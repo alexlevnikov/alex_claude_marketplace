@@ -1,0 +1,93 @@
+---
+name: browser-lab
+description: >
+  This skill should be used for any browser automation, web debugging, or
+  network reverse-engineering task — when the user wants to "automate a
+  browser", "fill out a form on a site", "scrape a page", "debug why a page
+  is slow/broken", "check console errors", "inspect network requests", "see
+  what API a website calls", "reverse-engineer a site's API", "capture the
+  requests a page makes", "replicate/replay an HTTP request", "turn a request
+  into curl or code", or "intercept and modify traffic". It routes the task
+  across bundled Playwright, Chrome DevTools, mitmproxy, and Firecrawl MCP
+  servers and explains which tool to use for what. For pure retrieval —
+  searching the web, scraping/crawling sites, or extracting structured data at
+  scale with no live browser needed — use the sibling `web-harvest` skill instead.
+metadata:
+  version: "0.2.0"
+---
+
+# Browser Lab
+
+Orchestrate four bundled MCP servers to cover the full spectrum of browser
+work: driving pages, debugging the frontend, disassembling a site's network
+traffic, and replicating its requests. This skill is the router — pick the
+right server for each job, chain them, and fall back gracefully.
+
+## The four servers and what each owns
+
+| Job | Server | Why |
+| --- | --- | --- |
+| Drive the page (navigate, click, type, forms, screenshots, multi-step flows) | **playwright** | Deterministic accessibility-tree driving, multi-browser, token-cheap, no vision needed |
+| Debug the frontend (console errors, network waterfall, performance traces, storage, Lighthouse) | **chrome-devtools** | Full Chrome DevTools Protocol — the only server with deep perf/console/network inspection |
+| Disassemble & intercept raw traffic (TLS MITM, modify/replay requests, extract tokens, generate curl) | **mitmproxy** | Sees all HTTP(S) below the browser; built for interception, replay, and API pattern detection |
+| Extract clean content/data at scale (page → markdown, structured extraction, crawl, map) | **firecrawl** | Fast, JS-rendered scraping and LLM extraction without wiring up a browser |
+
+Rule of thumb: **playwright acts, chrome-devtools inspects, mitmproxy disassembles, firecrawl harvests.** When two servers can do a thing (e.g. both playwright and chrome-devtools can click), let the table above decide ownership so you don't load two competing toolsets for the same step.
+
+## Routing decision guide
+
+Classify the request first, then act:
+
+- **"Automate / do X on this site"** → playwright. See `references/automation.md`.
+- **"Why is this page broken / slow / erroring?"** → chrome-devtools. See `references/debugging.md`.
+- **"What does this site call under the hood / what's its API?"** → start with chrome-devtools `list_network_requests` for a quick read; escalate to mitmproxy when you need to intercept, modify, or capture traffic the DevTools panel can't (native apps, service workers, non-browser clients). See `references/network-disassembly.md`.
+- **"Replicate / replay / turn into curl or code this request"** → mitmproxy for capture+replay+token chaining; shell out to `curlconverter` for HAR/curl → code. See `references/request-replication.md`.
+- **"Get the content/data from this page/site"** → firecrawl for a quick clean read here; playwright when the data is behind interaction/login. **For real retrieval jobs — web search, multi-page crawls, structured extraction, or hard/blocked sites — hand off to the `web-harvest` skill**, which routes across Exa, Tavily, Firecrawl, Bright Data, and Apify with cost-aware escalation.
+
+Many real tasks chain these: drive a flow with playwright → watch it in chrome-devtools → capture the key call with mitmproxy → replicate it with curl. Sequence the servers; don't try to do everything in one.
+
+## Standard operating procedure
+
+1. **Confirm scope and authorization.** Read the "Responsible use" section below before any interception, replay, or scraping work.
+2. **State the plan.** Name which server(s) you'll use and in what order.
+3. **Start the browser/proxy once.** Reuse the session across steps rather than re-launching per action.
+4. **Prefer structured reads over screenshots.** Use playwright `browser_snapshot` and chrome-devtools `take_snapshot` (accessibility tree) before falling back to screenshots + coordinate clicks.
+5. **Capture evidence.** For debugging, pull the actual console messages, network entries, and perf insights — don't infer. For network work, save the raw request/response (headers + body).
+6. **Verify the result.** After automating, assert the expected end state (element visible, URL, response code). After replicating a request, diff the replayed response against the original captured one.
+
+## Quick server cheat-sheet
+
+**playwright** — `browser_navigate`, `browser_snapshot`, `browser_click`, `browser_type`, `browser_fill_form`, `browser_select_option`, `browser_take_screenshot`, `browser_file_upload`, `browser_evaluate` (run JS in page), `browser_console_messages`, `browser_network_requests`, `browser_wait_for`, tab tools, coordinate `*_xy` fallbacks, `browser_pdf_save`.
+
+**chrome-devtools** — `navigate_page`, `list_network_requests`, `get_network_request` (full headers/body/timing), `list_console_messages`, `get_console_message`, `evaluate_script`, `performance_start_trace`/`performance_stop_trace`/`performance_analyze_insight`, `lighthouse_audit`, `emulate` (CPU/network throttle, device), heap-snapshot suite, `take_screenshot`.
+
+**mitmproxy** — `start_proxy`/`stop_proxy`/`set_scope`, `get_traffic_summary`, `search_traffic`, `inspect_flow` (returns curl equivalent), `add_interception_rule` (inject_header / replace_body / block), `set_global_header`, `replay_flow` (resend with modified method/headers/body), `extract_from_flow`, `set_session_variable`/`extract_session_variable` (token chaining), `detect_auth_pattern`, `get_api_patterns`, `export_openapi_spec`, `generate_scraper_code`.
+
+**firecrawl** — `firecrawl_scrape` (page → markdown), `firecrawl_crawl` (multi-page), `firecrawl_map` (discover URLs), `firecrawl_search`, `firecrawl_extract` (schema/LLM structured extraction).
+
+## Environment prerequisites
+
+- **playwright / chrome-devtools**: need Node.js and a local Chrome/Chromium. They run via `npx`; first launch downloads the package. chrome-devtools drives a real Chrome instance.
+- **mitmproxy**: needs `uv` (for `uvx`) and, for HTTPS interception, its CA certificate trusted by the client under test (visit `mitm.it` through the proxy, or install the cert). Without the trusted CA it can only see plaintext HTTP and TLS metadata.
+- **firecrawl**: the bundled endpoint is the keyless free tier (rate-limited). For higher limits, crawl, and extract, add a `FIRECRAWL_API_KEY` (see README).
+- **request replication codegen**: `curlconverter` is invoked via `npx curlconverter` — no install needed beyond Node.
+
+If a server is missing its prerequisite, say so plainly and offer the fallback (e.g. use chrome-devtools network reads if the mitmproxy CA isn't trusted yet).
+
+## Responsible use
+
+Network disassembly, interception, and request replication are powerful and can enable abuse. Operate within these bounds:
+
+- Only intercept, replay, or automate against sites the user **owns or is explicitly authorized to test**. For anything else, confirm authorization before proceeding.
+- Respect Terms of Service, `robots.txt`, rate limits, and authentication boundaries. Do not defeat access controls the user is not entitled to bypass, and do not harvest personal data without a lawful basis.
+- Treat captured tokens, cookies, and credentials as secrets: never echo them into logs or the final response, and scrub them from any saved artifacts.
+- If a request looks aimed at fraud, credential theft, scraping protected personal data, or circumventing security, decline and explain why.
+
+## References
+
+Load the relevant playbook when you start that kind of work:
+
+- `references/automation.md` — Playwright driving patterns, forms, auth, waiting, multi-tab.
+- `references/debugging.md` — Console, network waterfall, performance traces, storage/cookies, Lighthouse.
+- `references/network-disassembly.md` — Capturing and mapping a site's real API with chrome-devtools + mitmproxy.
+- `references/request-replication.md` — Turning captured requests into curl/code, auth/token chaining, replay & verification.

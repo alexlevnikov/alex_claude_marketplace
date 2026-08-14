@@ -1,0 +1,18 @@
+# Defense-in-depth: never let secrets into this iCloud-synced marketplace repo (design-doc D6).
+# API keys live in ~/.browser-lab-keys.env (home dir, outside this folder) — never here.
+*.env
+.env
+*-keys.env
+.browser-lab-keys.env
+secrets*
+*.secret
+*.pem
+*.key
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+
+# Node
+node_modules/

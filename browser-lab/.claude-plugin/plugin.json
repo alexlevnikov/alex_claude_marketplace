@@ -1,0 +1,32 @@
+{
+  "name": "browser-lab",
+  "version": "0.2.0",
+  "description": "A power toolkit for the whole web: live browser automation, deep frontend debugging, and network disassembly (browser-lab skill) plus web search, scraping, crawling, and structured data extraction at scale (web-harvest skill). Two orchestration skills route every task across Playwright, Chrome DevTools, mitmproxy, Firecrawl, Exa, Tavily, Bright Data, and Apify.",
+  "author": {
+    "name": "YOURSAUNAS"
+  },
+  "keywords": [
+    "browser",
+    "automation",
+    "debugging",
+    "network",
+    "devtools",
+    "playwright",
+    "mitmproxy",
+    "reverse-engineering",
+    "scraping",
+    "web-scraping",
+    "search",
+    "crawl",
+    "extract",
+    "structured-data",
+    "research",
+    "pricing",
+    "firecrawl",
+    "exa",
+    "tavily",
+    "brightdata",
+    "apify"
+  ],
+  "license": "MIT"
+}

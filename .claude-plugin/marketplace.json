@@ -1,0 +1,21 @@
+{
+  "name": "alex-claude-marketplace",
+  "owner": {
+    "name": "Alex Levnikov",
+    "email": "info@yoursaunas.com"
+  },
+  "metadata": {
+    "description": "Alex's personal Claude Code plugin marketplace.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "browser-lab",
+      "source": "./browser-lab",
+      "description": "Live browser automation, deep frontend debugging, and network disassembly, plus web search, scraping, crawling, and structured extraction at scale. Routes across Playwright, Chrome DevTools, mitmproxy, Firecrawl, Exa, Tavily, Bright Data, and Apify.",
+      "version": "0.2.0",
+      "author": { "name": "YOURSAUNAS" },
+      "keywords": ["browser", "automation", "debugging", "network", "scraping", "search", "extract"]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "agents-os",
+  "version": "0.1.0",
+  "description": "Operating knowledge for Alex's personal Agentic OS. Currently one skill: hetzner-server, which covers the Hetzner VPS that runs every agent — where its current state actually lives, which commands are safe, and what has to be updated after a change so the next session is not reading a stale document.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "hetzner",
+    "vps",
+    "server",
+    "infrastructure",
+    "docker-compose",
+    "deploy",
+    "tailscale",
+    "audit",
+    "agentic-os"
+  ],
+  "license": "MIT"
+}

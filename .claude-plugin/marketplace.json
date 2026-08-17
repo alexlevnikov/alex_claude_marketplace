@@ -16,6 +16,14 @@
       "version": "0.2.0",
       "author": { "name": "YOURSAUNAS" },
       "keywords": ["browser", "automation", "debugging", "network", "scraping", "search", "extract"]
+    },
+    {
+      "name": "agents-os",
+      "source": "./agents-os",
+      "description": "Operating knowledge for the personal Agentic OS. The hetzner-server skill covers the VPS that runs every agent: where its current state actually lives, which commands are safe, and what has to be updated after a change so the next session is not reading a stale document.",
+      "version": "0.1.0",
+      "author": { "name": "Alex Levnikov" },
+      "keywords": ["hetzner", "vps", "server", "infrastructure", "deploy", "tailscale", "audit", "agentic-os"]
     }
   ]
 }

@@ -49,10 +49,16 @@ quietly dropped *never force-push, never partial-publish*.
 
 Three box-specific notes those rules do not carry:
 
-- **The one standing `sudo` exception.** The rule is no sudo. The single exception is the
-  auditor's read-only whitelist — `ufw status`, `fail2ban-client status sshd`, `tail -n 200
-  /var/log/auth.log` — via `/etc/sudoers.d/agents-os-audit`. Its header states what review a
-  new line needs; nothing is added to it casually.
+- **The `sudo` exceptions — two, and the box is what says so.** The rule is no sudo. There
+  are exactly two NOPASSWD carve-outs and a third needs an ADR. They sit on *different
+  users*, so no single listing shows both — which is how this very line came to be wrong
+  once already. `alex` has the auditor's read-only whitelist
+  (`/etc/sudoers.d/agents-os-audit`, source under `$BOT/audit/install/`); read it live with
+  `ssh hetzner "sudo -n -l"` rather than trusting a list written down here. `agentos` has
+  `/usr/local/bin/finos-deploy-webapp`, the single bridge from the coding zone into the
+  finance zone (ADR 0008, script in `financial-agent/infra/hetzner/`): no arguments, both
+  paths hardcoded, and it must stay root-owned and unwritable by `agentos` or the bridge
+  becomes a root escalation. Detail for both: `$BOT/knowledge/gotchas.md`, §sudo.
 - **Generating a secret.** On the box, `openssl rand -hex 24`, straight into `secrets.env`.
   Never on the Mac — then it never exists there to leak.
 - **What may be exposed.** `$BOT/knowledge/topology.md` carries the whole public surface and

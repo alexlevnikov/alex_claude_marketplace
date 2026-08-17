@@ -41,16 +41,23 @@ collector: fix `$BOT/audit/collect.py` and regenerate.
 
 ## 2. Stop rules
 
-1. **No sudo.** It is password-gated. Anything needing root is a step Alex runs, stated
-   plainly as such — never attempted, never faked. The one existing exception is the
-   auditor's read-only whitelist (`ufw status`, `fail2ban-client status sshd`, `tail -n 200
-   /var/log/auth.log`); nothing gets added to it casually.
-2. **No secrets anywhere but `secrets.env` on the box.** Never print one into a transcript,
-   never copy one to the Mac. Generate new ones on the server: `openssl rand -hex 24`.
-3. **Never add `agentos` to the `docker` group**, and never link finance paths into
-   `/srv/agents-os`. Docker group membership is root-equivalent; that split is the security
-   model, not a convention.
-4. **Postgres ports are never published.** Loopback or nothing.
+They are **not** repeated here. All six live in `$BOT/../CLAUDE.md` §0, and that file
+cascades into every session under `Agents OS/` — including the subproject sessions this
+skill exists for, so nothing is lost by not restating them. A second, shorter copy is
+exactly how a rule goes missing: the copy that used to sit here was four rules long and had
+quietly dropped *never force-push, never partial-publish*.
+
+Three box-specific notes those rules do not carry:
+
+- **The one standing `sudo` exception.** The rule is no sudo. The single exception is the
+  auditor's read-only whitelist — `ufw status`, `fail2ban-client status sshd`, `tail -n 200
+  /var/log/auth.log` — via `/etc/sudoers.d/agents-os-audit`. Its header states what review a
+  new line needs; nothing is added to it casually.
+- **Generating a secret.** On the box, `openssl rand -hex 24`, straight into `secrets.env`.
+  Never on the Mac — then it never exists there to leak.
+- **What may be exposed.** `$BOT/knowledge/topology.md` carries the whole public surface and
+  why each path is on it. Postgres ports are never published to the host or the internet:
+  design intent, not a default.
 
 ## 3. After a change: close the loop
 

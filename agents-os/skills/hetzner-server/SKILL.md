@@ -61,46 +61,30 @@ Three box-specific notes those rules do not carry:
 
 ## 3. After a change: close the loop
 
-The box changes several times a day and most of it is noise. This loop runs on changes that
-alter an answer someone would act on.
-
-**Run it when the change is one of these:**
-
-- **Public surface** — a port opens or closes, a Funnel path appears or disappears, a
-  container publishes to something other than loopback.
-- **Inventory** — a stack or long-lived container appears or disappears; a compose file
-  moves; a service is pinned or unpinned.
-- **Automation** — a crontab entry, systemd timer or backup job added, removed, rescheduled.
-- **Identity** — a shell user, SSH key, group membership, sudoers entry, new secrets file.
-- **Trust** — anything moving a boundary between the `alex` and `agentos` zones, or a new
-  inbound integration.
-
-**Do not run it for:** image rebuilds and digest changes from an ordinary deploy, container
-restarts, uptime, disk / RAM / load, package counts, backup rotation, containers that live
-for minutes. The auditor already tracks those and the generated files already carry them.
+The box changes several times a day and most of it is noise. A change that alters an answer
+someone would act on — public surface, inventory, automation, identity, trust — has to reach
+the docs before the session ends. A measurement does not: uptime, disk, load, package
+counts, container restarts, an image digest from your own deploy. The auditor already
+carries those.
 
 The test is not taste: *would a session reading the docs tomorrow act differently?* If no,
 it is a measurement, and measurements are the machine's job.
 
-**The steps, in order:**
+**The loop itself is `$BOT/README.md`, under "After a change on the box (RULE)" — which
+class of change fires it, what to leave alone, and the six steps in order. Follow it there,
+not from memory.** It is one file-open away; it sits beside every file the steps tell you to
+edit; and it is the copy that gets maintained, because that is where the work happens. Step
+2 puts you in that directory anyway (`./refresh.py`).
 
-1. **Re-capture the auditor's baseline** if the change added a container, port, cron entry
-   or key — otherwise it reports your own deploy as an intruder until someone learns to
-   ignore it. Procedure in `$BOT/audit/install/README.md`. Every line the diff adds is
-   declared normal forever, so a human reads it. Copy `baseline.json` back into the repo and
-   commit it.
-2. **`cd $BOT && ./refresh.py`** — regenerates `facts/snapshot.md` and the `AUTO-STATE`
-   block in `Agents OS/CLAUDE.md`. `--dry-run` first if unsure.
-3. **`knowledge/topology.md`** if the *design intent* changed — a new stack, a deliberate
-   new exposure, a moved boundary. No machine writes here; this file records *why*, and a
-   collector can only ever see *what*.
-4. **`runbooks/<project>.md`** if a *procedure* changed.
-5. **`knowledge/gotchas.md`** if it cost more than a few minutes.
-6. **This skill** if what you just learned changes how the box is *operated* — a new stop
-   rule, a command that is no longer safe, a new place the truth lives. A skill that is
-   never updated becomes the most confidently wrong document in the system.
+Two things about that loop are worth carrying here, because they decide whether you may
+finish alone:
 
-Steps 2–6 are the agent's. Step 1 needs a human reading the baseline diff.
+- **Step 1 is a human's.** Re-capturing the auditor's baseline declares every added line
+  normal forever, so Alex reads the diff. Skipping it means the auditor reports your own
+  deploy as an intruder until someone learns to ignore it — which is how an alarm dies.
+- **Step 6 is this skill.** Update it when what you learned changes how the box is
+  *operated*: a new stop rule, a command no longer safe, a new place the truth lives. A
+  skill that is never updated becomes the most confidently wrong document in the system.
 
 ## 4. The auditor
 
@@ -125,20 +109,15 @@ ssh hetzner "tail -20 ~/agents-os-audit/audit.log"     # every action it took or
 
 ## 5. Traps that have already cost hours
 
-- **`PUT /workflows` in n8n deactivates the workflow.** Re-activate and verify. Most
-  repeated mistake in this project.
-- **The n8n container cannot see host files.** Its only mount is its own data volume. Route
-  host state through Postgres, which both sides already reach.
-- **cron's `PATH` is `/usr/bin:/bin` and its environment is otherwise empty.** A job that
-  works by hand and does nothing on schedule is almost always this.
-- **`docker system df` RECLAIMABLE is not what a prune reclaims** — it counted 7.5 GB while
-  `docker image prune -f` took 0 B. Never `docker image prune -a`: it deletes locally built
-  images and forces a rebuild.
-- **Backup filenames differ per stack.** `finance-os` writes `pg-*.sql.gz.gpg`,
-  `meditation-os` writes `meditation_os-*.sql.gz.gpg`. Guessing one pattern produced a false
-  "no backups" alarm.
-- **`timeout` does not exist on macOS** — a pipeline using it returns empty output, which
-  reads exactly like the remote command returning nothing.
+They live in `$BOT/knowledge/gotchas.md` — read it before you touch the box, and add to it
+the moment something surprises you. That file is the reason the same afternoon is not lost
+twice, and it is only worth what the last person put into it.
 
-The full list is `$BOT/knowledge/gotchas.md`, and it is the first thing to add to when
-something surprises you.
+It is organised by where the trap lives, so go straight to the part you are in: **Docker ·
+n8n · cron · Alerting · Git and GitHub accounts · Backups · sudo · Python · Docs.** Each
+entry carries the symptom, the cause and what to do instead.
+
+No selection of "the worst ones" is repeated here, deliberately. A second list stops being
+the worst ones the week after it is written, and it repeats the old number long after the
+original entry has been corrected — which is precisely the failure the file exists to
+prevent.

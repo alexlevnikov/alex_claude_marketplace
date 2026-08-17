@@ -18,11 +18,24 @@ One VPS (`ubuntu-4gb-nbg1-2`, 4 cores / 8 GB / 75 GB, Ubuntu) is the always-on r
 every agent in the Agentic OS. Reach it as `ssh hetzner`. Everything is Docker Compose in
 **user mode** under the account `alex`.
 
-Throughout, the knowledge base is:
+Throughout, `$BOT` is the knowledge base — `hetzner-bot/` in the `Agents OS` umbrella repo.
+Resolve it once, at the start of the task, rather than typing a path from memory:
 
 ```bash
-BOT=~/Library/Mobile\ Documents/com~apple~CloudDocs/alex.levnikov.root/Agents\ OS/hetzner-bot
+ROOT="$(git rev-parse --show-superproject-working-tree 2>/dev/null)"   # from a submodule
+[ -n "$ROOT" ] || ROOT="$(git rev-parse --show-toplevel 2>/dev/null)"  # from the umbrella
+BOT="$ROOT/hetzner-bot"
+[ -f "$BOT/refresh.py" ] || BOT=~/"Library/Mobile Documents/com~apple~CloudDocs/alex.levnikov.root/Agents OS/hetzner-bot"
+[ -f "$BOT/refresh.py" ] || echo "BOT not found — ask Alex where the repo is now; do not guess"
 ```
+
+Most sessions this skill serves are rooted in the umbrella or in one of its submodules
+(`financial-agent`, `meditation-agent`, `coding-agent`), and git answers for both cases —
+note that `--show-superproject-working-tree` returns an *empty string with exit 0* in the
+umbrella itself, so the second line tests for emptiness, not for failure. The literal path
+is the last resort, not the first: it is one machine's iCloud layout, it lives outside the
+repo it points at, and nothing in that repo can notice when it stops being true. The
+`refresh.py` probe is what turns that from a silent wrong answer into a question.
 
 ## 1. Read before you act
 

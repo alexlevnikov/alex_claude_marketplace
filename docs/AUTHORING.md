@@ -186,15 +186,27 @@ is exactly the failure Model B was introduced to avoid.
 
 ## Install and verify
 
-```bash
-claude plugin marketplace add ~/Library/Mobile\ Documents/com~apple~CloudDocs/alex.levnikov.root/claude_plugins
-```
-
-Once only. Afterwards, pull in your own changes with:
+The marketplace is installed **from GitHub**, not from this working copy:
 
 ```bash
-claude plugin marketplace update alex-claude-marketplace
+claude plugin marketplace add https://github.com/alexlevnikov/alex_claude_marketplace.git
 ```
+
+Once only. The remote is therefore the source of truth, and an edit here is
+invisible to Claude Code until it is committed **and pushed**. The whole loop
+after a change:
+
+```bash
+git push                                                   # nothing below sees the change without this
+claude plugin marketplace update alex-claude-marketplace    # refresh the clone
+claude plugin update <plugin>@alex-claude-marketplace       # bump one already installed
+claude plugin install <plugin>@alex-claude-marketplace      # or add a new one
+```
+
+Then **restart the session**. Plugins are read once at session start, so a running
+session keeps the old version even after every command above reports success — and
+a restart on its own updates nothing: without `marketplace update` it reinstalls
+the same stale clone. Both halves are needed, in that order.
 
 ### Enable at the right scope — this is the memory decision
 

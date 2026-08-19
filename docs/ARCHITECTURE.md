@@ -27,11 +27,17 @@ claude_plugins/                       ← marketplace root (git repo)
 │   │       └── references/*.md       ← detail, loaded only on demand
 │   ├── agents/                       ← OPTIONAL — subagent definitions
 │   └── README.md
+├── build.sh                          ← shared: package a plugin → .plugin
+├── doctor.sh                         ← shared: environment check
+├── validate-keys.sh                  ← shared: key source + live key check
 └── docs/
     ├── ARCHITECTURE.md               ← this file
     ├── AUTHORING.md                  ← how to build one
     └── specs/                        ← design decisions, dated
 ```
+
+Tooling is shared, one copy at the root — three plugins do not need three copies
+of the same script.
 
 A plugin listed in `marketplace.json` becomes installable; a plugin **enabled**
 in settings has its skills registered and its MCP servers started.
@@ -94,9 +100,9 @@ measure it directly:
 ps -Ao rss=,command= | grep -Ei "mcp|npm exec" | grep -v grep | awk '{s+=$1} END {printf "%.0f MB across %d processes\n", s/1024, NR}'
 ```
 
-Skills are cheap; MCP servers are not. **A plugin that is mostly skills can be
-enabled globally. A plugin that bundles `stdio` servers should be enabled per
-project.**
+Skills are cheap; MCP servers are not. The general answer would be "enable a
+skills-only plugin globally, and a `stdio`-bundling one per project" — but this
+marketplace has rejected per-project scoping, which changes the answer. See §4.
 
 ---
 
@@ -125,8 +131,17 @@ keys live in Claude's connector store.
 - **Requirement:** never hard-code exact tool names — a user-added connector may
   be namespaced differently. Detect by capability.
 
-**Choosing:** keyless + local + essential → A. Anything with an API key, an
-HTTP endpoint, or an optional backend → B.
+**Choosing:** the axis that matters is **transport**, not keys.
+
+- `http` backends → **A**, always. They hold no process, so bundling them is
+  free, and bundling means they work the moment the plugin is enabled instead of
+  waiting on a manual `claude mcp add`. Keys are not a reason to choose B; they
+  live in `~/.claude/settings.json` → `env` and interpolate into the bundled
+  `.mcp.json`. This is why `web-harvest` ships Model A with five keyed backends.
+- `stdio` backends → **A** when the plugin cannot function without them
+  (`browser-lab`), and then keep that plugin narrow, because every session pays.
+- **B** stays right for genuinely optional or user-supplied backends, where the
+  plugin ships routing intelligence and the user supplies the muscle.
 
 ---
 
@@ -203,8 +218,22 @@ separate fixes, and a good router does nothing for the second one.
 
 ## 6. Current inventory
 
-| Plugin | Skills | MCP shipped | Model | Notes |
-| --- | --- | --- | --- | --- |
-| `browser-lab` | `browser-lab`, `web-harvest` | 8 servers: 4 `stdio` (playwright, chrome-devtools, mitmproxy, brightdata) + 4 `http` (firecrawl, exa, tavily, apify) | A | The 4 `stdio` servers are the memory cost; the 4 `http` are free. The 2026-08-12 spec plans a split into `browser-lab` (3 keyless stdio, Model A) + `web-harvest` (Model B, no `.mcp.json`) — **not yet implemented**. |
-| `agents-os` | `hetzner-server` | none | — | Pure knowledge. Free to enable anywhere. |
+| Plugin | Skills | MCP shipped | Model | Cost per session | Notes |
+| --- | --- | --- | --- | --- | --- |
+| `browser-lab` 0.3.0 | `browser-lab` | 3 `stdio`: playwright, chrome-devtools, mitmproxy | A | **3 processes** | Keyless and local. All three are stdio-only with no hosted variant, so user scope costs 3 processes per open session — accepted deliberately, pending the wave-2 gateway. |
+| `web-harvest` 0.1.0 | `web-harvest` | 5 `http`: firecrawl, exa, tavily, brightdata, apify | A | **0 processes** | Keys in `~/.claude/settings.json` → `env`. Connects on first call; free to leave enabled at user scope. |
+| `agents-os` 0.1.0 | `hetzner-server` | none | — | 0 | Pure knowledge. Free to enable anywhere. |
+
+Split on 2026-08-19 per `specs/2026-08-19-web-harvest-split-design.md` (wave 1).
+Shared tooling lives at the repo root: `build.sh` (package a plugin),
+`doctor.sh` (environment check), `validate-keys.sh` (prove key source + key).
+
+### Where the keys live
+
+`env` in `~/.claude/settings.json`, which Claude Code reads however it was
+launched. **Not** a shell profile: the desktop app starts from the GUI and never
+sources `.zshrc`, so `${EXA_API_KEY}` in a `.mcp.json` interpolates to empty and
+the backend answers 401 — the bug that motivated wave 1. Any new keyed backend
+follows the same rule, or uses a connector added with `claude mcp add` where the
+key lives in Claude's connector store.
 

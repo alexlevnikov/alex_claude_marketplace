@@ -1,5 +1,5 @@
 # Defense-in-depth: never let secrets into this iCloud-synced marketplace repo (design-doc D6).
-# API keys live in ~/.browser-lab-keys.env (home dir, outside this folder) — never here.
+# API keys live in ~/.claude/settings.json → env (outside this folder) — never here.
 *.env
 .env
 *-keys.env
@@ -16,3 +16,10 @@ Thumbs.db
 
 # Node
 node_modules/
+
+# Build artifacts — installation happens over git from the marketplace, so a
+# committed .plugin archive is only a copy that goes stale (build with build.sh).
+*.plugin
+
+# mitmproxy-mcp scratch database
+mitm_mcp_traffic.db

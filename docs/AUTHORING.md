@@ -14,19 +14,22 @@ overwrites it on update.
 ## Decide first: is this a plugin, or a skill in an existing plugin?
 
 **A new skill in an existing plugin** when it shares that plugin's backends and
-its trigger vocabulary sits next to the existing ones. `web-harvest` living
-inside `browser-lab` is this case — both route web work, and they hand off to
-each other.
+its trigger vocabulary sits next to the existing ones.
 
 **A new plugin** when *any* of:
 - it needs MCP servers the existing plugins don't ship;
-- you want to enable it in some projects and not others;
+- **its servers have a different transport** — bundling `http` backends with
+  `stdio` ones makes the free half hostage to the expensive half;
+- you would ever want one without the other;
 - its domain has nothing to do with the existing ones.
 
-Scope is the deciding factor more often than subject matter. **If two skills
-would always be enabled together, they belong in one plugin.** If you would ever
-want one without the other, split them — that is the only way to pay for one
-without the other.
+**Cost is the deciding factor more often than subject matter.** `web-harvest`
+lived inside `browser-lab` until 2026-08-19 on the "they hand off to each other"
+argument, and that was the wrong call: five free HTTP backends could not be
+enabled without also starting four `stdio` processes. Related subject matter is
+not a reason to share a plugin; **an identical enable/disable decision is.** If
+you would ever want one without the other, split them — that is the only way to
+pay for one without the other.
 
 ---
 
@@ -200,9 +203,13 @@ claude plugin enable <plugin>@alex-claude-marketplace -s project
 ```
 
 `-s` takes `user` (everywhere), `project` (this repo, committed), or `local`
-(this repo, private). **Default to `project` for anything bundling `stdio`
-servers**; reserve `user` for skills-only plugins. `claude plugin disable` takes
-the same flag.
+(this repo, private). **This marketplace installs at `user` scope** (Alex,
+2026-08-19) — availability must not depend on which directory a session sits in.
+That makes transport the only lever left: prefer `http`, which costs nothing at
+user scope, and treat every `stdio` server as a per-session process you are
+choosing to pay for in *every* project. `claude plugin disable` takes the same
+flag; disabling a heavy plugin between uses is the honest answer until the
+wave-2 gateway lands.
 
 ### Check what it costs before you commit to it
 
@@ -212,7 +219,8 @@ claude plugin details <plugin>
 
 This prints the component inventory and the **projected token cost** —
 `always-on` (paid in every session) versus `on-invoke` (paid when a skill fires).
-`browser-lab`, for reference, is ~451 always-on tokens for two routers.
+`browser-lab`, for reference, was ~451 always-on tokens for two routers before
+the 2026-08-19 split; each half now carries roughly half of that.
 
 **Read the MCP line carefully.** It lists the servers and notes that tool schemas
 are *resolved at runtime and not counted*. That is a statement about **tokens**,
@@ -241,6 +249,11 @@ from `evals/**/case.yaml` against the plugin, including a no-plugin baseline arm
 - [ ] Every `SKILL.md` has `name` + `description` frontmatter
 - [ ] Sibling skills name each other in both directions
 - [ ] Every new MCP server: HTTP if the vendor offers it; no `mcp-remote` shims
+- [ ] Every API key referenced by a `.mcp.json` exists in `~/.claude/settings.json`
+      → `env` — **never** a shell profile, which the GUI-launched app never reads
+      (`bash validate-keys.sh` proves both the source and the key)
+- [ ] Shared tooling (`build.sh`, `doctor.sh`, `validate-keys.sh`) stays at the
+      repo root — one copy, not one per plugin
 - [ ] No API keys, tokens, or `.env` anywhere in the repo
 - [ ] `references/` carries the detail; `SKILL.md` stays a map
 - [ ] JSON parses:

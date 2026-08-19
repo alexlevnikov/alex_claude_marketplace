@@ -10,10 +10,10 @@ description: >
   Amazon / LinkedIn / Google Maps / Instagram. It routes across five bundled MCP servers — Exa
   and Tavily (web search), Firecrawl (clean scrape / crawl / extract), Bright Data (anti-bot
   unblocking + structured datasets), and Apify (site-specific scraper Actors) — picking the
-  cheapest tool that works, escalating on failure, and handing off to the browser-lab skill
-  for live clicking, logging in, or debugging.
+  cheapest tool that works, escalating on failure, and handing off to the sibling browser-lab
+  plugin for live clicking, logging in, or debugging.
 metadata:
-  version: "0.2.0"
+  version: "0.1.0"
 ---
 
 # Web Harvest
@@ -23,7 +23,7 @@ web," classify it and run it on the right backend — search when you don't know
 the URLs, scrape when you do, unblock when the site fights back, and use a
 ready-made Actor when someone has already solved that exact site. Pick the
 cheapest tool that works, escalate only on failure, and hand interaction/debug
-work to `browser-lab`.
+work to the `browser-lab` plugin.
 
 This skill is a **decision-maker, not a doer of everything at once.** Name the
 route before you act, run it, verify you got real content, and stop.
@@ -33,9 +33,17 @@ route before you act, run it, verify you got real content, and stop.
 | The task is really about… | Owner |
 | --- | --- |
 | **Finding / reading / extracting web content** (search, scrape, crawl, structured data) | **web-harvest** (this skill) |
-| **Driving a live page** — click, type, fill forms, log in, multi-step flows | hand off to **browser-lab** → playwright |
-| **Debugging a page** — console errors, slowness, performance, Lighthouse | hand off to **browser-lab** → chrome-devtools |
-| **Reverse-engineering / intercepting a site's own API traffic**, replaying requests | hand off to **browser-lab** → mitmproxy |
+| **Driving a live page** — click, type, fill forms, log in, multi-step flows | hand off to the **browser-lab** plugin → playwright |
+| **Debugging a page** — console errors, slowness, performance, Lighthouse | hand off to the **browser-lab** plugin → chrome-devtools |
+| **Reverse-engineering / intercepting a site's own API traffic**, replaying requests | hand off to the **browser-lab** plugin → mitmproxy |
+
+**`browser-lab` is a separate plugin and may not be installed.** Check by
+capability — is any tool available that drives a live browser or reads its
+console/network? — **never by tool name**, because the namespace changes with the
+plugin that ships the server. If nothing can drive a browser, say so in one line,
+name `browser-lab` and how to get it (`/plugin` → `alex-claude-marketplace` →
+install & enable `browser-lab`, then restart the session), and **carry on with
+whatever this skill can still do**. Never stop the task on a missing sibling.
 
 Rule of thumb: **web-harvest retrieves; browser-lab interacts.** If the data can
 be reached by requesting URLs, it's web-harvest. If it requires *behaving like a
@@ -52,8 +60,9 @@ browser-lab logs in and drives the flow → web-harvest extracts the result.
 | **Unblock & structured feeds** — the site blocks bots, needs geo/residential IPs, or is a big platform with a ready dataset (Amazon, LinkedIn, Instagram, Google Maps, SERPs) | **brightdata** (Web Unlocker + pre-built structured datasets) | Purpose-built anti-bot + maintained structured scrapers for the hard, high-value sites |
 | **Ready-made site scrapers** — a specific site/platform already has a maintained scraper, or you need a big managed run | **apify** (thousands of Store Actors + `rag-web-browser`) | Skip building a scraper; someone already did, and it runs managed at scale |
 
-Firecrawl is shared with `browser-lab` (its "harvest" tool). When a browser-lab
-task grows into a real search/crawl/structured job, route it here.
+All retrieval lives here. `browser-lab` ships no scraping backend of its own, so
+a browser-lab task that grows into a real search/crawl/structured job routes to
+this skill.
 
 ## Routing decision guide — classify first, then act
 
@@ -85,8 +94,10 @@ Work top-down; take the **first** match:
    `references/structured-and-unblocking.md`.
 
 6. **Needs login, clicking, or multi-step interaction to even reach the data** →
-   **hand off to `browser-lab`** (playwright drives it). Come back here to
-   extract once the content is on screen.
+   **hand off to the `browser-lab` plugin** (playwright drives it). Come back here
+   to extract once the content is on screen. If browser-lab isn't installed, say
+   so, name it, and fall back to what retrieval alone can reach — a Bright Data
+   or Apify route often gets the page without driving a browser at all.
 
 Many real jobs chain: **search (exa/tavily) → scrape/extract (firecrawl) →
 unblock or structured-scrape the ones that failed (brightdata/apify)**. Sequence
@@ -159,8 +170,10 @@ already exists for the target or you need a large managed run.
 
 ## Environment prerequisites (API keys)
 
-Unlike browser-lab's local core, these servers are cloud services and need keys.
-Each is optional-but-recommended; set the keys for the tiers you'll use:
+All five backends are hosted HTTP services and need keys. They are read from
+`env` in `~/.claude/settings.json` — **not** from the shell environment, which
+Claude Code never sees when it is launched from the GUI. Each key is
+optional-but-recommended; set the ones for the tiers you'll use:
 
 - **exa** → `EXA_API_KEY` (https://exa.ai) — search + research.
 - **tavily** → `TAVILY_API_KEY` (https://tavily.com) — search + extract.
@@ -173,12 +186,15 @@ Each is optional-but-recommended; set the keys for the tiers you'll use:
 
 If a server's key is missing, say so plainly and route to the next viable tool
 (e.g. no Bright Data key → try firecrawl, or ask the user to add the key for the
-hard target). Free tiers exist on all five for evaluation.
+hard target). Free tiers exist on all five for evaluation. A 401 from a backend
+means its key is missing or wrong in `~/.claude/settings.json` — say which key,
+don't retry the same call. `bash validate-keys.sh` at the marketplace root proves
+every key with a real API call.
 
 ## Responsible use
 
 Search and retrieval at scale can cross legal and ethical lines. Operate within
-these bounds (same guardrails as browser-lab):
+these bounds (the same guardrails `browser-lab` applies to interaction):
 
 - Scrape only what the user is authorized to collect. Respect Terms of Service,
   `robots.txt`, rate limits, and authentication/paywall boundaries. Don't use

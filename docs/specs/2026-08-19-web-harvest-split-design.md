@@ -1,7 +1,9 @@
 # Wave 1: split web-harvest out, fix the keys
 
 **Date:** 2026-08-19
-**Status:** Design — awaiting review
+**Status:** **Implemented** 2026-08-19 on branch `wave-1-web-harvest-split`.
+All five keys verified live (2xx from every backend via `validate-keys.sh`);
+acceptance criteria 1, 3 and 4 are session-level and verify after a restart.
 **Supersedes:** the plugin split in `2026-08-12-plugin-marketplace-structure-design.md`
 (D1 per-project scoping, and Model B for the cloud backends — both replaced below)
 

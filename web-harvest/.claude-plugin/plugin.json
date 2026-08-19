@@ -1,0 +1,26 @@
+{
+  "name": "web-harvest",
+  "version": "0.1.0",
+  "description": "The retrieval router for the open web: search, scrape, crawl, and structured extraction at scale. One skill classifies the job and routes it across Firecrawl, Exa, Tavily, Bright Data, and Apify, climbing a cost-aware escalation ladder and stopping at the first backend that returns real data. All five backends are hosted HTTP connectors, so the plugin holds no local process.",
+  "author": {
+    "name": "YOURSAUNAS"
+  },
+  "keywords": [
+    "scraping",
+    "web-scraping",
+    "search",
+    "crawl",
+    "extract",
+    "structured-data",
+    "research",
+    "retrieval",
+    "unblocking",
+    "pricing",
+    "firecrawl",
+    "exa",
+    "tavily",
+    "brightdata",
+    "apify"
+  ],
+  "license": "MIT"
+}

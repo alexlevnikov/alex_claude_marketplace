@@ -7,6 +7,49 @@ build), `specs/` (dated design decisions).
 
 ---
 
+## 2026-08-19 — Wave 1 shipped: web-harvest split out, keys fixed
+
+Implemented `specs/2026-08-19-web-harvest-split-design.md` on branch
+`wave-1-web-harvest-split`.
+
+**What changed**
+
+- **`web-harvest` 0.1.0** is its own plugin: the skill and its three references
+  moved wholesale, and all five backends are now `"type": "http"` — including
+  `brightdata`, which was the last local `npx` process among them
+  (`mcp.brightdata.com/mcp?token=…`). **0 processes per session.**
+- **`browser-lab` 0.3.0** keeps only playwright, chrome-devtools and mitmproxy.
+  It lost firecrawl with the split, so its skill no longer claims a retrieval
+  route: it hands the whole area to `web-harvest`, by capability and never by
+  tool name. **3 processes per session**, unchanged and still the open problem.
+- **Keys moved to `env` in `~/.claude/settings.json`** and all five verified with
+  a real API call — exa, tavily, firecrawl, brightdata, apify each answered 2xx.
+  The 401s are gone at the source.
+- **`setup-keys.sh` deleted.** It wrote `~/.browser-lab-keys.env` and sourced it
+  from the shell profile — the exact dead end that caused the bug. A script that
+  looks like it works is worse than no script.
+- **`validate-keys.sh` rewritten** to check *two* things: that the key sits in
+  settings.json (the only place Claude Code reads) **and** that it authenticates.
+  A key found only in `~/.zshrc` now FAILS the source check even when the call
+  succeeds — the call proves the key, not the wiring.
+- **Shared tooling moved to the repo root.** `build.sh` takes a plugin directory
+  (or `--all`) and refuses to package a directory containing key-shaped strings.
+- **`*.plugin` archives are no longer committed.** Installation happens over git
+  from the marketplace, so a checked-in archive is a stale copy — `browser-lab.plugin`
+  had gone stale the moment the split landed. Build one with `build.sh` when you
+  need to hand a plugin over out-of-band.
+
+**Operational note worth remembering:** this marketplace is installed from
+`github.com/alexlevnikov/alex_claude_marketplace`, **not** from the iCloud working
+copy. Editing here changes nothing until the branch is merged and pushed; then
+`/plugin` → update the marketplace → enable `web-harvest` → restart the session.
+
+**Still open:** the wave-2 gateway. `browser-lab` is now the only thing costing
+memory, which is exactly the shape the gateway decision needs — one plugin, three
+stdio servers, no hosted variant. See the next entry.
+
+---
+
 ## 2026-08-19 — Requirement change: user-level install, servers start on use
 
 **Alex:** the plugins should install at **user level**, and servers should start

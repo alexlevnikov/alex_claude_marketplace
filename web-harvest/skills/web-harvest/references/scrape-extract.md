@@ -67,6 +67,7 @@ straight to the structured tools.
 ## Keys / limits
 
 - Basic `scrape` works on the keyless hosted endpoint but is rate-limited.
-- `crawl` and `extract` and higher limits need `FIRECRAWL_API_KEY`. Set it before
-  relying on those. If it's missing and the user needs crawl/extract, ask them to
-  add the key (or fall back to a search API for discovery).
+- `crawl` and `extract` and higher limits need `FIRECRAWL_API_KEY`, read from
+  `env` in `~/.claude/settings.json`. If it's missing and the user needs
+  crawl/extract, ask them to add it there (or fall back to a search API for
+  discovery).

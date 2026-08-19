@@ -11,33 +11,9 @@
     "mitmproxy": {
       "command": "uvx",
       "args": ["mitmproxy-mcp"]
-    },
-    "firecrawl": {
-      "type": "http",
-      "url": "https://mcp.firecrawl.dev/v2/mcp"
-    },
-    "exa": {
-      "type": "http",
-      "url": "https://mcp.exa.ai/mcp",
-      "headers": { "x-api-key": "${EXA_API_KEY}" }
-    },
-    "tavily": {
-      "type": "http",
-      "url": "https://mcp.tavily.com/mcp/?tavilyApiKey=${TAVILY_API_KEY}"
-    },
-    "brightdata": {
-      "command": "npx",
-      "args": ["-y", "@brightdata/mcp"],
-      "env": { "API_TOKEN": "${BRIGHTDATA_API_TOKEN}" }
-    },
-    "apify": {
-      "type": "http",
-      "url": "https://mcp.apify.com",
-      "headers": { "Authorization": "Bearer ${APIFY_TOKEN}" }
     }
   },
   "recommendedCategories": [
-    "analytics-bi",
     "software-coding"
   ]
 }

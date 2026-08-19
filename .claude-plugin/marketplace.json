@@ -6,16 +6,24 @@
   },
   "metadata": {
     "description": "Alex's personal Claude Code plugin marketplace.",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "plugins": [
     {
       "name": "browser-lab",
       "source": "./browser-lab",
-      "description": "Live browser automation, deep frontend debugging, and network disassembly, plus web search, scraping, crawling, and structured extraction at scale. Routes across Playwright, Chrome DevTools, mitmproxy, Firecrawl, Exa, Tavily, Bright Data, and Apify.",
-      "version": "0.2.0",
+      "description": "The live-browser toolkit: browser automation, deep frontend debugging, network disassembly, and HTTP request replication. Routes every task across Playwright, Chrome DevTools, and mitmproxy. For retrieval, install web-harvest.",
+      "version": "0.3.0",
       "author": { "name": "YOURSAUNAS" },
-      "keywords": ["browser", "automation", "debugging", "network", "scraping", "search", "extract"]
+      "keywords": ["browser", "automation", "debugging", "network", "devtools", "playwright", "mitmproxy", "reverse-engineering"]
+    },
+    {
+      "name": "web-harvest",
+      "source": "./web-harvest",
+      "description": "The retrieval router for the open web: search, scrape, crawl, and structured extraction at scale across Firecrawl, Exa, Tavily, Bright Data, and Apify, with cost-aware escalation. All five backends are hosted HTTP connectors, so it holds no local process.",
+      "version": "0.1.0",
+      "author": { "name": "YOURSAUNAS" },
+      "keywords": ["scraping", "search", "crawl", "extract", "structured-data", "research", "retrieval", "firecrawl", "exa", "tavily", "brightdata", "apify"]
     },
     {
       "name": "agents-os",

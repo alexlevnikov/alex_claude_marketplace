@@ -7,6 +7,58 @@ build), `specs/` (dated design decisions).
 
 ---
 
+## 2026-08-19 — Wave 1 verified live, and what the measurement found
+
+First session after the restart. Everything wave 1 claimed was re-checked against
+running software rather than against the config.
+
+**Wave 1 holds.** `validate-keys.sh` passes 11/11 and `doctor.sh` passes all seven
+sections. All five `web-harvest` backends answered with real data through their
+plugin-namespaced tools — exa, tavily, firecrawl, brightdata, apify. The 401s are
+gone. `@brightdata/mcp` no longer spawns in new sessions: retrieval costs **zero
+local processes**, as designed.
+
+**`browser-lab` is 2 of 3.** playwright and mitmproxy answer. `chrome-devtools`
+fails with *"The browser is already running for …/chrome-profile"* — eight
+sessions contend for one profile directory and only the first to launch Chrome
+works. This is a real defect, not a cosmetic one, and it is what wave 2 fixes.
+
+**The measurement, on 8 live sessions:** 170 `stdio` processes, **643 MB** (1658 MB
+counting whole session trees, on an 8 GB machine). `browser-lab` is 355 MB of it.
+All eight parent processes were confirmed alive — there is nothing to reap, so
+only the gateway moves this number. Full table in
+`specs/2026-08-19-mcp-gateway-design.md`.
+
+**Two duplicates worth removing independently of wave 2:**
+
+- **`firecrawl-mcp` runs locally in every session** (24 processes, 90 MB) from
+  `firecrawl@claude-plugins-official`, duplicating the hosted Firecrawl that
+  `web-harvest` already serves over HTTP for free. Not a free removal: that plugin
+  also carries eleven `firecrawl-*` skills, which go with it.
+- **`mcp-remote` shims for inkeep persist** (8 processes, 62 MB) although the
+  config moved to `type: http` on 2026-08-18. Sessions opened before that change
+  still hold them; they die with those sessions.
+
+**Wave 2 decided (Alex, 2026-08-19):** scope is every `stdio` server on the
+machine; one shared Chrome with per-session tabs, because logins must survive
+(`--isolated` is therefore rejected); and we adopt a ready **transparent bridge**
+rather than build one, proving it on a stand first.
+
+Meta-routers are out, and the reasoning generalises: `mcpproxy-go`,
+`MikkoParkkola/mcp-gateway` and `mcp-aggregator` all collapse backend tools behind
+a search-and-invoke pair and sell it as context savings — **which MCP Tool Search
+already gives us natively, for free**. Paying indirection on every call for a
+benefit we already hold is a bad trade. Candidates that survived:
+[Rai-onl/mcp-gateway](https://github.com/rai-onl/mcp-gateway) and
+[common-creation/mcp-gateway](https://github.com/common-creation/mcp-gateway).
+
+**Method note worth keeping:** `doctor.sh` and `validate-keys.sh` both passed
+while `chrome-devtools` was broken. They check reachability and credentials, not
+whether a tool answers. A config that validates is not a plugin that works —
+verify by calling the tool.
+
+---
+
 ## 2026-08-19 — Wave 1 shipped: web-harvest split out, keys fixed
 
 Implemented `specs/2026-08-19-web-harvest-split-design.md` on branch

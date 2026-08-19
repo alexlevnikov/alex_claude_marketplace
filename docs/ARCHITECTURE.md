@@ -149,6 +149,26 @@ nothing on its own — if all the pieces stay enabled at user level, the same
 servers still start. Granularity is a *multiplier* on scope, not a substitute for
 it. Split **and** demote to project scope, or don't bother splitting.
 
+### Where this marketplace deliberately departs from that
+
+The rule above is the general one. **This setup rejects it** (Alex, 2026-08-19):
+plugins install at **user** scope, and servers must start when used. Per-project
+enabling is not an acceptable answer here — it makes availability depend on which
+directory a session happens to sit in.
+
+That is a strictly harder requirement, and it splits by transport:
+
+- **HTTP backends satisfy it for free.** No process is held; the connection
+  happens on the first call. This is why `web-harvest` can sit at user scope
+  costing nothing.
+- **stdio backends cannot satisfy it at all** without a gateway, because Claude
+  Code starts them with the session. `browser-lab`'s three servers are stdio-only
+  with no hosted variant, so it currently pays 3 processes per session at user
+  scope — accepted deliberately, pending the wave-2 gateway.
+
+So: **prefer HTTP; where a backend is stdio-only, a gateway is the only way to
+keep user scope honest.** See `IMPROVEMENT-LOG.md` for that decision's status.
+
 ---
 
 ## 5. The router-skill pattern

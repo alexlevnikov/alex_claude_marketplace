@@ -24,6 +24,7 @@ this is not a leak of orphans, it is the steady state):
 | mitmproxy | 16 | 11 MB | browser-lab |
 | firecrawl-mcp | 24 | **90 MB** | `firecrawl@claude-plugins-official` |
 | mcp-remote (inkeep) | 8 | 62 MB | leftover; config is already `type: http` |
+| @brightdata/mcp | 14 | 30 MB | leftover; pre-restart sessions on browser-lab 0.2.0 |
 | episodic-memory | 16 | 58 MB | third-party plugin |
 | superpowers-chrome | 8 | 27 MB | third-party plugin |
 | telegram, n8n | 7 | 22 MB | plugin / user scope |

@@ -1,10 +1,12 @@
 # Catalog
 
-Every routable tool, grouped by verb. `W` writes to code · `R` reports only. Verified present
-2026-08-20 in `design-studio/.claude/skills/`.
+Every routable tool, grouped by verb. `W` writes to code · `R` reports only. Presence is not
+asserted here — it is checked at call time by the resolver (`bash scripts/resolve.sh <tool>`;
+`--all` for the whole set), and the full registry of eighty-seven tools with vendor, class and
+group is `registry/tools.json`, rendered in `wiki/README.md`.
 
 Orchestrator-class skills are deliberately absent from this catalog — they belong to
-`design-pipeline`.
+`design-pipeline`. They are reachable by name through `/design-tools:<tool>`, never by route.
 
 ## LOOK — how it looks
 
@@ -17,6 +19,7 @@ Orchestrator-class skills are deliberately absent from this catalog — they bel
 | `bolder` | ui-craft | W | amplifying personality within the direction | a new direction |
 | `quieter` | ui-craft | W | restraint, toning down, reducing accent load | fixing a genuinely broken hierarchy |
 | `extract` | ui-craft | W | pulling repeated markup into components/tokens | first-time token setup |
+| `polish` | ui-craft | W | the final finish pass on a surface that is already right — reads `.ui-craft/brief.md` | a broken hierarchy; and not `impeccable polish` unless impeccable is named |
 | `high-end-visual-design` | taste-skill | W | making an existing surface read as expensive | wholesale redesign |
 | `shape` | ui-craft | W* | wireframing one new section (*writes a spec, not code) | a whole surface — that is the pipeline |
 
@@ -24,7 +27,7 @@ Orchestrator-class skills are deliberately absent from this catalog — they bel
 
 | Tool | Vendor | | For | Not for |
 |---|---|---|---|---|
-| `motion-design` | emil | W | timing, easing, choreography from scratch | fixing jank — that is performance |
+| `motion-design` | lottiefiles | W | timing, easing, choreography from scratch; Disney principles for UI | fixing jank — that is performance |
 | `emil-design-eng` | emil | W | component feel, springs, the invisible details | page-level motion planning |
 | `apple-design` | emil | W | gestures, drag, sheets, interruptibility, momentum | non-interactive entrance animation |
 | `delight` | ui-craft | W | purposeful micro-interactions | a motion system |
@@ -58,6 +61,7 @@ Orchestrator-class skills are deliberately absent from this catalog — they bel
 | `audit` | ui-craft | R | technical a11y audit inside a build session |
 | `web-quality-audit` | osmani | R | umbrella: performance + a11y + SEO + best practices |
 | `finalize` | ui-craft | R | READY / NOT READY / BLOCKED before merge |
+| `review-animations` | emil | R | animation code against Emil's craft bar — default to flagging |
 | `ui-craft:design-reviewer` + `ui-craft:a11y-auditor` | ui-craft | R | two fresh-context reviewers in parallel on a diff |
 
 ## LOOKUP — answer, don't act
@@ -77,4 +81,12 @@ whenever the chosen tool will write a long file.
 
 `gsap-core`, `gsap-react`, `ui-ux-pro-max` (enabled in settings, unresolvable in session) ·
 `theme-factory`, `brand-guidelines`, `canvas-design`, `web-artifacts-builder`, `webapp-testing`
-(not in this harness) · `review-animations` (in the registry, never installed).
+(not in this harness). Anything else the resolver reports `MISSING` at call time is absent *today*
+— say so, do not improvise.
+
+## In the set but not routed
+
+Techniques (`gsap-web`, `svg-animation`, `motion-dev-animations`, the rest of iart-ai), ui-craft
+phase commands (`brief`, `tokens`, `craft`, `sddesign`, …), presets, and every orchestrator
+(`impeccable`, `design-taste-frontend`, `awwwards`, …). All have a `/design-tools:<tool>` command
+and a wiki page; none is a route.

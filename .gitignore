@@ -23,3 +23,6 @@ node_modules/
 
 # mitmproxy-mcp scratch database
 mitm_mcp_traffic.db
+
+# Python bytecode from design-tools/scripts
+__pycache__/

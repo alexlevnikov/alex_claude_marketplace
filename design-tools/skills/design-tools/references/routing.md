@@ -19,6 +19,7 @@ Where a row lands on accessibility, performance, motion, polish, or review, **re
 | "this markup repeats everywhere" · «одно и то же копипастится» | `extract` |
 | "it should feel more expensive" · «должно выглядеть дороже» | `high-end-visual-design` |
 | "sketch this new section before we build it" · «набросай секцию» | `shape` |
+| "final finish pass" · «финальная полировка» · "it's right, now make it finished" | `polish` |
 
 ## Feel
 
@@ -58,6 +59,7 @@ Where a row lands on accessibility, performance, motion, polish, or review, **re
 | "run lighthouse" · «прогони полный аудит качества» | `web-quality-audit` |
 | "can I merge this" · «можно мержить?» · "is it done" · «это готово?» | `finalize` |
 | "review this diff properly" · «отревьюй дифф» | `ui-craft:design-reviewer` + `ui-craft:a11y-auditor` |
+| "review this animation code" · «отревьюй код анимации» · "is this motion up to standard" | `review-animations` |
 
 ## Escalate — not this plugin
 
@@ -67,6 +69,12 @@ Where a row lands on accessibility, performance, motion, polish, or review, **re
 | "redesign the homepage" · «переделай главную» | `design-pipeline` |
 | "make it look completely different" · «сделай совсем другой вид» | `design-pipeline` |
 | "we need a landing for the campaign" · «нужен лендинг» | `design-pipeline` |
+
+## Named outright — do not route, engage
+
+"run impeccable on the hero" · «прогони impeccable» · "use typeset here" · «возьми typeset» — the
+user has chosen. `/design-tools:<tool>` (or the same resolve-and-load by hand, `loading.md`). The
+only check left is the orchestrator one: a second orchestrator in this context is still a no.
 
 ## Ask, do not route
 

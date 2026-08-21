@@ -5,7 +5,7 @@
 Makes an existing surface read as expensive: shadows, cards, spacing, 'absolute zero' anti-patterns.
 
 **Vendor:** [taste-skill by Leonxlnx](../vendors/taste.md) · https://github.com/Leonxlnx/taste-skill
-**Mode:** W · **Class:** pass · **Group:** look · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** look · **Routable:** yes — discovery proposes it freely
 
 **For:** making an existing surface read as expensive: shadows, cards, spacing; 'absolute zero' anti-patterns
 **Not for:** wholesale redesign
@@ -14,7 +14,7 @@ Makes an existing surface read as expensive: shadows, cards, spacing, 'absolute 
 
 - Direct: `/design-tools:taste-high-end-visual-design <target>`
 - Vendor entry point: `/design-tools:taste` — runs the vendor's master `design-taste-frontend`
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "it should feel more expensive" · «должно выглядеть дороже»
 
 ## What the vendor says

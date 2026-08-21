@@ -5,7 +5,7 @@
 Answers questions about the Sonner toast library.
 
 **Vendor:** [Emil Kowalski](../vendors/emil.md) · https://github.com/emilkowalski/skills
-**Mode:** R · **Class:** lookup · **Group:** lookup · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** R · **Class:** lookup · **Group:** lookup · **Routable:** yes — discovery proposes it freely
 
 **For:** questions about the Sonner toast library
 **Not for:** other toast libraries
@@ -14,7 +14,7 @@ Answers questions about the Sonner toast library.
 
 - Direct: `/design-tools:emil-ask-sonner <target>`
 - Vendor entry point: `/design-tools:emil` — lists the vendor's tools
-- Through the router: `/design-tools:tool <your words>` — no fixed phrasing recorded yet in `routing.md`.
+- Discovery: `/design-tools:discover <your words>` can propose it — no fixed phrasing recorded yet in `phrases.md`.
 
 ## What the vendor says
 

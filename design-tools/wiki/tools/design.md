@@ -5,7 +5,7 @@
 Design principles from ten canonical books, for when a decision needs a reason behind it; read-only.
 
 **Vendor:** [frhscopex design-skill-os](../vendors/design-skill-os.md) · https://github.com/frhscopex/design-skill-os
-**Mode:** R · **Class:** lookup · **Group:** lookup · **Routable:** no — direct engagement only (`/design-tools:design-skill-os`)
+**Mode:** R · **Class:** lookup · **Group:** lookup · **Routable:** direct or whole-vendor only (`/design-tools:design-skill-os`)
 
 **For:** design principles from ten canonical books, when a decision needs a reason behind it
 **Not for:** producing code
@@ -14,7 +14,7 @@ Design principles from ten canonical books, for when a decision needs a reason b
 
 - Direct: `/design-tools:design-skill-os <target>`
 - Vendor entry point: `/design-tools:design-skill-os` — runs this very skill as the vendor's master
-- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
+- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.
 
 ## What the vendor says
 

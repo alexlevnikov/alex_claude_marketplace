@@ -11,7 +11,7 @@ audit, animate, fix, "make prettier". Prior art for the orchestrators that follo
 ## The contract
 
 Orchestrator-class and maximally broad. It wants to fire on *any* UI request, which is precisely the
-behaviour the router exists to prevent; keep it out of sessions where passes are running.
+behaviour discovery exists to replace with a list; keep it out of sessions where passes are running.
 
 ## Engage
 

@@ -8,10 +8,10 @@ allowed-tools: Bash(bash ${CLAUDE_PLUGIN_ROOT}/scripts/resolve.sh:*), Bash(bash 
 # Shawnchee — vendor master: `frontend-god-mode`
 
 `/design-tools:frontend-god-mode` runs **frontend-god-mode**, the skill this vendor calls its entry point, **the way the vendor
-designed it** — its own discovery questions, modes, knobs, argument format and report. The router's
-pass discipline (one tool, two-write maximum, read-only first) is deliberately *not* layered on top:
-this command exists precisely to let the vendor's own flow run. Two things still hold, because they
-are yours, not the router's: `BRAND-CONTRACT.md` answers the vendor's brand and preference questions
+designed it** — its own discovery questions, modes, knobs, argument format and report. The plugin's
+guardrails (read-only first, one tool per step) are deliberately *not* layered on top: this command
+exists precisely to let the vendor's own flow run. Two things still hold, because they are yours,
+not the plugin's: `BRAND-CONTRACT.md` answers the vendor's brand and preference questions
 (its tokens and forbidden list are the answer, not a suggestion), and you end by saying what changed,
 one line per file.
 
@@ -39,7 +39,7 @@ Argument format: `[target] [notes]`
    asks about brand, tokens, fonts, colours or preferences. If `.ui-craft/brief.md` exists, its §6
    applies too.
 4. Follow the vendor's flow to its own end — its questions, its passes, its report. Do not
-   substitute the router's steps. One constraint survives: **no second orchestrator-class skill in
+   substitute the plugin's steps. One constraint survives: **no second orchestrator-class skill in
    this context**; if the vendor's flow wants one, say so and stop.
 5. Report what changed, one line per file.
 

@@ -5,7 +5,7 @@
 ui-craft base with an editorial, type-led aesthetic fixed in.
 
 **Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
-**Mode:** W · **Class:** preset · **Group:** preset · **Routable:** no — direct engagement only (`/design-tools:ui-craft-editorial`)
+**Mode:** W · **Class:** preset · **Group:** preset · **Routable:** direct or whole-vendor only (`/design-tools:ui-craft-editorial`)
 
 **For:** ui-craft with an editorial aesthetic fixed
 **Not for:** surfaces with a brand contract
@@ -14,7 +14,7 @@ ui-craft base with an editorial, type-led aesthetic fixed in.
 
 - Direct: `/design-tools:ui-craft-editorial <target>`
 - Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
-- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
+- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.
 
 ## What the vendor says
 

@@ -11,7 +11,7 @@ frosted glass; 60fps CSS; `prefers-reduced-motion`.
 
 ## The contract
 
-How-to, not taste. These are **not routed** by the router: they assume the motion decision is
+How-to, not taste. Discovery proposes these only when the technique is named: they assume the motion decision is
 already made and a technique is named. Reach for one after `motion-design` / `emil-design-eng`
 decided what should move — or directly, when the user names the technique ("add a ScrollTrigger
 pin here"). `glassmorphism` is off-limits on YOURSAUNAS surfaces unless the brand contract allows it.

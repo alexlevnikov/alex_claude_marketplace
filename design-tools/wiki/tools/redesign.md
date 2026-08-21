@@ -5,7 +5,7 @@
 ui-craft's redesign lens: re-composes an existing surface against the brief and tokens.
 
 **Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:ui-craft-redesign`)
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** direct or whole-vendor only (`/design-tools:ui-craft-redesign`)
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
 
@@ -16,7 +16,7 @@ ui-craft's redesign lens: re-composes an existing surface against the brief and 
 
 - Direct: `/design-tools:ui-craft-redesign <target>`
 - Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
-- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
+- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.
 
 ## What the vendor says
 

@@ -39,6 +39,6 @@ dashboard, landing and auth — **no e-commerce recipe**, and it refuses to impr
 
 ## Engage
 
-- Router: almost every LOOK / FIX / JUDGE route lands on a ui-craft lens.
+- Discovery: almost every LOOK / FIX / JUDGE candidate is a ui-craft lens.
 - Direct: `/design-tools:typeset`, `/design-tools:unhappy`, `/design-tools:finalize`, …
 - Whole surfaces: `design-pipeline` wraps `brief → tokens → shape → craft → unhappy → harden → finalize` as gates G1–G9.

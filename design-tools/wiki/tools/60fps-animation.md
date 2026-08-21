@@ -5,7 +5,7 @@
 Makes janky CSS animation hit 60fps.
 
 **Vendor:** [iart-ai web-animation](../vendors/iart.md) · https://github.com/iart-ai/web-animation-skills
-**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** no — direct engagement only (`/design-tools:iart-60fps-animation`)
+**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** direct or whole-vendor only (`/design-tools:iart-60fps-animation`)
 
 **For:** make a janky CSS animation hit 60fps
 **Not for:** deciding what should move
@@ -14,7 +14,7 @@ Makes janky CSS animation hit 60fps.
 
 - Direct: `/design-tools:iart-60fps-animation <target>`
 - Vendor entry point: `/design-tools:iart` — lists the vendor's tools
-- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
+- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.
 
 ## What the vendor says
 

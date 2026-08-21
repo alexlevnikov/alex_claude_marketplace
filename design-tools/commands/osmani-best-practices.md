@@ -8,7 +8,7 @@ allowed-tools: Bash(bash ${CLAUDE_PLUGIN_ROOT}/scripts/resolve.sh:*), Bash(bash 
 # `best-practices` (Addy Osmani web-quality) — direct engagement
 
 `/design-tools:osmani-best-practices` — you asked for **best-practices** by name, so `design-tools` is not routing — it is
-loading. The router's discipline still holds: read-only before write, the brand contract outranks
+loading. The guardrails still hold: read-only before write, the brand contract outranks
 the vendor, say what changed. Reference card: `wiki/tools/best-practices.md` · vendor: `wiki/vendors/osmani.md`.
 Whole-vendor entry point: `/design-tools:osmani`.
 

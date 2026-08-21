@@ -5,7 +5,7 @@
 Read-only: finds where motion is missing but earned, and proposes it.
 
 **Vendor:** [Emil Kowalski](../vendors/emil.md) · https://github.com/emilkowalski/skills
-**Mode:** R · **Class:** judge · **Group:** feel · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** R · **Class:** judge · **Group:** feel · **Routable:** yes — discovery proposes it freely
 
 **For:** where motion is missing but earned
 **Not for:** improving motion that exists
@@ -14,7 +14,7 @@ Read-only: finds where motion is missing but earned, and proposes it.
 
 - Direct: `/design-tools:emil-find-animation-opportunities <target>`
 - Vendor entry point: `/design-tools:emil` — lists the vendor's tools
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "add some motion" · «оживи страницу» · "it feels static"
 
 ## What the vendor says

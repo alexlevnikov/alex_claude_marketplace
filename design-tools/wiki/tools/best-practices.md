@@ -5,7 +5,7 @@
 Security headers, CSP and modern platform practices.
 
 **Vendor:** [Addy Osmani web-quality](../vendors/osmani.md) · https://github.com/addyosmani/web-quality-skills
-**Mode:** W · **Class:** pass · **Group:** fix · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** fix · **Routable:** yes — discovery proposes it freely
 
 **For:** security headers, CSP, modernisation
 **Not for:** design questions
@@ -14,7 +14,7 @@ Security headers, CSP and modern platform practices.
 
 - Direct: `/design-tools:osmani-best-practices <target>`
 - Vendor entry point: `/design-tools:osmani` — lists the vendor's tools
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "security headers" · «проверь безопасность» · "is this code modern"
 
 ## What the vendor says

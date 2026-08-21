@@ -5,7 +5,7 @@
 Tones a loud surface down: fewer accents, calmer type and motion, more whitespace.
 
 **Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
-**Mode:** W · **Class:** pass · **Group:** look · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** look · **Routable:** yes — discovery proposes it freely
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
 
@@ -16,7 +16,7 @@ Tones a loud surface down: fewer accents, calmer type and motion, more whitespac
 
 - Direct: `/design-tools:ui-craft-quieter <target>`
 - Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "too loud" · «слишком кричаще» · «сделай спокойнее» · "tone it down"
 
 ## What the vendor says

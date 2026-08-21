@@ -5,7 +5,7 @@
 Three.js EffectComposer passes: bloom, depth of field and more.
 
 **Vendor:** [cloudai-x threejs](../vendors/threejs.md) · https://github.com/cloudai-x/threejs-skills
-**Mode:** W · **Class:** technique · **Group:** lookup · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** technique · **Group:** lookup · **Routable:** yes — discovery proposes it freely
 
 **For:** EffectComposer passes, bloom, DOF
 **Not for:** React
@@ -14,7 +14,7 @@ Three.js EffectComposer passes: bloom, depth of field and more.
 
 - Direct: `/design-tools:threejs-postprocessing <target>`
 - Vendor entry point: `/design-tools:threejs` — lists the vendor's tools
-- Through the router: `/design-tools:tool <your words>` — no fixed phrasing recorded yet in `routing.md`.
+- Discovery: `/design-tools:discover <your words>` can propose it — no fixed phrasing recorded yet in `phrases.md`.
 
 ## What the vendor says
 

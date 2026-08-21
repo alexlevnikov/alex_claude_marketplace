@@ -20,6 +20,6 @@ than a plan, and with `fixing-motion-performance` when what exists janks.
 
 ## Engage
 
-- Router: "add some motion" → `find-animation-opportunities` (R) → `motion-design` (W); "the timing feels wrong" → `motion-design`.
+- Discovery: "add some motion" → `find-animation-opportunities` (R) → `motion-design` (W); "the timing feels wrong" → `motion-design`.
 - Direct: `/design-tools:motion-design`.
 - Whole surfaces: `design-pipeline` G7 opens with it.

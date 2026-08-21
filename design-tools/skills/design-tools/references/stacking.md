@@ -15,7 +15,8 @@
 ## The rules
 
 1. **Read-only before write** on any code you have not seen this session.
-2. **Two write-tools maximum per request.** The third means escalate.
+2. **The user chooses the set** (discovery). A set of five writes is allowed but usually a sign the
+   direction is wrong — say so in the list, and name `design-pipeline`.
 3. **Never chain two tools that own the same aspect.** `typeset` then `high-end-visual-design` is
    two type opinions fighting; pick one.
 4. **Re-read the brand contract between tools** if the first one wrote a lot. Vendors drift toward
@@ -25,10 +26,10 @@
 
 ## When a fresh context is required
 
-Not for passes — they compose. Only for orchestrator-class skills, and this plugin routes to none.
-If a request genuinely needs one (`impeccable`, `design-taste-frontend`, `craft`), that is the
-escalation signal, not a stacking question: hand it to `design-pipeline`, which dispatches
-orchestrators in isolated subagents by design.
+Not for passes — they compose. Only for orchestrator-class skills. Discovery lists those as
+whole-vendor options (one alone, in its own context); a prompt with two of them is refused at
+compose time. A whole new surface is `design-pipeline`, which dispatches orchestrators in isolated
+subagents by design.
 
 ## The escalation sentence
 

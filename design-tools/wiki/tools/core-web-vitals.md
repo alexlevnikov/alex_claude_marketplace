@@ -5,7 +5,7 @@
 Diagnoses and fixes LCP, INP and CLS by name.
 
 **Vendor:** [Addy Osmani web-quality](../vendors/osmani.md) · https://github.com/addyosmani/web-quality-skills
-**Mode:** W · **Class:** pass · **Group:** fix · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** fix · **Routable:** yes — discovery proposes it freely
 
 **For:** LCP, INP, CLS by name
 **Not for:** general page weight
@@ -14,7 +14,7 @@ Diagnoses and fixes LCP, INP and CLS by name.
 
 - Direct: `/design-tools:osmani-core-web-vitals <target>`
 - Vendor entry point: `/design-tools:osmani` — lists the vendor's tools
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "LCP is bad" · "fix CLS" · «плохие Core Web Vitals»
 
 ## What the vendor says

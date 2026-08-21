@@ -5,7 +5,7 @@
 Ship gate: READY / NOT READY / BLOCKED with findings; never edits.
 
 **Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
-**Mode:** R · **Class:** judge · **Group:** judge · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** R · **Class:** judge · **Group:** judge · **Routable:** yes — discovery proposes it freely
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
 
@@ -16,7 +16,7 @@ Ship gate: READY / NOT READY / BLOCKED with findings; never edits.
 
 - Direct: `/design-tools:ui-craft-finalize <target>`
 - Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "can I merge this" · «можно мержить?» · "is it done" · «это готово?»
 
 ## What the vendor says

@@ -5,7 +5,7 @@
 Applies Awwwards-winning design principles to a surface; orchestrator.
 
 **Vendor:** [tponscr-debug](../vendors/awwwards.md) · https://github.com/tponscr-debug/claude-skill-awwwards
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:awwwards`)
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** direct or whole-vendor only (`/design-tools:awwwards`)
 
 **For:** Awwwards-style visual ambition on a surface
 **Not for:** a pass; own context
@@ -14,7 +14,7 @@ Applies Awwwards-winning design principles to a surface; orchestrator.
 
 - Direct: `/design-tools:awwwards <target>`
 - Vendor entry point: `/design-tools:awwwards` — runs this very skill as the vendor's master
-- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
+- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.
 
 ## What the vendor says
 

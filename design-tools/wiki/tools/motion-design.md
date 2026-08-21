@@ -5,7 +5,7 @@
 Designs motion from scratch: timing, easing, choreography, Disney principles; any animation stack.
 
 **Vendor:** [LottieFiles](../vendors/lottie.md) · https://github.com/lottiefiles/motion-design-skill
-**Mode:** W · **Class:** pass · **Group:** feel · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** feel · **Routable:** yes — discovery proposes it freely
 
 **For:** timing, easing, choreography from scratch; Disney principles adapted for UI
 **Not for:** fixing jank — that is `fixing-motion-performance`
@@ -14,7 +14,7 @@ Designs motion from scratch: timing, easing, choreography, Disney principles; an
 
 - Direct: `/design-tools:lottie-motion-design <target>`
 - Vendor entry point: `/design-tools:lottie` — runs this very skill as the vendor's master
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "add some motion" · «оживи страницу» · "it feels static"
   - "the timing feels wrong" · «анимация не та по ощущению»
 

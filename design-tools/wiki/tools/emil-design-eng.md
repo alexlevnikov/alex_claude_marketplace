@@ -5,7 +5,7 @@
 Polishes how a component feels: springs, interruptibility, the invisible details — Emil Kowalski's bar.
 
 **Vendor:** [Emil Kowalski](../vendors/emil.md) · https://github.com/emilkowalski/skills
-**Mode:** W · **Class:** pass · **Group:** feel · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** feel · **Routable:** yes — discovery proposes it freely
 
 **For:** component feel, springs, the invisible details; component contracts; review format
 **Not for:** page-level motion planning
@@ -14,7 +14,7 @@ Polishes how a component feels: springs, interruptibility, the invisible details
 
 - Direct: `/design-tools:emil-design-eng <target>`
 - Vendor entry point: `/design-tools:emil` — lists the vendor's tools
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "this component feels cheap" · «компонент ощущается дёшево»
 
 ## What the vendor says

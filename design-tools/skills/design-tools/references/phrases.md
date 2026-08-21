@@ -1,10 +1,12 @@
-# Routing
+# Phrases
 
-The user's words → one tool. Written in the phrasing people actually use, English and Russian,
-because a table keyed on filenames only fires when the request happens to use the filename.
+The user's words → the tool they usually mean, in the phrasing people actually use, English and
+Russian. Since 0.4.0 this is **not a route**: `scripts/discover.py` reads these rows as one input to
+its lexical pre-rank, and the discovery skill reads them as a hint when it ranks candidates. A row
+here raises a tool's score; it never decides alone.
 
-Where a row lands on accessibility, performance, motion, polish, or review, **read
-`collisions.md` before calling** — those five are contested by two or three vendors each.
+Where a row lands on accessibility, performance, motion, polish, or review, **read `collisions.md`**
+— those five are contested by two or three vendors each, and discovery must say which and why.
 
 ## Look
 

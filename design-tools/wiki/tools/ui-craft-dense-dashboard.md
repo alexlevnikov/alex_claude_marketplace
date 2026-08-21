@@ -5,7 +5,7 @@
 ui-craft base tuned for dense data dashboards and tables.
 
 **Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
-**Mode:** W · **Class:** preset · **Group:** preset · **Routable:** no — direct engagement only (`/design-tools:ui-craft-dense-dashboard`)
+**Mode:** W · **Class:** preset · **Group:** preset · **Routable:** direct or whole-vendor only (`/design-tools:ui-craft-dense-dashboard`)
 
 **For:** ui-craft tuned for dense data dashboards
 **Not for:** marketing and commerce surfaces
@@ -14,7 +14,7 @@ ui-craft base tuned for dense data dashboards and tables.
 
 - Direct: `/design-tools:ui-craft-dense-dashboard <target>`
 - Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
-- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
+- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.
 
 ## What the vendor says
 

@@ -8,7 +8,7 @@ allowed-tools: Bash(bash ${CLAUDE_PLUGIN_ROOT}/scripts/resolve.sh:*), Bash(bash 
 # `imagegen-frontend-mobile` (taste-skill by Leonxlnx) — direct engagement
 
 `/design-tools:taste-imagegen-frontend-mobile` — you asked for **imagegen-frontend-mobile** by name, so `design-tools` is not routing — it is
-loading. The router's discipline still holds: read-only before write, the brand contract outranks
+loading. The guardrails still hold: read-only before write, the brand contract outranks
 the vendor, say what changed. Reference card: `wiki/tools/imagegen-frontend-mobile.md` · vendor: `wiki/vendors/taste.md`.
 Whole-vendor entry point: `/design-tools:taste`.
 

@@ -5,7 +5,7 @@
 Fixes janky animation: compositor-only properties, layout thrash, reduced-motion, perf budget.
 
 **Vendor:** [ui-skills by ibelick](../vendors/ibelick.md) · https://github.com/ibelick/ui-skills
-**Mode:** W · **Class:** pass · **Group:** feel · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** feel · **Routable:** yes — discovery proposes it freely
 
 **For:** jank, layout thrashing, compositor-only properties, reduced-motion, perf budget
 **Not for:** how motion should feel
@@ -14,7 +14,7 @@ Fixes janky animation: compositor-only properties, layout thrash, reduced-motion
 
 - Direct: `/design-tools:ibelick-fixing-motion-performance <target>`
 - Vendor entry point: `/design-tools:ibelick` — lists the vendor's tools
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "it stutters" · «дёргается» · "janky" · «лагает при скролле»
 
 ## What the vendor says

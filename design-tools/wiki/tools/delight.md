@@ -5,7 +5,7 @@
 Adds purposeful micro-interactions — hover, press, success moments — within the motion tokens.
 
 **Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
-**Mode:** W · **Class:** pass · **Group:** feel · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** feel · **Routable:** yes — discovery proposes it freely
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
 
@@ -16,7 +16,7 @@ Adds purposeful micro-interactions — hover, press, success moments — within 
 
 - Direct: `/design-tools:ui-craft-delight <target>`
 - Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "add a nice touch on hover" · «микро-взаимодействие на ховер»
 
 ## What the vendor says

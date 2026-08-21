@@ -1,13 +1,14 @@
 # Catalog
 
-Every routable tool, grouped by verb. `W` writes to code · `R` reports only. Presence is not
+Every tool discovery proposes freely ("routable"), grouped by verb. `W` writes to code · `R` reports only. Presence is not
 asserted here — it is checked at call time by the resolver (`bash scripts/resolve.sh <tool>`;
 `--all` for the whole set), and the full registry of eighty-seven tools with vendor, class and
 group is `registry/tools.json`, rendered in `wiki/README.md`.
 
 Orchestrator-class skills are deliberately absent from this catalog — they belong to
 `design-pipeline`. They are reachable by name through `/design-tools:<vendor>-<tool>` (or the vendor's
-entry command `/design-tools:<vendor>`, which runs its master skill as designed), never by route.
+entry command `/design-tools:<vendor>`, which runs its master skill as designed); discovery lists them
+only as whole-vendor options.
 
 ## LOOK — how it looks
 
@@ -90,4 +91,4 @@ whenever the chosen tool will write a long file.
 Techniques (`gsap-web`, `svg-animation`, `motion-dev-animations`, the rest of iart-ai), ui-craft
 phase commands (`brief`, `tokens`, `craft`, `sddesign`, …), presets, and every orchestrator
 (`impeccable`, `design-taste-frontend`, `awwwards`, …). All have a `/design-tools:<vendor>-<tool>` command
-and a wiki page; none is a route.
+and a wiki page; discovery proposes them only when the request names the technique or the vendor.

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """build.py — regenerate the per-tool commands and the wiki from registry/tools.json.
 
-Reads:   registry/tools.json, each tool's installed SKILL.md (via resolve.py), and the router's
-         references (routing.md, collisions.md, stacking.md) for cross-links.
+Reads:   registry/tools.json, each tool's installed SKILL.md (via resolve.py), and the skill's
+         references (phrases.md, collisions.md, stacking.md) for cross-links.
 Writes:  commands/<tool>.md        one slash command per tool → /design-tools:<tool>
          wiki/tools/<tool>.md      one page per tool
          wiki/README.md            the index (vendors, tools by group, health)
@@ -116,7 +116,7 @@ def skill_facts(path: Path) -> dict:
     }
 
 
-# ---------------------------------------------------------------- router references ------------
+# ---------------------------------------------------------------- skill references -------------
 
 def routing_phrases(tool: str, routing_md: str) -> list[str]:
     out = []
@@ -175,7 +175,7 @@ CLASS_NOTES = {
     "judge": "**Judge.** Read-only by contract: report, score or verdict — change no files.",
     "technique": (
         "**Technique.** A framework- or effect-specific how-to. It assumes the motion or 3D decision "
-        "is already made; if it is not, route the taste question first (`/design-tools:tool`)."
+        "is already made; if it is not, run the taste question through `/design-tools:discover` first."
     ),
     "pass": "",
 }
@@ -224,7 +224,7 @@ allowed-tools: Bash(bash ${{CLAUDE_PLUGIN_ROOT}}/scripts/resolve.sh:*), Bash(bas
 # `{tool}` ({vendor['display']}) — direct engagement
 
 `/design-tools:{cmd}` — you asked for **{tool}** by name, so `design-tools` is not routing — it is
-loading. The router's discipline still holds: read-only before write, the brand contract outranks
+loading. The guardrails still hold: read-only before write, the brand contract outranks
 the vendor, say what changed. Reference card: `wiki/tools/{tool}.md` · vendor: `wiki/vendors/{meta['vendor']}.md`.
 Whole-vendor entry point: `/design-tools:{meta['vendor']}`.
 
@@ -263,10 +263,10 @@ def vendor_command_md(vkey: str, vendor: dict, rows: list[dict], master_row: dic
         body = f"""# {vendor['display']} — vendor master: `{mt}`
 
 `/design-tools:{vkey}` runs **{mt}**, the skill this vendor calls its entry point, **the way the vendor
-designed it** — its own discovery questions, modes, knobs, argument format and report. The router's
-pass discipline (one tool, two-write maximum, read-only first) is deliberately *not* layered on top:
-this command exists precisely to let the vendor's own flow run. Two things still hold, because they
-are yours, not the router's: `BRAND-CONTRACT.md` answers the vendor's brand and preference questions
+designed it** — its own discovery questions, modes, knobs, argument format and report. The plugin's
+guardrails (read-only first, one tool per step) are deliberately *not* layered on top: this command
+exists precisely to let the vendor's own flow run. Two things still hold, because they are yours,
+not the plugin's: `BRAND-CONTRACT.md` answers the vendor's brand and preference questions
 (its tokens and forbidden list are the answer, not a suggestion), and you end by saying what changed,
 one line per file.
 
@@ -294,7 +294,7 @@ Argument format: `{hint}`
    asks about brand, tokens, fonts, colours or preferences. If `.ui-craft/brief.md` exists, its §6
    applies too.
 4. Follow the vendor's flow to its own end — its questions, its passes, its report. Do not
-   substitute the router's steps. One constraint survives: **no second orchestrator-class skill in
+   substitute the plugin's steps. One constraint survives: **no second orchestrator-class skill in
    this context**; if the vendor's flow wants one, say so and stop.
 5. Report what changed, one line per file.
 
@@ -360,7 +360,7 @@ def tool_page(tool: str, meta: dict, vendor: dict, res: dict, facts: dict | None
     if fm.get("allowed-tools"):
         at = fm["allowed-tools"]
         flags.append("`allowed-tools: " + (", ".join(at) if isinstance(at, list) else str(at)) + "`")
-    routable = "yes — `/design-tools:tool` can land here" if meta["routable"] else "no — direct engagement only (`/design-tools:" + cmd_name(tool, meta) + "`)"
+    routable = "yes — discovery proposes it freely" if meta["routable"] else "direct or whole-vendor only (`/design-tools:" + cmd_name(tool, meta) + "`)"
     where = res.get("skill", "—")
     found = res.get("found_in", "—")
     base_line = ""
@@ -372,12 +372,12 @@ def tool_page(tool: str, meta: dict, vendor: dict, res: dict, facts: dict | None
               + (" — runs this very skill as the vendor's master" if vendor.get("master") == tool else
                  (f" — runs the vendor's master `{vendor['master']}`" if vendor.get("master") else " — lists the vendor's tools"))]
     if phrases:
-        engage.append("- Through the router, these phrasings land here:")
+        engage.append("- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:")
         engage += [f"  - {p}" for p in phrases]
     elif meta["routable"]:
-        engage.append("- Through the router: `/design-tools:tool <your words>` — no fixed phrasing recorded yet in `routing.md`.")
+        engage.append("- Discovery: `/design-tools:discover <your words>` can propose it — no fixed phrasing recorded yet in `phrases.md`.")
     else:
-        engage.append("- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.")
+        engage.append("- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.")
 
     def _cap(items: list[str], n: int = 20) -> str:
         shown = ", ".join(f"`{x}`" for x in items[:n])
@@ -478,13 +478,14 @@ def readme(reg: dict, rows: list[dict]) -> str:
 
 # design-tools wiki
 
-Every vendor and every tool in the set, how each is engaged, and where it actually lives. The
-router (`/design-tools:tool`) picks one of these; the per-tool commands (`/design-tools:<tool>`)
-engage one by name. Both load the tool the same way — see [LOADING.md](LOADING.md).
+Every vendor and every tool in the set, how each is engaged, and where it actually lives.
+`/design-tools:discover <task>` runs a request through all of them and lets you pick; the per-tool
+commands (`/design-tools:<vendor>-<tool>`) engage one by name; `/design-tools:<vendor>` runs a vendor's
+master as designed. All load a tool the same way — see [LOADING.md](LOADING.md).
 
 ## How a tool is loaded
 
-1. The tool is chosen — by the router or by you naming it.
+1. The tool is chosen — picked from discovery's list, or named by you.
 2. `scripts/resolve.sh <tool>` finds its `SKILL.md`: project `.claude/skills` → `~/.claude/skills` →
    configured roots → the registry roots below.
 3. `load: skill` (found in project/user scope) → the Skill tool by name. `load: read` (found in a
@@ -507,12 +508,14 @@ Health: {health}
 
 ## Other commands
 
-- `/design-tools:tool <your words>` — route to exactly one tool and run it.
+- `/design-tools:discover <task in your words>` — the front door: candidates → you pick → a prompt is
+  written to `.design-tools/<slug>.prompt.md` → run now or later.
+- `/design-tools:run [file]` — execute a written prompt, loading the tools exactly as it says.
 - `/design-tools:tools-list [group]` — print the catalog, change nothing.
 - `/design-tools:<vendor>` — the vendor's entry point: runs its master skill exactly as the vendor
   designed it (ui-craft, impeccable, taste → design-taste-frontend, …), or lists the vendor's tools
   when it has no master (emil, osmani, ibelick, iart, threejs).
-- `/design-tools:<vendor>-<tool> <target>` — engage one tool by name, bypassing the router. Names are
+- `/design-tools:<vendor>-<tool> <target>` — engage one tool by name, skipping discovery. Names are
   vendor-prefixed so the picker groups them: type `/design-tools:ui-craft` to see every ui-craft lens.
   One command per tool ({len(rows)} in total) plus one per vendor, regenerated by `python3 scripts/build.py`.
 - `/design-tools:demo [tool]` — open the design-studio dashboard (or one tool's bake-off demo) in the
@@ -524,7 +527,7 @@ Health: {health}
 
 def build(check: bool) -> int:
     reg = R.load_registry()
-    routing_md = (REFS / "routing.md").read_text(encoding="utf-8")
+    routing_md = (REFS / "phrases.md").read_text(encoding="utf-8")
     collisions_md = (REFS / "collisions.md").read_text(encoding="utf-8")
     stacking_md = (REFS / "stacking.md").read_text(encoding="utf-8")
 

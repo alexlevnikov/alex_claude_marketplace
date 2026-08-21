@@ -8,7 +8,7 @@ allowed-tools: Bash(bash ${CLAUDE_PLUGIN_ROOT}/scripts/resolve.sh:*), Bash(bash 
 # `animation-vocabulary` (Emil Kowalski) — direct engagement
 
 `/design-tools:emil-animation-vocabulary` — you asked for **animation-vocabulary** by name, so `design-tools` is not routing — it is
-loading. The router's discipline still holds: read-only before write, the brand contract outranks
+loading. The guardrails still hold: read-only before write, the brand contract outranks
 the vendor, say what changed. Reference card: `wiki/tools/animation-vocabulary.md` · vendor: `wiki/vendors/emil.md`.
 Whole-vendor entry point: `/design-tools:emil`.
 

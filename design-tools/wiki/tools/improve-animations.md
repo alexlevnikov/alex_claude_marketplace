@@ -5,7 +5,7 @@
 Read-only: audits all existing motion and writes a plan for other agents.
 
 **Vendor:** [Emil Kowalski](../vendors/emil.md) · https://github.com/emilkowalski/skills
-**Mode:** R · **Class:** judge · **Group:** feel · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** R · **Class:** judge · **Group:** feel · **Routable:** yes — discovery proposes it freely
 
 **For:** audit all motion and produce a plan for other agents
 **Not for:** one component
@@ -14,7 +14,7 @@ Read-only: audits all existing motion and writes a plan for other agents.
 
 - Direct: `/design-tools:emil-improve-animations <target>`
 - Vendor entry point: `/design-tools:emil` — lists the vendor's tools
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "audit all the animation in here" · «отревьюй весь моушн»
 
 ## What the vendor says

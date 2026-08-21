@@ -17,5 +17,5 @@ belongs to [emil](emil.md). `collisions.md` §1 and §2 encode exactly this.
 
 ## Engage
 
-- Router: "keyboard navigation is broken" → `fixing-accessibility`; "it stutters" → `fixing-motion-performance`.
+- Discovery: "keyboard navigation is broken" → `fixing-accessibility`; "it stutters" → `fixing-motion-performance`.
 - Direct: `/design-tools:fixing-accessibility`, `/design-tools:fixing-motion-performance`, `/design-tools:baseline-ui`.

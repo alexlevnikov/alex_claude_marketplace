@@ -5,7 +5,7 @@
 pbakaus's design director with internal modes — shape, audit, critique, typeset, colorize, polish, harden, live and more.
 
 **Vendor:** [impeccable by pbakaus](../vendors/impeccable.md) · https://github.com/pbakaus/impeccable
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:impeccable`)
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** direct or whole-vendor only (`/design-tools:impeccable`)
 
 **For:** high-variance art direction (DESIGN_VARIANCE ≥ 7) with internal modes: shape · audit|critique · animate|bolder|colorize|delight|layout|overdrive|quieter|typeset · adapt|clarify|distill · harden|onboard|optimize|polish · init|document|extract|live
 **Not for:** a cheap pass; ~3× the cost of `design-taste-frontend`; never beside another orchestrator
@@ -14,7 +14,7 @@ pbakaus's design director with internal modes — shape, audit, critique, typese
 
 - Direct: `/design-tools:impeccable <target>`
 - Vendor entry point: `/design-tools:impeccable` — runs this very skill as the vendor's master
-- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
+- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.
 
 ## What the vendor says
 

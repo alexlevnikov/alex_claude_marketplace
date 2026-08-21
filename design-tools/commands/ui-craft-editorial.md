@@ -8,7 +8,7 @@ allowed-tools: Bash(bash ${CLAUDE_PLUGIN_ROOT}/scripts/resolve.sh:*), Bash(bash 
 # `ui-craft-editorial` (ui-craft by educlopez) — direct engagement
 
 `/design-tools:ui-craft-editorial` — you asked for **ui-craft-editorial** by name, so `design-tools` is not routing — it is
-loading. The router's discipline still holds: read-only before write, the brand contract outranks
+loading. The guardrails still hold: read-only before write, the brand contract outranks
 the vendor, say what changed. Reference card: `wiki/tools/ui-craft-editorial.md` · vendor: `wiki/vendors/ui-craft.md`.
 Whole-vendor entry point: `/design-tools:ui-craft`.
 

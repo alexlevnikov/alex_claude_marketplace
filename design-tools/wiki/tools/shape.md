@@ -5,7 +5,7 @@
 Wireframes one new section into .ui-craft/spec.md — layout, state lattice, acceptance bar; writes a spec, not code.
 
 **Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
-**Mode:** W · **Class:** pass · **Group:** look · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** look · **Routable:** yes — discovery proposes it freely
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
 
@@ -16,7 +16,7 @@ Wireframes one new section into .ui-craft/spec.md — layout, state lattice, acc
 
 - Direct: `/design-tools:ui-craft-shape <target>`
 - Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "sketch this new section before we build it" · «набросай секцию»
 
 ## What the vendor says

@@ -5,7 +5,7 @@
 Adds or adjusts animation inside the project's motion token system (durations, easings, intensity).
 
 **Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
-**Mode:** W · **Class:** pass · **Group:** feel · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** feel · **Routable:** yes — discovery proposes it freely
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
 
@@ -16,7 +16,7 @@ Adds or adjusts animation inside the project's motion token system (durations, e
 
 - Direct: `/design-tools:ui-craft-animate <target>`
 - Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
-- Through the router: `/design-tools:tool <your words>` — no fixed phrasing recorded yet in `routing.md`.
+- Discovery: `/design-tools:discover <your words>` can propose it — no fixed phrasing recorded yet in `phrases.md`.
 
 ## What the vendor says
 

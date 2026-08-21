@@ -8,7 +8,7 @@ allowed-tools: Bash(bash ${CLAUDE_PLUGIN_ROOT}/scripts/resolve.sh:*), Bash(bash 
 # `pick-ui-library` (Emil Kowalski) — direct engagement
 
 `/design-tools:emil-pick-ui-library` — you asked for **pick-ui-library** by name, so `design-tools` is not routing — it is
-loading. The router's discipline still holds: read-only before write, the brand contract outranks
+loading. The guardrails still hold: read-only before write, the brand contract outranks
 the vendor, say what changed. Reference card: `wiki/tools/pick-ui-library.md` · vendor: `wiki/vendors/emil.md`.
 Whole-vendor entry point: `/design-tools:emil`.
 

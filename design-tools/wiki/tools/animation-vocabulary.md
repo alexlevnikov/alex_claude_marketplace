@@ -5,7 +5,7 @@
 Reverse dictionary: describe an effect, get its name and a reference.
 
 **Vendor:** [Emil Kowalski](../vendors/emil.md) · https://github.com/emilkowalski/skills
-**Mode:** R · **Class:** lookup · **Group:** lookup · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** R · **Class:** lookup · **Group:** lookup · **Routable:** yes — discovery proposes it freely
 
 **For:** naming an effect you can only describe
 **Not for:** designing one
@@ -14,7 +14,7 @@ Reverse dictionary: describe an effect, get its name and a reference.
 
 - Direct: `/design-tools:emil-animation-vocabulary <target>`
 - Vendor entry point: `/design-tools:emil` — lists the vendor's tools
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "what's it called when a popover pops" · «как называется этот эффект»
 
 ## What the vendor says

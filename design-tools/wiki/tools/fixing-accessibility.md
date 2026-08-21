@@ -5,7 +5,7 @@
 Fast targeted accessibility fixes: focus ring, tab order, labels, ARIA.
 
 **Vendor:** [ui-skills by ibelick](../vendors/ibelick.md) · https://github.com/ibelick/ui-skills
-**Mode:** W · **Class:** pass · **Group:** fix · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** fix · **Routable:** yes — discovery proposes it freely
 
 **For:** fast keyboard / focus / ARIA fixes — a named defect
 **Not for:** a compliance audit
@@ -14,7 +14,7 @@ Fast targeted accessibility fixes: focus ring, tab order, labels, ARIA.
 
 - Direct: `/design-tools:ibelick-fixing-accessibility <target>`
 - Vendor entry point: `/design-tools:ibelick` — lists the vendor's tools
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "keyboard navigation is broken" · «с клавиатуры не работает» · "focus ring missing"
 
 ## What the vendor says

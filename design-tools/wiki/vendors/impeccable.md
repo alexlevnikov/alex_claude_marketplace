@@ -28,5 +28,5 @@ bounded passes, not a loop").
 
 ## Engage
 
-- Router: never — orchestrator-class requests escalate to `design-pipeline`.
+- Discovery: listed as a whole-vendor option (`impeccable alone`); whole new surfaces go to `design-pipeline`.
 - Direct: `/design-tools:impeccable <mode> <target>` — the deliberate by-pass.

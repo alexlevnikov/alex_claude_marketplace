@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Alex's personal Claude Code plugin marketplace.",
-    "version": "0.3.3"
+    "version": "0.3.4"
   },
   "plugins": [
     {
@@ -115,14 +115,13 @@
     {
       "name": "design-tools",
       "source": "./design-tools",
-      "description": "The router: one targeted design pass on UI that already exists. Reads the request in the user's own words, picks exactly one specialist skill out of eighty-seven across ui-craft, taste-skill, impeccable, Emil Kowalski, Addy Osmani's web-quality suite, ibelick and nine smaller vendors — then resolves where that skill is actually installed and loads it, so the route works from any project, not only design-studio. Carries what no single vendor has: a collision table for the twelve places where three vendors cover the same ground, read-only-before-write discipline, a hard escalation threshold to design-pipeline, a registry-driven wiki of every vendor and tool, one vendor-prefixed command per tool (/design-tools:ui-craft-typeset, /design-tools:osmani-seo, …) so the picker groups them, and one entry command per vendor (/design-tools:ui-craft, /design-tools:impeccable, /design-tools:taste) that runs the vendor's master skill exactly as the vendor designed it.",
-      "version": "0.3.0",
+      "description": "Discovery for design work on UI that already exists. Describe the task in your own words; it is run through eighty-seven design skills from fifteen vendors (ui-craft, taste-skill, impeccable, Emil Kowalski, Addy Osmani's web-quality suite, ibelick and nine smaller ones) and a ranked list comes back — each tool with what it would do for this task, whole-vendor options where one orchestrator would do, collision notes where two overlap. You pick; a ready-to-run prompt is written that loads exactly those tools from wherever they are installed (registry + resolver, so it works from any project) and uses them in the right order; run it now or later. Keeps one vendor-prefixed command per tool (/design-tools:ui-craft-typeset, /design-tools:osmani-seo, …), one entry per vendor that runs its master skill as the vendor designed it (/design-tools:impeccable, /design-tools:ui-craft, /design-tools:taste), a wiki of every vendor and tool, and /design-tools:demo for the design-studio dashboard.",
+      "version": "0.4.0",
       "author": {
         "name": "YOURSAUNAS"
       },
       "keywords": [
         "design",
-        "router",
         "typography",
         "color",
         "motion",
@@ -136,7 +135,9 @@
         "registry",
         "impeccable",
         "taste-skill",
-        "emil-kowalski"
+        "emil-kowalski",
+        "discovery",
+        "prompt-composer"
       ]
     }
   ]

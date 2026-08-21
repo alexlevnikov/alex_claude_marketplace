@@ -23,5 +23,5 @@ per-tool commands do.
 
 ## Engage
 
-- Router: FEEL routes — "this component feels cheap" → `emil-design-eng`; "the drawer should follow my finger" → `apple-design`; "add some motion" → `find-animation-opportunities` then a write tool.
+- Discovery: FEEL phrasings — "this component feels cheap" → `emil-design-eng`; "the drawer should follow my finger" → `apple-design`; "add some motion" → `find-animation-opportunities` then a write tool.
 - Direct: `/design-tools:emil-design-eng`, `/design-tools:review-animations`, `/design-tools:prototype`, …

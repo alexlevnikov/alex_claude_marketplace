@@ -5,7 +5,7 @@
 Generates brand identity boards and logo systems; needs an image tool.
 
 **Vendor:** [taste-skill by Leonxlnx](../vendors/taste.md) · https://github.com/Leonxlnx/taste-skill
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:taste-brandkit`)
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** direct or whole-vendor only (`/design-tools:taste-brandkit`)
 
 **For:** identity boards, logo systems, brand guideline boards — needs image generation
 **Not for:** surfaces; and not for YOURSAUNAS, whose identity is in the brand contract
@@ -14,7 +14,7 @@ Generates brand identity boards and logo systems; needs an image tool.
 
 - Direct: `/design-tools:taste-brandkit <target>`
 - Vendor entry point: `/design-tools:taste` — runs the vendor's master `design-taste-frontend`
-- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
+- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.
 
 ## What the vendor says
 

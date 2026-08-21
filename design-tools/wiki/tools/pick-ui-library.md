@@ -5,7 +5,7 @@
 Recommends a UI component library for your stack.
 
 **Vendor:** [Emil Kowalski](../vendors/emil.md) · https://github.com/emilkowalski/skills
-**Mode:** R · **Class:** lookup · **Group:** lookup · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** R · **Class:** lookup · **Group:** lookup · **Routable:** yes — discovery proposes it freely
 
 **For:** choosing a UI component library for a stack
 **Not for:** styling decisions
@@ -14,7 +14,7 @@ Recommends a UI component library for your stack.
 
 - Direct: `/design-tools:emil-pick-ui-library <target>`
 - Vendor entry point: `/design-tools:emil` — lists the vendor's tools
-- Through the router: `/design-tools:tool <your words>` — no fixed phrasing recorded yet in `routing.md`.
+- Discovery: `/design-tools:discover <your words>` can propose it — no fixed phrasing recorded yet in `phrases.md`.
 
 ## What the vendor says
 

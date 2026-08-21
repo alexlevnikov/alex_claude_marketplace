@@ -8,7 +8,7 @@ allowed-tools: Bash(bash ${CLAUDE_PLUGIN_ROOT}/scripts/resolve.sh:*), Bash(bash 
 # `core-web-vitals` (Addy Osmani web-quality) — direct engagement
 
 `/design-tools:osmani-core-web-vitals` — you asked for **core-web-vitals** by name, so `design-tools` is not routing — it is
-loading. The router's discipline still holds: read-only before write, the brand contract outranks
+loading. The guardrails still hold: read-only before write, the brand contract outranks
 the vendor, say what changed. Reference card: `wiki/tools/core-web-vitals.md` · vendor: `wiki/vendors/osmani.md`.
 Whole-vendor entry point: `/design-tools:osmani`.
 

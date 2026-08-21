@@ -5,7 +5,7 @@
 Builds motion or audits it with Emil / Krehel / Tompkins lenses; audit emits an HTML report with looping demos.
 
 **Vendor:** [kylezantos](../vendors/design-motion-principles.md) · https://github.com/kylezantos/design-motion-principles
-**Mode:** W/R · **Class:** pass · **Group:** feel · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W/R · **Class:** pass · **Group:** feel · **Routable:** yes — discovery proposes it freely
 
 **For:** build or audit motion; audit emits an HTML report with looping demos
 **Not for:** when a plain text answer is wanted
@@ -14,7 +14,7 @@ Builds motion or audits it with Emil / Krehel / Tompkins lenses; audit emits an 
 
 - Direct: `/design-tools:design-motion-principles <target>`
 - Vendor entry point: `/design-tools:design-motion-principles` — runs this very skill as the vendor's master
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "I want to see the motion review" · «хочу посмотреть отчёт по анимации»
 
 ## What the vendor says

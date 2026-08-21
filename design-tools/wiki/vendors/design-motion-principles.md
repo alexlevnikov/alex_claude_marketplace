@@ -17,5 +17,5 @@ Use the audit mode when a visible review is wanted (`collisions.md` §3); use `i
 
 ## Engage
 
-- Router: "I want to see the motion review" → `design-motion-principles` (audit).
+- Discovery: "I want to see the motion review" → `design-motion-principles` (audit).
 - Direct: `/design-tools:design-motion-principles audit <target>`.

@@ -5,7 +5,7 @@
 Final finish pass on a surface that is already right: alignment, spacing, micro-details, using project tokens.
 
 **Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
-**Mode:** W · **Class:** pass · **Group:** look · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** look · **Routable:** yes — discovery proposes it freely
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
 
@@ -16,7 +16,7 @@ Final finish pass on a surface that is already right: alignment, spacing, micro-
 
 - Direct: `/design-tools:ui-craft-polish <target>`
 - Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "final finish pass" · «финальная полировка» · "it's right, now make it finished"
 
 ## What the vendor says

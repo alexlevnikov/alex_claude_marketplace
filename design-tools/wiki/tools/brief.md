@@ -5,7 +5,7 @@
 Interviews you and writes .ui-craft/brief.md — purpose, user, principles, success metric, out of scope.
 
 **Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
-**Mode:** W · **Class:** phase · **Group:** phase · **Routable:** no — direct engagement only (`/design-tools:ui-craft-brief`)
+**Mode:** W · **Class:** phase · **Group:** phase · **Routable:** direct or whole-vendor only (`/design-tools:ui-craft-brief`)
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
 
@@ -16,7 +16,7 @@ Interviews you and writes .ui-craft/brief.md — purpose, user, principles, succ
 
 - Direct: `/design-tools:ui-craft-brief <target>`
 - Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
-- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
+- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.
 
 ## What the vendor says
 

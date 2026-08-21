@@ -11,7 +11,7 @@ BLOCK LIBRARY → REDESIGN PROTOCOL. In the group-01 bake-off it was one of two 
 impeccable) that recognised the *brief itself* as a cliché.
 
 Around it: `high-end-visual-design` (98 lines, "ABSOLUTE ZERO" anti-patterns + a creative-variance
-engine — the one taste-skill tool the router treats as a pass); `brandkit` (798 lines, identity
+engine — the one taste-skill tool discovery proposes as a pass); `brandkit` (798 lines, identity
 boards and logo systems — needs image generation); `imagegen-frontend-web` (987 lines; hard rule:
 **one horizontal image per section**); `image-to-code` (1228 lines, tuned for Codex); and
 `full-output-enforcement` (49 lines) — the modifier that bans placeholders and truncated output.
@@ -30,6 +30,6 @@ G3 default). Weak: knows nothing about states, data, or e-commerce logic.
 
 ## Engage
 
-- Router: `high-end-visual-design` on "make it feel expensive"; `full-output-enforcement` whenever the chosen tool writes a long file.
+- Discovery: `high-end-visual-design` on "make it feel expensive"; `full-output-enforcement` whenever the chosen tool writes a long file.
 - Direct: `/design-tools:design-taste-frontend`, `/design-tools:brandkit`, …
 - Whole surfaces: `design-pipeline` G2 (references) and G3 (direction).

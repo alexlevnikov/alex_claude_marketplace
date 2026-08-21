@@ -5,7 +5,7 @@
 Direction preset: minimalist UI.
 
 **Vendor:** [taste-skill by Leonxlnx](../vendors/taste.md) · https://github.com/Leonxlnx/taste-skill
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:taste-minimalist-ui`)
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** direct or whole-vendor only (`/design-tools:taste-minimalist-ui`)
 
 **For:** a minimalist direction preset
 **Not for:** surfaces with a brand contract
@@ -14,7 +14,7 @@ Direction preset: minimalist UI.
 
 - Direct: `/design-tools:taste-minimalist-ui <target>`
 - Vendor entry point: `/design-tools:taste` — runs the vendor's master `design-taste-frontend`
-- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
+- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.
 
 ## What the vendor says
 

@@ -5,7 +5,7 @@
 Builds several genuinely different versions of one UI piece behind a live picker; promote the winner.
 
 **Vendor:** [Emil Kowalski](../vendors/emil.md) · https://github.com/emilkowalski/skills
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:emil-prototype`)
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** direct or whole-vendor only (`/design-tools:emil-prototype`)
 
 **For:** build several genuinely different versions of one UI piece behind a visual picker
 **Not for:** the router — it only runs when named (`disable-model-invocation`)
@@ -14,7 +14,7 @@ Builds several genuinely different versions of one UI piece behind a live picker
 
 - Direct: `/design-tools:emil-prototype <target>`
 - Vendor entry point: `/design-tools:emil` — lists the vendor's tools
-- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
+- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.
 
 ## What the vendor says
 

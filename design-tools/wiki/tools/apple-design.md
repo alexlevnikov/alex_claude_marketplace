@@ -5,7 +5,7 @@
 Direct-manipulation motion: drag, swipe, sheets, velocity handoff, momentum, interruptibility.
 
 **Vendor:** [Emil Kowalski](../vendors/emil.md) · https://github.com/emilkowalski/skills
-**Mode:** W · **Class:** pass · **Group:** feel · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** feel · **Routable:** yes — discovery proposes it freely
 
 **For:** gestures, drag, sheets, interruptibility, velocity handoff, momentum
 **Not for:** non-interactive entrance animation
@@ -14,7 +14,7 @@ Direct-manipulation motion: drag, swipe, sheets, velocity handoff, momentum, int
 
 - Direct: `/design-tools:emil-apple-design <target>`
 - Vendor entry point: `/design-tools:emil` — lists the vendor's tools
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "the drawer should follow my finger" · «свайп должен тянуться за пальцем»
 
 ## What the vendor says

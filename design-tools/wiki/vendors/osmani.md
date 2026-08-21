@@ -18,6 +18,6 @@ works it (`stacking.md`). Discriminators (`collisions.md` §1–2): a *metric* n
 
 ## Engage
 
-- Router: "LCP is bad" → `core-web-vitals`; "we don't rank" → `seo`; "run lighthouse" → `web-quality-audit`.
+- Discovery: "LCP is bad" → `core-web-vitals`; "we don't rank" → `seo`; "run lighthouse" → `web-quality-audit`.
 - Direct: `/design-tools:seo`, `/design-tools:core-web-vitals`, `/design-tools:accessibility`, …
 - Whole surfaces: `design-pipeline` G8.

@@ -8,7 +8,7 @@ allowed-tools: Bash(bash ${CLAUDE_PLUGIN_ROOT}/scripts/resolve.sh:*), Bash(bash 
 # `seo` (Addy Osmani web-quality) — direct engagement
 
 `/design-tools:osmani-seo` — you asked for **seo** by name, so `design-tools` is not routing — it is
-loading. The router's discipline still holds: read-only before write, the brand contract outranks
+loading. The guardrails still hold: read-only before write, the brand contract outranks
 the vendor, say what changed. Reference card: `wiki/tools/seo.md` · vendor: `wiki/vendors/osmani.md`.
 Whole-vendor entry point: `/design-tools:osmani`.
 

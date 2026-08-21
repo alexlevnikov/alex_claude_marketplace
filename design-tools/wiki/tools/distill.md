@@ -5,7 +5,7 @@
 Removes noise from an over-built surface: cuts sections, elements and decoration that earn nothing.
 
 **Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
-**Mode:** W · **Class:** pass · **Group:** look · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** look · **Routable:** yes — discovery proposes it freely
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
 
@@ -16,7 +16,7 @@ Removes noise from an over-built surface: cuts sections, elements and decoration
 
 - Direct: `/design-tools:ui-craft-distill <target>`
 - Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "too busy" · «слишком много всего» · "there's too much on this page"
 
 ## What the vendor says

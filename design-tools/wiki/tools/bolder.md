@@ -5,7 +5,7 @@
 Amplifies personality inside the current direction: stronger type, contrast, signature details.
 
 **Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
-**Mode:** W · **Class:** pass · **Group:** look · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** look · **Routable:** yes — discovery proposes it freely
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
 
@@ -16,7 +16,7 @@ Amplifies personality inside the current direction: stronger type, contrast, sig
 
 - Direct: `/design-tools:ui-craft-bolder <target>`
 - Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "it's bland" · «пресно, добавь характера» · "give it some personality"
 
 ## What the vendor says

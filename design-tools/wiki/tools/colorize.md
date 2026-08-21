@@ -5,7 +5,7 @@
 Applies and tunes colour on existing UI: palette use, theming, dark mode, accent budget.
 
 **Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
-**Mode:** W · **Class:** pass · **Group:** look · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** look · **Routable:** yes — discovery proposes it freely
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
 
@@ -16,7 +16,7 @@ Applies and tunes colour on existing UI: palette use, theming, dark mode, accent
 
 - Direct: `/design-tools:ui-craft-colorize <target>`
 - Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "the colours are wrong" · «цвета не те» · "dark mode looks broken" · «тёмная тема сломана»
 
 ## What the vendor says

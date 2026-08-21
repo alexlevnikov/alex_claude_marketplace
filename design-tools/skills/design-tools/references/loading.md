@@ -1,8 +1,8 @@
 # Loading a tool
 
-A route is a name. A name is not a skill until the file behind it is in context. This is the
-procedure between "the route is `typeset`" and "`typeset` is running" — it is the same whether the
-router chose the tool or the user named it with `/design-tools:<tool>`.
+A name is not a skill until the file behind it is in context. This is the procedure between
+"the tool is `typeset`" and "`typeset` is running" — it is the same whether the
+tool came out of discovery (`/design-tools:discover`) or the user named it with `/design-tools:<vendor>-<tool>`.
 
 ## The procedure
 
@@ -34,7 +34,7 @@ router chose the tool or the user named it with `/design-tools:<tool>`.
    `load: read` → Read `base:` (if any), then `skill:`, then follow the skill's own instructions
    exactly — its "load X", "read references/Y" steps included — against `dir:`.
 
-4. **Only then** do the brand-contract step and the read-only-first step from `SKILL.md`, and run.
+4. **Only then** the brand-contract step and the read-only-first order from the prompt, and run.
 
 ## When it is MISSING
 

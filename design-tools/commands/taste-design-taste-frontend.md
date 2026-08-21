@@ -8,7 +8,7 @@ allowed-tools: Bash(bash ${CLAUDE_PLUGIN_ROOT}/scripts/resolve.sh:*), Bash(bash 
 # `design-taste-frontend` (taste-skill by Leonxlnx) — direct engagement
 
 `/design-tools:taste-design-taste-frontend` — you asked for **design-taste-frontend** by name, so `design-tools` is not routing — it is
-loading. The router's discipline still holds: read-only before write, the brand contract outranks
+loading. The guardrails still hold: read-only before write, the brand contract outranks
 the vendor, say what changed. Reference card: `wiki/tools/design-taste-frontend.md` · vendor: `wiki/vendors/taste.md`.
 Whole-vendor entry point: `/design-tools:taste`.
 

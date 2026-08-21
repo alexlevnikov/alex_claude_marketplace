@@ -5,7 +5,7 @@
 On-page SEO: meta, structured data, sitemap, robots, headings, internal links.
 
 **Vendor:** [Addy Osmani web-quality](../vendors/osmani.md) · https://github.com/addyosmani/web-quality-skills
-**Mode:** W · **Class:** pass · **Group:** fix · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** W · **Class:** pass · **Group:** fix · **Routable:** yes — discovery proposes it freely
 
 **For:** meta, structured data, sitemap, robots, on-page
 **Not for:** copywriting for humans
@@ -14,7 +14,7 @@ On-page SEO: meta, structured data, sitemap, robots, headings, internal links.
 
 - Direct: `/design-tools:osmani-seo <target>`
 - Vendor entry point: `/design-tools:osmani` — lists the vendor's tools
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "we don't rank" · «нас не находят в поиске» · "add structured data" · «микроразметка»
 
 ## What the vendor says

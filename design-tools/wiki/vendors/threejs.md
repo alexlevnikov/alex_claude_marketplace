@@ -11,10 +11,10 @@ scene inside whatever page they are given.
 ## The contract
 
 `collisions.md` §12: vanilla Three.js → these; React → the `core-3d-animation` plugin
-(`react-three-fiber`, `babylonjs-engine`, …). They are LOOKUP-group in the catalog — the router
-can land here for a named 3D question.
+(`react-three-fiber`, `babylonjs-engine`, …). They are LOOKUP-group in the catalog — discovery
+proposes them for a named 3D question.
 
 ## Engage
 
-- Router: a named Three.js concern ("the GLTF won't load", "add bloom") → the matching `threejs-*`.
+- Discovery: a named Three.js concern ("the GLTF won't load", "add bloom") → the matching `threejs-*`.
 - Direct: `/design-tools:threejs-shaders`, `/design-tools:threejs-loaders`, …

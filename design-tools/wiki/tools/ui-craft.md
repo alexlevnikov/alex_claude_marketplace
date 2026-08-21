@@ -5,7 +5,7 @@
 The ui-craft base: discovery, anti-slop rules, knobs and Craft Report; actions build | animate | review | polish | audit.
 
 **Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
-**Mode:** W · **Class:** base · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:ui-craft`)
+**Mode:** W · **Class:** base · **Group:** direction · **Routable:** direct or whole-vendor only (`/design-tools:ui-craft`)
 
 **For:** the base: anti-slop rules, discovery, knobs, Craft Report; actions build|animate|review|polish|audit
 **Not for:** a single aspect — use a lens
@@ -14,7 +14,7 @@ The ui-craft base: discovery, anti-slop rules, knobs and Craft Report; actions b
 
 - Direct: `/design-tools:ui-craft <target>`
 - Vendor entry point: `/design-tools:ui-craft` — runs this very skill as the vendor's master
-- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
+- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.
 
 ## What the vendor says
 

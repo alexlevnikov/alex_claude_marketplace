@@ -5,7 +5,7 @@
 Motion.dev / Framer Motion patterns for React, Next.js, Svelte and Astro at 120fps.
 
 **Vendor:** [Motion.dev skill](../vendors/motion-dev.md) · https://github.com/199-biotechnologies/motion-dev-animations-skill
-**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** no — direct engagement only (`/design-tools:motion-dev-animations`)
+**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** direct or whole-vendor only (`/design-tools:motion-dev-animations`)
 
 **For:** Motion.dev / Framer Motion patterns for React, Next.js, Svelte, Astro
 **Not for:** projects not on Motion.dev
@@ -14,7 +14,7 @@ Motion.dev / Framer Motion patterns for React, Next.js, Svelte and Astro at 120f
 
 - Direct: `/design-tools:motion-dev-animations <target>`
 - Vendor entry point: `/design-tools:motion-dev` — runs this very skill as the vendor's master
-- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
+- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.
 
 ## What the vendor says
 

@@ -8,7 +8,7 @@ allowed-tools: Bash(bash ${CLAUDE_PLUGIN_ROOT}/scripts/resolve.sh:*), Bash(bash 
 # `glassmorphism` (iart-ai web-animation) — direct engagement
 
 `/design-tools:iart-glassmorphism` — you asked for **glassmorphism** by name, so `design-tools` is not routing — it is
-loading. The router's discipline still holds: read-only before write, the brand contract outranks
+loading. The guardrails still hold: read-only before write, the brand contract outranks
 the vendor, say what changed. Reference card: `wiki/tools/glassmorphism.md` · vendor: `wiki/vendors/iart.md`.
 Whole-vendor entry point: `/design-tools:iart`.
 
@@ -24,7 +24,7 @@ run it yourself with Bash:
 
 **$ARGUMENTS**
 
-**Technique.** A framework- or effect-specific how-to. It assumes the motion or 3D decision is already made; if it is not, route the taste question first (`/design-tools:tool`).
+**Technique.** A framework- or effect-specific how-to. It assumes the motion or 3D decision is already made; if it is not, run the taste question through `/design-tools:discover` first.
 
 ## Do
 

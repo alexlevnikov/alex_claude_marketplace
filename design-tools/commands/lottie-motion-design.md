@@ -8,7 +8,7 @@ allowed-tools: Bash(bash ${CLAUDE_PLUGIN_ROOT}/scripts/resolve.sh:*), Bash(bash 
 # `motion-design` (LottieFiles) — direct engagement
 
 `/design-tools:lottie-motion-design` — you asked for **motion-design** by name, so `design-tools` is not routing — it is
-loading. The router's discipline still holds: read-only before write, the brand contract outranks
+loading. The guardrails still hold: read-only before write, the brand contract outranks
 the vendor, say what changed. Reference card: `wiki/tools/motion-design.md` · vendor: `wiki/vendors/lottie.md`.
 Whole-vendor entry point: `/design-tools:lottie`.
 

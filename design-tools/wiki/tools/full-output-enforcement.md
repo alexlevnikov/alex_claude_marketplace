@@ -5,7 +5,7 @@
 Modifier: bans placeholders, ellipses and truncated output in whatever the next tool writes.
 
 **Vendor:** [taste-skill by Leonxlnx](../vendors/taste.md) · https://github.com/Leonxlnx/taste-skill
-**Mode:** R · **Class:** modifier · **Group:** modifier · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** R · **Class:** modifier · **Group:** modifier · **Routable:** yes — discovery proposes it freely
 
 **For:** bans placeholders and truncated output — switch on whenever the chosen tool will write a long file
 **Not for:** use on its own; it modifies another tool
@@ -14,7 +14,7 @@ Modifier: bans placeholders, ellipses and truncated output in whatever the next 
 
 - Direct: `/design-tools:taste-full-output-enforcement <target>`
 - Vendor entry point: `/design-tools:taste` — runs the vendor's master `design-taste-frontend`
-- Through the router: `/design-tools:tool <your words>` — no fixed phrasing recorded yet in `routing.md`.
+- Discovery: `/design-tools:discover <your words>` can propose it — no fixed phrasing recorded yet in `phrases.md`.
 
 ## What the vendor says
 

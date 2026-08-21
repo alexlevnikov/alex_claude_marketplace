@@ -5,7 +5,7 @@
 Scores a surface 0–100 against heuristics and personas; PM-ready audit, read-only.
 
 **Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
-**Mode:** R · **Class:** judge · **Group:** judge · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** R · **Class:** judge · **Group:** judge · **Routable:** yes — discovery proposes it freely
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
 
@@ -16,7 +16,7 @@ Scores a surface 0–100 against heuristics and personas; PM-ready audit, read-o
 
 - Direct: `/design-tools:ui-craft-heuristic <target>`
 - Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "score it" · «оцени по десятибалльной» · "give me a PM-ready audit"
 
 ## What the vendor says

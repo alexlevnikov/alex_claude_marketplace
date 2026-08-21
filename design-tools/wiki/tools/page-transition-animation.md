@@ -5,7 +5,7 @@
 Page and view transitions.
 
 **Vendor:** [iart-ai web-animation](../vendors/iart.md) · https://github.com/iart-ai/web-animation-skills
-**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** no — direct engagement only (`/design-tools:iart-page-transition-animation`)
+**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** direct or whole-vendor only (`/design-tools:iart-page-transition-animation`)
 
 **For:** page and view transitions
 **Not for:** in-page motion
@@ -14,7 +14,7 @@ Page and view transitions.
 
 - Direct: `/design-tools:iart-page-transition-animation <target>`
 - Vendor entry point: `/design-tools:iart` — lists the vendor's tools
-- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
+- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.
 
 ## What the vendor says
 

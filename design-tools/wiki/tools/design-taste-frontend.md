@@ -5,7 +5,7 @@
 Art-direction doctrine: infers the brief, sets three dials, bans AI tells, designs from a block library.
 
 **Vendor:** [taste-skill by Leonxlnx](../vendors/taste.md) · https://github.com/Leonxlnx/taste-skill
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:taste-design-taste-frontend`)
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** direct or whole-vendor only (`/design-tools:taste-design-taste-frontend`)
 
 **For:** art direction at DESIGN_VARIANCE ≤ 6: brief inference, three dials, AI-tells list, block library
 **Not for:** a pass; and never beside another orchestrator
@@ -14,7 +14,7 @@ Art-direction doctrine: infers the brief, sets three dials, bans AI tells, desig
 
 - Direct: `/design-tools:taste-design-taste-frontend <target>`
 - Vendor entry point: `/design-tools:taste` — runs this very skill as the vendor's master
-- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
+- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.
 
 ## What the vendor says
 

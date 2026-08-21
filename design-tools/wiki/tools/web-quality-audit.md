@@ -5,7 +5,7 @@
 Umbrella audit across performance, a11y, SEO and best practices; names the worst axis; read-only.
 
 **Vendor:** [Addy Osmani web-quality](../vendors/osmani.md) · https://github.com/addyosmani/web-quality-skills
-**Mode:** R · **Class:** judge · **Group:** judge · **Routable:** yes — `/design-tools:tool` can land here
+**Mode:** R · **Class:** judge · **Group:** judge · **Routable:** yes — discovery proposes it freely
 
 **For:** umbrella: performance + a11y + SEO + best practices at once
 **Not for:** fixing — it names the worst axis, then you work that axis
@@ -14,7 +14,7 @@ Umbrella audit across performance, a11y, SEO and best practices; names the worst
 
 - Direct: `/design-tools:osmani-web-quality-audit <target>`
 - Vendor entry point: `/design-tools:osmani` — lists the vendor's tools
-- Through the router, these phrasings land here:
+- Discovery pre-rank: these phrasings (`references/phrases.md`) point here:
   - "run lighthouse" · «прогони полный аудит качества»
 
 ## What the vendor says

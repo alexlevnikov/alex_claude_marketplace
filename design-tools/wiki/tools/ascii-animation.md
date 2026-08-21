@@ -5,7 +5,7 @@
 ASCII and text-based animation effects.
 
 **Vendor:** [iart-ai web-animation](../vendors/iart.md) · https://github.com/iart-ai/web-animation-skills
-**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** no — direct engagement only (`/design-tools:iart-ascii-animation`)
+**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** direct or whole-vendor only (`/design-tools:iart-ascii-animation`)
 
 **For:** ASCII / text-based animation effects
 **Not for:** anything else
@@ -14,7 +14,7 @@ ASCII and text-based animation effects.
 
 - Direct: `/design-tools:iart-ascii-animation <target>`
 - Vendor entry point: `/design-tools:iart` — lists the vendor's tools
-- Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
+- Discovery lists it only as a whole-vendor option, or when the request names it; the command above is the direct path.
 
 ## What the vendor says
 

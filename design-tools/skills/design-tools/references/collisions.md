@@ -1,7 +1,7 @@
 # Collisions
 
-Twelve places where more than one vendor covers the same ground. Without a rule the router picks by
-coin flip, and the user learns nothing from the answer. Each rule below is a *discriminator* — a
+Twelve places where more than one vendor covers the same ground. Without a rule discovery would list
+both without saying why, and the user learns nothing from the choice. Each rule below is a *discriminator* — a
 question whose answer names the tool.
 
 ## 1. Accessibility — three vendors

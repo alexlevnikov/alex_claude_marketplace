@@ -37,7 +37,7 @@
       "name": "alex-git",
       "source": "./alex-git",
       "description": "The map of Alex's git estate: every working copy and its remote, which GitHub identity actually pushes and what its token may not do, what a push to a given branch deploys, and the traps already paid for once — a 'Repository not found' that is really a blocked transport, work hiding in a second clone, and the two-way Shopify theme sync.",
-      "version": "0.1.3",
+      "version": "0.1.4",
       "author": { "name": "Alex Levnikov" },
       "keywords": ["git", "github", "gh-cli", "push", "remotes", "credentials", "fine-grained-token", "shopify-theme-sync", "icloud"]
     }

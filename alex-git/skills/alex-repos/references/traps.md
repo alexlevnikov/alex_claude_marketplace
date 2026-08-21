@@ -76,6 +76,18 @@ on the way.
   the bot's opaque one-liner. Put the rationale in a **code comment**, and the measurements
   in the project repo — do not entrust either to a commit message on this branch.
 
+- **Do not push theme files through git by hand.** You lose the race: `theme push` produces
+  the bot's commit first, the manual push is rejected non-fast-forward, and the rebase then
+  discards your commit as already upstream. Hand-push only what the theme does not contain —
+  `.github/`, `package.json`, `package-lock.json`, documentation. (That is the one case where
+  a temporary worktree pushed straight at `origin/staging` is the right tool, when the shared
+  clone has someone else's work in it.)
+- **The round-trip deletes, not just reformats.** Shopify drops any key its schema does not
+  know: a `_comment` carrying the reason for a section's spacing disappeared from
+  `templates/collection.json` with no error and nothing in the diff that reads as a loss.
+  Liquid comes back byte-for-byte, so reasoning lives in the `.liquid` file or the planning
+  repo — never inside a JSON template.
+
 Recorded as decision **V28** in `Sauna/roadmap/v3-store/README.md`; the working order is
 deploy → `git fetch` → rebase onto the bot's commit, and never edit the same files locally
 while a deploy is in flight.

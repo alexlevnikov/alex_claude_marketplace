@@ -71,6 +71,14 @@ on the way.
   local JSON template is probably the older formatting.
 - The bot's version of a JSON template is authoritative once it exists; check your edit
   survived the normalization instead of forcing your copy over it.
+- **Your commit message may never reach the theme's history.** A local commit that touches
+  the same file is dropped on rebase as *"patch contents already upstream"*, leaving only
+  the bot's opaque one-liner. Put the rationale in a **code comment**, and the measurements
+  in the project repo — do not entrust either to a commit message on this branch.
+
+Recorded as decision **V28** in `Sauna/roadmap/v3-store/README.md`; the working order is
+deploy → `git fetch` → rebase onto the bot's commit, and never edit the same files locally
+while a deploy is in flight.
 
 ---
 

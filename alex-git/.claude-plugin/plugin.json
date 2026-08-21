@@ -1,6 +1,6 @@
 {
   "name": "alex-git",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Operating knowledge for Alex's git estate. One skill: alex-repos — the map of every working copy (path, remote, branch model, and what a push deploys), the two GitHub identities and the exact limits of each token, and the traps that have already cost hours: misleading 'Repository not found', stale fetch caches, work hiding in a second clone, the two-way Shopify theme integration, and two sessions sharing one working tree.",
   "author": {
     "name": "Alex Levnikov"

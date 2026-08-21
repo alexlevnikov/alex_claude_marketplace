@@ -44,6 +44,11 @@ trailer on agent-written commits. Match the last three commits of the repo you a
 - **`staging` is wired to Shopify theme `152536514721`** (unpublished). The live theme is
   `152528158881` and is *stock Horizon* — the ordinary storefront URL does not render this
   work. Preview with `?preview_theme_id=152536514721` on top of a storefront-password login.
+- **Every measurement needs that parameter, or it measures the stock theme.** A bare URL
+  returns Horizon's own defaults — including its Russian UI strings, which on 2026-08-20 was
+  read as "the store language change did not work" and kept a blocker open an extra day while
+  the response header already said `content-language: en-US`. Budgets, screenshots and
+  acceptance checks are all worthless without the preview id.
 
 Two things happen when you push `staging`, and both have bitten:
 

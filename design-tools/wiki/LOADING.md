@@ -12,8 +12,9 @@ and how to keep the generated layer honest.
 | Generator | `scripts/build.py` | writes `commands/<tool>.md`, `wiki/tools/<tool>.md`, `wiki/README.md` from the registry + installed frontmatter |
 | Router | `skills/design-tools/SKILL.md` + `references/` | chooses one tool from the user's words, then loads it via the resolver |
 | Per-tool commands | `commands/<tool>.md` | `/design-tools:<tool>` — skip the router, load one tool by name |
+| Demo | `commands/demo.md` → `scripts/dashboard.sh` | `/design-tools:demo [tool]` — open the design-studio dashboard or a tool's bake-off demo, if present (`registry/tools.json` → `studio`, override `$DESIGN_STUDIO_DIR`) |
 
-Hand-written and never overwritten: `commands/tool.md`, `commands/tools-list.md`,
+Hand-written and never overwritten: `commands/tool.md`, `commands/tools-list.md`, `commands/demo.md`,
 `wiki/vendors/*.md`, this file, and everything under `skills/`.
 
 ## Search order

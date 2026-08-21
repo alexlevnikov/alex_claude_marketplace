@@ -1,7 +1,6 @@
 {
   "$schema_note": "Single source of truth for design-tools. scripts/resolve.sh reads `roots` + `tools`; scripts/build.py regenerates commands/<tool>.md and wiki/ from `vendors` + `tools` + each installed SKILL.md. Edit here, then run `python3 scripts/build.py`.",
   "version": 1,
-
   "roots": [
     {
       "name": "design-studio",
@@ -9,7 +8,13 @@
       "note": "The bake-off inventory. Canonical install of every vendor skill; `design-studio/scripts/install-all.sh` and `scripts/skillset.sh` maintain it."
     }
   ],
-
+  "studio": {
+    "dir": "/Users/alexlevnikov/Library/Mobile Documents/com~apple~CloudDocs/alex.levnikov.root/design-studio",
+    "dashboard": "dashboard.html",
+    "demos": "demos",
+    "rebuild": "python3 scripts/build_dashboard.py",
+    "note": "The bake-off dashboard (self-contained HTML, per-skill demos embedded). `/design-tools:demo` opens it via scripts/dashboard.sh; override the location with $DESIGN_STUDIO_DIR. Its vendor column comes from candidates/skills-dashboard.json, which mis-attributes twelve ui-craft lenses to impeccable — the wiki here is the authority."
+  },
   "vendors": {
     "ui-craft": {
       "name": "ui-craft",
@@ -132,116 +137,826 @@
       "contract": "Reference reading, not a pass. Use when a decision needs a principle behind it."
     }
   },
-
   "groups": {
-    "look":       "LOOK — how it looks",
-    "feel":       "FEEL — how it moves",
-    "fix":        "FIX — make it survive production",
-    "judge":      "JUDGE — decide, change nothing",
-    "lookup":     "LOOKUP — answer, don't act",
-    "modifier":   "MODIFIER — on top of another tool",
-    "direction":  "DIRECTION — orchestrator-class, whole surfaces (design-pipeline territory)",
-    "phase":      "PHASE — ui-craft's conveyor steps (wrapped by design-pipeline)",
-    "preset":     "PRESET — ui-craft base with a fixed aesthetic",
-    "technique":  "TECHNIQUE — framework- or effect-specific how-to"
+    "look": "LOOK — how it looks",
+    "feel": "FEEL — how it moves",
+    "fix": "FIX — make it survive production",
+    "judge": "JUDGE — decide, change nothing",
+    "lookup": "LOOKUP — answer, don't act",
+    "modifier": "MODIFIER — on top of another tool",
+    "direction": "DIRECTION — orchestrator-class, whole surfaces (design-pipeline territory)",
+    "phase": "PHASE — ui-craft's conveyor steps (wrapped by design-pipeline)",
+    "preset": "PRESET — ui-craft base with a fixed aesthetic",
+    "technique": "TECHNIQUE — framework- or effect-specific how-to"
   },
-
   "tools": {
-    "ui-craft":                  {"vendor": "ui-craft", "mode": "W", "class": "base",        "group": "direction", "routable": false, "for": "the base: anti-slop rules, discovery, knobs, Craft Report; actions build|animate|review|polish|audit", "not_for": "a single aspect — use a lens"},
-    "ui-craft-minimal":          {"vendor": "ui-craft", "mode": "W", "class": "preset",      "group": "preset",    "routable": false, "for": "ui-craft with a minimal aesthetic fixed", "not_for": "surfaces with a brand contract — the contract owns the aesthetic"},
-    "ui-craft-editorial":        {"vendor": "ui-craft", "mode": "W", "class": "preset",      "group": "preset",    "routable": false, "for": "ui-craft with an editorial aesthetic fixed", "not_for": "surfaces with a brand contract"},
-    "ui-craft-dense-dashboard":  {"vendor": "ui-craft", "mode": "W", "class": "preset",      "group": "preset",    "routable": false, "for": "ui-craft tuned for dense data dashboards", "not_for": "marketing and commerce surfaces"},
-    "start":                     {"vendor": "ui-craft", "base": "ui-craft", "mode": "R", "class": "phase", "group": "phase", "routable": false, "for": "onboarding: explains the ladder and names the next rung", "not_for": "doing work"},
-    "brief":                     {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "phase", "group": "phase", "routable": false, "for": "writes `.ui-craft/brief.md` — purpose, user, principles, metric, out-of-scope", "not_for": "a pass; it asks five questions and stops"},
-    "tokens":                    {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "phase", "group": "phase", "routable": false, "for": "establish or audit the three-layer token spine", "not_for": "inventing hues — the brand contract owns values"},
-    "shape":                     {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "pass",  "group": "look",  "routable": true,  "for": "wireframing one new section — writes `.ui-craft/spec.md`, not code", "not_for": "a whole surface — that is the pipeline"},
-    "craft":                     {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "build a surface from the spec; recipes for dashboard, landing, auth", "not_for": "e-commerce — no recipe, it falls back to standard build mode"},
-    "sddesign":                  {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "ui-craft's own six-gate express lane: brief → tokens → shape → craft → converge → ship", "not_for": "anything design-pipeline already wraps — two conveyors fight"},
-    "finalize":                  {"vendor": "ui-craft", "base": "ui-craft", "mode": "R", "class": "judge", "group": "judge", "routable": true,  "for": "READY / NOT READY / BLOCKED before merge; findings only", "not_for": "fixing what it finds"},
-    "remember":                  {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "phase", "group": "phase", "routable": false, "for": "append a learned constraint to `.ui-craft/brief.md` §6", "not_for": "design work"},
-    "polish":                    {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "pass", "group": "look", "routable": true,  "for": "the final finish pass on a surface that is already right — reads `.ui-craft/brief.md` and project tokens", "not_for": "a surface whose hierarchy is wrong; and not `impeccable polish` unless impeccable is named"},
-    "typeset":                   {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "pass", "group": "look", "routable": true,  "for": "type scale, tracking, optical size, hierarchy", "not_for": "choosing a typeface for a new brand"},
-    "colorize":                  {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "pass", "group": "look", "routable": true,  "for": "palette application, theming, dark mode", "not_for": "inventing a palette — the contract owns that"},
-    "adapt":                     {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "pass", "group": "look", "routable": true,  "for": "breakpoints, mobile layout, container queries, touch targets, safe areas", "not_for": "a layout that is wrong at every width"},
-    "distill":                   {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "pass", "group": "look", "routable": true,  "for": "cutting noise from an over-built surface", "not_for": "a surface that is under-built"},
-    "bolder":                    {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "pass", "group": "look", "routable": true,  "for": "amplifying personality within the direction", "not_for": "a new direction"},
-    "quieter":                   {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "pass", "group": "look", "routable": true,  "for": "restraint, toning down, reducing accent load", "not_for": "fixing a genuinely broken hierarchy"},
-    "extract":                   {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "pass", "group": "look", "routable": true,  "for": "pulling repeated markup into components and tokens", "not_for": "first-time token setup — that is `tokens`"},
-    "redesign":                  {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "ui-craft's redesign lens for an existing surface", "not_for": "the router — a redesign is pipeline work"},
-    "delight":                   {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "pass", "group": "feel", "routable": true,  "for": "purposeful micro-interactions", "not_for": "a motion system"},
-    "animate":                   {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "pass", "group": "feel", "routable": true,  "for": "animation inside the project's motion tokens", "not_for": "taste questions — use emil"},
-    "unhappy":                   {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "pass", "group": "fix",  "routable": true,  "for": "states before the happy path; impossible booleans into a state machine", "not_for": "cosmetic error styling"},
-    "harden":                    {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "pass", "group": "fix",  "routable": true,  "for": "skeletons, empty, error, partial, i18n, offline, permissions, first-run", "not_for": "greenfield state design — `unhappy` first"},
-    "clarify":                   {"vendor": "ui-craft", "base": "ui-craft", "mode": "W", "class": "pass", "group": "fix",  "routable": true,  "for": "UX copy: errors, empty states, CTAs, voice matrix, reading level", "not_for": "marketing copy"},
-    "audit":                     {"vendor": "ui-craft", "base": "ui-craft", "mode": "R", "class": "judge", "group": "judge", "routable": true, "for": "technical a11y audit inside a build session", "not_for": "a compliance report — that is osmani `accessibility`"},
-    "critique":                  {"vendor": "ui-craft", "base": "ui-craft", "mode": "R", "class": "judge", "group": "judge", "routable": true, "for": "UX critique, no code changes", "not_for": "a number — that is `heuristic`"},
-    "heuristic":                 {"vendor": "ui-craft", "base": "ui-craft", "mode": "R", "class": "judge", "group": "judge", "routable": true, "for": "0–100 score, PM-ready audit, personas", "not_for": "a merge decision — that is `finalize`"},
-
-    "design-taste-frontend":     {"vendor": "taste-skill", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "art direction at DESIGN_VARIANCE ≤ 6: brief inference, three dials, AI-tells list, block library", "not_for": "a pass; and never beside another orchestrator"},
-    "design-taste-frontend-v1":  {"vendor": "taste-skill", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "the previous, shorter version of `design-taste-frontend` (226 lines)", "not_for": "new work — kept for comparison only"},
-    "gpt-taste":                 {"vendor": "taste-skill", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "taste-skill's variant tuned for GPT-style output", "not_for": "Claude sessions — use `design-taste-frontend`"},
-    "high-end-visual-design":    {"vendor": "taste-skill", "mode": "W", "class": "pass", "group": "look", "routable": true, "for": "making an existing surface read as expensive: shadows, cards, spacing; 'absolute zero' anti-patterns", "not_for": "wholesale redesign"},
-    "brandkit":                  {"vendor": "taste-skill", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "identity boards, logo systems, brand guideline boards — needs image generation", "not_for": "surfaces; and not for YOURSAUNAS, whose identity is in the brand contract"},
-    "imagegen-frontend-web":     {"vendor": "taste-skill", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "one horizontal reference image per section of a web surface", "not_for": "sessions without an image tool"},
-    "imagegen-frontend-mobile":  {"vendor": "taste-skill", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "reference images for mobile screens", "not_for": "web surfaces — use the web variant"},
-    "image-to-code":             {"vendor": "taste-skill", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "generate a reference → analyse → code it; tuned for Codex", "not_for": "a targeted pass"},
-    "full-output-enforcement":   {"vendor": "taste-skill", "mode": "R", "class": "modifier", "group": "modifier", "routable": true, "for": "bans placeholders and truncated output — switch on whenever the chosen tool will write a long file", "not_for": "use on its own; it modifies another tool"},
-    "minimalist-ui":             {"vendor": "taste-skill", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "a minimalist direction preset", "not_for": "surfaces with a brand contract"},
-    "industrial-brutalist-ui":   {"vendor": "taste-skill", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "a brutalist direction preset", "not_for": "surfaces with a brand contract"},
-    "redesign-existing-projects":{"vendor": "taste-skill", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "taste-skill's redesign protocol for an existing project", "not_for": "the router — a redesign is pipeline work"},
-    "stitch-design-taste":       {"vendor": "taste-skill", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "taste-skill tuned for Google Stitch handoff", "not_for": "anything not going through Stitch"},
-
-    "impeccable":                {"vendor": "impeccable", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "high-variance art direction (DESIGN_VARIANCE ≥ 7) with internal modes: shape · audit|critique · animate|bolder|colorize|delight|layout|overdrive|quieter|typeset · adapt|clarify|distill · harden|onboard|optimize|polish · init|document|extract|live", "not_for": "a cheap pass; ~3× the cost of `design-taste-frontend`; never beside another orchestrator"},
-
-    "motion-design":             {"vendor": "lottiefiles", "mode": "W", "class": "pass", "group": "feel", "routable": true, "for": "timing, easing, choreography from scratch; Disney principles adapted for UI", "not_for": "fixing jank — that is `fixing-motion-performance`"},
-    "emil-design-eng":           {"vendor": "emil", "mode": "W", "class": "pass", "group": "feel", "routable": true, "for": "component feel, springs, the invisible details; component contracts; review format", "not_for": "page-level motion planning"},
-    "apple-design":              {"vendor": "emil", "mode": "W", "class": "pass", "group": "feel", "routable": true, "for": "gestures, drag, sheets, interruptibility, velocity handoff, momentum", "not_for": "non-interactive entrance animation"},
-    "find-animation-opportunities": {"vendor": "emil", "mode": "R", "class": "judge", "group": "feel", "routable": true, "for": "where motion is missing but earned", "not_for": "improving motion that exists"},
-    "improve-animations":        {"vendor": "emil", "mode": "R", "class": "judge", "group": "feel", "routable": true, "for": "audit all motion and produce a plan for other agents", "not_for": "one component"},
-    "review-animations":         {"vendor": "emil", "mode": "R", "class": "judge", "group": "judge", "routable": true, "for": "review animation code against Emil's craft bar — default to flagging, approval is earned", "not_for": "finding missing motion — that is `find-animation-opportunities`"},
-    "animation-vocabulary":      {"vendor": "emil", "mode": "R", "class": "lookup", "group": "lookup", "routable": true, "for": "naming an effect you can only describe", "not_for": "designing one"},
-    "pick-ui-library":           {"vendor": "emil", "mode": "R", "class": "lookup", "group": "lookup", "routable": true, "for": "choosing a UI component library for a stack", "not_for": "styling decisions"},
-    "ask-sonner":                {"vendor": "emil", "mode": "R", "class": "lookup", "group": "lookup", "routable": true, "for": "questions about the Sonner toast library", "not_for": "other toast libraries"},
-    "prototype":                 {"vendor": "emil", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "build several genuinely different versions of one UI piece behind a visual picker", "not_for": "the router — it only runs when named (`disable-model-invocation`)"},
-
-    "baseline-ui":               {"vendor": "ibelick", "mode": "R", "class": "lookup", "group": "lookup", "routable": true, "for": "the base tidiness checklist — spacing, alignment, contrast, consistency", "not_for": "a design opinion"},
-    "fixing-accessibility":      {"vendor": "ibelick", "mode": "W", "class": "pass", "group": "fix", "routable": true, "for": "fast keyboard / focus / ARIA fixes — a named defect", "not_for": "a compliance audit"},
-    "fixing-motion-performance": {"vendor": "ibelick", "mode": "W", "class": "pass", "group": "feel", "routable": true, "for": "jank, layout thrashing, compositor-only properties, reduced-motion, perf budget", "not_for": "how motion should feel"},
-
-    "accessibility":             {"vendor": "osmani", "mode": "W", "class": "pass", "group": "fix", "routable": true, "for": "full WCAG 2.2, POUR, conformance level, pre-launch", "not_for": "a one-line focus-ring fix"},
-    "core-web-vitals":           {"vendor": "osmani", "mode": "W", "class": "pass", "group": "fix", "routable": true, "for": "LCP, INP, CLS by name", "not_for": "general page weight"},
-    "performance":               {"vendor": "osmani", "mode": "W", "class": "pass", "group": "fix", "routable": true, "for": "payload, critical path, fonts, images, caching", "not_for": "a named Core Web Vital"},
-    "seo":                       {"vendor": "osmani", "mode": "W", "class": "pass", "group": "fix", "routable": true, "for": "meta, structured data, sitemap, robots, on-page", "not_for": "copywriting for humans"},
-    "best-practices":            {"vendor": "osmani", "mode": "W", "class": "pass", "group": "fix", "routable": true, "for": "security headers, CSP, modernisation", "not_for": "design questions"},
-    "web-quality-audit":         {"vendor": "osmani", "mode": "R", "class": "judge", "group": "judge", "routable": true, "for": "umbrella: performance + a11y + SEO + best practices at once", "not_for": "fixing — it names the worst axis, then you work that axis"},
-
-    "design-motion-principles":  {"vendor": "kylezantos", "mode": "W/R", "class": "pass", "group": "feel", "routable": true, "for": "build or audit motion; audit emits an HTML report with looping demos", "not_for": "when a plain text answer is wanted"},
-    "motion-dev-animations":     {"vendor": "motion-dev", "mode": "W", "class": "technique", "group": "technique", "routable": false, "for": "Motion.dev / Framer Motion patterns for React, Next.js, Svelte, Astro", "not_for": "projects not on Motion.dev"},
-
-    "60fps-animation":           {"vendor": "iart-ai", "mode": "W", "class": "technique", "group": "technique", "routable": false, "for": "make a janky CSS animation hit 60fps", "not_for": "deciding what should move"},
-    "accessible-animation":      {"vendor": "iart-ai", "mode": "W", "class": "technique", "group": "technique", "routable": false, "for": "prefers-reduced-motion and accessible motion patterns", "not_for": "a full a11y audit"},
-    "ascii-animation":           {"vendor": "iart-ai", "mode": "W", "class": "technique", "group": "technique", "routable": false, "for": "ASCII / text-based animation effects", "not_for": "anything else"},
-    "glassmorphism":             {"vendor": "iart-ai", "mode": "W", "class": "technique", "group": "technique", "routable": false, "for": "frosted-glass surfaces done right", "not_for": "YOURSAUNAS surfaces unless the brand contract allows it"},
-    "gsap-web":                  {"vendor": "iart-ai", "mode": "W", "class": "technique", "group": "technique", "routable": false, "for": "GSAP: ScrollTrigger, pinning, scrub, SplitText, Flip, Lenis", "not_for": "CSS-only motion"},
-    "lottie-animation":          {"vendor": "iart-ai", "mode": "W", "class": "technique", "group": "technique", "routable": false, "for": "embedding and controlling Lottie animations", "not_for": "designing the animation"},
-    "micro-interaction":         {"vendor": "iart-ai", "mode": "W", "class": "technique", "group": "technique", "routable": false, "for": "micro-interaction recipes", "not_for": "taste — that is `delight` or `emil-design-eng`"},
-    "page-transition-animation": {"vendor": "iart-ai", "mode": "W", "class": "technique", "group": "technique", "routable": false, "for": "page and view transitions", "not_for": "in-page motion"},
-    "svg-animation":             {"vendor": "iart-ai", "mode": "W", "class": "technique", "group": "technique", "routable": false, "for": "SVG path, morph, and line-drawing animation", "not_for": "raster or 3D"},
-
-    "threejs-fundamentals":      {"vendor": "cloudai", "mode": "W", "class": "technique", "group": "lookup", "routable": true, "for": "scene setup, cameras, renderer, Object3D hierarchy, coordinates", "not_for": "React — use core-3d-animation"},
-    "threejs-loaders":           {"vendor": "cloudai", "mode": "W", "class": "technique", "group": "lookup", "routable": true, "for": "GLTF/OBJ/texture loaders and asset pipelines", "not_for": "React"},
-    "threejs-materials":         {"vendor": "cloudai", "mode": "W", "class": "technique", "group": "lookup", "routable": true, "for": "materials and PBR", "not_for": "React"},
-    "threejs-lighting":          {"vendor": "cloudai", "mode": "W", "class": "technique", "group": "lookup", "routable": true, "for": "lights, shadows, environment maps", "not_for": "React"},
-    "threejs-shaders":           {"vendor": "cloudai", "mode": "W", "class": "technique", "group": "lookup", "routable": true, "for": "GLSL and ShaderMaterial", "not_for": "React"},
-    "threejs-geometry":          {"vendor": "cloudai", "mode": "W", "class": "technique", "group": "lookup", "routable": true, "for": "geometries, buffers, instancing", "not_for": "React"},
-    "threejs-textures":          {"vendor": "cloudai", "mode": "W", "class": "technique", "group": "lookup", "routable": true, "for": "textures, UVs, mapping", "not_for": "React"},
-    "threejs-animation":         {"vendor": "cloudai", "mode": "W", "class": "technique", "group": "lookup", "routable": true, "for": "animation mixer, clips, keyframes", "not_for": "React"},
-    "threejs-interaction":       {"vendor": "cloudai", "mode": "W", "class": "technique", "group": "lookup", "routable": true, "for": "raycasting, controls, pointer events", "not_for": "React"},
-    "threejs-postprocessing":    {"vendor": "cloudai", "mode": "W", "class": "technique", "group": "lookup", "routable": true, "for": "EffectComposer passes, bloom, DOF", "not_for": "React"},
-
-    "awwwards":                  {"vendor": "awwwards", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "Awwwards-style visual ambition on a surface", "not_for": "a pass; own context"},
-    "calm-design":               {"vendor": "calm-design", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "calm premium direction with a DESIGN.md output and self-critique", "not_for": "a pass; own context"},
-    "frontend-god-mode":         {"vendor": "frontend-god-mode", "mode": "W", "class": "orchestrator", "group": "direction", "routable": false, "for": "the consolidated master skill — any frontend request", "not_for": "the router, by definition"},
-    "design":                    {"vendor": "design-skill-os", "mode": "R", "class": "lookup", "group": "lookup", "routable": false, "for": "design principles from ten canonical books, when a decision needs a reason behind it", "not_for": "producing code"}
+    "ui-craft": {
+      "vendor": "ui-craft",
+      "mode": "W",
+      "class": "base",
+      "group": "direction",
+      "routable": false,
+      "for": "the base: anti-slop rules, discovery, knobs, Craft Report; actions build|animate|review|polish|audit",
+      "not_for": "a single aspect — use a lens"
+    },
+    "ui-craft-minimal": {
+      "vendor": "ui-craft",
+      "mode": "W",
+      "class": "preset",
+      "group": "preset",
+      "routable": false,
+      "for": "ui-craft with a minimal aesthetic fixed",
+      "not_for": "surfaces with a brand contract — the contract owns the aesthetic"
+    },
+    "ui-craft-editorial": {
+      "vendor": "ui-craft",
+      "mode": "W",
+      "class": "preset",
+      "group": "preset",
+      "routable": false,
+      "for": "ui-craft with an editorial aesthetic fixed",
+      "not_for": "surfaces with a brand contract"
+    },
+    "ui-craft-dense-dashboard": {
+      "vendor": "ui-craft",
+      "mode": "W",
+      "class": "preset",
+      "group": "preset",
+      "routable": false,
+      "for": "ui-craft tuned for dense data dashboards",
+      "not_for": "marketing and commerce surfaces"
+    },
+    "start": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "R",
+      "class": "phase",
+      "group": "phase",
+      "routable": false,
+      "for": "onboarding: explains the ladder and names the next rung",
+      "not_for": "doing work"
+    },
+    "brief": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "phase",
+      "group": "phase",
+      "routable": false,
+      "for": "writes `.ui-craft/brief.md` — purpose, user, principles, metric, out-of-scope",
+      "not_for": "a pass; it asks five questions and stops"
+    },
+    "tokens": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "phase",
+      "group": "phase",
+      "routable": false,
+      "for": "establish or audit the three-layer token spine",
+      "not_for": "inventing hues — the brand contract owns values"
+    },
+    "shape": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "pass",
+      "group": "look",
+      "routable": true,
+      "for": "wireframing one new section — writes `.ui-craft/spec.md`, not code",
+      "not_for": "a whole surface — that is the pipeline"
+    },
+    "craft": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "build a surface from the spec; recipes for dashboard, landing, auth",
+      "not_for": "e-commerce — no recipe, it falls back to standard build mode"
+    },
+    "sddesign": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "ui-craft's own six-gate express lane: brief → tokens → shape → craft → converge → ship",
+      "not_for": "anything design-pipeline already wraps — two conveyors fight"
+    },
+    "finalize": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "R",
+      "class": "judge",
+      "group": "judge",
+      "routable": true,
+      "for": "READY / NOT READY / BLOCKED before merge; findings only",
+      "not_for": "fixing what it finds"
+    },
+    "remember": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "phase",
+      "group": "phase",
+      "routable": false,
+      "for": "append a learned constraint to `.ui-craft/brief.md` §6",
+      "not_for": "design work"
+    },
+    "polish": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "pass",
+      "group": "look",
+      "routable": true,
+      "for": "the final finish pass on a surface that is already right — reads `.ui-craft/brief.md` and project tokens",
+      "not_for": "a surface whose hierarchy is wrong; and not `impeccable polish` unless impeccable is named"
+    },
+    "typeset": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "pass",
+      "group": "look",
+      "routable": true,
+      "for": "type scale, tracking, optical size, hierarchy",
+      "not_for": "choosing a typeface for a new brand"
+    },
+    "colorize": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "pass",
+      "group": "look",
+      "routable": true,
+      "for": "palette application, theming, dark mode",
+      "not_for": "inventing a palette — the contract owns that"
+    },
+    "adapt": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "pass",
+      "group": "look",
+      "routable": true,
+      "for": "breakpoints, mobile layout, container queries, touch targets, safe areas",
+      "not_for": "a layout that is wrong at every width"
+    },
+    "distill": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "pass",
+      "group": "look",
+      "routable": true,
+      "for": "cutting noise from an over-built surface",
+      "not_for": "a surface that is under-built"
+    },
+    "bolder": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "pass",
+      "group": "look",
+      "routable": true,
+      "for": "amplifying personality within the direction",
+      "not_for": "a new direction"
+    },
+    "quieter": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "pass",
+      "group": "look",
+      "routable": true,
+      "for": "restraint, toning down, reducing accent load",
+      "not_for": "fixing a genuinely broken hierarchy"
+    },
+    "extract": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "pass",
+      "group": "look",
+      "routable": true,
+      "for": "pulling repeated markup into components and tokens",
+      "not_for": "first-time token setup — that is `tokens`"
+    },
+    "redesign": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "ui-craft's redesign lens for an existing surface",
+      "not_for": "the router — a redesign is pipeline work"
+    },
+    "delight": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "pass",
+      "group": "feel",
+      "routable": true,
+      "for": "purposeful micro-interactions",
+      "not_for": "a motion system"
+    },
+    "animate": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "pass",
+      "group": "feel",
+      "routable": true,
+      "for": "animation inside the project's motion tokens",
+      "not_for": "taste questions — use emil"
+    },
+    "unhappy": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "pass",
+      "group": "fix",
+      "routable": true,
+      "for": "states before the happy path; impossible booleans into a state machine",
+      "not_for": "cosmetic error styling"
+    },
+    "harden": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "pass",
+      "group": "fix",
+      "routable": true,
+      "for": "skeletons, empty, error, partial, i18n, offline, permissions, first-run",
+      "not_for": "greenfield state design — `unhappy` first"
+    },
+    "clarify": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "W",
+      "class": "pass",
+      "group": "fix",
+      "routable": true,
+      "for": "UX copy: errors, empty states, CTAs, voice matrix, reading level",
+      "not_for": "marketing copy"
+    },
+    "audit": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "R",
+      "class": "judge",
+      "group": "judge",
+      "routable": true,
+      "for": "technical a11y audit inside a build session",
+      "not_for": "a compliance report — that is osmani `accessibility`"
+    },
+    "critique": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "R",
+      "class": "judge",
+      "group": "judge",
+      "routable": true,
+      "for": "UX critique, no code changes",
+      "not_for": "a number — that is `heuristic`"
+    },
+    "heuristic": {
+      "vendor": "ui-craft",
+      "base": "ui-craft",
+      "mode": "R",
+      "class": "judge",
+      "group": "judge",
+      "routable": true,
+      "for": "0–100 score, PM-ready audit, personas",
+      "not_for": "a merge decision — that is `finalize`"
+    },
+    "design-taste-frontend": {
+      "vendor": "taste-skill",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "art direction at DESIGN_VARIANCE ≤ 6: brief inference, three dials, AI-tells list, block library",
+      "not_for": "a pass; and never beside another orchestrator"
+    },
+    "design-taste-frontend-v1": {
+      "vendor": "taste-skill",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "the previous, shorter version of `design-taste-frontend` (226 lines)",
+      "not_for": "new work — kept for comparison only"
+    },
+    "gpt-taste": {
+      "vendor": "taste-skill",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "taste-skill's variant tuned for GPT-style output",
+      "not_for": "Claude sessions — use `design-taste-frontend`"
+    },
+    "high-end-visual-design": {
+      "vendor": "taste-skill",
+      "mode": "W",
+      "class": "pass",
+      "group": "look",
+      "routable": true,
+      "for": "making an existing surface read as expensive: shadows, cards, spacing; 'absolute zero' anti-patterns",
+      "not_for": "wholesale redesign"
+    },
+    "brandkit": {
+      "vendor": "taste-skill",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "identity boards, logo systems, brand guideline boards — needs image generation",
+      "not_for": "surfaces; and not for YOURSAUNAS, whose identity is in the brand contract"
+    },
+    "imagegen-frontend-web": {
+      "vendor": "taste-skill",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "one horizontal reference image per section of a web surface",
+      "not_for": "sessions without an image tool"
+    },
+    "imagegen-frontend-mobile": {
+      "vendor": "taste-skill",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "reference images for mobile screens",
+      "not_for": "web surfaces — use the web variant"
+    },
+    "image-to-code": {
+      "vendor": "taste-skill",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "generate a reference → analyse → code it; tuned for Codex",
+      "not_for": "a targeted pass"
+    },
+    "full-output-enforcement": {
+      "vendor": "taste-skill",
+      "mode": "R",
+      "class": "modifier",
+      "group": "modifier",
+      "routable": true,
+      "for": "bans placeholders and truncated output — switch on whenever the chosen tool will write a long file",
+      "not_for": "use on its own; it modifies another tool"
+    },
+    "minimalist-ui": {
+      "vendor": "taste-skill",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "a minimalist direction preset",
+      "not_for": "surfaces with a brand contract"
+    },
+    "industrial-brutalist-ui": {
+      "vendor": "taste-skill",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "a brutalist direction preset",
+      "not_for": "surfaces with a brand contract"
+    },
+    "redesign-existing-projects": {
+      "vendor": "taste-skill",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "taste-skill's redesign protocol for an existing project",
+      "not_for": "the router — a redesign is pipeline work"
+    },
+    "stitch-design-taste": {
+      "vendor": "taste-skill",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "taste-skill tuned for Google Stitch handoff",
+      "not_for": "anything not going through Stitch"
+    },
+    "impeccable": {
+      "vendor": "impeccable",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "high-variance art direction (DESIGN_VARIANCE ≥ 7) with internal modes: shape · audit|critique · animate|bolder|colorize|delight|layout|overdrive|quieter|typeset · adapt|clarify|distill · harden|onboard|optimize|polish · init|document|extract|live",
+      "not_for": "a cheap pass; ~3× the cost of `design-taste-frontend`; never beside another orchestrator"
+    },
+    "motion-design": {
+      "vendor": "lottiefiles",
+      "mode": "W",
+      "class": "pass",
+      "group": "feel",
+      "routable": true,
+      "for": "timing, easing, choreography from scratch; Disney principles adapted for UI",
+      "not_for": "fixing jank — that is `fixing-motion-performance`"
+    },
+    "emil-design-eng": {
+      "vendor": "emil",
+      "mode": "W",
+      "class": "pass",
+      "group": "feel",
+      "routable": true,
+      "for": "component feel, springs, the invisible details; component contracts; review format",
+      "not_for": "page-level motion planning"
+    },
+    "apple-design": {
+      "vendor": "emil",
+      "mode": "W",
+      "class": "pass",
+      "group": "feel",
+      "routable": true,
+      "for": "gestures, drag, sheets, interruptibility, velocity handoff, momentum",
+      "not_for": "non-interactive entrance animation"
+    },
+    "find-animation-opportunities": {
+      "vendor": "emil",
+      "mode": "R",
+      "class": "judge",
+      "group": "feel",
+      "routable": true,
+      "for": "where motion is missing but earned",
+      "not_for": "improving motion that exists"
+    },
+    "improve-animations": {
+      "vendor": "emil",
+      "mode": "R",
+      "class": "judge",
+      "group": "feel",
+      "routable": true,
+      "for": "audit all motion and produce a plan for other agents",
+      "not_for": "one component"
+    },
+    "review-animations": {
+      "vendor": "emil",
+      "mode": "R",
+      "class": "judge",
+      "group": "judge",
+      "routable": true,
+      "for": "review animation code against Emil's craft bar — default to flagging, approval is earned",
+      "not_for": "finding missing motion — that is `find-animation-opportunities`"
+    },
+    "animation-vocabulary": {
+      "vendor": "emil",
+      "mode": "R",
+      "class": "lookup",
+      "group": "lookup",
+      "routable": true,
+      "for": "naming an effect you can only describe",
+      "not_for": "designing one"
+    },
+    "pick-ui-library": {
+      "vendor": "emil",
+      "mode": "R",
+      "class": "lookup",
+      "group": "lookup",
+      "routable": true,
+      "for": "choosing a UI component library for a stack",
+      "not_for": "styling decisions"
+    },
+    "ask-sonner": {
+      "vendor": "emil",
+      "mode": "R",
+      "class": "lookup",
+      "group": "lookup",
+      "routable": true,
+      "for": "questions about the Sonner toast library",
+      "not_for": "other toast libraries"
+    },
+    "prototype": {
+      "vendor": "emil",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "build several genuinely different versions of one UI piece behind a visual picker",
+      "not_for": "the router — it only runs when named (`disable-model-invocation`)"
+    },
+    "baseline-ui": {
+      "vendor": "ibelick",
+      "mode": "R",
+      "class": "lookup",
+      "group": "lookup",
+      "routable": true,
+      "for": "the base tidiness checklist — spacing, alignment, contrast, consistency",
+      "not_for": "a design opinion"
+    },
+    "fixing-accessibility": {
+      "vendor": "ibelick",
+      "mode": "W",
+      "class": "pass",
+      "group": "fix",
+      "routable": true,
+      "for": "fast keyboard / focus / ARIA fixes — a named defect",
+      "not_for": "a compliance audit"
+    },
+    "fixing-motion-performance": {
+      "vendor": "ibelick",
+      "mode": "W",
+      "class": "pass",
+      "group": "feel",
+      "routable": true,
+      "for": "jank, layout thrashing, compositor-only properties, reduced-motion, perf budget",
+      "not_for": "how motion should feel"
+    },
+    "accessibility": {
+      "vendor": "osmani",
+      "mode": "W",
+      "class": "pass",
+      "group": "fix",
+      "routable": true,
+      "for": "full WCAG 2.2, POUR, conformance level, pre-launch",
+      "not_for": "a one-line focus-ring fix"
+    },
+    "core-web-vitals": {
+      "vendor": "osmani",
+      "mode": "W",
+      "class": "pass",
+      "group": "fix",
+      "routable": true,
+      "for": "LCP, INP, CLS by name",
+      "not_for": "general page weight"
+    },
+    "performance": {
+      "vendor": "osmani",
+      "mode": "W",
+      "class": "pass",
+      "group": "fix",
+      "routable": true,
+      "for": "payload, critical path, fonts, images, caching",
+      "not_for": "a named Core Web Vital"
+    },
+    "seo": {
+      "vendor": "osmani",
+      "mode": "W",
+      "class": "pass",
+      "group": "fix",
+      "routable": true,
+      "for": "meta, structured data, sitemap, robots, on-page",
+      "not_for": "copywriting for humans"
+    },
+    "best-practices": {
+      "vendor": "osmani",
+      "mode": "W",
+      "class": "pass",
+      "group": "fix",
+      "routable": true,
+      "for": "security headers, CSP, modernisation",
+      "not_for": "design questions"
+    },
+    "web-quality-audit": {
+      "vendor": "osmani",
+      "mode": "R",
+      "class": "judge",
+      "group": "judge",
+      "routable": true,
+      "for": "umbrella: performance + a11y + SEO + best practices at once",
+      "not_for": "fixing — it names the worst axis, then you work that axis"
+    },
+    "design-motion-principles": {
+      "vendor": "kylezantos",
+      "mode": "W/R",
+      "class": "pass",
+      "group": "feel",
+      "routable": true,
+      "for": "build or audit motion; audit emits an HTML report with looping demos",
+      "not_for": "when a plain text answer is wanted"
+    },
+    "motion-dev-animations": {
+      "vendor": "motion-dev",
+      "mode": "W",
+      "class": "technique",
+      "group": "technique",
+      "routable": false,
+      "for": "Motion.dev / Framer Motion patterns for React, Next.js, Svelte, Astro",
+      "not_for": "projects not on Motion.dev"
+    },
+    "60fps-animation": {
+      "vendor": "iart-ai",
+      "mode": "W",
+      "class": "technique",
+      "group": "technique",
+      "routable": false,
+      "for": "make a janky CSS animation hit 60fps",
+      "not_for": "deciding what should move"
+    },
+    "accessible-animation": {
+      "vendor": "iart-ai",
+      "mode": "W",
+      "class": "technique",
+      "group": "technique",
+      "routable": false,
+      "for": "prefers-reduced-motion and accessible motion patterns",
+      "not_for": "a full a11y audit"
+    },
+    "ascii-animation": {
+      "vendor": "iart-ai",
+      "mode": "W",
+      "class": "technique",
+      "group": "technique",
+      "routable": false,
+      "for": "ASCII / text-based animation effects",
+      "not_for": "anything else"
+    },
+    "glassmorphism": {
+      "vendor": "iart-ai",
+      "mode": "W",
+      "class": "technique",
+      "group": "technique",
+      "routable": false,
+      "for": "frosted-glass surfaces done right",
+      "not_for": "YOURSAUNAS surfaces unless the brand contract allows it"
+    },
+    "gsap-web": {
+      "vendor": "iart-ai",
+      "mode": "W",
+      "class": "technique",
+      "group": "technique",
+      "routable": false,
+      "for": "GSAP: ScrollTrigger, pinning, scrub, SplitText, Flip, Lenis",
+      "not_for": "CSS-only motion"
+    },
+    "lottie-animation": {
+      "vendor": "iart-ai",
+      "mode": "W",
+      "class": "technique",
+      "group": "technique",
+      "routable": false,
+      "for": "embedding and controlling Lottie animations",
+      "not_for": "designing the animation"
+    },
+    "micro-interaction": {
+      "vendor": "iart-ai",
+      "mode": "W",
+      "class": "technique",
+      "group": "technique",
+      "routable": false,
+      "for": "micro-interaction recipes",
+      "not_for": "taste — that is `delight` or `emil-design-eng`"
+    },
+    "page-transition-animation": {
+      "vendor": "iart-ai",
+      "mode": "W",
+      "class": "technique",
+      "group": "technique",
+      "routable": false,
+      "for": "page and view transitions",
+      "not_for": "in-page motion"
+    },
+    "svg-animation": {
+      "vendor": "iart-ai",
+      "mode": "W",
+      "class": "technique",
+      "group": "technique",
+      "routable": false,
+      "for": "SVG path, morph, and line-drawing animation",
+      "not_for": "raster or 3D"
+    },
+    "threejs-fundamentals": {
+      "vendor": "cloudai",
+      "mode": "W",
+      "class": "technique",
+      "group": "lookup",
+      "routable": true,
+      "for": "scene setup, cameras, renderer, Object3D hierarchy, coordinates",
+      "not_for": "React — use core-3d-animation"
+    },
+    "threejs-loaders": {
+      "vendor": "cloudai",
+      "mode": "W",
+      "class": "technique",
+      "group": "lookup",
+      "routable": true,
+      "for": "GLTF/OBJ/texture loaders and asset pipelines",
+      "not_for": "React"
+    },
+    "threejs-materials": {
+      "vendor": "cloudai",
+      "mode": "W",
+      "class": "technique",
+      "group": "lookup",
+      "routable": true,
+      "for": "materials and PBR",
+      "not_for": "React"
+    },
+    "threejs-lighting": {
+      "vendor": "cloudai",
+      "mode": "W",
+      "class": "technique",
+      "group": "lookup",
+      "routable": true,
+      "for": "lights, shadows, environment maps",
+      "not_for": "React"
+    },
+    "threejs-shaders": {
+      "vendor": "cloudai",
+      "mode": "W",
+      "class": "technique",
+      "group": "lookup",
+      "routable": true,
+      "for": "GLSL and ShaderMaterial",
+      "not_for": "React"
+    },
+    "threejs-geometry": {
+      "vendor": "cloudai",
+      "mode": "W",
+      "class": "technique",
+      "group": "lookup",
+      "routable": true,
+      "for": "geometries, buffers, instancing",
+      "not_for": "React"
+    },
+    "threejs-textures": {
+      "vendor": "cloudai",
+      "mode": "W",
+      "class": "technique",
+      "group": "lookup",
+      "routable": true,
+      "for": "textures, UVs, mapping",
+      "not_for": "React"
+    },
+    "threejs-animation": {
+      "vendor": "cloudai",
+      "mode": "W",
+      "class": "technique",
+      "group": "lookup",
+      "routable": true,
+      "for": "animation mixer, clips, keyframes",
+      "not_for": "React"
+    },
+    "threejs-interaction": {
+      "vendor": "cloudai",
+      "mode": "W",
+      "class": "technique",
+      "group": "lookup",
+      "routable": true,
+      "for": "raycasting, controls, pointer events",
+      "not_for": "React"
+    },
+    "threejs-postprocessing": {
+      "vendor": "cloudai",
+      "mode": "W",
+      "class": "technique",
+      "group": "lookup",
+      "routable": true,
+      "for": "EffectComposer passes, bloom, DOF",
+      "not_for": "React"
+    },
+    "awwwards": {
+      "vendor": "awwwards",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "Awwwards-style visual ambition on a surface",
+      "not_for": "a pass; own context"
+    },
+    "calm-design": {
+      "vendor": "calm-design",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "calm premium direction with a DESIGN.md output and self-critique",
+      "not_for": "a pass; own context"
+    },
+    "frontend-god-mode": {
+      "vendor": "frontend-god-mode",
+      "mode": "W",
+      "class": "orchestrator",
+      "group": "direction",
+      "routable": false,
+      "for": "the consolidated master skill — any frontend request",
+      "not_for": "the router, by definition"
+    },
+    "design": {
+      "vendor": "design-skill-os",
+      "mode": "R",
+      "class": "lookup",
+      "group": "lookup",
+      "routable": false,
+      "for": "design principles from ten canonical books, when a decision needs a reason behind it",
+      "not_for": "producing code"
+    }
   }
 }

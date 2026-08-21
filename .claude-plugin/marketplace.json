@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Alex's personal Claude Code plugin marketplace.",
-    "version": "0.3.0"
+    "version": "0.3.1"
   },
   "plugins": [
     {
@@ -94,7 +94,7 @@
       "name": "design-pipeline",
       "source": "./design-pipeline",
       "description": "The conveyor: builds a complete web surface end-to-end through ten gates, each owned by one vendor skill and each closing on a checkable artifact — intake, brief, tokens, references, art direction, wireframe, build, states, motion, SEO/CWV/a11y audit, ship verdict. Wraps ui-craft's phase commands rather than re-implementing them, and closes the four holes ui-craft leaves: intake, visual references, isolated art direction, and search/performance audit. For single-aspect passes on existing UI, install design-tools.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "author": {
         "name": "YOURSAUNAS"
       },

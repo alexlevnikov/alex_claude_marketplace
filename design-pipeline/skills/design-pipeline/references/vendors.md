@@ -20,6 +20,23 @@ vendor with durable project memory (`.ui-craft/brief.md`, `.ui-craft/spec.md`).
 **Contract:** every ui-craft lens opens by asking to read `ui-craft/SKILL.md` first — let it. A lens
 without its base loses the anti-slop rules, the knobs, and the Craft Report format.
 
+**Interactive by design — carry the answers in.** These lenses stop and wait for a human unless the
+invocation pre-empts them. An unattended run that dispatches them bare will stall.
+
+| Lens | What it stops on | What the gate must supply |
+|---|---|---|
+| `brief` | five questions, then "show before writing" | product purpose · primary user · 3–5 principles · success metric · out of scope — all derivable from `00-intake.md` and the brand contract. Plus: write without confirmation. |
+| `tokens` | "ask which file to write to", then confirm before writing | the target file, resolved from the build target. Plus: these primitives are canon, do not propose alternatives. |
+| `shape` | three to five clarifying questions; spec persist is opt-in | primary action · default-visible vs disclosed · what success looks like · who the user is. Plus: the persist is auto-confirmed. |
+| `craft` | declares a Craft Read, then builds | the direction is settled — execute it, do not re-derive. |
+| `finalize` | nothing — read-only, findings only | pointers to the acceptance bar, direction and audit so it does not re-derive them. |
+
+**Recipe coverage is partial.** `craft` ships `recipe-dashboard.md`, `recipe-landing.md` and
+`recipe-auth.md`. **There is no e-commerce recipe** — `craft` says so and refuses to improvise one,
+falling back to standard build mode. That is the right behaviour, and G5 compensates by treating the
+G4 acceptance bar as the recipe. Authoring a local `recipe-ecommerce.md` is the durable fix once a
+second commerce surface exists to generalise from.
+
 **Knobs** to pass from intake: `CRAFT_LEVEL` (7 default, 5 in ship-fast), `MOTION_INTENSITY`
 (1–3 when G7 is off), `VISUAL_DENSITY`, `DESIGN_VARIANCE`.
 

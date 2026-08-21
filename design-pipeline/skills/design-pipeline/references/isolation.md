@@ -11,15 +11,25 @@ committed to.
 Passes do not have this problem. `typeset`, `unhappy`, `seo` and their kind operate on one aspect
 and compose cleanly.
 
+There is a second, independent reason to isolate, and the first version of this file missed it:
+**context cost**. A pass that reads a 100 KB built surface spends as much of the orchestrator's
+context as an orchestrator does. Isolation is decided by what a gate *reads*, not only by what class
+its owner belongs to.
+
 ## The rules
 
-1. **G3 and G5 run in a subagent.** Non-negotiable.
+1. **G3 and G5 run in a subagent.** Non-negotiable — their owners are orchestrator-class.
 2. **One orchestrator per subagent**, named explicitly, with an instruction not to invoke others.
-3. **Pass-class gates run inline** — G1, G4, G6, G7, G8, G9.
-4. **Never dispatch an orchestrator speculatively.** If a gate is already closed by an artifact,
+3. **Gates that read the built artifact — G6, G8, G9 — are `subagent-if-large`:** inline while the
+   surface is under 25 KB, dispatched above it. Measure the file; do not estimate. The orchestrator
+   must finish the run, and a gate that exhausts its context mid-pipeline costs more than a dispatch.
+4. **Gates that read only their own small inputs run inline** — G0, G1, G4.
+5. **Never dispatch an orchestrator speculatively.** If a gate is already closed by an artifact,
    the gate is skipped, not re-run "to compare".
-5. **The subagent gets artifacts, not conversation.** Everything it needs is in the files listed
+6. **The subagent gets artifacts, not conversation.** Everything it needs is in the files listed
    in its prompt. It cannot see this conversation and must not be assumed to.
+7. **The dispatching gate verifies what comes back.** A subagent's report is a claim about the
+   artifact, not the artifact. See *A gate closes on a verified artifact* in `gates.md`.
 
 ## Dispatch template — G3 DIRECTION
 

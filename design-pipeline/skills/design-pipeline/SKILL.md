@@ -11,7 +11,7 @@ description: >
   exists — typography, colour, motion, states, a11y, performance, SEO, or a read-only review
   — use `design-tools` instead.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Design Pipeline
@@ -21,7 +21,7 @@ done — a single good skill can do that. The point is that it gets done **the s
 that every stage leaves something the next stage can read, and that a run interrupted at gate six
 resumes at gate six.
 
-## The three laws
+## The five laws
 
 **1. Orchestrate only.** This skill sequences other skills. It never re-implements what a vendor
 already does. No composition rules, no easing tables, no WCAG criteria live in this plugin — they
@@ -33,6 +33,14 @@ run in **their own subagent**, each told to use exactly one named skill. See `re
 
 **3. Degraded honesty.** A skipped gate is marked `[–]` and its downstream cost is printed in the
 ship verdict. Never present a run with skipped gates as a clean run.
+
+**4. A gate closes on a verified artifact, never on a vendor's report.** Measure the file, check it
+is structurally complete, and spot-check at least one claim before marking a gate done. The vendor
+reports what it believes it did; you close on what is on disk.
+
+**5. When two artifacts disagree, the direction decides how it looks and the spec decides what is on
+it.** Full precedence order in `references/gates.md` — and the real fix is that G4 references the
+direction's values rather than restating them.
 
 ## The gates
 
@@ -94,6 +102,11 @@ Schemas and examples: `references/artifacts.md`.
   commercial surfaces, not a default cost on every page.
 - `full-output-enforcement` is on for every gate that writes a long file. No placeholders, no
   "// rest of the implementation here".
+- **Isolation** follows what a gate reads: orchestrator-owned gates (G3, G5) always dispatch;
+  gates that read the built surface (G6, G8, G9) dispatch once it exceeds 25 KB; the rest run inline.
+- **Unattended by default.** Several ui-craft lenses stop and ask — `brief`, `tokens` and `shape` all
+  do. Every gate invocation carries their answers in and says the run is unattended. A gate that
+  stalls waiting for a human has failed, not paused.
 
 ## When not to use this
 

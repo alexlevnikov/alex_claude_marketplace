@@ -39,8 +39,32 @@ The file that makes a run resumable. Written after every gate resolves.
 }
 ```
 
-`status` ∈ `pending | running | done | skipped`. A `skipped` gate always carries a `cost` string —
-that string is what gets printed in the ship verdict. Timestamps come from `date`, never invented.
+`status` ∈ `pending | running | done | skipped | done-by-verification`.
+
+- `skipped` always carries a `cost` string — that string is printed in the ship verdict.
+- `done-by-verification` means the gate's own owner did not run, but the orchestrator verified the
+  work exists and holds. It carries a `cost` too, plus a `verified` array listing what was actually
+  checked and how. Use it when an earlier gate already did the work; never as a shortcut for a gate
+  nobody performed.
+- `running` on a resume means the gate was interrupted mid-flight: check whether its artifact exists
+  and is complete **before** re-running it.
+
+Timestamps come from `date`, never invented.
+
+Two optional top-level keys:
+
+```json
+"resume_test": { "result": "passed", "method": "…" },
+"post_verdict_fixes": [{
+  "date": "2026-08-21", "source": "impeccable stop hook", "rule": "side-tab",
+  "file": "index.html:943", "assessment": "real finding — …",
+  "fix": "…", "verdict_impact": "none — minor; NOT READY stands"
+}]
+```
+
+`post_verdict_fixes` records anything changed after G9 wrote its verdict. Every entry must also
+appear as a `## Post-verdict fix` section in `09-SHIP.md` — the state file is the index, the ship
+report is the record.
 
 ## 00-intake.md
 

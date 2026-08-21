@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Alex's personal Claude Code plugin marketplace.",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "plugins": [
     {
@@ -14,32 +14,125 @@
       "source": "./browser-lab",
       "description": "The live-browser toolkit: browser automation, deep frontend debugging, network disassembly, and HTTP request replication. Routes every task across Playwright, Chrome DevTools, and mitmproxy. For retrieval, install web-harvest.",
       "version": "0.3.1",
-      "author": { "name": "YOURSAUNAS" },
-      "keywords": ["browser", "automation", "debugging", "network", "devtools", "playwright", "mitmproxy", "reverse-engineering"]
+      "author": {
+        "name": "YOURSAUNAS"
+      },
+      "keywords": [
+        "browser",
+        "automation",
+        "debugging",
+        "network",
+        "devtools",
+        "playwright",
+        "mitmproxy",
+        "reverse-engineering"
+      ]
     },
     {
       "name": "web-harvest",
       "source": "./web-harvest",
       "description": "The retrieval router for the open web: search, scrape, crawl, and structured extraction at scale across Firecrawl, Exa, Tavily, Bright Data, and Apify, with cost-aware escalation. All five backends are hosted HTTP connectors, so it holds no local process.",
       "version": "0.1.0",
-      "author": { "name": "YOURSAUNAS" },
-      "keywords": ["scraping", "search", "crawl", "extract", "structured-data", "research", "retrieval", "firecrawl", "exa", "tavily", "brightdata", "apify"]
+      "author": {
+        "name": "YOURSAUNAS"
+      },
+      "keywords": [
+        "scraping",
+        "search",
+        "crawl",
+        "extract",
+        "structured-data",
+        "research",
+        "retrieval",
+        "firecrawl",
+        "exa",
+        "tavily",
+        "brightdata",
+        "apify"
+      ]
     },
     {
       "name": "agents-os",
       "source": "./agents-os",
       "description": "Operating knowledge for the personal Agentic OS. The hetzner-server skill covers the VPS that runs every agent: where its current state actually lives, which commands are safe, and what has to be updated after a change so the next session is not reading a stale document.",
       "version": "0.1.0",
-      "author": { "name": "Alex Levnikov" },
-      "keywords": ["hetzner", "vps", "server", "infrastructure", "deploy", "tailscale", "audit", "agentic-os"]
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "hetzner",
+        "vps",
+        "server",
+        "infrastructure",
+        "deploy",
+        "tailscale",
+        "audit",
+        "agentic-os"
+      ]
     },
     {
       "name": "alex-git",
       "source": "./alex-git",
       "description": "The map of Alex's git estate: every working copy and its remote, which GitHub identity actually pushes and what its token may not do, what a push to a given branch deploys, and the traps already paid for once — a 'Repository not found' that is really a blocked transport, work hiding in a second clone, and the two-way Shopify theme sync.",
       "version": "0.1.4",
-      "author": { "name": "Alex Levnikov" },
-      "keywords": ["git", "github", "gh-cli", "push", "remotes", "credentials", "fine-grained-token", "shopify-theme-sync", "icloud"]
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "git",
+        "github",
+        "gh-cli",
+        "push",
+        "remotes",
+        "credentials",
+        "fine-grained-token",
+        "shopify-theme-sync",
+        "icloud"
+      ]
+    },
+    {
+      "name": "design-pipeline",
+      "source": "./design-pipeline",
+      "description": "The conveyor: builds a complete web surface end-to-end through ten gates, each owned by one vendor skill and each closing on a checkable artifact — intake, brief, tokens, references, art direction, wireframe, build, states, motion, SEO/CWV/a11y audit, ship verdict. Wraps ui-craft's phase commands rather than re-implementing them, and closes the four holes ui-craft leaves: intake, visual references, isolated art direction, and search/performance audit. For single-aspect passes on existing UI, install design-tools.",
+      "version": "0.1.0",
+      "author": {
+        "name": "YOURSAUNAS"
+      },
+      "keywords": [
+        "design",
+        "pipeline",
+        "orchestration",
+        "ui-craft",
+        "art-direction",
+        "design-system",
+        "seo",
+        "core-web-vitals",
+        "accessibility",
+        "ship-gate",
+        "ecommerce"
+      ]
+    },
+    {
+      "name": "design-tools",
+      "source": "./design-tools",
+      "description": "The router: one targeted design pass on UI that already exists. Reads the request in the user's own words, picks exactly one specialist skill out of seventy-six across ui-craft, taste-skill, Emil Kowalski, Addy Osmani's web-quality suite and ibelick, and delegates to it. Carries what no single vendor has — a collision table for the twelve places where three vendors cover the same ground, read-only-before-write discipline, and a hard escalation threshold to design-pipeline when a request stops being one pass.",
+      "version": "0.1.0",
+      "author": {
+        "name": "YOURSAUNAS"
+      },
+      "keywords": [
+        "design",
+        "router",
+        "typography",
+        "color",
+        "motion",
+        "accessibility",
+        "performance",
+        "seo",
+        "code-review",
+        "polish",
+        "ui-craft"
+      ]
     }
   ]
 }

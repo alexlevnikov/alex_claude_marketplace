@@ -1,0 +1,22 @@
+{
+  "name": "design-tools",
+  "version": "0.1.0",
+  "description": "The router: one targeted design pass on UI that already exists. Reads the request in the user's own words, picks exactly one specialist skill out of seventy-six across ui-craft, taste-skill, Emil Kowalski, Addy Osmani's web-quality suite and ibelick, and delegates to it. Carries what no single vendor has — a collision table for the twelve places where three vendors cover the same ground, read-only-before-write discipline, and a hard escalation threshold to design-pipeline when a request stops being one pass.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "router",
+    "typography",
+    "color",
+    "motion",
+    "accessibility",
+    "performance",
+    "seo",
+    "code-review",
+    "polish",
+    "ui-craft"
+  ],
+  "license": "MIT"
+}

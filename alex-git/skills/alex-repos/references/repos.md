@@ -68,8 +68,10 @@ CI (both fire on push and PR to `main`/`staging`):
 | `.github/workflows/quality.yml` | weight / request / DOM / image budgets from `scripts/budgets.json`, measured against the **staging theme preview on the CDN** |
 
 `quality.yml` needs three repository secrets — `SHOPIFY_STORE`, `STAGING_THEME_ID`,
-`SHOPIFY_FLAG_STORE_PASSWORD` — and fails without them. The fine-grained PAT cannot create
-them (see `auth.md`); Alex adds them in the repo settings UI.
+`SHOPIFY_FLAG_STORE_PASSWORD` — and refuses to start without them. The fine-grained PAT cannot
+create them (see `auth.md`); Alex adds them in the repo settings UI. The repository documents
+its own CI in `.github/README.md`, and `CLAUDE.md` at its root carries the verification rules —
+both added 2026-08-20, so a session working in the theme no longer depends on this file.
 
 **Never budget against `shopify theme dev`.** Measured 2026-08-19: the same homepage is
 5015 KB through the dev server and 433 KB through the CDN. The dev server serves assets

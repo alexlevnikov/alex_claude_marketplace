@@ -130,3 +130,22 @@ unpushed, work believed lost, a clone believed missing. Each was corrected in pl
 old claim left visible and a note on what the faulty method was. That is the convention here:
 the wrong conclusion is deleted only along with the reasoning that produced it, otherwise the
 next session repeats the method and reaches the same wrong answer.
+
+---
+
+## 9. An empty secret is not an error
+
+`quality.yml` measures `https://$SHOPIFY_STORE/?preview_theme_id=$STAGING_THEME_ID`. An unset
+`STAGING_THEME_ID` does not fail: `?preview_theme_id=` with no value is ignored, the request is
+served from the **published** theme — stock Horizon, not ours — and the gate reports entirely
+plausible numbers for a theme nobody here maintains. For a while the only thing preventing that
+was an empty `SHOPIFY_STORE` breaking the URL first: a safety net made of a second bug.
+
+**Rule.** A workflow that consumes secrets asserts them in its first step, before checkout, and
+fails naming the missing ones. Never let a missing input degrade into a valid-looking
+measurement of something else. Fixed 2026-08-20; the job now fails in 8 seconds instead of
+producing numbers.
+
+Related: the fine-grained token cannot create or read repository secrets at all
+(`403 Resource not accessible by personal access token`), so adding them is always a browser
+step for Alex — see `auth.md`.

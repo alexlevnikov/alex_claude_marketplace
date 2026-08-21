@@ -100,6 +100,32 @@ that skills detect a capability and never hard-code a tool name:
 | [Rai-onl/mcp-gateway](https://github.com/rai-onl/mcp-gateway) | One binary, one config. Spawns the stdio child, performs the MCP handshake, restarts a crashed child on the next request. Per-server `request_timeout_seconds` (default 30 s). `SIGHUP` reloads config in place. | Lazy start on first call; idle reaping |
 | [common-creation/mcp-gateway](https://github.com/common-creation/mcp-gateway) | "Auto-start MCP servers on first request". Streamable HTTP, per-server path `/v1/proxy/{server-name}`, `POST /api/servers/{name}/start\|stop`, web UI. | Idle reaping; maturity |
 
+### Resolved from source, 2026-08-19
+
+Both repositories were cloned and read rather than trusted. **Rai-onl wins on
+every property that motivated this wave**, and `common-creation` is out.
+
+| Property | Rai-onl (Rust) | common-creation (Go) |
+| --- | --- | --- |
+| Lazy start | **Yes** — `router/src/dispatch.rs` holds each bridge as an empty slot and a *request* spawns it; the slot lock is held "across the handshake" | **No** — `main.go:41` calls `manager.StartAll(ctx)` at startup. The lazy path exists (`ensureSession`, `streamable.go:113`) but is not the default |
+| Crash / wedge recovery | **Yes** — background probe reaps a dead child and replaces one that fails the liveness probe repeatedly (`dispatch.rs:231`) | None |
+| Idle reaping | No | No |
+| Maintained | v0.3.0, 2026-07-27, recent commits | Last commit 2026-01-10 |
+| Build | `cargo build` — **needs a Rust toolchain, absent on this machine** | Go / Docker, both present |
+
+Two corrections to earlier reasoning, both recorded so they are not re-derived:
+
+- **`common-creation`'s README overclaims.** "Auto-start MCP servers on first
+  request" is contradicted by its own `main.go`. The README was the basis for
+  putting it on the shortlist; the source removes it.
+- **Criterion 3 was overweighted.** With one daemon the worst case is three
+  browser-lab processes for the whole machine, against 21 today (7 sessions × 3).
+  Idle reaping would buy "zero instead of three", not "three instead of 21". Its
+  absence is therefore acceptable, and it drops from blocking to nice-to-have.
+
+**Decision: Rai-onl/mcp-gateway.** Its cost is a Rust toolchain on this machine,
+which no other work here needs.
+
 ## Architecture
 
 ```
@@ -142,16 +168,17 @@ is **not documented** and must be tested, not assumed — see criterion 8.
 
 ## Phase 0: the stand
 
-Both candidates are unverified. The stand runs before any config on this machine
-changes, against one backend, with the criteria fixed in advance.
+Criteria 2 and 3 were settled from source (see above) and no longer need the
+stand. What remains needs a running gateway. The stand uses **Rai-onl**, one
+backend, before any config on this machine changes.
 
 1. Claude Code connects over `"type": "http"` and tools arrive with **native
    schemas**, not meta-tools.
-2. **Lazy start** — the backend process is absent from `ps` before the first tool
-   call and present after it.
-3. **Idle reaping** — the process disappears after the idle timeout. Failing this
-   is not disqualifying, but it must be recorded honestly: lazy start without
-   reaping means a long-lived daemon eventually holds everything anyway.
+2. **Lazy start** — *settled from source*. Confirm in passing: the backend
+   process is absent from `ps` before the first tool call and present after it.
+3. **Idle reaping** — *settled: neither candidate has it*, and it is not worth
+   blocking on. Confirm instead that a started backend stays a single instance
+   machine-wide no matter how many sessions call it.
 4. **Two concurrent sessions** against one backend do not corrupt each other;
    chrome-devtools with page-id routing keeps their tabs separate.
 5. **Logins survive** a session restart — a cookie set in one session is present
@@ -201,9 +228,12 @@ holds state that a session needs, so a rollback costs a restart and no data.
 
 ## Open questions
 
-- Which candidate survives phase 0. If neither does, the fallback is a purpose-
-  built bridge (~400 lines: config, one endpoint per backend, spawn on first
-  call, idle reap, launchd) — chosen only against evidence from the stand.
+- ~~Which candidate survives phase 0~~ — **resolved 2026-08-19 from source:
+  Rai-onl.** The fallback if it fails the stand is still a purpose-built bridge
+  (~400 lines: config, one endpoint per backend, spawn on first call, launchd).
+- Whether a Rust toolchain on this machine is an acceptable price. It is needed
+  only to build the gateway; nothing else here uses Rust. Alex decides before
+  the stand runs.
 - Whether the gateway should reap Chrome itself, or only the chrome-devtools
   server. Reaping the browser discards the tab state sessions may still want.
 - Whether `n8n-hetzner` belongs behind the gateway at all: it is an `ssh`

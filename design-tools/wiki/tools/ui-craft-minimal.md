@@ -2,7 +2,9 @@
 
 # `ui-craft-minimal`
 
-**Vendor:** [ui-craft](../vendors/ui-craft.md) (educlopez) · https://github.com/educlopez/ui-craft
+ui-craft base with a minimal, whitespace-led aesthetic fixed in.
+
+**Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
 **Mode:** W · **Class:** preset · **Group:** preset · **Routable:** no — direct engagement only (`/design-tools:ui-craft-minimal`)
 
 **For:** ui-craft with a minimal aesthetic fixed
@@ -11,6 +13,7 @@
 ## Engage
 
 - Direct: `/design-tools:ui-craft-minimal <target>`
+- Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

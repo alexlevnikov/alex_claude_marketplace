@@ -2,15 +2,18 @@
 
 # `micro-interaction`
 
-**Vendor:** [web-animation-skills](../vendors/iart-ai.md) (iart-ai) · https://github.com/iart-ai/web-animation-skills
-**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** no — direct engagement only (`/design-tools:micro-interaction`)
+Micro-interaction recipes: hover, press, toggle, feedback.
+
+**Vendor:** [iart-ai web-animation](../vendors/iart.md) · https://github.com/iart-ai/web-animation-skills
+**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** no — direct engagement only (`/design-tools:iart-micro-interaction`)
 
 **For:** micro-interaction recipes
 **Not for:** taste — that is `delight` or `emil-design-eng`
 
 ## Engage
 
-- Direct: `/design-tools:micro-interaction <target>`
+- Direct: `/design-tools:iart-micro-interaction <target>`
+- Vendor entry point: `/design-tools:iart` — lists the vendor's tools
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

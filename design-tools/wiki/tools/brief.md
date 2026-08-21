@@ -2,8 +2,10 @@
 
 # `brief`
 
-**Vendor:** [ui-craft](../vendors/ui-craft.md) (educlopez) · https://github.com/educlopez/ui-craft
-**Mode:** W · **Class:** phase · **Group:** phase · **Routable:** no — direct engagement only (`/design-tools:brief`)
+Interviews you and writes .ui-craft/brief.md — purpose, user, principles, success metric, out of scope.
+
+**Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
+**Mode:** W · **Class:** phase · **Group:** phase · **Routable:** no — direct engagement only (`/design-tools:ui-craft-brief`)
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
 
@@ -12,7 +14,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:brief <target>`
+- Direct: `/design-tools:ui-craft-brief <target>`
+- Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

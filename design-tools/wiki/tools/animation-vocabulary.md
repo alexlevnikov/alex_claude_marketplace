@@ -2,7 +2,9 @@
 
 # `animation-vocabulary`
 
-**Vendor:** [Emil Kowalski skills](../vendors/emil.md) (emilkowalski) · https://github.com/emilkowalski/skills
+Reverse dictionary: describe an effect, get its name and a reference.
+
+**Vendor:** [Emil Kowalski](../vendors/emil.md) · https://github.com/emilkowalski/skills
 **Mode:** R · **Class:** lookup · **Group:** lookup · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** naming an effect you can only describe
@@ -10,7 +12,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:animation-vocabulary <target>`
+- Direct: `/design-tools:emil-animation-vocabulary <target>`
+- Vendor entry point: `/design-tools:emil` — lists the vendor's tools
 - Through the router, these phrasings land here:
   - "what's it called when a popover pops" · «как называется этот эффект»
 

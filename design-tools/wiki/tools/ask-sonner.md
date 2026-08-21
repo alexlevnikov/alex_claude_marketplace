@@ -2,7 +2,9 @@
 
 # `ask-sonner`
 
-**Vendor:** [Emil Kowalski skills](../vendors/emil.md) (emilkowalski) · https://github.com/emilkowalski/skills
+Answers questions about the Sonner toast library.
+
+**Vendor:** [Emil Kowalski](../vendors/emil.md) · https://github.com/emilkowalski/skills
 **Mode:** R · **Class:** lookup · **Group:** lookup · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** questions about the Sonner toast library
@@ -10,7 +12,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:ask-sonner <target>`
+- Direct: `/design-tools:emil-ask-sonner <target>`
+- Vendor entry point: `/design-tools:emil` — lists the vendor's tools
 - Through the router: `/design-tools:tool <your words>` — no fixed phrasing recorded yet in `routing.md`.
 
 ## What the vendor says

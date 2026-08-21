@@ -2,15 +2,18 @@
 
 # `gpt-taste`
 
-**Vendor:** [taste-skill](../vendors/taste-skill.md) (Leonxlnx) · https://github.com/Leonxlnx/taste-skill
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:gpt-taste`)
+taste-skill variant tuned for GPT-style output.
+
+**Vendor:** [taste-skill by Leonxlnx](../vendors/taste.md) · https://github.com/Leonxlnx/taste-skill
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:taste-gpt-taste`)
 
 **For:** taste-skill's variant tuned for GPT-style output
 **Not for:** Claude sessions — use `design-taste-frontend`
 
 ## Engage
 
-- Direct: `/design-tools:gpt-taste <target>`
+- Direct: `/design-tools:taste-gpt-taste <target>`
+- Vendor entry point: `/design-tools:taste` — runs the vendor's master `design-taste-frontend`
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

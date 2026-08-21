@@ -2,7 +2,9 @@
 
 # `seo`
 
-**Vendor:** [web-quality-skills](../vendors/osmani.md) (addyosmani) · https://github.com/addyosmani/web-quality-skills
+On-page SEO: meta, structured data, sitemap, robots, headings, internal links.
+
+**Vendor:** [Addy Osmani web-quality](../vendors/osmani.md) · https://github.com/addyosmani/web-quality-skills
 **Mode:** W · **Class:** pass · **Group:** fix · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** meta, structured data, sitemap, robots, on-page
@@ -10,7 +12,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:seo <target>`
+- Direct: `/design-tools:osmani-seo <target>`
+- Vendor entry point: `/design-tools:osmani` — lists the vendor's tools
 - Through the router, these phrasings land here:
   - "we don't rank" · «нас не находят в поиске» · "add structured data" · «микроразметка»
 

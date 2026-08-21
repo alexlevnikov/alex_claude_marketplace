@@ -2,7 +2,9 @@
 
 # `design-motion-principles`
 
-**Vendor:** [design-motion-principles](../vendors/kylezantos.md) (kylezantos) · https://github.com/kylezantos/design-motion-principles
+Builds motion or audits it with Emil / Krehel / Tompkins lenses; audit emits an HTML report with looping demos.
+
+**Vendor:** [kylezantos](../vendors/design-motion-principles.md) · https://github.com/kylezantos/design-motion-principles
 **Mode:** W/R · **Class:** pass · **Group:** feel · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** build or audit motion; audit emits an HTML report with looping demos
@@ -11,6 +13,7 @@
 ## Engage
 
 - Direct: `/design-tools:design-motion-principles <target>`
+- Vendor entry point: `/design-tools:design-motion-principles` — runs this very skill as the vendor's master
 - Through the router, these phrasings land here:
   - "I want to see the motion review" · «хочу посмотреть отчёт по анимации»
 

@@ -2,7 +2,9 @@
 
 # `improve-animations`
 
-**Vendor:** [Emil Kowalski skills](../vendors/emil.md) (emilkowalski) · https://github.com/emilkowalski/skills
+Read-only: audits all existing motion and writes a plan for other agents.
+
+**Vendor:** [Emil Kowalski](../vendors/emil.md) · https://github.com/emilkowalski/skills
 **Mode:** R · **Class:** judge · **Group:** feel · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** audit all motion and produce a plan for other agents
@@ -10,7 +12,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:improve-animations <target>`
+- Direct: `/design-tools:emil-improve-animations <target>`
+- Vendor entry point: `/design-tools:emil` — lists the vendor's tools
 - Through the router, these phrasings land here:
   - "audit all the animation in here" · «отревьюй весь моушн»
 

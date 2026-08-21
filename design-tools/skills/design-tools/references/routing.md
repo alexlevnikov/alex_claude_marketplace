@@ -73,7 +73,8 @@ Where a row lands on accessibility, performance, motion, polish, or review, **re
 ## Named outright — do not route, engage
 
 "run impeccable on the hero" · «прогони impeccable» · "use typeset here" · «возьми typeset» — the
-user has chosen. `/design-tools:<tool>` (or the same resolve-and-load by hand, `loading.md`). The
+user has chosen. `/design-tools:<vendor>-<tool>` — or `/design-tools:<vendor>` for the vendor's master
+skill run as designed — or the same resolve-and-load by hand (`loading.md`). The
 only check left is the orchestrator one: a second orchestrator in this context is still a no.
 
 ## Ask, do not route

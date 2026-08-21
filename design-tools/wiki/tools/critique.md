@@ -2,7 +2,9 @@
 
 # `critique`
 
-**Vendor:** [ui-craft](../vendors/ui-craft.md) (educlopez) · https://github.com/educlopez/ui-craft
+UX critique of a surface — what to change and why; no code changes.
+
+**Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
 **Mode:** R · **Class:** judge · **Group:** judge · **Routable:** yes — `/design-tools:tool` can land here
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
@@ -12,7 +14,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:critique <target>`
+- Direct: `/design-tools:ui-craft-critique <target>`
+- Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
 - Through the router, these phrasings land here:
   - "what would you change" · «что скажешь по этой странице»
 

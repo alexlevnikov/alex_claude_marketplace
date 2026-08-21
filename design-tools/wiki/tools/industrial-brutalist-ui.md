@@ -2,15 +2,18 @@
 
 # `industrial-brutalist-ui`
 
-**Vendor:** [taste-skill](../vendors/taste-skill.md) (Leonxlnx) · https://github.com/Leonxlnx/taste-skill
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:industrial-brutalist-ui`)
+Direction preset: industrial-brutalist UI.
+
+**Vendor:** [taste-skill by Leonxlnx](../vendors/taste.md) · https://github.com/Leonxlnx/taste-skill
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:taste-industrial-brutalist-ui`)
 
 **For:** a brutalist direction preset
 **Not for:** surfaces with a brand contract
 
 ## Engage
 
-- Direct: `/design-tools:industrial-brutalist-ui <target>`
+- Direct: `/design-tools:taste-industrial-brutalist-ui <target>`
+- Vendor entry point: `/design-tools:taste` — runs the vendor's master `design-taste-frontend`
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

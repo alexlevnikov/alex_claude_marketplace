@@ -2,7 +2,9 @@
 
 # `frontend-god-mode`
 
-**Vendor:** [frontend-god-mode](../vendors/frontend-god-mode.md) (Shawnchee) · https://github.com/Shawnchee/frontend-god-mode
+Consolidated do-everything frontend master skill; orchestrator.
+
+**Vendor:** [Shawnchee](../vendors/frontend-god-mode.md) · https://github.com/Shawnchee/frontend-god-mode
 **Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:frontend-god-mode`)
 
 **For:** the consolidated master skill — any frontend request
@@ -11,6 +13,7 @@
 ## Engage
 
 - Direct: `/design-tools:frontend-god-mode <target>`
+- Vendor entry point: `/design-tools:frontend-god-mode` — runs this very skill as the vendor's master
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

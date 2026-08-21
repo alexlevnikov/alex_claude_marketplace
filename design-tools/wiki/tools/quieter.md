@@ -2,7 +2,9 @@
 
 # `quieter`
 
-**Vendor:** [ui-craft](../vendors/ui-craft.md) (educlopez) · https://github.com/educlopez/ui-craft
+Tones a loud surface down: fewer accents, calmer type and motion, more whitespace.
+
+**Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
 **Mode:** W · **Class:** pass · **Group:** look · **Routable:** yes — `/design-tools:tool` can land here
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
@@ -12,7 +14,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:quieter <target>`
+- Direct: `/design-tools:ui-craft-quieter <target>`
+- Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
 - Through the router, these phrasings land here:
   - "too loud" · «слишком кричаще» · «сделай спокойнее» · "tone it down"
 

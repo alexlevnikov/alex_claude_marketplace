@@ -2,7 +2,9 @@
 
 # `fixing-accessibility`
 
-**Vendor:** [ui-skills](../vendors/ibelick.md) (ibelick) · https://github.com/ibelick/ui-skills
+Fast targeted accessibility fixes: focus ring, tab order, labels, ARIA.
+
+**Vendor:** [ui-skills by ibelick](../vendors/ibelick.md) · https://github.com/ibelick/ui-skills
 **Mode:** W · **Class:** pass · **Group:** fix · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** fast keyboard / focus / ARIA fixes — a named defect
@@ -10,7 +12,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:fixing-accessibility <target>`
+- Direct: `/design-tools:ibelick-fixing-accessibility <target>`
+- Vendor entry point: `/design-tools:ibelick` — lists the vendor's tools
 - Through the router, these phrasings land here:
   - "keyboard navigation is broken" · «с клавиатуры не работает» · "focus ring missing"
 

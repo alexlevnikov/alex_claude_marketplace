@@ -9,10 +9,10 @@ description: >
   "the page is slow", "we don't show up in search", "what would you change here", "score this
   page", "can I merge this", "what's that effect called". It picks exactly one specialist skill,
   resolves where that skill is installed, loads it, and runs it. Also use when the user names a
-  tool from the set outright ("run impeccable on this", "use typeset") — `/design-tools:<tool>`
-  engages it directly. For building a whole new surface from scratch, use `design-pipeline`.
+  tool from the set outright ("run impeccable on this", "use typeset") — `/design-tools:<vendor>` runs
+  a vendor's master skill as designed, `/design-tools:<vendor>-<tool>` engages one tool directly. For building a whole new surface from scratch, use `design-pipeline`.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Design Tools
@@ -73,12 +73,19 @@ above any pass-level decision.
 ## Direct engagement
 
 When the user names a tool — "run `impeccable` on the hero", "do a `typeset` pass" — there is nothing
-to route. `/design-tools:<tool> <target>` exists for every tool in the set (eighty-seven commands,
-generated from `registry/tools.json`); it resolves, loads and runs that one tool under the same
-discipline. Orchestrator-class tools (`impeccable`, `design-taste-frontend`, `craft`, …) are
-reachable this way *only* — the router never lands on them — and their commands say why they want
-a context of their own. The wiki (`wiki/README.md`, `wiki/vendors/`, `wiki/tools/`) is the
-reference for what each one is.
+to route. Every tool in the set has a command, named **vendor-first** so the picker groups them:
+`/design-tools:ui-craft-typeset`, `/design-tools:osmani-seo`, `/design-tools:emil-apple-design`
+(no double prefix when the tool already carries the vendor key: `emil-design-eng`, `threejs-shaders`).
+Each resolves, loads and runs that one tool under the same discipline.
+
+Every vendor also has an **entry command**, `/design-tools:<vendor>`. Where the vendor has a master
+skill — `ui-craft`, `impeccable`, `taste` (→ `design-taste-frontend`), `lottie` (→ `motion-design`),
+the single-skill vendors — it runs that skill **as the vendor designed it**: its own discovery,
+modes, knobs and report, with the router's pass discipline deliberately not layered on top; only
+the brand contract (as the answer to its brand questions) and "say what changed" survive. Where the
+vendor has no master — `emil`, `osmani`, `ibelick`, `iart`, `threejs` — the command lists and
+dispatches. Orchestrator-class tools are reachable these ways *only* — the router never lands on
+them. The wiki (`wiki/README.md`, `wiki/vendors/`, `wiki/tools/`) is the reference for what each one is.
 
 ## What this skill never does
 

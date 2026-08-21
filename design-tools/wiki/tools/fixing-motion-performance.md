@@ -2,7 +2,9 @@
 
 # `fixing-motion-performance`
 
-**Vendor:** [ui-skills](../vendors/ibelick.md) (ibelick) · https://github.com/ibelick/ui-skills
+Fixes janky animation: compositor-only properties, layout thrash, reduced-motion, perf budget.
+
+**Vendor:** [ui-skills by ibelick](../vendors/ibelick.md) · https://github.com/ibelick/ui-skills
 **Mode:** W · **Class:** pass · **Group:** feel · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** jank, layout thrashing, compositor-only properties, reduced-motion, perf budget
@@ -10,7 +12,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:fixing-motion-performance <target>`
+- Direct: `/design-tools:ibelick-fixing-motion-performance <target>`
+- Vendor entry point: `/design-tools:ibelick` — lists the vendor's tools
 - Through the router, these phrasings land here:
   - "it stutters" · «дёргается» · "janky" · «лагает при скролле»
 

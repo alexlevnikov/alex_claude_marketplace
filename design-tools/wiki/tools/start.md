@@ -2,8 +2,10 @@
 
 # `start`
 
-**Vendor:** [ui-craft](../vendors/ui-craft.md) (educlopez) · https://github.com/educlopez/ui-craft
-**Mode:** R · **Class:** phase · **Group:** phase · **Routable:** no — direct engagement only (`/design-tools:start`)
+Explains the ui-craft ladder and names your next rung; changes nothing.
+
+**Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
+**Mode:** R · **Class:** phase · **Group:** phase · **Routable:** no — direct engagement only (`/design-tools:ui-craft-start`)
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
 
@@ -12,7 +14,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:start <target>`
+- Direct: `/design-tools:ui-craft-start <target>`
+- Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

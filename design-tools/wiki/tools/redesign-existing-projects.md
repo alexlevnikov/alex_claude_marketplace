@@ -2,15 +2,18 @@
 
 # `redesign-existing-projects`
 
-**Vendor:** [taste-skill](../vendors/taste-skill.md) (Leonxlnx) · https://github.com/Leonxlnx/taste-skill
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:redesign-existing-projects`)
+taste-skill's redesign protocol for an existing project.
+
+**Vendor:** [taste-skill by Leonxlnx](../vendors/taste.md) · https://github.com/Leonxlnx/taste-skill
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:taste-redesign-existing-projects`)
 
 **For:** taste-skill's redesign protocol for an existing project
 **Not for:** the router — a redesign is pipeline work
 
 ## Engage
 
-- Direct: `/design-tools:redesign-existing-projects <target>`
+- Direct: `/design-tools:taste-redesign-existing-projects <target>`
+- Vendor entry point: `/design-tools:taste` — runs the vendor's master `design-taste-frontend`
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

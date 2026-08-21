@@ -2,7 +2,9 @@
 
 # `find-animation-opportunities`
 
-**Vendor:** [Emil Kowalski skills](../vendors/emil.md) (emilkowalski) · https://github.com/emilkowalski/skills
+Read-only: finds where motion is missing but earned, and proposes it.
+
+**Vendor:** [Emil Kowalski](../vendors/emil.md) · https://github.com/emilkowalski/skills
 **Mode:** R · **Class:** judge · **Group:** feel · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** where motion is missing but earned
@@ -10,7 +12,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:find-animation-opportunities <target>`
+- Direct: `/design-tools:emil-find-animation-opportunities <target>`
+- Vendor entry point: `/design-tools:emil` — lists the vendor's tools
 - Through the router, these phrasings land here:
   - "add some motion" · «оживи страницу» · "it feels static"
 

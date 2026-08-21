@@ -6,7 +6,8 @@ asserted here — it is checked at call time by the resolver (`bash scripts/reso
 group is `registry/tools.json`, rendered in `wiki/README.md`.
 
 Orchestrator-class skills are deliberately absent from this catalog — they belong to
-`design-pipeline`. They are reachable by name through `/design-tools:<tool>`, never by route.
+`design-pipeline`. They are reachable by name through `/design-tools:<vendor>-<tool>` (or the vendor's
+entry command `/design-tools:<vendor>`, which runs its master skill as designed), never by route.
 
 ## LOOK — how it looks
 
@@ -88,5 +89,5 @@ whenever the chosen tool will write a long file.
 
 Techniques (`gsap-web`, `svg-animation`, `motion-dev-animations`, the rest of iart-ai), ui-craft
 phase commands (`brief`, `tokens`, `craft`, `sddesign`, …), presets, and every orchestrator
-(`impeccable`, `design-taste-frontend`, `awwwards`, …). All have a `/design-tools:<tool>` command
+(`impeccable`, `design-taste-frontend`, `awwwards`, …). All have a `/design-tools:<vendor>-<tool>` command
 and a wiki page; none is a route.

@@ -2,8 +2,10 @@
 
 # `sddesign`
 
-**Vendor:** [ui-craft](../vendors/ui-craft.md) (educlopez) · https://github.com/educlopez/ui-craft
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:sddesign`)
+ui-craft's six-gate conveyor for one surface: brief → tokens → shape → craft → converge → ship.
+
+**Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:ui-craft-sddesign`)
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
 
@@ -12,7 +14,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:sddesign <target>`
+- Direct: `/design-tools:ui-craft-sddesign <target>`
+- Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

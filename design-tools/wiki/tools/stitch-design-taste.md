@@ -2,15 +2,18 @@
 
 # `stitch-design-taste`
 
-**Vendor:** [taste-skill](../vendors/taste-skill.md) (Leonxlnx) · https://github.com/Leonxlnx/taste-skill
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:stitch-design-taste`)
+taste-skill tuned for Google Stitch handoff.
+
+**Vendor:** [taste-skill by Leonxlnx](../vendors/taste.md) · https://github.com/Leonxlnx/taste-skill
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:taste-stitch-design-taste`)
 
 **For:** taste-skill tuned for Google Stitch handoff
 **Not for:** anything not going through Stitch
 
 ## Engage
 
-- Direct: `/design-tools:stitch-design-taste <target>`
+- Direct: `/design-tools:taste-stitch-design-taste <target>`
+- Vendor entry point: `/design-tools:taste` — runs the vendor's master `design-taste-frontend`
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

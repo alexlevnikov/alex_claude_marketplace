@@ -2,15 +2,18 @@
 
 # `60fps-animation`
 
-**Vendor:** [web-animation-skills](../vendors/iart-ai.md) (iart-ai) · https://github.com/iart-ai/web-animation-skills
-**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** no — direct engagement only (`/design-tools:60fps-animation`)
+Makes janky CSS animation hit 60fps.
+
+**Vendor:** [iart-ai web-animation](../vendors/iart.md) · https://github.com/iart-ai/web-animation-skills
+**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** no — direct engagement only (`/design-tools:iart-60fps-animation`)
 
 **For:** make a janky CSS animation hit 60fps
 **Not for:** deciding what should move
 
 ## Engage
 
-- Direct: `/design-tools:60fps-animation <target>`
+- Direct: `/design-tools:iart-60fps-animation <target>`
+- Vendor entry point: `/design-tools:iart` — lists the vendor's tools
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

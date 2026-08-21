@@ -11,7 +11,8 @@ and how to keep the generated layer honest.
 | Resolver | `scripts/resolve.sh <tool>` → `resolve.py` | finds `<root>/<tool>/SKILL.md`, prints a load manifest |
 | Generator | `scripts/build.py` | writes `commands/<tool>.md`, `wiki/tools/<tool>.md`, `wiki/README.md` from the registry + installed frontmatter |
 | Router | `skills/design-tools/SKILL.md` + `references/` | chooses one tool from the user's words, then loads it via the resolver |
-| Per-tool commands | `commands/<tool>.md` | `/design-tools:<tool>` — skip the router, load one tool by name |
+| Per-tool commands | `commands/<vendor>-<tool>.md` | `/design-tools:<vendor>-<tool>` — skip the router, load one tool by name. Vendor-first names so the picker groups them; no double prefix when the tool already starts with the vendor key; `command` in the registry overrides |
+| Vendor entry commands | `commands/<vendor>.md` | `/design-tools:<vendor>` — runs the vendor's `master` skill exactly as the vendor designed it (router discipline not layered on), or lists and dispatches the vendor's tools when there is no master |
 | Demo | `commands/demo.md` → `scripts/dashboard.sh` | `/design-tools:demo [tool]` — open the design-studio dashboard or a tool's bake-off demo, if present (`registry/tools.json` → `studio`, override `$DESIGN_STUDIO_DIR`) |
 
 Hand-written and never overwritten: `commands/tool.md`, `commands/tools-list.md`, `commands/demo.md`,
@@ -57,7 +58,7 @@ them by name, their `allowed-tools` apply, and nothing depends on an iCloud path
 | After… | Do |
 |---|---|
 | installing / removing / upgrading a vendor skill in design-studio | `python3 scripts/build.py` — the wiki pages re-read frontmatter and file lists |
-| adding a tool to the set | add an entry under `tools` in `registry/tools.json` (and the vendor under `vendors` if new), rebuild; the command and wiki page appear |
+| adding a tool to the set | add an entry under `tools` in `registry/tools.json` (and the vendor under `vendors` if new — with `display`, and `master` if it has one), rebuild; the command and wiki page appear. Commands are `<vendor>-<tool>` and descriptions come from the tool's `does` sentence |
 | retiring a tool | remove its registry entry, rebuild — the generator deletes the stale command and page |
 | editing `routing.md` / `collisions.md` / `stacking.md` | rebuild — tool pages quote the phrasings and cross-links |
 | before committing | `python3 scripts/build.py --check` must print ✔; `bash scripts/resolve.sh --all` must show N/N |

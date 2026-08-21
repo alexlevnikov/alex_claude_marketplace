@@ -2,7 +2,9 @@
 
 # `animate`
 
-**Vendor:** [ui-craft](../vendors/ui-craft.md) (educlopez) · https://github.com/educlopez/ui-craft
+Adds or adjusts animation inside the project's motion token system (durations, easings, intensity).
+
+**Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
 **Mode:** W · **Class:** pass · **Group:** feel · **Routable:** yes — `/design-tools:tool` can land here
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
@@ -12,7 +14,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:animate <target>`
+- Direct: `/design-tools:ui-craft-animate <target>`
+- Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
 - Through the router: `/design-tools:tool <your words>` — no fixed phrasing recorded yet in `routing.md`.
 
 ## What the vendor says

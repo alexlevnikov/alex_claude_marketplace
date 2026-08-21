@@ -2,15 +2,18 @@
 
 # `imagegen-frontend-web`
 
-**Vendor:** [taste-skill](../vendors/taste-skill.md) (Leonxlnx) · https://github.com/Leonxlnx/taste-skill
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:imagegen-frontend-web`)
+Generates one horizontal reference image per section of a web surface before any code.
+
+**Vendor:** [taste-skill by Leonxlnx](../vendors/taste.md) · https://github.com/Leonxlnx/taste-skill
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:taste-imagegen-frontend-web`)
 
 **For:** one horizontal reference image per section of a web surface
 **Not for:** sessions without an image tool
 
 ## Engage
 
-- Direct: `/design-tools:imagegen-frontend-web <target>`
+- Direct: `/design-tools:taste-imagegen-frontend-web <target>`
+- Vendor entry point: `/design-tools:taste` — runs the vendor's master `design-taste-frontend`
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

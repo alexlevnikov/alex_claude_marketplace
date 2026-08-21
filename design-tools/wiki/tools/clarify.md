@@ -2,7 +2,9 @@
 
 # `clarify`
 
-**Vendor:** [ui-craft](../vendors/ui-craft.md) (educlopez) · https://github.com/educlopez/ui-craft
+Rewrites UX copy: error messages, empty states, CTAs, voice matrix, reading level.
+
+**Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
 **Mode:** W · **Class:** pass · **Group:** fix · **Routable:** yes — `/design-tools:tool` can land here
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
@@ -12,7 +14,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:clarify <target>`
+- Direct: `/design-tools:ui-craft-clarify <target>`
+- Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
 - Through the router, these phrasings land here:
   - "the error message is useless" · «текст ошибки бессмысленный» · "rewrite the empty state copy"
 

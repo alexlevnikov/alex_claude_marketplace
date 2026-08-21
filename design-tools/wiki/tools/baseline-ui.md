@@ -2,7 +2,9 @@
 
 # `baseline-ui`
 
-**Vendor:** [ui-skills](../vendors/ibelick.md) (ibelick) · https://github.com/ibelick/ui-skills
+Base tidiness checklist: spacing, alignment, contrast, consistency; read-only.
+
+**Vendor:** [ui-skills by ibelick](../vendors/ibelick.md) · https://github.com/ibelick/ui-skills
 **Mode:** R · **Class:** lookup · **Group:** lookup · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** the base tidiness checklist — spacing, alignment, contrast, consistency
@@ -10,7 +12,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:baseline-ui <target>`
+- Direct: `/design-tools:ibelick-baseline-ui <target>`
+- Vendor entry point: `/design-tools:ibelick` — lists the vendor's tools
 - Through the router: `/design-tools:tool <your words>` — no fixed phrasing recorded yet in `routing.md`.
 
 ## What the vendor says

@@ -2,15 +2,18 @@
 
 # `glassmorphism`
 
-**Vendor:** [web-animation-skills](../vendors/iart-ai.md) (iart-ai) · https://github.com/iart-ai/web-animation-skills
-**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** no — direct engagement only (`/design-tools:glassmorphism`)
+Frosted-glass surfaces done right.
+
+**Vendor:** [iart-ai web-animation](../vendors/iart.md) · https://github.com/iart-ai/web-animation-skills
+**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** no — direct engagement only (`/design-tools:iart-glassmorphism`)
 
 **For:** frosted-glass surfaces done right
 **Not for:** YOURSAUNAS surfaces unless the brand contract allows it
 
 ## Engage
 
-- Direct: `/design-tools:glassmorphism <target>`
+- Direct: `/design-tools:iart-glassmorphism <target>`
+- Vendor entry point: `/design-tools:iart` — lists the vendor's tools
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

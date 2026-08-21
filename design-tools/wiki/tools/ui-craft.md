@@ -2,7 +2,9 @@
 
 # `ui-craft`
 
-**Vendor:** [ui-craft](../vendors/ui-craft.md) (educlopez) · https://github.com/educlopez/ui-craft
+The ui-craft base: discovery, anti-slop rules, knobs and Craft Report; actions build | animate | review | polish | audit.
+
+**Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
 **Mode:** W · **Class:** base · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:ui-craft`)
 
 **For:** the base: anti-slop rules, discovery, knobs, Craft Report; actions build|animate|review|polish|audit
@@ -11,6 +13,7 @@
 ## Engage
 
 - Direct: `/design-tools:ui-craft <target>`
+- Vendor entry point: `/design-tools:ui-craft` — runs this very skill as the vendor's master
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

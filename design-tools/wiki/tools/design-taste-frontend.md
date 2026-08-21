@@ -2,15 +2,18 @@
 
 # `design-taste-frontend`
 
-**Vendor:** [taste-skill](../vendors/taste-skill.md) (Leonxlnx) · https://github.com/Leonxlnx/taste-skill
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:design-taste-frontend`)
+Art-direction doctrine: infers the brief, sets three dials, bans AI tells, designs from a block library.
+
+**Vendor:** [taste-skill by Leonxlnx](../vendors/taste.md) · https://github.com/Leonxlnx/taste-skill
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:taste-design-taste-frontend`)
 
 **For:** art direction at DESIGN_VARIANCE ≤ 6: brief inference, three dials, AI-tells list, block library
 **Not for:** a pass; and never beside another orchestrator
 
 ## Engage
 
-- Direct: `/design-tools:design-taste-frontend <target>`
+- Direct: `/design-tools:taste-design-taste-frontend <target>`
+- Vendor entry point: `/design-tools:taste` — runs this very skill as the vendor's master
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

@@ -2,15 +2,18 @@
 
 # `imagegen-frontend-mobile`
 
-**Vendor:** [taste-skill](../vendors/taste-skill.md) (Leonxlnx) · https://github.com/Leonxlnx/taste-skill
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:imagegen-frontend-mobile`)
+Generates reference imagery for mobile screens before any code.
+
+**Vendor:** [taste-skill by Leonxlnx](../vendors/taste.md) · https://github.com/Leonxlnx/taste-skill
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:taste-imagegen-frontend-mobile`)
 
 **For:** reference images for mobile screens
 **Not for:** web surfaces — use the web variant
 
 ## Engage
 
-- Direct: `/design-tools:imagegen-frontend-mobile <target>`
+- Direct: `/design-tools:taste-imagegen-frontend-mobile <target>`
+- Vendor entry point: `/design-tools:taste` — runs the vendor's master `design-taste-frontend`
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

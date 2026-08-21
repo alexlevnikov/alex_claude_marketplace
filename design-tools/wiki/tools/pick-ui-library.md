@@ -2,7 +2,9 @@
 
 # `pick-ui-library`
 
-**Vendor:** [Emil Kowalski skills](../vendors/emil.md) (emilkowalski) · https://github.com/emilkowalski/skills
+Recommends a UI component library for your stack.
+
+**Vendor:** [Emil Kowalski](../vendors/emil.md) · https://github.com/emilkowalski/skills
 **Mode:** R · **Class:** lookup · **Group:** lookup · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** choosing a UI component library for a stack
@@ -10,7 +12,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:pick-ui-library <target>`
+- Direct: `/design-tools:emil-pick-ui-library <target>`
+- Vendor entry point: `/design-tools:emil` — lists the vendor's tools
 - Through the router: `/design-tools:tool <your words>` — no fixed phrasing recorded yet in `routing.md`.
 
 ## What the vendor says

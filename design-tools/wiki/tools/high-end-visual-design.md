@@ -2,7 +2,9 @@
 
 # `high-end-visual-design`
 
-**Vendor:** [taste-skill](../vendors/taste-skill.md) (Leonxlnx) · https://github.com/Leonxlnx/taste-skill
+Makes an existing surface read as expensive: shadows, cards, spacing, 'absolute zero' anti-patterns.
+
+**Vendor:** [taste-skill by Leonxlnx](../vendors/taste.md) · https://github.com/Leonxlnx/taste-skill
 **Mode:** W · **Class:** pass · **Group:** look · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** making an existing surface read as expensive: shadows, cards, spacing; 'absolute zero' anti-patterns
@@ -10,7 +12,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:high-end-visual-design <target>`
+- Direct: `/design-tools:taste-high-end-visual-design <target>`
+- Vendor entry point: `/design-tools:taste` — runs the vendor's master `design-taste-frontend`
 - Through the router, these phrasings land here:
   - "it should feel more expensive" · «должно выглядеть дороже»
 

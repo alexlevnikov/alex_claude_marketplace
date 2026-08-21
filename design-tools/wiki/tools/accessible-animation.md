@@ -2,15 +2,18 @@
 
 # `accessible-animation`
 
-**Vendor:** [web-animation-skills](../vendors/iart-ai.md) (iart-ai) · https://github.com/iart-ai/web-animation-skills
-**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** no — direct engagement only (`/design-tools:accessible-animation`)
+Honours prefers-reduced-motion with accessible motion patterns.
+
+**Vendor:** [iart-ai web-animation](../vendors/iart.md) · https://github.com/iart-ai/web-animation-skills
+**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** no — direct engagement only (`/design-tools:iart-accessible-animation`)
 
 **For:** prefers-reduced-motion and accessible motion patterns
 **Not for:** a full a11y audit
 
 ## Engage
 
-- Direct: `/design-tools:accessible-animation <target>`
+- Direct: `/design-tools:iart-accessible-animation <target>`
+- Vendor entry point: `/design-tools:iart` — lists the vendor's tools
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

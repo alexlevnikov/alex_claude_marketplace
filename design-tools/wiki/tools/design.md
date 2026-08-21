@@ -2,15 +2,18 @@
 
 # `design`
 
-**Vendor:** [design-skill-os](../vendors/design-skill-os.md) (frhscopex) · https://github.com/frhscopex/design-skill-os
-**Mode:** R · **Class:** lookup · **Group:** lookup · **Routable:** no — direct engagement only (`/design-tools:design`)
+Design principles from ten canonical books, for when a decision needs a reason behind it; read-only.
+
+**Vendor:** [frhscopex design-skill-os](../vendors/design-skill-os.md) · https://github.com/frhscopex/design-skill-os
+**Mode:** R · **Class:** lookup · **Group:** lookup · **Routable:** no — direct engagement only (`/design-tools:design-skill-os`)
 
 **For:** design principles from ten canonical books, when a decision needs a reason behind it
 **Not for:** producing code
 
 ## Engage
 
-- Direct: `/design-tools:design <target>`
+- Direct: `/design-tools:design-skill-os <target>`
+- Vendor entry point: `/design-tools:design-skill-os` — runs this very skill as the vendor's master
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

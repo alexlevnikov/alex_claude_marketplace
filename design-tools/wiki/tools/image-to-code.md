@@ -2,15 +2,18 @@
 
 # `image-to-code`
 
-**Vendor:** [taste-skill](../vendors/taste-skill.md) (Leonxlnx) · https://github.com/Leonxlnx/taste-skill
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:image-to-code`)
+Generates a visual reference, analyses it, then codes the UI from it; tuned for Codex.
+
+**Vendor:** [taste-skill by Leonxlnx](../vendors/taste.md) · https://github.com/Leonxlnx/taste-skill
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:taste-image-to-code`)
 
 **For:** generate a reference → analyse → code it; tuned for Codex
 **Not for:** a targeted pass
 
 ## Engage
 
-- Direct: `/design-tools:image-to-code <target>`
+- Direct: `/design-tools:taste-image-to-code <target>`
+- Vendor entry point: `/design-tools:taste` — runs the vendor's master `design-taste-frontend`
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

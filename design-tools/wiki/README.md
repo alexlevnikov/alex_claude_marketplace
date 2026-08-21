@@ -21,168 +21,291 @@ Health: 87/87 tools resolved at build time; nothing missing.
 
 ## Vendors
 
-| Vendor | Author · repo | Tools | Page |
-|---|---|---|---|
-| **ui-craft** | educlopez · https://github.com/educlopez/ui-craft | 29 | [vendors/ui-craft.md](vendors/ui-craft.md) |
-| **taste-skill** | Leonxlnx · https://github.com/Leonxlnx/taste-skill | 13 | [vendors/taste-skill.md](vendors/taste-skill.md) |
-| **impeccable** | pbakaus · https://github.com/pbakaus/impeccable | 1 | [vendors/impeccable.md](vendors/impeccable.md) |
-| **Emil Kowalski skills** | emilkowalski · https://github.com/emilkowalski/skills | 9 | [vendors/emil.md](vendors/emil.md) |
-| **ui-skills** | ibelick · https://github.com/ibelick/ui-skills | 3 | [vendors/ibelick.md](vendors/ibelick.md) |
-| **web-quality-skills** | addyosmani · https://github.com/addyosmani/web-quality-skills | 6 | [vendors/osmani.md](vendors/osmani.md) |
-| **web-animation-skills** | iart-ai · https://github.com/iart-ai/web-animation-skills | 9 | [vendors/iart-ai.md](vendors/iart-ai.md) |
-| **motion-design-skill** | LottieFiles · https://github.com/lottiefiles/motion-design-skill | 1 | [vendors/lottiefiles.md](vendors/lottiefiles.md) |
-| **design-motion-principles** | kylezantos · https://github.com/kylezantos/design-motion-principles | 1 | [vendors/kylezantos.md](vendors/kylezantos.md) |
-| **motion-dev-animations** | 199-biotechnologies · https://github.com/199-biotechnologies/motion-dev-animations-skill | 1 | [vendors/motion-dev.md](vendors/motion-dev.md) |
-| **threejs-skills** | cloudai-x · https://github.com/cloudai-x/threejs-skills | 10 | [vendors/cloudai.md](vendors/cloudai.md) |
-| **claude-skill-awwwards** | tponscr-debug · https://github.com/tponscr-debug/claude-skill-awwwards | 1 | [vendors/awwwards.md](vendors/awwwards.md) |
-| **calm-design** | calmtiger86 · https://github.com/calmtiger86/calm-design | 1 | [vendors/calm-design.md](vendors/calm-design.md) |
-| **frontend-god-mode** | Shawnchee · https://github.com/Shawnchee/frontend-god-mode | 1 | [vendors/frontend-god-mode.md](vendors/frontend-god-mode.md) |
-| **design-skill-os** | frhscopex · https://github.com/frhscopex/design-skill-os | 1 | [vendors/design-skill-os.md](vendors/design-skill-os.md) |
+| Vendor | Entry command | Master skill | Tools | Page |
+|---|---|---|---|---|
+| **ui-craft by educlopez** · https://github.com/educlopez/ui-craft | `/design-tools:ui-craft` | `ui-craft` — runs as designed | 29 | [vendors/ui-craft.md](vendors/ui-craft.md) |
+| **taste-skill by Leonxlnx** · https://github.com/Leonxlnx/taste-skill | `/design-tools:taste` | `design-taste-frontend` — runs as designed | 13 | [vendors/taste.md](vendors/taste.md) |
+| **impeccable by pbakaus** · https://github.com/pbakaus/impeccable | `/design-tools:impeccable` | `impeccable` — runs as designed | 1 | [vendors/impeccable.md](vendors/impeccable.md) |
+| **Emil Kowalski** · https://github.com/emilkowalski/skills | `/design-tools:emil` | none — hub lists tools | 9 | [vendors/emil.md](vendors/emil.md) |
+| **ui-skills by ibelick** · https://github.com/ibelick/ui-skills | `/design-tools:ibelick` | none — hub lists tools | 3 | [vendors/ibelick.md](vendors/ibelick.md) |
+| **Addy Osmani web-quality** · https://github.com/addyosmani/web-quality-skills | `/design-tools:osmani` | none — hub lists tools | 6 | [vendors/osmani.md](vendors/osmani.md) |
+| **iart-ai web-animation** · https://github.com/iart-ai/web-animation-skills | `/design-tools:iart` | none — hub lists tools | 9 | [vendors/iart.md](vendors/iart.md) |
+| **LottieFiles** · https://github.com/lottiefiles/motion-design-skill | `/design-tools:lottie` | `motion-design` — runs as designed | 1 | [vendors/lottie.md](vendors/lottie.md) |
+| **kylezantos** · https://github.com/kylezantos/design-motion-principles | `/design-tools:design-motion-principles` | `design-motion-principles` — runs as designed | 1 | [vendors/design-motion-principles.md](vendors/design-motion-principles.md) |
+| **Motion.dev skill** · https://github.com/199-biotechnologies/motion-dev-animations-skill | `/design-tools:motion-dev` | `motion-dev-animations` — runs as designed | 1 | [vendors/motion-dev.md](vendors/motion-dev.md) |
+| **cloudai-x threejs** · https://github.com/cloudai-x/threejs-skills | `/design-tools:threejs` | none — hub lists tools | 10 | [vendors/threejs.md](vendors/threejs.md) |
+| **tponscr-debug** · https://github.com/tponscr-debug/claude-skill-awwwards | `/design-tools:awwwards` | `awwwards` — runs as designed | 1 | [vendors/awwwards.md](vendors/awwwards.md) |
+| **calmtiger86** · https://github.com/calmtiger86/calm-design | `/design-tools:calm-design` | `calm-design` — runs as designed | 1 | [vendors/calm-design.md](vendors/calm-design.md) |
+| **Shawnchee** · https://github.com/Shawnchee/frontend-god-mode | `/design-tools:frontend-god-mode` | `frontend-god-mode` — runs as designed | 1 | [vendors/frontend-god-mode.md](vendors/frontend-god-mode.md) |
+| **frhscopex design-skill-os** · https://github.com/frhscopex/design-skill-os | `/design-tools:design-skill-os` | `design` — runs as designed | 1 | [vendors/design-skill-os.md](vendors/design-skill-os.md) |
 
 ## Tools by group
 
 ### LOOK — how it looks
 
-| Tool | Vendor | Mode | Class | Routable | For |
+| Tool | Vendor | Mode | Class | Routable | What it does |
 |---|---|---|---|---|---|
-| [`shape`](tools/shape.md) | ui-craft | W | pass | yes | wireframing one new section — writes `.ui-craft/spec.md`, not code |
-| [`polish`](tools/polish.md) | ui-craft | W | pass | yes | the final finish pass on a surface that is already right — reads `.ui-craft/brief.md` and project tokens |
-| [`typeset`](tools/typeset.md) | ui-craft | W | pass | yes | type scale, tracking, optical size, hierarchy |
-| [`colorize`](tools/colorize.md) | ui-craft | W | pass | yes | palette application, theming, dark mode |
-| [`adapt`](tools/adapt.md) | ui-craft | W | pass | yes | breakpoints, mobile layout, container queries, touch targets, safe areas |
-| [`distill`](tools/distill.md) | ui-craft | W | pass | yes | cutting noise from an over-built surface |
-| [`bolder`](tools/bolder.md) | ui-craft | W | pass | yes | amplifying personality within the direction |
-| [`quieter`](tools/quieter.md) | ui-craft | W | pass | yes | restraint, toning down, reducing accent load |
-| [`extract`](tools/extract.md) | ui-craft | W | pass | yes | pulling repeated markup into components and tokens |
-| [`high-end-visual-design`](tools/high-end-visual-design.md) | taste-skill | W | pass | yes | making an existing surface read as expensive: shadows, cards, spacing; 'absolute zero' anti-patterns |
+| [`shape`](tools/shape.md) | ui-craft | W | pass | yes | Wireframes one new section into .ui-craft/spec.md — layout, state lattice, acceptance bar; writes a spec, not code. |
+| [`polish`](tools/polish.md) | ui-craft | W | pass | yes | Final finish pass on a surface that is already right: alignment, spacing, micro-details, using project tokens. |
+| [`typeset`](tools/typeset.md) | ui-craft | W | pass | yes | Retunes the typography of existing UI: modular scale, tracking, leading, weight hierarchy, micro-typography. |
+| [`colorize`](tools/colorize.md) | ui-craft | W | pass | yes | Applies and tunes colour on existing UI: palette use, theming, dark mode, accent budget. |
+| [`adapt`](tools/adapt.md) | ui-craft | W | pass | yes | Makes an existing layout responsive: breakpoints, touch targets, safe areas, fluid type, container queries. |
+| [`distill`](tools/distill.md) | ui-craft | W | pass | yes | Removes noise from an over-built surface: cuts sections, elements and decoration that earn nothing. |
+| [`bolder`](tools/bolder.md) | ui-craft | W | pass | yes | Amplifies personality inside the current direction: stronger type, contrast, signature details. |
+| [`quieter`](tools/quieter.md) | ui-craft | W | pass | yes | Tones a loud surface down: fewer accents, calmer type and motion, more whitespace. |
+| [`extract`](tools/extract.md) | ui-craft | W | pass | yes | Pulls repeated markup into reusable components and tokens. |
+| [`high-end-visual-design`](tools/high-end-visual-design.md) | taste | W | pass | yes | Makes an existing surface read as expensive: shadows, cards, spacing, 'absolute zero' anti-patterns. |
 
 ### FEEL — how it moves
 
-| Tool | Vendor | Mode | Class | Routable | For |
+| Tool | Vendor | Mode | Class | Routable | What it does |
 |---|---|---|---|---|---|
-| [`delight`](tools/delight.md) | ui-craft | W | pass | yes | purposeful micro-interactions |
-| [`animate`](tools/animate.md) | ui-craft | W | pass | yes | animation inside the project's motion tokens |
-| [`motion-design`](tools/motion-design.md) | lottiefiles | W | pass | yes | timing, easing, choreography from scratch; Disney principles adapted for UI |
-| [`emil-design-eng`](tools/emil-design-eng.md) | emil | W | pass | yes | component feel, springs, the invisible details; component contracts; review format |
-| [`apple-design`](tools/apple-design.md) | emil | W | pass | yes | gestures, drag, sheets, interruptibility, velocity handoff, momentum |
-| [`find-animation-opportunities`](tools/find-animation-opportunities.md) | emil | R | judge | yes | where motion is missing but earned |
-| [`improve-animations`](tools/improve-animations.md) | emil | R | judge | yes | audit all motion and produce a plan for other agents |
-| [`fixing-motion-performance`](tools/fixing-motion-performance.md) | ibelick | W | pass | yes | jank, layout thrashing, compositor-only properties, reduced-motion, perf budget |
-| [`design-motion-principles`](tools/design-motion-principles.md) | kylezantos | W/R | pass | yes | build or audit motion; audit emits an HTML report with looping demos |
+| [`delight`](tools/delight.md) | ui-craft | W | pass | yes | Adds purposeful micro-interactions — hover, press, success moments — within the motion tokens. |
+| [`animate`](tools/animate.md) | ui-craft | W | pass | yes | Adds or adjusts animation inside the project's motion token system (durations, easings, intensity). |
+| [`motion-design`](tools/motion-design.md) | lottie | W | pass | yes | Designs motion from scratch: timing, easing, choreography, Disney principles; any animation stack. |
+| [`emil-design-eng`](tools/emil-design-eng.md) | emil | W | pass | yes | Polishes how a component feels: springs, interruptibility, the invisible details — Emil Kowalski's bar. |
+| [`apple-design`](tools/apple-design.md) | emil | W | pass | yes | Direct-manipulation motion: drag, swipe, sheets, velocity handoff, momentum, interruptibility. |
+| [`find-animation-opportunities`](tools/find-animation-opportunities.md) | emil | R | judge | yes | Read-only: finds where motion is missing but earned, and proposes it. |
+| [`improve-animations`](tools/improve-animations.md) | emil | R | judge | yes | Read-only: audits all existing motion and writes a plan for other agents. |
+| [`fixing-motion-performance`](tools/fixing-motion-performance.md) | ibelick | W | pass | yes | Fixes janky animation: compositor-only properties, layout thrash, reduced-motion, perf budget. |
+| [`design-motion-principles`](tools/design-motion-principles.md) | design-motion-principles | W/R | pass | yes | Builds motion or audits it with Emil / Krehel / Tompkins lenses; audit emits an HTML report with looping demos. |
 
 ### FIX — make it survive production
 
-| Tool | Vendor | Mode | Class | Routable | For |
+| Tool | Vendor | Mode | Class | Routable | What it does |
 |---|---|---|---|---|---|
-| [`unhappy`](tools/unhappy.md) | ui-craft | W | pass | yes | states before the happy path; impossible booleans into a state machine |
-| [`harden`](tools/harden.md) | ui-craft | W | pass | yes | skeletons, empty, error, partial, i18n, offline, permissions, first-run |
-| [`clarify`](tools/clarify.md) | ui-craft | W | pass | yes | UX copy: errors, empty states, CTAs, voice matrix, reading level |
-| [`fixing-accessibility`](tools/fixing-accessibility.md) | ibelick | W | pass | yes | fast keyboard / focus / ARIA fixes — a named defect |
-| [`accessibility`](tools/accessibility.md) | osmani | W | pass | yes | full WCAG 2.2, POUR, conformance level, pre-launch |
-| [`core-web-vitals`](tools/core-web-vitals.md) | osmani | W | pass | yes | LCP, INP, CLS by name |
-| [`performance`](tools/performance.md) | osmani | W | pass | yes | payload, critical path, fonts, images, caching |
-| [`seo`](tools/seo.md) | osmani | W | pass | yes | meta, structured data, sitemap, robots, on-page |
-| [`best-practices`](tools/best-practices.md) | osmani | W | pass | yes | security headers, CSP, modernisation |
+| [`unhappy`](tools/unhappy.md) | ui-craft | W | pass | yes | Designs the non-happy states first — empty, loading, error, partial — and turns boolean soup into a state machine. |
+| [`harden`](tools/harden.md) | ui-craft | W | pass | yes | Production-hardens a surface: skeletons, empty/error/partial states, i18n, offline, permissions, first run. |
+| [`clarify`](tools/clarify.md) | ui-craft | W | pass | yes | Rewrites UX copy: error messages, empty states, CTAs, voice matrix, reading level. |
+| [`fixing-accessibility`](tools/fixing-accessibility.md) | ibelick | W | pass | yes | Fast targeted accessibility fixes: focus ring, tab order, labels, ARIA. |
+| [`accessibility`](tools/accessibility.md) | osmani | W | pass | yes | Full WCAG 2.2 accessibility pass — POUR, conformance level, fixes. |
+| [`core-web-vitals`](tools/core-web-vitals.md) | osmani | W | pass | yes | Diagnoses and fixes LCP, INP and CLS by name. |
+| [`performance`](tools/performance.md) | osmani | W | pass | yes | Cuts page weight and load time: payload, critical path, fonts, images, caching. |
+| [`seo`](tools/seo.md) | osmani | W | pass | yes | On-page SEO: meta, structured data, sitemap, robots, headings, internal links. |
+| [`best-practices`](tools/best-practices.md) | osmani | W | pass | yes | Security headers, CSP and modern platform practices. |
 
 ### JUDGE — decide, change nothing
 
-| Tool | Vendor | Mode | Class | Routable | For |
+| Tool | Vendor | Mode | Class | Routable | What it does |
 |---|---|---|---|---|---|
-| [`finalize`](tools/finalize.md) | ui-craft | R | judge | yes | READY / NOT READY / BLOCKED before merge; findings only |
-| [`audit`](tools/audit.md) | ui-craft | R | judge | yes | technical a11y audit inside a build session |
-| [`critique`](tools/critique.md) | ui-craft | R | judge | yes | UX critique, no code changes |
-| [`heuristic`](tools/heuristic.md) | ui-craft | R | judge | yes | 0–100 score, PM-ready audit, personas |
-| [`review-animations`](tools/review-animations.md) | emil | R | judge | yes | review animation code against Emil's craft bar — default to flagging, approval is earned |
-| [`web-quality-audit`](tools/web-quality-audit.md) | osmani | R | judge | yes | umbrella: performance + a11y + SEO + best practices at once |
+| [`finalize`](tools/finalize.md) | ui-craft | R | judge | yes | Ship gate: READY / NOT READY / BLOCKED with findings; never edits. |
+| [`audit`](tools/audit.md) | ui-craft | R | judge | yes | Technical accessibility audit inside a build session: contrast, focus, ARIA, keyboard; report only. |
+| [`critique`](tools/critique.md) | ui-craft | R | judge | yes | UX critique of a surface — what to change and why; no code changes. |
+| [`heuristic`](tools/heuristic.md) | ui-craft | R | judge | yes | Scores a surface 0–100 against heuristics and personas; PM-ready audit, read-only. |
+| [`review-animations`](tools/review-animations.md) | emil | R | judge | yes | Read-only review of animation code against Emil's craft bar; defaults to flagging. |
+| [`web-quality-audit`](tools/web-quality-audit.md) | osmani | R | judge | yes | Umbrella audit across performance, a11y, SEO and best practices; names the worst axis; read-only. |
 
 ### LOOKUP — answer, don't act
 
-| Tool | Vendor | Mode | Class | Routable | For |
+| Tool | Vendor | Mode | Class | Routable | What it does |
 |---|---|---|---|---|---|
-| [`animation-vocabulary`](tools/animation-vocabulary.md) | emil | R | lookup | yes | naming an effect you can only describe |
-| [`pick-ui-library`](tools/pick-ui-library.md) | emil | R | lookup | yes | choosing a UI component library for a stack |
-| [`ask-sonner`](tools/ask-sonner.md) | emil | R | lookup | yes | questions about the Sonner toast library |
-| [`baseline-ui`](tools/baseline-ui.md) | ibelick | R | lookup | yes | the base tidiness checklist — spacing, alignment, contrast, consistency |
-| [`threejs-fundamentals`](tools/threejs-fundamentals.md) | cloudai | W | technique | yes | scene setup, cameras, renderer, Object3D hierarchy, coordinates |
-| [`threejs-loaders`](tools/threejs-loaders.md) | cloudai | W | technique | yes | GLTF/OBJ/texture loaders and asset pipelines |
-| [`threejs-materials`](tools/threejs-materials.md) | cloudai | W | technique | yes | materials and PBR |
-| [`threejs-lighting`](tools/threejs-lighting.md) | cloudai | W | technique | yes | lights, shadows, environment maps |
-| [`threejs-shaders`](tools/threejs-shaders.md) | cloudai | W | technique | yes | GLSL and ShaderMaterial |
-| [`threejs-geometry`](tools/threejs-geometry.md) | cloudai | W | technique | yes | geometries, buffers, instancing |
-| [`threejs-textures`](tools/threejs-textures.md) | cloudai | W | technique | yes | textures, UVs, mapping |
-| [`threejs-animation`](tools/threejs-animation.md) | cloudai | W | technique | yes | animation mixer, clips, keyframes |
-| [`threejs-interaction`](tools/threejs-interaction.md) | cloudai | W | technique | yes | raycasting, controls, pointer events |
-| [`threejs-postprocessing`](tools/threejs-postprocessing.md) | cloudai | W | technique | yes | EffectComposer passes, bloom, DOF |
-| [`design`](tools/design.md) | design-skill-os | R | lookup | no | design principles from ten canonical books, when a decision needs a reason behind it |
+| [`animation-vocabulary`](tools/animation-vocabulary.md) | emil | R | lookup | yes | Reverse dictionary: describe an effect, get its name and a reference. |
+| [`pick-ui-library`](tools/pick-ui-library.md) | emil | R | lookup | yes | Recommends a UI component library for your stack. |
+| [`ask-sonner`](tools/ask-sonner.md) | emil | R | lookup | yes | Answers questions about the Sonner toast library. |
+| [`baseline-ui`](tools/baseline-ui.md) | ibelick | R | lookup | yes | Base tidiness checklist: spacing, alignment, contrast, consistency; read-only. |
+| [`threejs-fundamentals`](tools/threejs-fundamentals.md) | threejs | W | technique | yes | Three.js scene setup: cameras, renderer, Object3D hierarchy, coordinates. |
+| [`threejs-loaders`](tools/threejs-loaders.md) | threejs | W | technique | yes | Three.js asset loading: GLTF / OBJ / textures, pipelines, progress. |
+| [`threejs-materials`](tools/threejs-materials.md) | threejs | W | technique | yes | Three.js materials and PBR. |
+| [`threejs-lighting`](tools/threejs-lighting.md) | threejs | W | technique | yes | Three.js lights, shadows, environment maps. |
+| [`threejs-shaders`](tools/threejs-shaders.md) | threejs | W | technique | yes | Three.js GLSL and ShaderMaterial. |
+| [`threejs-geometry`](tools/threejs-geometry.md) | threejs | W | technique | yes | Three.js geometries, buffers, instancing. |
+| [`threejs-textures`](tools/threejs-textures.md) | threejs | W | technique | yes | Three.js textures, UVs, mapping. |
+| [`threejs-animation`](tools/threejs-animation.md) | threejs | W | technique | yes | Three.js animation mixer, clips, keyframes. |
+| [`threejs-interaction`](tools/threejs-interaction.md) | threejs | W | technique | yes | Three.js raycasting, controls, pointer events. |
+| [`threejs-postprocessing`](tools/threejs-postprocessing.md) | threejs | W | technique | yes | Three.js EffectComposer passes: bloom, depth of field and more. |
+| [`design`](tools/design.md) | design-skill-os | R | lookup | no | Design principles from ten canonical books, for when a decision needs a reason behind it; read-only. |
 
 ### MODIFIER — on top of another tool
 
-| Tool | Vendor | Mode | Class | Routable | For |
+| Tool | Vendor | Mode | Class | Routable | What it does |
 |---|---|---|---|---|---|
-| [`full-output-enforcement`](tools/full-output-enforcement.md) | taste-skill | R | modifier | yes | bans placeholders and truncated output — switch on whenever the chosen tool will write a long file |
+| [`full-output-enforcement`](tools/full-output-enforcement.md) | taste | R | modifier | yes | Modifier: bans placeholders, ellipses and truncated output in whatever the next tool writes. |
 
 ### DIRECTION — orchestrator-class, whole surfaces (design-pipeline territory)
 
-| Tool | Vendor | Mode | Class | Routable | For |
+| Tool | Vendor | Mode | Class | Routable | What it does |
 |---|---|---|---|---|---|
-| [`ui-craft`](tools/ui-craft.md) | ui-craft | W | base | no | the base: anti-slop rules, discovery, knobs, Craft Report; actions build|animate|review|polish|audit |
-| [`craft`](tools/craft.md) | ui-craft | W | orchestrator | no | build a surface from the spec; recipes for dashboard, landing, auth |
-| [`sddesign`](tools/sddesign.md) | ui-craft | W | orchestrator | no | ui-craft's own six-gate express lane: brief → tokens → shape → craft → converge → ship |
-| [`redesign`](tools/redesign.md) | ui-craft | W | orchestrator | no | ui-craft's redesign lens for an existing surface |
-| [`design-taste-frontend`](tools/design-taste-frontend.md) | taste-skill | W | orchestrator | no | art direction at DESIGN_VARIANCE ≤ 6: brief inference, three dials, AI-tells list, block library |
-| [`design-taste-frontend-v1`](tools/design-taste-frontend-v1.md) | taste-skill | W | orchestrator | no | the previous, shorter version of `design-taste-frontend` (226 lines) |
-| [`gpt-taste`](tools/gpt-taste.md) | taste-skill | W | orchestrator | no | taste-skill's variant tuned for GPT-style output |
-| [`brandkit`](tools/brandkit.md) | taste-skill | W | orchestrator | no | identity boards, logo systems, brand guideline boards — needs image generation |
-| [`imagegen-frontend-web`](tools/imagegen-frontend-web.md) | taste-skill | W | orchestrator | no | one horizontal reference image per section of a web surface |
-| [`imagegen-frontend-mobile`](tools/imagegen-frontend-mobile.md) | taste-skill | W | orchestrator | no | reference images for mobile screens |
-| [`image-to-code`](tools/image-to-code.md) | taste-skill | W | orchestrator | no | generate a reference → analyse → code it; tuned for Codex |
-| [`minimalist-ui`](tools/minimalist-ui.md) | taste-skill | W | orchestrator | no | a minimalist direction preset |
-| [`industrial-brutalist-ui`](tools/industrial-brutalist-ui.md) | taste-skill | W | orchestrator | no | a brutalist direction preset |
-| [`redesign-existing-projects`](tools/redesign-existing-projects.md) | taste-skill | W | orchestrator | no | taste-skill's redesign protocol for an existing project |
-| [`stitch-design-taste`](tools/stitch-design-taste.md) | taste-skill | W | orchestrator | no | taste-skill tuned for Google Stitch handoff |
-| [`impeccable`](tools/impeccable.md) | impeccable | W | orchestrator | no | high-variance art direction (DESIGN_VARIANCE ≥ 7) with internal modes: shape · audit|critique · animate|bolder|colorize|delight|layout|overdrive|quieter|typeset · adapt|clarify|distill · harden|onboard|optimize|polish · init|document|extract|live |
-| [`prototype`](tools/prototype.md) | emil | W | orchestrator | no | build several genuinely different versions of one UI piece behind a visual picker |
-| [`awwwards`](tools/awwwards.md) | awwwards | W | orchestrator | no | Awwwards-style visual ambition on a surface |
-| [`calm-design`](tools/calm-design.md) | calm-design | W | orchestrator | no | calm premium direction with a DESIGN.md output and self-critique |
-| [`frontend-god-mode`](tools/frontend-god-mode.md) | frontend-god-mode | W | orchestrator | no | the consolidated master skill — any frontend request |
+| [`ui-craft`](tools/ui-craft.md) | ui-craft | W | base | no | The ui-craft base: discovery, anti-slop rules, knobs and Craft Report; actions build | animate | review | polish | audit. |
+| [`craft`](tools/craft.md) | ui-craft | W | orchestrator | no | Builds a surface from the spec with ui-craft recipes (dashboard, landing, auth). |
+| [`sddesign`](tools/sddesign.md) | ui-craft | W | orchestrator | no | ui-craft's six-gate conveyor for one surface: brief → tokens → shape → craft → converge → ship. |
+| [`redesign`](tools/redesign.md) | ui-craft | W | orchestrator | no | ui-craft's redesign lens: re-composes an existing surface against the brief and tokens. |
+| [`design-taste-frontend`](tools/design-taste-frontend.md) | taste | W | orchestrator | no | Art-direction doctrine: infers the brief, sets three dials, bans AI tells, designs from a block library. |
+| [`design-taste-frontend-v1`](tools/design-taste-frontend-v1.md) | taste | W | orchestrator | no | Previous, shorter version of design-taste-frontend; kept for comparison only. |
+| [`gpt-taste`](tools/gpt-taste.md) | taste | W | orchestrator | no | taste-skill variant tuned for GPT-style output. |
+| [`brandkit`](tools/brandkit.md) | taste | W | orchestrator | no | Generates brand identity boards and logo systems; needs an image tool. |
+| [`imagegen-frontend-web`](tools/imagegen-frontend-web.md) | taste | W | orchestrator | no | Generates one horizontal reference image per section of a web surface before any code. |
+| [`imagegen-frontend-mobile`](tools/imagegen-frontend-mobile.md) | taste | W | orchestrator | no | Generates reference imagery for mobile screens before any code. |
+| [`image-to-code`](tools/image-to-code.md) | taste | W | orchestrator | no | Generates a visual reference, analyses it, then codes the UI from it; tuned for Codex. |
+| [`minimalist-ui`](tools/minimalist-ui.md) | taste | W | orchestrator | no | Direction preset: minimalist UI. |
+| [`industrial-brutalist-ui`](tools/industrial-brutalist-ui.md) | taste | W | orchestrator | no | Direction preset: industrial-brutalist UI. |
+| [`redesign-existing-projects`](tools/redesign-existing-projects.md) | taste | W | orchestrator | no | taste-skill's redesign protocol for an existing project. |
+| [`stitch-design-taste`](tools/stitch-design-taste.md) | taste | W | orchestrator | no | taste-skill tuned for Google Stitch handoff. |
+| [`impeccable`](tools/impeccable.md) | impeccable | W | orchestrator | no | pbakaus's design director with internal modes — shape, audit, critique, typeset, colorize, polish, harden, live and more. |
+| [`prototype`](tools/prototype.md) | emil | W | orchestrator | no | Builds several genuinely different versions of one UI piece behind a live picker; promote the winner. |
+| [`awwwards`](tools/awwwards.md) | awwwards | W | orchestrator | no | Applies Awwwards-winning design principles to a surface; orchestrator. |
+| [`calm-design`](tools/calm-design.md) | calm-design | W | orchestrator | no | Calm premium design agent: writes DESIGN.md, self-critiques, runs pre-flight checks; Korean-first. |
+| [`frontend-god-mode`](tools/frontend-god-mode.md) | frontend-god-mode | W | orchestrator | no | Consolidated do-everything frontend master skill; orchestrator. |
 
 ### PHASE — ui-craft's conveyor steps (wrapped by design-pipeline)
 
-| Tool | Vendor | Mode | Class | Routable | For |
+| Tool | Vendor | Mode | Class | Routable | What it does |
 |---|---|---|---|---|---|
-| [`start`](tools/start.md) | ui-craft | R | phase | no | onboarding: explains the ladder and names the next rung |
-| [`brief`](tools/brief.md) | ui-craft | W | phase | no | writes `.ui-craft/brief.md` — purpose, user, principles, metric, out-of-scope |
-| [`tokens`](tools/tokens.md) | ui-craft | W | phase | no | establish or audit the three-layer token spine |
-| [`remember`](tools/remember.md) | ui-craft | W | phase | no | append a learned constraint to `.ui-craft/brief.md` §6 |
+| [`start`](tools/start.md) | ui-craft | R | phase | no | Explains the ui-craft ladder and names your next rung; changes nothing. |
+| [`brief`](tools/brief.md) | ui-craft | W | phase | no | Interviews you and writes .ui-craft/brief.md — purpose, user, principles, success metric, out of scope. |
+| [`tokens`](tools/tokens.md) | ui-craft | W | phase | no | Establishes or audits the three-layer design-token spine (primitive → semantic → component). |
+| [`remember`](tools/remember.md) | ui-craft | W | phase | no | Appends a learned design constraint to .ui-craft/brief.md §6 so future sessions obey it. |
 
 ### PRESET — ui-craft base with a fixed aesthetic
 
-| Tool | Vendor | Mode | Class | Routable | For |
+| Tool | Vendor | Mode | Class | Routable | What it does |
 |---|---|---|---|---|---|
-| [`ui-craft-minimal`](tools/ui-craft-minimal.md) | ui-craft | W | preset | no | ui-craft with a minimal aesthetic fixed |
-| [`ui-craft-editorial`](tools/ui-craft-editorial.md) | ui-craft | W | preset | no | ui-craft with an editorial aesthetic fixed |
-| [`ui-craft-dense-dashboard`](tools/ui-craft-dense-dashboard.md) | ui-craft | W | preset | no | ui-craft tuned for dense data dashboards |
+| [`ui-craft-minimal`](tools/ui-craft-minimal.md) | ui-craft | W | preset | no | ui-craft base with a minimal, whitespace-led aesthetic fixed in. |
+| [`ui-craft-editorial`](tools/ui-craft-editorial.md) | ui-craft | W | preset | no | ui-craft base with an editorial, type-led aesthetic fixed in. |
+| [`ui-craft-dense-dashboard`](tools/ui-craft-dense-dashboard.md) | ui-craft | W | preset | no | ui-craft base tuned for dense data dashboards and tables. |
 
 ### TECHNIQUE — framework- or effect-specific how-to
 
-| Tool | Vendor | Mode | Class | Routable | For |
+| Tool | Vendor | Mode | Class | Routable | What it does |
 |---|---|---|---|---|---|
-| [`motion-dev-animations`](tools/motion-dev-animations.md) | motion-dev | W | technique | no | Motion.dev / Framer Motion patterns for React, Next.js, Svelte, Astro |
-| [`60fps-animation`](tools/60fps-animation.md) | iart-ai | W | technique | no | make a janky CSS animation hit 60fps |
-| [`accessible-animation`](tools/accessible-animation.md) | iart-ai | W | technique | no | prefers-reduced-motion and accessible motion patterns |
-| [`ascii-animation`](tools/ascii-animation.md) | iart-ai | W | technique | no | ASCII / text-based animation effects |
-| [`glassmorphism`](tools/glassmorphism.md) | iart-ai | W | technique | no | frosted-glass surfaces done right |
-| [`gsap-web`](tools/gsap-web.md) | iart-ai | W | technique | no | GSAP: ScrollTrigger, pinning, scrub, SplitText, Flip, Lenis |
-| [`lottie-animation`](tools/lottie-animation.md) | iart-ai | W | technique | no | embedding and controlling Lottie animations |
-| [`micro-interaction`](tools/micro-interaction.md) | iart-ai | W | technique | no | micro-interaction recipes |
-| [`page-transition-animation`](tools/page-transition-animation.md) | iart-ai | W | technique | no | page and view transitions |
-| [`svg-animation`](tools/svg-animation.md) | iart-ai | W | technique | no | SVG path, morph, and line-drawing animation |
+| [`motion-dev-animations`](tools/motion-dev-animations.md) | motion-dev | W | technique | no | Motion.dev / Framer Motion patterns for React, Next.js, Svelte and Astro at 120fps. |
+| [`60fps-animation`](tools/60fps-animation.md) | iart | W | technique | no | Makes janky CSS animation hit 60fps. |
+| [`accessible-animation`](tools/accessible-animation.md) | iart | W | technique | no | Honours prefers-reduced-motion with accessible motion patterns. |
+| [`ascii-animation`](tools/ascii-animation.md) | iart | W | technique | no | ASCII and text-based animation effects. |
+| [`glassmorphism`](tools/glassmorphism.md) | iart | W | technique | no | Frosted-glass surfaces done right. |
+| [`gsap-web`](tools/gsap-web.md) | iart | W | technique | no | GSAP recipes: ScrollTrigger, pinning, scrub, SplitText, Flip, Lenis. |
+| [`lottie-animation`](tools/lottie-animation.md) | iart | W | technique | no | Embeds and controls Lottie animations. |
+| [`micro-interaction`](tools/micro-interaction.md) | iart | W | technique | no | Micro-interaction recipes: hover, press, toggle, feedback. |
+| [`page-transition-animation`](tools/page-transition-animation.md) | iart | W | technique | no | Page and view transitions. |
+| [`svg-animation`](tools/svg-animation.md) | iart | W | technique | no | SVG path, morph and line-drawing animation. |
 
-## Commands
+## Commands, grouped by vendor
+
+**ui-craft by educlopez** — `/design-tools:ui-craft` runs `ui-craft` as the vendor designed it
+- `/design-tools:ui-craft` — The ui-craft base: discovery, anti-slop rules, knobs and Craft Report; actions build | animate | review | polish | audit.
+- `/design-tools:ui-craft-minimal` — ui-craft base with a minimal, whitespace-led aesthetic fixed in.
+- `/design-tools:ui-craft-editorial` — ui-craft base with an editorial, type-led aesthetic fixed in.
+- `/design-tools:ui-craft-dense-dashboard` — ui-craft base tuned for dense data dashboards and tables.
+- `/design-tools:ui-craft-start` — Explains the ui-craft ladder and names your next rung; changes nothing.
+- `/design-tools:ui-craft-brief` — Interviews you and writes .ui-craft/brief.md — purpose, user, principles, success metric, out of scope.
+- `/design-tools:ui-craft-tokens` — Establishes or audits the three-layer design-token spine (primitive → semantic → component).
+- `/design-tools:ui-craft-shape` — Wireframes one new section into .ui-craft/spec.md — layout, state lattice, acceptance bar; writes a spec, not code.
+- `/design-tools:ui-craft-craft` — Builds a surface from the spec with ui-craft recipes (dashboard, landing, auth).
+- `/design-tools:ui-craft-sddesign` — ui-craft's six-gate conveyor for one surface: brief → tokens → shape → craft → converge → ship.
+- `/design-tools:ui-craft-finalize` — Ship gate: READY / NOT READY / BLOCKED with findings; never edits.
+- `/design-tools:ui-craft-remember` — Appends a learned design constraint to .ui-craft/brief.md §6 so future sessions obey it.
+- `/design-tools:ui-craft-polish` — Final finish pass on a surface that is already right: alignment, spacing, micro-details, using project tokens.
+- `/design-tools:ui-craft-typeset` — Retunes the typography of existing UI: modular scale, tracking, leading, weight hierarchy, micro-typography.
+- `/design-tools:ui-craft-colorize` — Applies and tunes colour on existing UI: palette use, theming, dark mode, accent budget.
+- `/design-tools:ui-craft-adapt` — Makes an existing layout responsive: breakpoints, touch targets, safe areas, fluid type, container queries.
+- `/design-tools:ui-craft-distill` — Removes noise from an over-built surface: cuts sections, elements and decoration that earn nothing.
+- `/design-tools:ui-craft-bolder` — Amplifies personality inside the current direction: stronger type, contrast, signature details.
+- `/design-tools:ui-craft-quieter` — Tones a loud surface down: fewer accents, calmer type and motion, more whitespace.
+- `/design-tools:ui-craft-extract` — Pulls repeated markup into reusable components and tokens.
+- `/design-tools:ui-craft-redesign` — ui-craft's redesign lens: re-composes an existing surface against the brief and tokens.
+- `/design-tools:ui-craft-delight` — Adds purposeful micro-interactions — hover, press, success moments — within the motion tokens.
+- `/design-tools:ui-craft-animate` — Adds or adjusts animation inside the project's motion token system (durations, easings, intensity).
+- `/design-tools:ui-craft-unhappy` — Designs the non-happy states first — empty, loading, error, partial — and turns boolean soup into a state machine.
+- `/design-tools:ui-craft-harden` — Production-hardens a surface: skeletons, empty/error/partial states, i18n, offline, permissions, first run.
+- `/design-tools:ui-craft-clarify` — Rewrites UX copy: error messages, empty states, CTAs, voice matrix, reading level.
+- `/design-tools:ui-craft-audit` — Technical accessibility audit inside a build session: contrast, focus, ARIA, keyboard; report only.
+- `/design-tools:ui-craft-critique` — UX critique of a surface — what to change and why; no code changes.
+- `/design-tools:ui-craft-heuristic` — Scores a surface 0–100 against heuristics and personas; PM-ready audit, read-only.
+
+**taste-skill by Leonxlnx** — `/design-tools:taste` runs `design-taste-frontend` as the vendor designed it
+- `/design-tools:taste-design-taste-frontend` — Art-direction doctrine: infers the brief, sets three dials, bans AI tells, designs from a block library.
+- `/design-tools:taste-design-taste-frontend-v1` — Previous, shorter version of design-taste-frontend; kept for comparison only.
+- `/design-tools:taste-gpt-taste` — taste-skill variant tuned for GPT-style output.
+- `/design-tools:taste-high-end-visual-design` — Makes an existing surface read as expensive: shadows, cards, spacing, 'absolute zero' anti-patterns.
+- `/design-tools:taste-brandkit` — Generates brand identity boards and logo systems; needs an image tool.
+- `/design-tools:taste-imagegen-frontend-web` — Generates one horizontal reference image per section of a web surface before any code.
+- `/design-tools:taste-imagegen-frontend-mobile` — Generates reference imagery for mobile screens before any code.
+- `/design-tools:taste-image-to-code` — Generates a visual reference, analyses it, then codes the UI from it; tuned for Codex.
+- `/design-tools:taste-full-output-enforcement` — Modifier: bans placeholders, ellipses and truncated output in whatever the next tool writes.
+- `/design-tools:taste-minimalist-ui` — Direction preset: minimalist UI.
+- `/design-tools:taste-industrial-brutalist-ui` — Direction preset: industrial-brutalist UI.
+- `/design-tools:taste-redesign-existing-projects` — taste-skill's redesign protocol for an existing project.
+- `/design-tools:taste-stitch-design-taste` — taste-skill tuned for Google Stitch handoff.
+
+**impeccable by pbakaus** — `/design-tools:impeccable` runs `impeccable` as the vendor designed it
+- `/design-tools:impeccable` — pbakaus's design director with internal modes — shape, audit, critique, typeset, colorize, polish, harden, live and more.
+
+**Emil Kowalski** — `/design-tools:emil` lists and dispatches
+- `/design-tools:emil-design-eng` — Polishes how a component feels: springs, interruptibility, the invisible details — Emil Kowalski's bar.
+- `/design-tools:emil-apple-design` — Direct-manipulation motion: drag, swipe, sheets, velocity handoff, momentum, interruptibility.
+- `/design-tools:emil-find-animation-opportunities` — Read-only: finds where motion is missing but earned, and proposes it.
+- `/design-tools:emil-improve-animations` — Read-only: audits all existing motion and writes a plan for other agents.
+- `/design-tools:emil-review-animations` — Read-only review of animation code against Emil's craft bar; defaults to flagging.
+- `/design-tools:emil-animation-vocabulary` — Reverse dictionary: describe an effect, get its name and a reference.
+- `/design-tools:emil-pick-ui-library` — Recommends a UI component library for your stack.
+- `/design-tools:emil-ask-sonner` — Answers questions about the Sonner toast library.
+- `/design-tools:emil-prototype` — Builds several genuinely different versions of one UI piece behind a live picker; promote the winner.
+
+**ui-skills by ibelick** — `/design-tools:ibelick` lists and dispatches
+- `/design-tools:ibelick-baseline-ui` — Base tidiness checklist: spacing, alignment, contrast, consistency; read-only.
+- `/design-tools:ibelick-fixing-accessibility` — Fast targeted accessibility fixes: focus ring, tab order, labels, ARIA.
+- `/design-tools:ibelick-fixing-motion-performance` — Fixes janky animation: compositor-only properties, layout thrash, reduced-motion, perf budget.
+
+**Addy Osmani web-quality** — `/design-tools:osmani` lists and dispatches
+- `/design-tools:osmani-accessibility` — Full WCAG 2.2 accessibility pass — POUR, conformance level, fixes.
+- `/design-tools:osmani-core-web-vitals` — Diagnoses and fixes LCP, INP and CLS by name.
+- `/design-tools:osmani-performance` — Cuts page weight and load time: payload, critical path, fonts, images, caching.
+- `/design-tools:osmani-seo` — On-page SEO: meta, structured data, sitemap, robots, headings, internal links.
+- `/design-tools:osmani-best-practices` — Security headers, CSP and modern platform practices.
+- `/design-tools:osmani-web-quality-audit` — Umbrella audit across performance, a11y, SEO and best practices; names the worst axis; read-only.
+
+**iart-ai web-animation** — `/design-tools:iart` lists and dispatches
+- `/design-tools:iart-60fps-animation` — Makes janky CSS animation hit 60fps.
+- `/design-tools:iart-accessible-animation` — Honours prefers-reduced-motion with accessible motion patterns.
+- `/design-tools:iart-ascii-animation` — ASCII and text-based animation effects.
+- `/design-tools:iart-glassmorphism` — Frosted-glass surfaces done right.
+- `/design-tools:iart-gsap-web` — GSAP recipes: ScrollTrigger, pinning, scrub, SplitText, Flip, Lenis.
+- `/design-tools:iart-lottie-animation` — Embeds and controls Lottie animations.
+- `/design-tools:iart-micro-interaction` — Micro-interaction recipes: hover, press, toggle, feedback.
+- `/design-tools:iart-page-transition-animation` — Page and view transitions.
+- `/design-tools:iart-svg-animation` — SVG path, morph and line-drawing animation.
+
+**LottieFiles** — `/design-tools:lottie` runs `motion-design` as the vendor designed it
+- `/design-tools:lottie-motion-design` — Designs motion from scratch: timing, easing, choreography, Disney principles; any animation stack.
+
+**kylezantos** — `/design-tools:design-motion-principles` runs `design-motion-principles` as the vendor designed it
+- `/design-tools:design-motion-principles` — Builds motion or audits it with Emil / Krehel / Tompkins lenses; audit emits an HTML report with looping demos.
+
+**Motion.dev skill** — `/design-tools:motion-dev` runs `motion-dev-animations` as the vendor designed it
+- `/design-tools:motion-dev-animations` — Motion.dev / Framer Motion patterns for React, Next.js, Svelte and Astro at 120fps.
+
+**cloudai-x threejs** — `/design-tools:threejs` lists and dispatches
+- `/design-tools:threejs-fundamentals` — Three.js scene setup: cameras, renderer, Object3D hierarchy, coordinates.
+- `/design-tools:threejs-loaders` — Three.js asset loading: GLTF / OBJ / textures, pipelines, progress.
+- `/design-tools:threejs-materials` — Three.js materials and PBR.
+- `/design-tools:threejs-lighting` — Three.js lights, shadows, environment maps.
+- `/design-tools:threejs-shaders` — Three.js GLSL and ShaderMaterial.
+- `/design-tools:threejs-geometry` — Three.js geometries, buffers, instancing.
+- `/design-tools:threejs-textures` — Three.js textures, UVs, mapping.
+- `/design-tools:threejs-animation` — Three.js animation mixer, clips, keyframes.
+- `/design-tools:threejs-interaction` — Three.js raycasting, controls, pointer events.
+- `/design-tools:threejs-postprocessing` — Three.js EffectComposer passes: bloom, depth of field and more.
+
+**tponscr-debug** — `/design-tools:awwwards` runs `awwwards` as the vendor designed it
+- `/design-tools:awwwards` — Applies Awwwards-winning design principles to a surface; orchestrator.
+
+**calmtiger86** — `/design-tools:calm-design` runs `calm-design` as the vendor designed it
+- `/design-tools:calm-design` — Calm premium design agent: writes DESIGN.md, self-critiques, runs pre-flight checks; Korean-first.
+
+**Shawnchee** — `/design-tools:frontend-god-mode` runs `frontend-god-mode` as the vendor designed it
+- `/design-tools:frontend-god-mode` — Consolidated do-everything frontend master skill; orchestrator.
+
+**frhscopex design-skill-os** — `/design-tools:design-skill-os` runs `design` as the vendor designed it
+- `/design-tools:design-skill-os` — Design principles from ten canonical books, for when a decision needs a reason behind it; read-only.
+
+## Other commands
 
 - `/design-tools:tool <your words>` — route to exactly one tool and run it.
 - `/design-tools:tools-list [group]` — print the catalog, change nothing.
-- `/design-tools:<tool> <target>` — engage one tool by name, bypassing the router. One command per
-  tool above (87 in total), regenerated by `python3 scripts/build.py`.
+- `/design-tools:<vendor>` — the vendor's entry point: runs its master skill exactly as the vendor
+  designed it (ui-craft, impeccable, taste → design-taste-frontend, …), or lists the vendor's tools
+  when it has no master (emil, osmani, ibelick, iart, threejs).
+- `/design-tools:<vendor>-<tool> <target>` — engage one tool by name, bypassing the router. Names are
+  vendor-prefixed so the picker groups them: type `/design-tools:ui-craft` to see every ui-craft lens.
+  One command per tool (87 in total) plus one per vendor, regenerated by `python3 scripts/build.py`.
 - `/design-tools:demo [tool]` — open the design-studio dashboard (or one tool's bake-off demo) in the
   browser, if it exists on this machine. Read-only; `scripts/dashboard.sh`.

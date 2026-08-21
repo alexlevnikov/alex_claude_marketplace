@@ -2,7 +2,9 @@
 
 # `web-quality-audit`
 
-**Vendor:** [web-quality-skills](../vendors/osmani.md) (addyosmani) · https://github.com/addyosmani/web-quality-skills
+Umbrella audit across performance, a11y, SEO and best practices; names the worst axis; read-only.
+
+**Vendor:** [Addy Osmani web-quality](../vendors/osmani.md) · https://github.com/addyosmani/web-quality-skills
 **Mode:** R · **Class:** judge · **Group:** judge · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** umbrella: performance + a11y + SEO + best practices at once
@@ -10,7 +12,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:web-quality-audit <target>`
+- Direct: `/design-tools:osmani-web-quality-audit <target>`
+- Vendor entry point: `/design-tools:osmani` — lists the vendor's tools
 - Through the router, these phrasings land here:
   - "run lighthouse" · «прогони полный аудит качества»
 

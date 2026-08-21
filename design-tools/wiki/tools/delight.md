@@ -2,7 +2,9 @@
 
 # `delight`
 
-**Vendor:** [ui-craft](../vendors/ui-craft.md) (educlopez) · https://github.com/educlopez/ui-craft
+Adds purposeful micro-interactions — hover, press, success moments — within the motion tokens.
+
+**Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
 **Mode:** W · **Class:** pass · **Group:** feel · **Routable:** yes — `/design-tools:tool` can land here
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
@@ -12,7 +14,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:delight <target>`
+- Direct: `/design-tools:ui-craft-delight <target>`
+- Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
 - Through the router, these phrasings land here:
   - "add a nice touch on hover" · «микро-взаимодействие на ховер»
 

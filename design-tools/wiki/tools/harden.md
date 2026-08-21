@@ -2,7 +2,9 @@
 
 # `harden`
 
-**Vendor:** [ui-craft](../vendors/ui-craft.md) (educlopez) · https://github.com/educlopez/ui-craft
+Production-hardens a surface: skeletons, empty/error/partial states, i18n, offline, permissions, first run.
+
+**Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
 **Mode:** W · **Class:** pass · **Group:** fix · **Routable:** yes — `/design-tools:tool` can land here
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
@@ -12,7 +14,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:harden <target>`
+- Direct: `/design-tools:ui-craft-harden <target>`
+- Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
 - Through the router, these phrasings land here:
   - "is this production ready" · «готово к проду?» · "what about errors and loading"
 

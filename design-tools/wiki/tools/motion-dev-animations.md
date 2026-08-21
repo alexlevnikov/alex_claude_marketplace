@@ -2,7 +2,9 @@
 
 # `motion-dev-animations`
 
-**Vendor:** [motion-dev-animations](../vendors/motion-dev.md) (199-biotechnologies) · https://github.com/199-biotechnologies/motion-dev-animations-skill
+Motion.dev / Framer Motion patterns for React, Next.js, Svelte and Astro at 120fps.
+
+**Vendor:** [Motion.dev skill](../vendors/motion-dev.md) · https://github.com/199-biotechnologies/motion-dev-animations-skill
 **Mode:** W · **Class:** technique · **Group:** technique · **Routable:** no — direct engagement only (`/design-tools:motion-dev-animations`)
 
 **For:** Motion.dev / Framer Motion patterns for React, Next.js, Svelte, Astro
@@ -11,6 +13,7 @@
 ## Engage
 
 - Direct: `/design-tools:motion-dev-animations <target>`
+- Vendor entry point: `/design-tools:motion-dev` — runs this very skill as the vendor's master
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

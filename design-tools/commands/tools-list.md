@@ -15,6 +15,7 @@ Show the `design-tools` catalog for: **$ARGUMENTS** (default: all routable group
   and from where — project scope, user scope, or the design-studio root.
 - `vendors` → `wiki/README.md` § *Vendors*, one line each, with the link to `wiki/vendors/<vendor>.md`.
 
-Every tool listed has a direct command, `/design-tools:<tool>`, and a page, `wiki/tools/<tool>.md`.
+Every tool listed has a direct command, `/design-tools:<vendor>-<tool>`, and a page, `wiki/tools/<tool>.md`;
+every vendor has an entry command, `/design-tools:<vendor>` (master skill as designed, or the hub).
 
 Change nothing. This command answers "what have I got", not "do something".

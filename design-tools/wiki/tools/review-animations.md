@@ -2,7 +2,9 @@
 
 # `review-animations`
 
-**Vendor:** [Emil Kowalski skills](../vendors/emil.md) (emilkowalski) · https://github.com/emilkowalski/skills
+Read-only review of animation code against Emil's craft bar; defaults to flagging.
+
+**Vendor:** [Emil Kowalski](../vendors/emil.md) · https://github.com/emilkowalski/skills
 **Mode:** R · **Class:** judge · **Group:** judge · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** review animation code against Emil's craft bar — default to flagging, approval is earned
@@ -10,7 +12,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:review-animations <target>`
+- Direct: `/design-tools:emil-review-animations <target>`
+- Vendor entry point: `/design-tools:emil` — lists the vendor's tools
 - Through the router, these phrasings land here:
   - "review this animation code" · «отревьюй код анимации» · "is this motion up to standard"
 

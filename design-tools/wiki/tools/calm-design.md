@@ -2,7 +2,9 @@
 
 # `calm-design`
 
-**Vendor:** [calm-design](../vendors/calm-design.md) (calmtiger86) · https://github.com/calmtiger86/calm-design
+Calm premium design agent: writes DESIGN.md, self-critiques, runs pre-flight checks; Korean-first.
+
+**Vendor:** [calmtiger86](../vendors/calm-design.md) · https://github.com/calmtiger86/calm-design
 **Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:calm-design`)
 
 **For:** calm premium direction with a DESIGN.md output and self-critique
@@ -11,6 +13,7 @@
 ## Engage
 
 - Direct: `/design-tools:calm-design <target>`
+- Vendor entry point: `/design-tools:calm-design` — runs this very skill as the vendor's master
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

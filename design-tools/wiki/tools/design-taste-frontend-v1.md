@@ -2,15 +2,18 @@
 
 # `design-taste-frontend-v1`
 
-**Vendor:** [taste-skill](../vendors/taste-skill.md) (Leonxlnx) · https://github.com/Leonxlnx/taste-skill
-**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:design-taste-frontend-v1`)
+Previous, shorter version of design-taste-frontend; kept for comparison only.
+
+**Vendor:** [taste-skill by Leonxlnx](../vendors/taste.md) · https://github.com/Leonxlnx/taste-skill
+**Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:taste-design-taste-frontend-v1`)
 
 **For:** the previous, shorter version of `design-taste-frontend` (226 lines)
 **Not for:** new work — kept for comparison only
 
 ## Engage
 
-- Direct: `/design-tools:design-taste-frontend-v1 <target>`
+- Direct: `/design-tools:taste-design-taste-frontend-v1 <target>`
+- Vendor entry point: `/design-tools:taste` — runs the vendor's master `design-taste-frontend`
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

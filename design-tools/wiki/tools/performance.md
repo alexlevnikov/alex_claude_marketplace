@@ -2,7 +2,9 @@
 
 # `performance`
 
-**Vendor:** [web-quality-skills](../vendors/osmani.md) (addyosmani) · https://github.com/addyosmani/web-quality-skills
+Cuts page weight and load time: payload, critical path, fonts, images, caching.
+
+**Vendor:** [Addy Osmani web-quality](../vendors/osmani.md) · https://github.com/addyosmani/web-quality-skills
 **Mode:** W · **Class:** pass · **Group:** fix · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** payload, critical path, fonts, images, caching
@@ -10,7 +12,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:performance <target>`
+- Direct: `/design-tools:osmani-performance <target>`
+- Vendor entry point: `/design-tools:osmani` — lists the vendor's tools
 - Through the router, these phrasings land here:
   - "the page is heavy" · «страница медленно грузится» · "too many requests"
 

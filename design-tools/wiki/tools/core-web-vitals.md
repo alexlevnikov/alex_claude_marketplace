@@ -2,7 +2,9 @@
 
 # `core-web-vitals`
 
-**Vendor:** [web-quality-skills](../vendors/osmani.md) (addyosmani) · https://github.com/addyosmani/web-quality-skills
+Diagnoses and fixes LCP, INP and CLS by name.
+
+**Vendor:** [Addy Osmani web-quality](../vendors/osmani.md) · https://github.com/addyosmani/web-quality-skills
 **Mode:** W · **Class:** pass · **Group:** fix · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** LCP, INP, CLS by name
@@ -10,7 +12,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:core-web-vitals <target>`
+- Direct: `/design-tools:osmani-core-web-vitals <target>`
+- Vendor entry point: `/design-tools:osmani` — lists the vendor's tools
 - Through the router, these phrasings land here:
   - "LCP is bad" · "fix CLS" · «плохие Core Web Vitals»
 

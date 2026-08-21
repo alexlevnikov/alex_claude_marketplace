@@ -1,7 +1,7 @@
 {
   "name": "design-tools",
-  "version": "0.2.0",
-  "description": "The router: one targeted design pass on UI that already exists. Reads the request in the user's own words, picks exactly one specialist skill out of eighty-seven across ui-craft, taste-skill, impeccable, Emil Kowalski, Addy Osmani's web-quality suite, ibelick and nine smaller vendors — then resolves where that skill is actually installed and loads it, so the route works from any project, not only design-studio. Carries what no single vendor has: a collision table for the twelve places where three vendors cover the same ground, read-only-before-write discipline, a hard escalation threshold to design-pipeline, a registry-driven wiki of every vendor and tool, and one direct command per tool (/design-tools:impeccable, /design-tools:typeset, …) for when the user names the tool outright.",
+  "version": "0.3.0",
+  "description": "The router: one targeted design pass on UI that already exists. Reads the request in the user's own words, picks exactly one specialist skill out of eighty-seven across ui-craft, taste-skill, impeccable, Emil Kowalski, Addy Osmani's web-quality suite, ibelick and nine smaller vendors — then resolves where that skill is actually installed and loads it, so the route works from any project, not only design-studio. Carries what no single vendor has: a collision table for the twelve places where three vendors cover the same ground, read-only-before-write discipline, a hard escalation threshold to design-pipeline, a registry-driven wiki of every vendor and tool, one vendor-prefixed command per tool (/design-tools:ui-craft-typeset, /design-tools:osmani-seo, …) so the picker groups them, and one entry command per vendor (/design-tools:ui-craft, /design-tools:impeccable, /design-tools:taste) that runs the vendor's master skill exactly as the vendor designed it.",
   "author": {
     "name": "Alex Levnikov"
   },

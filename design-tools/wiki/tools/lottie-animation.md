@@ -2,15 +2,18 @@
 
 # `lottie-animation`
 
-**Vendor:** [web-animation-skills](../vendors/iart-ai.md) (iart-ai) · https://github.com/iart-ai/web-animation-skills
-**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** no — direct engagement only (`/design-tools:lottie-animation`)
+Embeds and controls Lottie animations.
+
+**Vendor:** [iart-ai web-animation](../vendors/iart.md) · https://github.com/iart-ai/web-animation-skills
+**Mode:** W · **Class:** technique · **Group:** technique · **Routable:** no — direct engagement only (`/design-tools:iart-lottie-animation`)
 
 **For:** embedding and controlling Lottie animations
 **Not for:** designing the animation
 
 ## Engage
 
-- Direct: `/design-tools:lottie-animation <target>`
+- Direct: `/design-tools:iart-lottie-animation <target>`
+- Vendor entry point: `/design-tools:iart` — lists the vendor's tools
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

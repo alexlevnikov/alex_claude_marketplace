@@ -2,7 +2,9 @@
 
 # `threejs-fundamentals`
 
-**Vendor:** [threejs-skills](../vendors/cloudai.md) (cloudai-x) · https://github.com/cloudai-x/threejs-skills
+Three.js scene setup: cameras, renderer, Object3D hierarchy, coordinates.
+
+**Vendor:** [cloudai-x threejs](../vendors/threejs.md) · https://github.com/cloudai-x/threejs-skills
 **Mode:** W · **Class:** technique · **Group:** lookup · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** scene setup, cameras, renderer, Object3D hierarchy, coordinates
@@ -11,6 +13,7 @@
 ## Engage
 
 - Direct: `/design-tools:threejs-fundamentals <target>`
+- Vendor entry point: `/design-tools:threejs` — lists the vendor's tools
 - Through the router: `/design-tools:tool <your words>` — no fixed phrasing recorded yet in `routing.md`.
 
 ## What the vendor says

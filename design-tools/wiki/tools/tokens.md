@@ -2,8 +2,10 @@
 
 # `tokens`
 
-**Vendor:** [ui-craft](../vendors/ui-craft.md) (educlopez) · https://github.com/educlopez/ui-craft
-**Mode:** W · **Class:** phase · **Group:** phase · **Routable:** no — direct engagement only (`/design-tools:tokens`)
+Establishes or audits the three-layer design-token spine (primitive → semantic → component).
+
+**Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
+**Mode:** W · **Class:** phase · **Group:** phase · **Routable:** no — direct engagement only (`/design-tools:ui-craft-tokens`)
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
 
@@ -12,7 +14,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:tokens <target>`
+- Direct: `/design-tools:ui-craft-tokens <target>`
+- Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

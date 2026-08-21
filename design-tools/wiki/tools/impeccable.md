@@ -2,7 +2,9 @@
 
 # `impeccable`
 
-**Vendor:** [impeccable](../vendors/impeccable.md) (pbakaus) · https://github.com/pbakaus/impeccable
+pbakaus's design director with internal modes — shape, audit, critique, typeset, colorize, polish, harden, live and more.
+
+**Vendor:** [impeccable by pbakaus](../vendors/impeccable.md) · https://github.com/pbakaus/impeccable
 **Mode:** W · **Class:** orchestrator · **Group:** direction · **Routable:** no — direct engagement only (`/design-tools:impeccable`)
 
 **For:** high-variance art direction (DESIGN_VARIANCE ≥ 7) with internal modes: shape · audit|critique · animate|bolder|colorize|delight|layout|overdrive|quieter|typeset · adapt|clarify|distill · harden|onboard|optimize|polish · init|document|extract|live
@@ -11,6 +13,7 @@
 ## Engage
 
 - Direct: `/design-tools:impeccable <target>`
+- Vendor entry point: `/design-tools:impeccable` — runs this very skill as the vendor's master
 - Not routed. The router escalates this class of request to `design-pipeline` or asks; the command above is the deliberate by-pass.
 
 ## What the vendor says

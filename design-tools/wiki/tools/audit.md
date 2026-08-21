@@ -2,7 +2,9 @@
 
 # `audit`
 
-**Vendor:** [ui-craft](../vendors/ui-craft.md) (educlopez) · https://github.com/educlopez/ui-craft
+Technical accessibility audit inside a build session: contrast, focus, ARIA, keyboard; report only.
+
+**Vendor:** [ui-craft by educlopez](../vendors/ui-craft.md) · https://github.com/educlopez/ui-craft
 **Mode:** R · **Class:** judge · **Group:** judge · **Routable:** yes — `/design-tools:tool` can land here
 
 **Base:** this is a `ui-craft` lens — the base loads first. → [ui-craft](ui-craft.md)
@@ -12,7 +14,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:audit <target>`
+- Direct: `/design-tools:ui-craft-audit <target>`
+- Vendor entry point: `/design-tools:ui-craft` — runs the vendor's master `ui-craft`
 - Through the router, these phrasings land here:
   - "check a11y while we build" · «проверь доступность по ходу»
 

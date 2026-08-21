@@ -2,7 +2,9 @@
 
 # `accessibility`
 
-**Vendor:** [web-quality-skills](../vendors/osmani.md) (addyosmani) · https://github.com/addyosmani/web-quality-skills
+Full WCAG 2.2 accessibility pass — POUR, conformance level, fixes.
+
+**Vendor:** [Addy Osmani web-quality](../vendors/osmani.md) · https://github.com/addyosmani/web-quality-skills
 **Mode:** W · **Class:** pass · **Group:** fix · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** full WCAG 2.2, POUR, conformance level, pre-launch
@@ -10,7 +12,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:accessibility <target>`
+- Direct: `/design-tools:osmani-accessibility <target>`
+- Vendor entry point: `/design-tools:osmani` — lists the vendor's tools
 - Through the router, these phrasings land here:
   - "run an accessibility audit" · «проверь доступность» · "WCAG compliance"
 

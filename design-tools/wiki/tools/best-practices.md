@@ -2,7 +2,9 @@
 
 # `best-practices`
 
-**Vendor:** [web-quality-skills](../vendors/osmani.md) (addyosmani) · https://github.com/addyosmani/web-quality-skills
+Security headers, CSP and modern platform practices.
+
+**Vendor:** [Addy Osmani web-quality](../vendors/osmani.md) · https://github.com/addyosmani/web-quality-skills
 **Mode:** W · **Class:** pass · **Group:** fix · **Routable:** yes — `/design-tools:tool` can land here
 
 **For:** security headers, CSP, modernisation
@@ -10,7 +12,8 @@
 
 ## Engage
 
-- Direct: `/design-tools:best-practices <target>`
+- Direct: `/design-tools:osmani-best-practices <target>`
+- Vendor entry point: `/design-tools:osmani` — lists the vendor's tools
 - Through the router, these phrasings land here:
   - "security headers" · «проверь безопасность» · "is this code modern"
 

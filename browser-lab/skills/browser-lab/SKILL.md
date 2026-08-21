@@ -70,7 +70,8 @@ Many real tasks chain these: drive a flow with playwright → watch it in chrome
 
 ## Environment prerequisites
 
-- **playwright / chrome-devtools**: need Node.js and a local Chrome/Chromium. They run via `npx`; first launch downloads the package. chrome-devtools drives a real Chrome instance.
+- **playwright / chrome-devtools**: need Node.js and a local Chrome/Chromium. They run via `npx`; first launch downloads the package.
+- **chrome-devtools attaches, it does not launch.** It runs with `--autoConnect` and drives the user's already-open Chrome, which is why several sessions can use it at once and why the user's logins are already present. This needs remote debugging enabled once at `chrome://inspect/#remote-debugging`. **If a call fails because no browser can be attached to, say so and name that toggle — do not switch the server to `--isolated` or a private profile to work around it, and never enable it on the user's behalf.** Anything that only needs a browser to act in, rather than the user's own session, belongs to playwright: it brings its own browser and never touches the personal profile.
 - **mitmproxy**: needs `uv` (for `uvx`) and, for HTTPS interception, its CA certificate trusted by the client under test (visit `mitm.it` through the proxy, or install the cert). Without the trusted CA it can only see plaintext HTTP and TLS metadata.
 - **request replication codegen**: `curlconverter` is invoked via `npx curlconverter` — no install needed beyond Node.
 

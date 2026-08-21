@@ -1,6 +1,6 @@
 {
   "name": "browser-lab",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "The live-browser toolkit: browser automation, deep frontend debugging, network disassembly, and HTTP request replication. One orchestration skill routes every task across bundled Playwright, Chrome DevTools, and mitmproxy servers. For retrieval — web search, scraping, crawling, structured extraction — install the sibling web-harvest plugin.",
   "author": {
     "name": "YOURSAUNAS"

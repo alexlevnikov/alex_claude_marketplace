@@ -32,17 +32,34 @@ All three are **local, keyless, and stdio** — no account, no API key.
 
 **Runtime cost, stated plainly:** stdio servers start with the session, not on
 first use, so this plugin holds **three processes in every open session** whether
-or not you touch a browser (~45–80 MB each). That is the price of the capability
-today — all three ship stdio-only, with no hosted variant. Closing that gap needs
-a gateway; it is tracked as wave 2 in `docs/IMPROVEMENT-LOG.md`. If you rarely do
-browser work, disable this plugin and enable it when you need it — `web-harvest`
-is unaffected and costs nothing either way.
+or not you touch a browser. Idle they are small (a few MB each); the weight
+arrives when a browser actually launches. All three ship stdio-only with no
+hosted variant, so the only way to close the gap is a gateway — **considered in
+depth and declined**, see `docs/specs/2026-08-19-mcp-gateway-design.md`. If you
+rarely do browser work, disable this plugin and enable it when you need it —
+`web-harvest` is unaffected and costs nothing either way.
 
 ## Setup
 
 Everything self-installs on first use via `npx`/`uvx`. Prerequisites:
 
 - **Node.js** (playwright, chrome-devtools) and a local **Chrome/Chromium**.
+- **Remote debugging enabled in Chrome**, one time, at
+  `chrome://inspect/#remote-debugging`. `chrome-devtools` runs with
+  `--autoConnect` and attaches to the Chrome you already have open instead of
+  launching its own. Without this toggle it has no browser to attach to.
+
+  This is what makes the server usable in more than one session at a time.
+  Without it, each session tries to launch its own Chrome against the same
+  profile directory and every session but the first fails with *"The browser is
+  already running for …/chrome-profile"*. Attaching to one shared browser also
+  means your existing logins are simply there.
+
+  **Know what you are turning on.** With the remote debugging server running,
+  any local process can drive your logged-in browser — mail, bank, anything you
+  are signed into. Turn it on if you want deep debugging across sessions;
+  leave it off and use `playwright`, which brings its own browser and never
+  touches your profile, if you do not.
 - **`uv`** for mitmproxy (`uvx mitmproxy-mcp`). For HTTPS interception, trust the
   mitmproxy CA: route a browser through the proxy and visit `mitm.it`. Without
   the trusted CA it sees only plaintext HTTP and TLS metadata.

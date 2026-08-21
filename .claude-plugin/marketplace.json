@@ -13,7 +13,7 @@
       "name": "browser-lab",
       "source": "./browser-lab",
       "description": "The live-browser toolkit: browser automation, deep frontend debugging, network disassembly, and HTTP request replication. Routes every task across Playwright, Chrome DevTools, and mitmproxy. For retrieval, install web-harvest.",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "author": { "name": "YOURSAUNAS" },
       "keywords": ["browser", "automation", "debugging", "network", "devtools", "playwright", "mitmproxy", "reverse-engineering"]
     },

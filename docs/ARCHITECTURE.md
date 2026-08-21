@@ -220,7 +220,7 @@ separate fixes, and a good router does nothing for the second one.
 
 | Plugin | Skills | MCP shipped | Model | Cost per session | Notes |
 | --- | --- | --- | --- | --- | --- |
-| `browser-lab` 0.3.0 | `browser-lab` | 3 `stdio`: playwright, chrome-devtools, mitmproxy | A | **3 processes** | Keyless and local. All three are stdio-only with no hosted variant, so user scope costs 3 processes per open session — accepted deliberately, pending the wave-2 gateway. |
+| `browser-lab` 0.3.1 | `browser-lab` | 3 `stdio`: playwright, chrome-devtools, mitmproxy | A | **3 processes** | Keyless and local. All three are stdio-only with no hosted variant, so user scope costs 3 processes per open session — **accepted permanently**: the gateway that would have removed it was designed and declined (`specs/2026-08-19-mcp-gateway-design.md`). `chrome-devtools` runs with `--autoConnect` and needs remote debugging enabled once in Chrome. |
 | `web-harvest` 0.1.0 | `web-harvest` | 5 `http`: firecrawl, exa, tavily, brightdata, apify | A | **0 processes** | Keys in `~/.claude/settings.json` → `env`. Connects on first call; free to leave enabled at user scope. |
 | `agents-os` 0.1.0 | `hetzner-server` | none | — | 0 | Pure knowledge. Free to enable anywhere. |
 

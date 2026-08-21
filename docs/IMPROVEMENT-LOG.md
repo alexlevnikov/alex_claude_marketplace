@@ -7,6 +7,53 @@ build), `specs/` (dated design decisions).
 
 ---
 
+## 2026-08-19 — Wave 2 declined. `browser-lab` 0.3.1 fixes the defect instead
+
+**Decision (Alex, 2026-08-19): the gateway is not built.** The design stays in
+`specs/2026-08-19-mcp-gateway-design.md` marked DECLINED, with the reasoning, so
+that reopening it starts from the analysis rather than from zero.
+
+**What separated the two things.** The gateway removes a *cost*; only one thing
+was *broken*. `chrome-devtools` failed in every session but the one that won the
+race for the Chrome profile — and that is fixed by a single flag, not by a
+daemon. Everything else worked the whole time.
+
+**`browser-lab` 0.3.1** adds `--autoConnect` to `chrome-devtools`. It attaches to
+the Chrome you already have open instead of launching its own, so there is no
+profile to contend over, every session can use it at once, and existing logins
+are simply there. **It requires enabling remote debugging once** at
+`chrome://inspect/#remote-debugging`, and the README states plainly what that
+means: any local process can then drive the logged-in browser. `playwright`
+remains the answer for anyone who would rather not — it brings its own browser
+and never touches the personal profile.
+
+**Why the gateway lost, on evidence gathered after it was approved:**
+
+- Rai-onl publishes **no binaries** — v0.3.0 ships zero release assets — so it
+  means installing a **Rust toolchain** (~1.4 GB) that nothing else here needs.
+- It is a **thirteen-crate project** with OIDC, TLS and a credential store, for
+  the job of putting three local servers behind a loopback port.
+- The daemon would sit **in the path of all MCP traffic**, including the telegram
+  token and n8n credentials over ssh.
+- Against ~300 MB on an 8 GB machine.
+
+**Two things worth keeping from the work, even though it shipped nothing:**
+
+- **Read the source, not the README.** `common-creation/mcp-gateway` advertises
+  "auto-start MCP servers on first request"; its own `main.go:41` calls
+  `StartAll` at startup. Rai-onl documents neither lazy start nor reaping, yet
+  its `router/src/dispatch.rs` shows both a request-filled bridge slot and
+  liveness-driven replacement. Both READMEs were wrong in opposite directions.
+- **Check whether the criterion is worth its weight.** "Idle reaping" was written
+  as a blocking requirement. With one daemon the worst case is 3 processes
+  machine-wide against 21 today, so reaping buys zero-instead-of-three, not
+  three-instead-of-21. It should never have been blocking.
+
+**Accepted permanently:** 3 stdio processes per open session for `browser-lab`.
+`ARCHITECTURE.md` §6 now says so instead of pointing at a pending wave.
+
+---
+
 ## 2026-08-19 — Wave 1 verified live, and what the measurement found
 
 First session after the restart. Everything wave 1 claimed was re-checked against

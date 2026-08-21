@@ -1,8 +1,43 @@
 # Wave 2: one HTTP gateway per machine
 
 **Date:** 2026-08-19
-**Status:** Design — approved by Alex 2026-08-19. Not implemented; phase 0 (the
-stand) gates everything else.
+**Status:** **DECLINED 2026-08-19. Not implemented, and not scheduled.** The
+design below is sound and the measurements are real; the decision is that the
+price is wrong for what it buys. Kept in full because the next person to feel
+this pain should start from the analysis, not from zero. See "Why this was
+declined" immediately below.
+**Superseded by:** nothing. The problem it addresses is accepted, not solved.
+
+## Why this was declined
+
+The gateway removes a **cost**, not a defect. Only one thing was actually broken
+— `chrome-devtools` failing in every session but the one that won the Chrome
+profile race — and that is fixed far more cheaply by `--autoConnect`, shipped in
+`browser-lab` 0.3.1. Everything else in the plugin worked throughout.
+
+What the gateway would have cost, once the candidates were read rather than
+trusted:
+
+- A **Rust toolchain** (~1.4 GB) on a machine where nothing else needs one:
+  Rai-onl publishes no binaries, its v0.3.0 release carries zero assets.
+- Building a **thirteen-crate project** with OIDC auth, TLS and a credential
+  store to do one small job — put three local servers behind a loopback HTTP
+  port.
+- A **third-party daemon in the path of all MCP traffic**, including the
+  telegram token and n8n credentials carried over ssh.
+
+Against roughly 300 MB on an 8 GB machine. Real money, but not at that price,
+and not with that blast radius.
+
+**Revisit when**, and only when, memory pressure again blocks work — the
+symptom recorded in `CLAUDE.md` is scheduled-task spawns dying silently. Then
+start here: the candidate is chosen, the two decisive properties are settled
+from source, and the acceptance criteria are written.
+
+---
+
+**Original status (superseded):** Design — approved by Alex 2026-08-19. Not
+implemented; phase 0 (the stand) gates everything else.
 **Follows:** `2026-08-19-web-harvest-split-design.md`, which closed the retrieval
 side and left this open.
 **Prior art:** `2026-08-18-mcp-dynamic-loading-prior-art.md` — read it first. Its

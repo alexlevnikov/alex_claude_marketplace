@@ -1,5 +1,5 @@
-# Defense-in-depth: never let secrets into this iCloud-synced marketplace repo (design-doc D6).
-# API keys live in ~/.claude/settings.json → env (outside this folder) — never here.
+# Defense in depth: never put secrets in this marketplace, public or private.
+# API keys belong in local runtime configuration, never in Git.
 *.env
 .env
 *-keys.env

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "roles": [
+    {
+      "id": "interface-builder",
+      "guide": "roles/interface-builder.md",
+      "requires": ["design-tools"],
+      "optional": ["browser-lab"],
+      "entry_skills": ["design-tools:design-tools", "design-tools:design-pipeline"]
+    },
+    {
+      "id": "web-researcher",
+      "guide": "roles/web-researcher.md",
+      "requires": ["web-harvest"],
+      "optional": ["browser-lab"],
+      "entry_skills": ["web-harvest:web-harvest", "browser-lab:browser-lab"]
+    }
+  ]
+}

@@ -1,0 +1,625 @@
+{
+  "schema_version": 2,
+  "source": "current upstream vendor checkouts",
+  "previous_tested_inventory": {
+    "repository": "alexlevnikov/design-studio",
+    "revision": "fdfb2460c4d4cf3c986065932106ff79c8074a4d"
+  },
+  "tools": {
+    "ui-craft": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": "skills/ui-craft/SKILL.md",
+      "sha256": "1529a5fcd1a09de5a4487d23a4e267f0052886d345f2a73726faff94286b1093",
+      "local_adaptations": [
+        "Bundle and relink the upstream animation storyboard example"
+      ]
+    },
+    "ui-craft-minimal": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": "skills/ui-craft-minimal/SKILL.md",
+      "sha256": "56a524a9bdb99977eb44ceb9f996655c6e9e67ffd23a6e16deb4bd5616f8d1b1"
+    },
+    "ui-craft-editorial": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": "skills/ui-craft-editorial/SKILL.md",
+      "sha256": "ef242b20340796ac1040baea2fe68069e625366fce479adbe4f3afde5010f70e"
+    },
+    "ui-craft-dense-dashboard": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": "skills/ui-craft-dense-dashboard/SKILL.md",
+      "sha256": "b36b8a90f6758e565c7783e7c5f855fb90a1baf727534df4918aa0d44ea3ba34"
+    },
+    "start": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/start/SKILL.md",
+      "sha256": "aeb924393f3d36bfde4c17665b7f5053d0fcbff6ab96b5ccfe8cec916f770146"
+    },
+    "brief": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/brief/SKILL.md",
+      "sha256": "5bef831052a6708b84194fad5e3f15c82ca39b1de3c3684ee2dca418a0e0dc7b"
+    },
+    "tokens": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/tokens/SKILL.md",
+      "sha256": "fd3ef05980da7ec321a190fde5e47adf5c040165a7a19a037a2041daa5f920fc"
+    },
+    "shape": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/shape/SKILL.md",
+      "sha256": "708ad68f76689e3734a8cb069d3456c96df51a08f27b8364e12e2e156e7705c6",
+      "local_adaptations": [
+        "Point the state-design link at the bundled ui-craft skill"
+      ]
+    },
+    "craft": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/craft/SKILL.md",
+      "sha256": "af1bf85841815f7347ad15b62d9a12a00566c1fe0e7ee66be3c960ab5d28638a"
+    },
+    "sddesign": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/sddesign/SKILL.md",
+      "sha256": "ac0ed28216e94b9c8ed5a064e60980610a130a700646dfaa55b19cdd71165090"
+    },
+    "finalize": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/finalize/SKILL.md",
+      "sha256": "09e84f83a417078aad5d8d34e81bc8259601e98fe19123152f7a5985227d4f49"
+    },
+    "remember": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/remember/SKILL.md",
+      "sha256": "50825ff73e1fcbd427dd60057809fdc70c378762130b5d807a1d7002eacd91f8"
+    },
+    "polish": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/polish/SKILL.md",
+      "sha256": "e297dfa7d0ca04ef4b2d3907b45e3f8424e19607a5601cdb4c62582e90c6be3a"
+    },
+    "typeset": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/typeset/SKILL.md",
+      "sha256": "165319a6e87d7c13c574d8c18b19fa39cf2f67a9e72e1cf6891c747e6fe89c27"
+    },
+    "colorize": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/colorize/SKILL.md",
+      "sha256": "957576a309913636e66140880c4ce01cc4ad8c7f87dcdcc0766d4a102d186f19"
+    },
+    "adapt": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/adapt/SKILL.md",
+      "sha256": "7fc88dea10671164bd06421d43fbde889d3fab2c34646597245283941d860bc4"
+    },
+    "distill": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/distill/SKILL.md",
+      "sha256": "6f5eda9912081bbff2f315c62896a3c71ce3d3e7c654ecad31297819299163c4"
+    },
+    "bolder": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/bolder/SKILL.md",
+      "sha256": "fee45ee330c5a883a823f302c4e1401a3c398529f27aee78ac64197d0f635ff3"
+    },
+    "quieter": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/quieter/SKILL.md",
+      "sha256": "5d703e7018cb39be45d131aadc8e5f8537ed43441dc6b0e0692edf22168ea4f3"
+    },
+    "extract": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/extract/SKILL.md",
+      "sha256": "2f97f4664ba80a3d96cd99507815ce54c34cb2ae2f7ab3a6f0c51103067e60bb"
+    },
+    "redesign": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/redesign/SKILL.md",
+      "sha256": "d412ed2f1cdbf90ac4a32c1fe8bfde73f4921194a17d9374e6d6d86904728d5e"
+    },
+    "delight": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/delight/SKILL.md",
+      "sha256": "5ee37ed08c406f32853323376414eaee5adbe980555646e378f0952f58affbc9"
+    },
+    "animate": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/animate/SKILL.md",
+      "sha256": "08ff71d67ea8e616736642d75162f81893b9206637e0fdbb4bf9f812acef91f5"
+    },
+    "unhappy": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/unhappy/SKILL.md",
+      "sha256": "41d20f7c68c6e3b2cb5fe6006b946b9af8db70c58940ab9b58b7550f38ee308b"
+    },
+    "harden": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/harden/SKILL.md",
+      "sha256": "ba68a4b0721d7da7cc5533a4af6e030125d50d513bc2e618939421355ce7b249"
+    },
+    "clarify": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/clarify/SKILL.md",
+      "sha256": "60906eecc5e299d41ea170fac4dc515f9ddc18c85687861f853292fe79739238"
+    },
+    "audit": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/audit/SKILL.md",
+      "sha256": "f0b245a8a0d2ff6c26298fab2a5f4855fccba538e8780fde5ffaf80894edeefc"
+    },
+    "critique": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/critique/SKILL.md",
+      "sha256": "2bd9ca88fe1d3cff9a9610870a4badd5834e67a13fa0b2a87b70c88fa5678454"
+    },
+    "heuristic": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/heuristic/SKILL.md",
+      "sha256": "c52d4dce9734df77c58f40bd385bd18886c078046708fb70a79327479acaf6ad"
+    },
+    "design-taste-frontend": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/taste-skill/SKILL.md",
+      "sha256": "21aa7dd60840bd68a65a226e6d784bbada3f01e5cfe2ea82086be1e83b6e59d9"
+    },
+    "design-taste-frontend-v1": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/taste-skill-v1/SKILL.md",
+      "sha256": "1ac5b62809cff95a6633c4018fbfa6053361f80493acbc590310a1859b6c9760"
+    },
+    "gpt-taste": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/gpt-tasteskill/SKILL.md",
+      "sha256": "99022f365838ae1fe67fe8574d018920f635eb22a5e1a5cda1595308c298e3b9"
+    },
+    "high-end-visual-design": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/soft-skill/SKILL.md",
+      "sha256": "38e3c73a48abcdf1b33e3a58158038f47765ab902e67f92bfa163e49f0763518"
+    },
+    "brandkit": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/brandkit/SKILL.md",
+      "sha256": "54993c3c3da80f4ac2d80a7e99b87b7092ccfda2292e2832fc8d07e404228e8c"
+    },
+    "imagegen-frontend-web": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/imagegen-frontend-web/SKILL.md",
+      "sha256": "9fc826d99cc47121d4071b2a69611a834025b2e5e095f6afe385a412210b430b"
+    },
+    "imagegen-frontend-mobile": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/imagegen-frontend-mobile/SKILL.md",
+      "sha256": "284263951ff525673ffe451e5d685e8d89c9580099b93f6272910fb3fc110e56"
+    },
+    "image-to-code": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/image-to-code-skill/SKILL.md",
+      "sha256": "bb47707147a7547e6f9dc2b07df9b5d51e159162f64acb05bccc5afaf635eab8"
+    },
+    "full-output-enforcement": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/output-skill/SKILL.md",
+      "sha256": "254f14dc185b5b8ab5b9581662d248cd7e861cec77f1ade464a7a4a3f2a81722"
+    },
+    "minimalist-ui": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/minimalist-skill/SKILL.md",
+      "sha256": "6c77b040acc234dea91948fdf585964ee344679dcbc76b080b30a83cc51fd7ad"
+    },
+    "industrial-brutalist-ui": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/brutalist-skill/SKILL.md",
+      "sha256": "31c38a2ab7be29e8f9613385c0c243e0eba204ebb7e5e727b3012e281b600874"
+    },
+    "redesign-existing-projects": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/redesign-skill/SKILL.md",
+      "sha256": "80255a23350e3bccb87f70770d6d8d49ee260583f9db70c48a86fb6f0e97831e"
+    },
+    "stitch-design-taste": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/stitch-skill/SKILL.md",
+      "sha256": "d3b3e1c598d7bcc43191a0ae39ee5d78becb6a8814ce79856bb90e4e20b970af"
+    },
+    "impeccable": {
+      "vendor": "impeccable",
+      "upstream": "https://github.com/pbakaus/impeccable",
+      "upstream_revision": "2f98774f86bc05563876643db37e6c37c322850f",
+      "upstream_path": ".claude/skills/impeccable/SKILL.md",
+      "sha256": "3826f1cb31ba28317c35bb1eb0a550604ade863fa4bbc6ccd63a41f15e24f458"
+    },
+    "motion-design": {
+      "vendor": "lottie",
+      "upstream": "https://github.com/lottiefiles/motion-design-skill",
+      "upstream_revision": "f9a8a041b85185ee4881b3471d3415e939aac772",
+      "upstream_path": "skills/motion-design/SKILL.md",
+      "sha256": "96d6590739bb8bb9290041638f1e21514a383658bc44d4d00ac2259914c6ef13"
+    },
+    "emil-design-eng": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/emil-design-eng/SKILL.md",
+      "sha256": "e9b2fb66191a4fb6aaa63c5739b5dee1605d427e68ab2a9010243266bd462a4b"
+    },
+    "apple-design": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/apple-design/SKILL.md",
+      "sha256": "1cbf13cd6e20b25d0aa8f3dce1c636b93aa0d3c3ecb5a7d53328fbfaf53ff8c4"
+    },
+    "find-animation-opportunities": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/find-animation-opportunities/SKILL.md",
+      "sha256": "7be77665d65d76c3846aa414796d07fbe1f8913d94dcf9f8ffcbee2896cdf752"
+    },
+    "improve-animations": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/improve-animations/SKILL.md",
+      "sha256": "9b94a0a0c7f73e8624fe1d2746d689fc4113fa1f4145965f8fc6fc4a2ac78660"
+    },
+    "review-animations": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/review-animations/SKILL.md",
+      "sha256": "2c5e6c2172c569d0732ec4c36f8a667f9608fb4f1360f64bf1238e111b7e9b78"
+    },
+    "animation-vocabulary": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/animation-vocabulary/SKILL.md",
+      "sha256": "e419635a45f57f00ce01199ba70b2cfa297ae0a038f122af00a92e570bd98dab"
+    },
+    "pick-ui-library": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/pick-ui-library/SKILL.md",
+      "sha256": "b4abbfb29d5cc111b40eb9479d3a3c15ff524856696e08ff29a688d6bc5cd84e"
+    },
+    "ask-sonner": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/ask-sonner/SKILL.md",
+      "sha256": "094bd8a24dae5fcdd35cdd4fe6f007b426db7167e5f1ffbe705dbbce9ae5fdec"
+    },
+    "prototype": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/prototype/SKILL.md",
+      "sha256": "020163cbf37f3407c751d4bb42dc928b32e3a8b77bed3f11f9f474eb0b991b28"
+    },
+    "baseline-ui": {
+      "vendor": "ibelick",
+      "upstream": "https://github.com/ibelick/ui-skills",
+      "upstream_revision": "c628a5917754ec2396d9cbb47988f280ba1d5cb0",
+      "upstream_path": "skills/baseline-ui/SKILL.md",
+      "sha256": "c71c3377a3b57ede439a32afcb6d4521556ea14a05bbf1e3cba2df00a2c62db5"
+    },
+    "fixing-accessibility": {
+      "vendor": "ibelick",
+      "upstream": "https://github.com/ibelick/ui-skills",
+      "upstream_revision": "c628a5917754ec2396d9cbb47988f280ba1d5cb0",
+      "upstream_path": "skills/fixing-accessibility/SKILL.md",
+      "sha256": "4065b8641b3c8a1b1f4dc29a8089520ae3f1475061ab608b46f6d559d4edf315"
+    },
+    "fixing-motion-performance": {
+      "vendor": "ibelick",
+      "upstream": "https://github.com/ibelick/ui-skills",
+      "upstream_revision": "c628a5917754ec2396d9cbb47988f280ba1d5cb0",
+      "upstream_path": "skills/fixing-motion-performance/SKILL.md",
+      "sha256": "e6b86a0d59cdc8429281cf03ead3e4c17b490fbc963323a5d318d1d7d0a50b03"
+    },
+    "accessibility": {
+      "vendor": "osmani",
+      "upstream": "https://github.com/addyosmani/web-quality-skills",
+      "upstream_revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "upstream_path": "skills/accessibility/SKILL.md",
+      "sha256": "21ad2404cfd978308591f748dda3490a7b06e7355caf9aa51483dee00819e69d"
+    },
+    "core-web-vitals": {
+      "vendor": "osmani",
+      "upstream": "https://github.com/addyosmani/web-quality-skills",
+      "upstream_revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "upstream_path": "skills/core-web-vitals/SKILL.md",
+      "sha256": "6f85d66a5644084c65a6991f724ae22f1fbc88a7f38d00b5316c72a5d9985bc6"
+    },
+    "performance": {
+      "vendor": "osmani",
+      "upstream": "https://github.com/addyosmani/web-quality-skills",
+      "upstream_revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "upstream_path": "skills/performance/SKILL.md",
+      "sha256": "afd416dbb84d0efdecedf24aab8fe6d070db3ce3c5a7551d536aa4e643f9cb7b"
+    },
+    "seo": {
+      "vendor": "osmani",
+      "upstream": "https://github.com/addyosmani/web-quality-skills",
+      "upstream_revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "upstream_path": "skills/seo/SKILL.md",
+      "sha256": "91c0e1ff2789b688247bbe485d3d08179ff0ae23a9af23d09848c3e5915b5ff8"
+    },
+    "best-practices": {
+      "vendor": "osmani",
+      "upstream": "https://github.com/addyosmani/web-quality-skills",
+      "upstream_revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "upstream_path": "skills/best-practices/SKILL.md",
+      "sha256": "88c5455bbab40fa74e8058662553cb380b10774a8354e0f2e1832e1fa4b9b1ac"
+    },
+    "web-quality-audit": {
+      "vendor": "osmani",
+      "upstream": "https://github.com/addyosmani/web-quality-skills",
+      "upstream_revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "upstream_path": "skills/web-quality-audit/SKILL.md",
+      "sha256": "f70580fe539e1eae85a7b7e3505b14f6f6842ece2fd32dfc71269213a7d17e79"
+    },
+    "design-motion-principles": {
+      "vendor": "design-motion-principles",
+      "upstream": "https://github.com/kylezantos/design-motion-principles",
+      "upstream_revision": "4a9ca879f24a361f4dca4174fe2da0f67b5ddee3",
+      "upstream_path": "skills/design-motion-principles/SKILL.md",
+      "sha256": "5a951f307fd07297c8d9559afc01cb1fa4c8268e2c3d62b82dc67c536a0cdbe4"
+    },
+    "motion-dev-animations": {
+      "vendor": "motion-dev",
+      "upstream": "https://github.com/199-biotechnologies/motion-dev-animations-skill",
+      "upstream_revision": "3feedfb4dba8adae40fc9a5f9a23e3dda2121205",
+      "upstream_path": "SKILL.md",
+      "sha256": "ff99f404d3c5722c00ed504ae0a115348ed8170b52b38c106c147129351048d5"
+    },
+    "60fps-animation": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/60fps-animation/SKILL.md",
+      "sha256": "e4ee3de7edac40a540a57333b60549522f566adbd9d349e0539bde1182d7ee7c"
+    },
+    "accessible-animation": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/accessible-animation/SKILL.md",
+      "sha256": "5c05d1770b2662c8627a6c86d4425e19b42a4c9d6f807670b49da7e6a6491ae1"
+    },
+    "ascii-animation": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/ascii-animation/SKILL.md",
+      "sha256": "9d61b302eda01342e433b1512cb63b7b80f988c800d15192226178426aa3decb"
+    },
+    "glassmorphism": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/glassmorphism/SKILL.md",
+      "sha256": "16d2646ab93ead206c80efa1aece4a572b21345813c770d0067610fa893be48a"
+    },
+    "gsap-web": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/gsap-web/SKILL.md",
+      "sha256": "a4d7dc483a942b02d9291018110e53bf023a03a68e301758958386d241ef1443"
+    },
+    "lottie-animation": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/lottie-animation/SKILL.md",
+      "sha256": "c8ab23efd43b779a4a938076f3673cd6bb21f2bb8a250465cd318d11e1803e62"
+    },
+    "micro-interaction": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/micro-interaction/SKILL.md",
+      "sha256": "864718e020b98e11474a4fd9ace3db7b6e7d65062e6dd2215e00234e3c783096"
+    },
+    "page-transition-animation": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/page-transition-animation/SKILL.md",
+      "sha256": "3b25807f6693e516bffd26e5f3c22cacd780d05fd07f27f4e11be66f1acb066c"
+    },
+    "svg-animation": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/svg-animation/SKILL.md",
+      "sha256": "04d13ed4ccfa795e12421b25b61969fd42d9b609bd80ae2f351c0e0db847f16a"
+    },
+    "threejs-fundamentals": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-fundamentals/SKILL.md",
+      "sha256": "1018ff36926863bab270b4853cab8e512df03f16b817c5523b3c090e1156c81c"
+    },
+    "threejs-loaders": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-loaders/SKILL.md",
+      "sha256": "1b9bc8afe458f835344d2cb7491fc180e6687cdb5f54adcbf64fc45dd9df89dc"
+    },
+    "threejs-materials": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-materials/SKILL.md",
+      "sha256": "9f090dfad6b37ce5dd5adc11e88892e8fbb29c965d5b6b9121d91fefeb352b47"
+    },
+    "threejs-lighting": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-lighting/SKILL.md",
+      "sha256": "46c172cc64ac8b3938fcca8db3f0bbd7fe0231631c7515b0c24ea354053050a5"
+    },
+    "threejs-shaders": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-shaders/SKILL.md",
+      "sha256": "611b33752e97146e26aa440275c0dea12af4a1cbd41bcad3c0145aa68ddc6dd8"
+    },
+    "threejs-geometry": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-geometry/SKILL.md",
+      "sha256": "6078e3d145d8cad0e1d55c1b9749629f70fa509ab1e40bf08f1786476670b299"
+    },
+    "threejs-textures": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-textures/SKILL.md",
+      "sha256": "f15ab0eae44ffe88bb57a6332509a35846fbe69ca89dad8319ecf6bf16fb21a9"
+    },
+    "threejs-animation": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-animation/SKILL.md",
+      "sha256": "bbbb1f3c54176be501027e65f60ccdd6288dee9a70bfed2876591360cbe70c4f"
+    },
+    "threejs-interaction": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-interaction/SKILL.md",
+      "sha256": "9e5c7885b6aea93382daf6a67783f33bb8d67b2e063f4dc196ad3bd57d88d4b1"
+    },
+    "threejs-postprocessing": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-postprocessing/SKILL.md",
+      "sha256": "c63b74aabcf95e447074ea5cb3a02c757031c8841a9202eccf48d31906abf75f"
+    },
+    "awwwards": {
+      "vendor": "awwwards",
+      "upstream": "https://github.com/tponscr-debug/claude-skill-awwwards",
+      "upstream_revision": "d18aa0c42b71fc60bc978b19de8e3181ab193ec5",
+      "upstream_path": "SKILL.md",
+      "sha256": "a64b44366a7e2ca5dd6376c47f030c8d7669167356dede29b4d277cda8986c34"
+    },
+    "calm-design": {
+      "vendor": "calm-design",
+      "upstream": "https://github.com/calmtiger86/calm-design",
+      "upstream_revision": "c85ed30665a90a324cd08e68f80377b5cc2c0c86",
+      "upstream_path": "SKILL.md",
+      "sha256": "4b152a7220cd78de7cab1c569243fdd1d9b3a4bd17cba84688350cfba339cdd9"
+    },
+    "frontend-god-mode": {
+      "vendor": "frontend-god-mode",
+      "upstream": "https://github.com/Shawnchee/frontend-god-mode",
+      "upstream_revision": "e19f282b1f798813df81e2d217ac8ce69369924e",
+      "upstream_path": "frontend-god-mode/SKILL.md",
+      "sha256": "1be0a3e2e036cedb8dfae4e73bae11cf7aeec8fa15cd92caee28ea34ddb3973b"
+    },
+    "design": {
+      "vendor": "design-skill-os",
+      "upstream": "https://github.com/frhscopex/design-skill-os",
+      "upstream_revision": "82e41c6f6d374f4fcdea06465536e5d5cefc7a3d",
+      "upstream_path": ".cursor/skills/SKILL.md",
+      "sha256": "6ebaa09fed1f35eb4c5051959136ccfa9303cdb281243e72caf5749d8fb83258"
+    }
+  }
+}

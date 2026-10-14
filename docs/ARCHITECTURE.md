@@ -1,32 +1,36 @@
 # Marketplace Architecture
 
+For the current library model—capability packs, third-party dependencies, and
+roles—see [LIBRARY.md](LIBRARY.md). This document records the existing Claude
+plugin design and its runtime cost decisions.
+
 How this marketplace is put together, and — more importantly — **what each part
 costs at runtime**. Read this before adding a plugin; the cost model is the part
 that is easy to get wrong and expensive to undo.
 
-**Repo:** `alex_claude_marketplace` · working copy at
-`~/Library/Mobile Documents/.../alex.levnikov.root/claude_plugins/`
-(the copy under `~/.claude/plugins/marketplaces/` is a read-only clone Claude
-Code manages — never edit it; edit here and push).
+**Repo:** `alex_claude_marketplace`. Edit a Git working copy, rather than the
+copy Claude Code manages under `~/.claude/plugins/marketplaces/`.
 
 ---
 
 ## 1. The shape
 
 ```
-claude_plugins/                       ← marketplace root (git repo)
+alex_claude_marketplace/              ← marketplace root (git repo)
 ├── .claude-plugin/
 │   └── marketplace.json              ← the index: every plugin listed here
-├── <plugin>/
-│   ├── .claude-plugin/
-│   │   └── plugin.json               ← this plugin's manifest
-│   ├── .mcp.json                     ← OPTIONAL — MCP servers this plugin ships
-│   ├── skills/
-│   │   └── <skill>/
-│   │       ├── SKILL.md              ← router: frontmatter + decision guide
-│   │       └── references/*.md       ← detail, loaded only on demand
-│   ├── agents/                       ← OPTIONAL — subagent definitions
-│   └── README.md
+├── plugins/
+│   └── <plugin>/
+│       ├── .claude-plugin/plugin.json ← plugin manifest
+│       ├── .mcp.json                 ← OPTIONAL — bundled MCP servers
+│       ├── skills/<skill>/SKILL.md   ← on-demand workflows
+│       └── README.md
+├── roles/                            ← pack combinations and handoffs
+│   ├── catalog.json                  ← checked dependency map
+│   └── <role>.md                     ← how to use the installed packs
+├── scripts/
+│   ├── check.py                      ← catalog and package check
+│   └── codex-smoke.py                ← isolated install check
 ├── build.sh                          ← shared: package a plugin → .plugin
 ├── doctor.sh                         ← shared: environment check
 ├── validate-keys.sh                  ← shared: key source + live key check
@@ -36,8 +40,9 @@ claude_plugins/                       ← marketplace root (git repo)
     └── specs/                        ← design decisions, dated
 ```
 
-Tooling is shared, one copy at the root — three plugins do not need three copies
-of the same script.
+Tooling is shared at the root and under `scripts/` — three plugins do not need
+three copies of the same check. `design-tools` keeps its bundle tools inside
+its own pack because they operate on that pack's registry.
 
 A plugin listed in `marketplace.json` becomes installable; a plugin **enabled**
 in settings has its skills registered and its MCP servers started.
@@ -122,7 +127,7 @@ cannot function without (`playwright`, `chrome-devtools`, `mitmproxy`).
 user adds connectors themselves (`claude mcp add`, or the Customize UI), and the
 keys live in Claude's connector store.
 
-- Pro: zero runtime cost; no secrets in an iCloud-synced folder; the user
+- Pro: zero runtime cost; no secrets in the repository; the user
   controls which backends exist.
 - Con: the plugin does nothing until connectors are added — it ships the routing
   *intelligence*, the user supplies the muscle.
@@ -222,7 +227,7 @@ separate fixes, and a good router does nothing for the second one.
 | --- | --- | --- | --- | --- | --- |
 | `browser-lab` 0.3.1 | `browser-lab` | 3 `stdio`: playwright, chrome-devtools, mitmproxy | A | **3 processes** | Keyless and local. All three are stdio-only with no hosted variant, so user scope costs 3 processes per open session — **accepted permanently**: the gateway that would have removed it was designed and declined (`specs/2026-08-19-mcp-gateway-design.md`). `chrome-devtools` runs with `--autoConnect` and needs remote debugging enabled once in Chrome. |
 | `web-harvest` 0.1.0 | `web-harvest` | 5 `http`: firecrawl, exa, tavily, brightdata, apify | A | **0 processes** | Keys in `~/.claude/settings.json` → `env`. Connects on first call; free to leave enabled at user scope. |
-| `agents-os` 0.1.0 | `hetzner-server` | none | — | 0 | Pure knowledge. Free to enable anywhere. |
+| `design-tools` 0.6.0 | `design-tools`, `design-pipeline` | none | — | 0 local MCP processes | One install includes both workflows and 87 curated vendor skills; provenance and attribution are in the pack. |
 
 Split on 2026-08-19 per `specs/2026-08-19-web-harvest-split-design.md` (wave 1).
 Shared tooling lives at the repo root: `build.sh` (package a plugin),
@@ -236,4 +241,3 @@ sources `.zshrc`, so `${EXA_API_KEY}` in a `.mcp.json` interpolates to empty and
 the backend answers 401 — the bug that motivated wave 1. Any new keyed backend
 follows the same rule, or uses a connector added with `claude mcp add` where the
 key lives in Claude's connector store.
-

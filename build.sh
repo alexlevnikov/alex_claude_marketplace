@@ -4,7 +4,7 @@
 # Shared by every plugin in the repo; lives at the marketplace root.
 #
 # Usage:
-#   bash build.sh <plugin-dir>     # e.g. bash build.sh web-harvest
+#   bash build.sh <plugin-name>    # e.g. bash build.sh web-harvest
 #   bash build.sh --all            # build every plugin listed in marketplace.json
 #
 # Output: ./<plugin-name>.plugin  (written to the marketplace root)
@@ -22,6 +22,7 @@ usage() { echo "usage: bash build.sh <plugin-dir> | --all" >&2; exit 2; }
 
 build_one() {
   local dir="$1"
+  [ -d "$dir" ] || dir="plugins/$dir"
   [ -d "$dir" ] || { echo "✖ No such plugin directory: $dir" >&2; return 1; }
 
   local manifest="$dir/.claude-plugin/plugin.json"
@@ -76,11 +77,15 @@ build_one() {
 }
 
 if [ "$1" = "--all" ]; then
-  # Every directory holding a plugin manifest is a plugin.
-  while IFS= read -r m; do
-    build_one "$(dirname "$(dirname "$m")")"
-  done < <(find . -mindepth 3 -maxdepth 3 -path "./.claude-plugin/*" -prune -o \
-             -name plugin.json -path "*/.claude-plugin/*" -print | sed 's|^\./||' | sort)
+  while IFS= read -r dir; do
+    build_one "$dir"
+  done < <(python3 - <<'PY'
+import json
+from pathlib import Path
+for entry in json.loads(Path('.claude-plugin/marketplace.json').read_text())['plugins']:
+    print(entry['source'])
+PY
+)
 else
   build_one "${1%/}"
 fi

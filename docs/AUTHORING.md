@@ -4,8 +4,7 @@ How to add a plugin, a skill, or an MCP server to this marketplace.
 Read `ARCHITECTURE.md` first — especially the cost model in §2. This guide is
 the procedure; that one is the reasoning.
 
-**Always edit the working copy:**
-`~/Library/Mobile Documents/.../alex.levnikov.root/claude_plugins/`
+**Always edit a Git working copy outside iCloud**, such as `~/code/alex_claude_marketplace/`.
 Never edit `~/.claude/plugins/marketplaces/alex-claude-marketplace/` — Claude Code
 overwrites it on update.
 
@@ -38,11 +37,11 @@ pay for one without the other.
 ### 1. Scaffold
 
 ```bash
-cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/alex.levnikov.root/claude_plugins
-mkdir -p <plugin>/.claude-plugin <plugin>/skills/<skill>/references
+cd /path/to/this/repository
+mkdir -p plugins/<plugin>/.claude-plugin plugins/<plugin>/skills/<skill>/references
 ```
 
-### 2. `<plugin>/.claude-plugin/plugin.json`
+### 2. `plugins/<plugin>/.claude-plugin/plugin.json`
 
 ```json
 {
@@ -64,7 +63,7 @@ Append to `plugins[]`:
 ```json
 {
   "name": "<plugin>",
-  "source": "./<plugin>",
+  "source": "./plugins/<plugin>",
   "description": "One sentence — this is what shows in the plugin list.",
   "version": "0.1.0",
   "author": { "name": "Alex Levnikov" },
@@ -74,13 +73,17 @@ Append to `plugins[]`:
 
 Keep `version` here in sync with `plugin.json`. Bump both together.
 
+The three existing packs live under `plugins/`. Keep marketplace paths relative
+to this repository root so Claude Code and Codex can install from the same
+catalog.
+
 ### 4. Write the router skill (below), then install and verify (§Install).
 
 ---
 
 ## Write a skill
 
-`<plugin>/skills/<skill>/SKILL.md`:
+`plugins/<plugin>/skills/<skill>/SKILL.md`:
 
 ```markdown
 ---
@@ -176,7 +179,7 @@ inside the plugin.
 
 ### Never put secrets in this repo
 
-It is iCloud-synced and pushed to GitHub. Keys belong in Claude's connector store
+It can be pushed to a public GitHub repository. Keys belong in Claude's connector store
 (entered at `claude mcp add` time) or in `~/.claude/settings.json` `env`.
 `${VAR}` interpolation in a bundled `.mcp.json` only works if the variable is
 actually defined outside the repo — an unset `${VAR}` yields silent 401s, which
@@ -215,7 +218,7 @@ claude plugin enable <plugin>@alex-claude-marketplace -s project
 ```
 
 `-s` takes `user` (everywhere), `project` (this repo, committed), or `local`
-(this repo, private). **This marketplace installs at `user` scope** (Alex,
+(this repo, local). **This marketplace normally installs at `user` scope** (Alex,
 2026-08-19) — availability must not depend on which directory a session sits in.
 That makes transport the only lever left: prefer `http`, which costs nothing at
 user scope, and treat every `stdio` server as a per-session process you are
@@ -256,7 +259,7 @@ from `evals/**/case.yaml` against the plugin, including a no-plugin baseline arm
 
 ## Pre-commit checklist
 
-- [ ] `plugin.json` `name` matches the directory name
+- [ ] `plugin.json` `name` matches the directory name under `plugins/`
 - [ ] Registered in `marketplace.json`, versions in sync
 - [ ] Every `SKILL.md` has `name` + `description` frontmatter
 - [ ] Sibling skills name each other in both directions
@@ -268,8 +271,13 @@ from `evals/**/case.yaml` against the plugin, including a no-plugin baseline arm
       repo root — one copy, not one per plugin
 - [ ] No API keys, tokens, or `.env` anywhere in the repo
 - [ ] `references/` carries the detail; `SKILL.md` stays a map
-- [ ] JSON parses:
-      `for f in $(find . -name "*.json" -not -path "./.git/*"); do python3 -c "import json;json.load(open('$f'))" || echo "BAD $f"; done`
+- [ ] `python3 scripts/check.py` passes; `python3 scripts/codex-smoke.py`
+      confirms a fresh Codex install; `claude plugin validate . --strict`
+      passes where Claude Code is installed
+
+For a new role, add a guide under `roles/`, list its required and optional
+packs and entry skills in `roles/catalog.json`, and run `scripts/check.py`.
+Only add a native agent definition when a real workflow needs isolated context.
 
 ---
 

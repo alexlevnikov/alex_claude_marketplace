@@ -1,0 +1,28 @@
+{
+  "name": "design-tools",
+  "version": "0.6.0",
+  "description": "One-install design pack with two workflows and 87 updated vendor skills from 15 pinned upstream repositories. Claude Code has vendor and vendor:skill commands; Codex uses the design-tools router skill.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "typography",
+    "color",
+    "motion",
+    "accessibility",
+    "performance",
+    "seo",
+    "code-review",
+    "polish",
+    "ui-craft",
+    "wiki",
+    "registry",
+    "impeccable",
+    "taste-skill",
+    "emil-kowalski",
+    "discovery",
+    "prompt-composer"
+  ],
+  "license": "MIT"
+}

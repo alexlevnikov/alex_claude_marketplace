@@ -16,6 +16,8 @@ Codex can read that catalog too. [Roles](roles/README.md) describe useful pack
 combinations; they are workflows, not extra installations or tool permission
 boundaries. See [setup](docs/SETUP.md) for install and update commands, and
 [library design](docs/LIBRARY.md) for the rules behind this layout.
+The [research record](docs/RESEARCH.md) collects source links and lessons for
+future changes.
 
 ## Use design-tools
 

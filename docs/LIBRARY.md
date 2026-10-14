@@ -3,6 +3,9 @@
 This repository is a library of reusable AI capabilities. Its marketplace is
 the installation catalog, not the whole library model.
 
+The [research record](RESEARCH.md) links the GitHub repositories, standards,
+and host documentation that informed this model and lists what to revisit.
+
 ## Units
 
 | Unit | Owns | Example |

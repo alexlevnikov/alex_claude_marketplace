@@ -9,6 +9,7 @@ their contents.
 | --- | --- | --- |
 | [browser-lab](plugins/browser-lab/) | Live browser investigation and debugging | Browser skill and local MCP tools |
 | [web-harvest](plugins/web-harvest/) | Search, scrape, crawl, and extraction | Routing skill and hosted MCP connections; credentials stay local |
+| [hermes-agent-architect](plugins/hermes-agent-architect/) | Research Hermes and design bots | Living Codex skill, architecture decisions, docs index, pinned upstream submodule |
 | [design-tools](plugins/design-tools/) | Discover design tools or build a new web surface | Discovery and pipeline skills, commands, wiki, and a compatibility copy of 87 vendor skills |
 | [design vendor plugins](plugins/design-tools/registry/vendor-plugin-overviews.json) | Install and invoke one vendor independently | 15 standalone packs with direct skills, commands, resources, and license evidence |
 

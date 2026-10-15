@@ -273,6 +273,22 @@
         "design",
         "design-skill-os"
       ]
+    },
+    {
+      "name": "hermes-agent-architect",
+      "source": "./plugins/hermes-agent-architect",
+      "description": "Version-aware Hermes Agent architecture guidance, official docs index, and reusable decisions for designing bots.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "hermes",
+        "agent",
+        "architecture",
+        "memory",
+        "bots"
+      ]
     }
   ]
 }

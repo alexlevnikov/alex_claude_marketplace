@@ -1,0 +1,7 @@
+{
+  "name": "hermes-agent-architect",
+  "version": "0.1.0",
+  "description": "Version-aware Hermes Agent architecture guidance, official docs index, and reusable decisions for designing bots.",
+  "author": { "name": "Alex Levnikov" },
+  "keywords": ["hermes", "agent", "architecture", "memory", "bots"]
+}

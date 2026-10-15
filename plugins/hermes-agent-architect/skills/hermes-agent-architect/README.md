@@ -12,6 +12,8 @@ another machine require an ordinary Git pull in the marketplace checkout.
 - `references/decision-guide.md`: extension-point and capability selection.
 - `references/knowledge-policy.md`: how to preserve verified findings and
   architecture decisions after work.
+- `docs/hermes-platform-overview.md`: one complete feature, memory and
+  customization map with all 239 official index pages.
 - `docs/`: deep research, including memory architecture and provider review.
 - `data/docs-catalog.json`: version-aware index of the official Hermes docs.
 - `scripts/find_docs.py`: search the catalog and locate pinned documents.

@@ -8,7 +8,8 @@ description: Research Hermes Agent and design or extend Hermes bots using versio
 This skill is the entry point to the Hermes architecture knowledge in the
 directory containing this file. Its Git source is
 `alex_claude_marketplace/plugins/hermes-agent-architect/skills/hermes-agent-architect`.
-Read only the references needed for the current task.
+Read only the references needed for the current task. For a broad map of
+features, memory and customization, open the [complete platform overview](docs/hermes-platform-overview.md).
 
 1. Use [the decision guide](references/decision-guide.md) to choose a Hermes
    mechanism. Search `data/docs-catalog.json` with `python3 scripts/find_docs.py

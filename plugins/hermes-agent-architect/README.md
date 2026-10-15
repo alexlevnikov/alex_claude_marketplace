@@ -1,7 +1,7 @@
 # Hermes Agent Architect
 
 The [skill](skills/hermes-agent-architect/SKILL.md) contains the complete
-architecture workspace: routing guidance, documentation catalog, deep research,
+architecture workspace: [complete platform overview](skills/hermes-agent-architect/docs/hermes-platform-overview.md), routing guidance, documentation catalog, deep research,
 scripts and the pinned Hermes source submodule. The skill folder is also the
 separate Codex project folder on the VPS.
 

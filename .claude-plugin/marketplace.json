@@ -278,7 +278,7 @@
       "name": "hermes-agent-architect",
       "source": "./plugins/hermes-agent-architect",
       "description": "Hermes Agent component library, research, bot blueprints, extensions, and runtime audits.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "author": {
         "name": "Alex Levnikov"
       },

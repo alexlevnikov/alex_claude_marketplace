@@ -6,8 +6,49 @@ The clean Hermes `v2026.9.14` submodule is pinned at `upstream/hermes-agent`, ou
 
 This plugin starts no MCP server and deploys no bot. A local Codex symlink to the marketplace checkout sees knowledge edits on the next read; published plugin caches need their own update. Host maps, credentials, profiles, sessions and personal memory stay in private sources.
 
-## Deferred: pinned upstream in Codex plugin cache
+## Pinned source for Codex installations
 
-Mac verification on 2026-10-15 found that Codex loads all four Hermes skills from plugin version `0.2.0`, but the installed plugin cache does not contain the `upstream/hermes-agent` submodule. The authored library and documentation catalog remain available there; a claim about the pinned `v2026.9.14` implementation still needs the exact tagged source from a checkout with that submodule initialized.
+Codex plugin caches can omit Git submodules. Keep the plugin installed normally,
+and provide the source from a separate checkout of this same public repository:
 
-Revisit how the Mac should provide the pinned source for research: initialize it in a separate marketplace checkout or establish a supported plugin installation path that includes submodules. Check how the skill locates that source and avoid duplicate installed skills. Until then, report the missing local source instead of treating the catalog entry or current website as proof of tagged behavior.
+```sh
+git clone https://github.com/alexlevnikov/alex_claude_marketplace.git ~/.local/share/alex-claude-marketplace
+git -C ~/.local/share/alex-claude-marketplace submodule update --init --depth 1 -- plugins/hermes-agent-architect/upstream/hermes-agent
+python3 ~/.local/share/alex-claude-marketplace/plugins/hermes-agent-architect/skills/hermes-agent-architect/scripts/resolve_upstream.py --json
+```
+
+Before using an existing destination, review its origin, branch and Git status.
+Preserve local changes; do not clone over it or reset it. This checkout remains
+outside iCloud and outside managed caches. It is source storage, not another
+skill installation: do not link its skills into `~/.agents/skills` or add it as a
+second marketplace. Codex should discover exactly the four plugin skills.
+
+From the installed architect skill, `scripts/resolve_upstream.py` automatically
+tries the adjacent submodule, then the standard checkout above. Both must match
+the installed catalog's exact commit and be clean. Index flags that hide tracked changes (`assume-unchanged` or `skip-worktree`) are rejected; use a full, ordinary checkout. An explicit `--upstream` or
+`HERMES_ARCHITECT_UPSTREAM` can select another upstream root; an invalid override
+fails. The resolver never changes Git or downloads anything. On exit code 2,
+report pinned source as unavailable. `scripts/find_docs.py` keeps current URLs
+separate and labels unavailable pinned files; `--require-upstream` makes that a
+failing check. `resolve_upstream.py --file <relative-path>` also verifies file
+bytes against the pinned Git blob before returning its path.
+
+Plugin upgrades/removal only replace managed caches; this external checkout
+survives. Update the plugin by the [Codex setup procedure](../../docs/SETUP.md).
+When an intentionally reviewed plugin update changes the pin, first review the
+external checkout for local changes, fast-forward its main branch, then run the
+submodule update command again. An old or edited source is rejected until it
+matches; the resolver does not automatically advance or erase it.
+
+### Verification
+
+```sh
+python3 -m unittest discover -s plugins/hermes-agent-architect/tests -v
+python3 plugins/hermes-agent-architect/skills/hermes-agent-architect/scripts/validate_knowledge.py --require-upstream
+python3 scripts/check.py
+python3 scripts/codex-smoke.py
+```
+
+The deferred `0.2.0` cache issue is addressed by the external-source resolver in
+`0.2.1`. The external source does not establish any deployed bot's actual image,
+profile or enabled tools; inspect those separately in private sources.

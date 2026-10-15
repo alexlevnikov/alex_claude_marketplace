@@ -109,6 +109,9 @@ def main() -> int:
     try:
         packs = check_catalog()
         check_roles(packs)
+        hermes = packs["hermes-agent-architect"]
+        run(sys.executable, "-B", "-m", "unittest", "discover", "-s", str(hermes / "tests"), "-v")
+        run(sys.executable, "-B", str(hermes / "skills/hermes-agent-architect/scripts/validate_knowledge.py"))
         design = packs["design-tools"] / "scripts"
         run(sys.executable, str(design / "check_bundle.py"))
         run(sys.executable, str(design / "build.py"), "--check")

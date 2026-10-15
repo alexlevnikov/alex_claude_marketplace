@@ -55,6 +55,8 @@ marketplace upgrade alex-claude-marketplace`, then remove and add that plugin
 again if the installed cache still points at the earlier version. Reopen the
 session after installing.
 
+For `hermes-agent-architect`, Codex may omit the pinned upstream submodule from its cache. Use the separate public marketplace checkout and automatic resolver described in the [Hermes setup](../plugins/hermes-agent-architect/README.md#pinned-source-for-codex-installations). Keep only the normal plugin installed; do not add duplicate user-skill symlinks.
+
 ## Local dependencies and credentials
 
 - Each vendor pack includes its pinned skill resources and license evidence;

@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """Validate Hermes knowledge records, links, pinned source and public hygiene."""
 
+import argparse
 import json
 import os
 import re
-import subprocess
 import sys
 from datetime import date
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+
+from resolve_upstream import UpstreamUnavailable, resolve_upstream
 
 ROOT = Path(__file__).resolve().parents[1]
 PLUGIN = ROOT.parents[1]
@@ -57,16 +59,20 @@ def check_links(path: Path, errors: list[str]) -> None:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--require-upstream", action="store_true", help="Require verified pinned local source as well as library structure")
+    args = parser.parse_args()
     errors = []
     catalog = json.loads((ROOT / "data/docs-catalog.json").read_text(encoding="utf-8"))
     pinned_tag = catalog["pinned_tag"]
-    upstream = PLUGIN / "upstream/hermes-agent"
-    if upstream.is_dir() and not (upstream / "website/docs").is_dir():
-        errors.append("pinned upstream exists without website/docs")
-    if (upstream / ".git").exists():
-        result = subprocess.run(["git", "-C", str(upstream), "rev-parse", "HEAD"], capture_output=True, text=True)
-        if result.returncode or result.stdout.strip() != catalog["pinned_commit"]:
-            errors.append("pinned upstream commit differs from catalog")
+    try:
+        source = resolve_upstream()
+        print(f"Pinned upstream OK: {source['commit']} at {source['root']}")
+    except UpstreamUnavailable as exc:
+        if args.require_upstream:
+            errors.append(str(exc))
+        else:
+            print(f"{exc} Structural validation only.", file=sys.stderr)
     for folder, (kind, statuses) in KINDS.items():
         for path in sorted((ROOT / "references" / folder).glob("*.md")):
             if path.name == "index.md":

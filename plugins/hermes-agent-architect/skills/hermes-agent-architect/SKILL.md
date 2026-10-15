@@ -1,40 +1,16 @@
 ---
 name: hermes-agent-architect
-description: Research Hermes Agent and design or extend Hermes bots using version-checked official capabilities and reusable architecture decisions. Use for profiles, skills, plugins, MCP, memory, cron, hooks, delegation, gateways, APIs, or source patches.
+description: Research Hermes Agent capabilities and maintain a versioned library of bot components, architecture decisions, patterns, and deep studies. Use for Hermes platform design and reusable knowledge; use focused sibling skills for bot blueprints, extensions, and runtime audits.
 ---
 
 # Hermes Agent Architect
 
-This skill is the entry point to the Hermes architecture knowledge in the
-directory containing this file. Its Git source is
-`alex_claude_marketplace/plugins/hermes-agent-architect/skills/hermes-agent-architect`.
-Read only the references needed for the current task. For a broad map of
-features, memory and customization, open the [complete platform overview](docs/hermes-platform-overview.md).
+This is the durable, public component and research library for designing Hermes bots. Keep it as the primary place for reusable platform mechanics, evidence, decisions and deep studies. The owning Git repository is `alex_claude_marketplace`; the skill directory can also be opened as its own Codex project.
 
-1. Use [the decision guide](references/decision-guide.md) to choose a Hermes
-   mechanism. Search `data/docs-catalog.json` with `python3 scripts/find_docs.py
-   <topic>` from this directory, or run the script by its absolute path. Read
-   the exact tagged file under `upstream/hermes-agent/website/docs` when present.
-   If the submodule is absent, initialize it from the marketplace Git root or
-   check the pinned official source at commit
-   `345cd2b057a452236de401d3534b8502a7465e8d`.
-2. Distinguish three claims: the current official documentation, what is in
-   pinned Hermes `v2026.9.14`, and what is enabled in the target bot. Verify
-   current claims against official sources. A document in the tag does not prove
-   runtime enablement.
-3. For a bot on this VPS, read
-   `/srv/repos/agent-lab-mvp/docs/HERMES-SERVICES.md`, then inspect its source
-   repository, Compose or systemd unit, image and profile before changing it.
-   Keep knowledge, deployed code, secrets and runtime data separate.
-4. Explain the smallest supported extension point, prerequisites, trust
-   boundary, version compatibility, validation and rollback. A core patch needs
-   a reason that the documented extension points cannot satisfy.
-5. After substantive Hermes work, follow
-   [the knowledge policy](references/knowledge-policy.md): preserve verified
-   reusable findings and decisions in this skill. Never copy secrets, profiles,
-   sessions, private user memory or raw credential-bearing API responses here.
+1. Search [the component index](references/components/index.md), [decision guide](references/decision-guide.md), prior [decisions](references/decisions/) and [patterns](references/patterns/) before proposing an architecture. Use `python3 scripts/find_knowledge.py <topic>` for the authored library and `python3 scripts/find_docs.py <topic>` for the official catalog.
+2. Read the exact pinned source under `../../upstream/hermes-agent/website/docs` when available. The [catalog](data/docs-catalog.json) distinguishes current documentation URLs from matching files in the pinned `v2026.9.14` source. Verify current claims against official sources. A tagged document alone does not prove a feature works in a target bot.
+3. For a deployed bot, inspect its private service inventory, source repository, Compose/systemd definition, image and runtime profile. Use a host-specific architecture skill when one is installed. Never infer deployment from this public library.
+4. Explain the selected component or extension point, prerequisites, data and permission boundaries, version compatibility, validation and rollback. A core patch needs a reason that supported extension points cannot satisfy the need.
+5. After substantive Hermes work, follow the [knowledge policy](references/knowledge-policy.md): save verified reusable findings and owner-approved decisions here. Keep live profiles, secrets, sessions and personal memory outside this public plugin.
 
-For memory design, read [the memory architecture](docs/hermes-memory-architecture.md)
-and, when comparing backends,
-[the provider review](docs/hermes-memory-providers-review-2026-10-15.md).
-The [README](README.md) explains the catalog and the local project layout.
+For a broad feature map read the [platform overview](docs/hermes-platform-overview.md). For memory design read the [memory architecture](docs/hermes-memory-architecture.md) and [provider review](docs/hermes-memory-providers-review-2026-10-15.md). The [README](README.md) explains layout and commands.

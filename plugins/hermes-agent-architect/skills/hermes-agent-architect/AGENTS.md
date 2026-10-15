@@ -1,17 +1,7 @@
 # Hermes Agent Architect project
 
-This directory is the Codex skill and the prepared main folder for the separate
-`VPS · Hermes Architect` Codex project. Register that project in the Codex UI. The owning Git repository is
-`/srv/repos/alex_claude_marketplace`; edit this checkout, not an installed
-plugin cache. The installed Codex skill on this VPS is a symlink to this folder.
+This directory is both the primary Hermes architecture skill and a suitable Codex project folder. Its owning Git repository is `alex_claude_marketplace`; edit that checkout, not a plugin cache. The pinned upstream source lives at `../../upstream/hermes-agent` outside this skill folder so upstream skills are not discovered as marketplace skills.
 
-Before advising on Hermes, read `SKILL.md`, the relevant part of
-`references/decision-guide.md`, `data/docs-catalog.json`, and the exact pinned
-source document when available. Distinguish current official documentation,
-the pinned `v2026.9.14` tag, and actual enablement in a target bot. Follow
-`references/knowledge-policy.md` when recording reusable findings.
+Before advising on Hermes, use `SKILL.md`, the component index, relevant decision or pattern, `data/docs-catalog.json`, and the exact tagged source when available. Distinguish current official documentation, pinned `v2026.9.14`, and actual enablement in the target bot. Follow `references/knowledge-policy.md` when recording reusable findings.
 
-For a VPS bot, read `/home/ubuntu/Projects/CODEX_PROJECTS.md` and
-`/srv/repos/agent-lab-mvp/docs/HERMES-SERVICES.md` before touching deployment.
-This skill does not own bot runtime, secrets, profiles, sessions or user memory.
-Keep upstream clean; bot-specific patches belong in bot repositories.
+A target bot's private inventory and deployment configuration belong to that bot or a private operations source. This public skill does not own secrets, runtime profiles, sessions or user memory. Keep upstream clean; bot-specific patches belong in bot repositories.

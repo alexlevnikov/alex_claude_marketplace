@@ -1,0 +1,7 @@
+{
+  "name": "vps-operator",
+  "version": "0.1.0",
+  "description": "Portable VPS service and Tailscale access audits without host-specific configuration.",
+  "author": { "name": "Alex Levnikov" },
+  "keywords": ["vps", "systemd", "docker", "tailscale", "operations"]
+}

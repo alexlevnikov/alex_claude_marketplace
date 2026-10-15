@@ -1,10 +1,10 @@
 # Hermes capability and architecture guide
 
 This is an index of design choices, not a claim that every documented feature
-is enabled on this VPS. The deployed shared base is `v2026.9.14` / `0.21.3`
-at commit `345cd2b057a452236de401d3534b8502a7465e8d`. Start with the tagged
-file named in `../data/docs-catalog.json`; read the live official page for
-changes since that tag. The Reflection image adds its own core patch.
+is enabled in a target bot. This library pins upstream `v2026.9.14` at commit
+`345cd2b057a452236de401d3534b8502a7465e8d`. Start with the tagged file
+named in `../data/docs-catalog.json`; check the current official page for
+changes and inspect each target image and any local patch separately.
 
 ## Choose the right mechanism
 
@@ -66,7 +66,7 @@ For bot memory design, use the local [memory architecture and configuration guid
   differ: use read-only observers for telemetry, behavior-changing plugin hooks
   only when the trust path and failure behavior are understood.
 
-## Version and VPS gates
+## Version and deployment gates
 
 The current official index has 239 unique pages. Twelve URL paths are not
 present in the pinned tag's docs, including Session Storage Recovery, Bot
@@ -75,12 +75,10 @@ They may be new, renamed, or relocated; do **not** infer the runtime lacks or
 has them from a path match alone. Inspect current upstream source/release notes
 and the running image before depending on one.
 
-The shared Docker image on this VPS pins the upstream digest in
-`/srv/repos/agent-lab-mvp/Dockerfile.hermes`; Finance and Reflection have
-separate image/build chains. Reflection's patched core is not automatically
-in the other bots. For production changes, start with the live service map at
-`/srv/repos/agent-lab-mvp/docs/HERMES-SERVICES.md`; never copy OAuth, memory,
-sessions, source documents or secrets into this knowledge repository.
+A target bot may use a different image, build chain or local patch. Before a
+production change, inspect its private service inventory, source repository,
+Compose/systemd definition, deployed image and runtime profile. Never copy
+OAuth, memory, sessions or secrets into this public knowledge library.
 
 ## Finding the rest of Hermes
 

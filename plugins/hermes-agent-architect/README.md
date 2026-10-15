@@ -1,12 +1,7 @@
 # Hermes Agent Architect
 
-The [skill](skills/hermes-agent-architect/SKILL.md) contains the complete
-architecture workspace: [complete platform overview](skills/hermes-agent-architect/docs/hermes-platform-overview.md), routing guidance, documentation catalog, deep research,
-scripts and the pinned Hermes source submodule. The skill folder is also the
-separate Codex project folder on the VPS.
+The [architect skill](skills/hermes-agent-architect/SKILL.md) remains the primary component and research library: [component cards](skills/hermes-agent-architect/references/components/index.md), [architecture decisions](skills/hermes-agent-architect/references/decisions/), [bot patterns](skills/hermes-agent-architect/references/patterns/), [full platform overview](skills/hermes-agent-architect/docs/hermes-platform-overview.md), memory research and an official documentation catalog. Focused sibling skills turn that library into bot blueprints, extension designs and runtime audits.
 
-This pack starts no MCP server and deploys no bot. It is installed locally on
-the VPS through a symlink to the marketplace checkout, so knowledge edits in
-that checkout are visible at the next read. A published plugin cache may lag
-until its own update and may need the Git submodule initialized in a checkout;
-the official linked source is the fallback.
+The clean Hermes `v2026.9.14` submodule is pinned at `upstream/hermes-agent`, outside `skills/`, to avoid discovering upstream skills as this plugin's skills. Initialize it after cloning with `git submodule update --init -- plugins/hermes-agent-architect/upstream/hermes-agent` from the marketplace root.
+
+This plugin starts no MCP server and deploys no bot. A local Codex symlink to the marketplace checkout sees knowledge edits on the next read; published plugin caches need their own update. Host maps, credentials, profiles, sessions and personal memory stay in private sources.

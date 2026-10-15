@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | Текущий официальный сайт | Как Hermes описывает функцию сейчас | [Persistent Memory](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory), [Memory Providers](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory-providers) |
 | Закреплённый `v2026.9.14` | Что описано и реализовано в базовом upstream теге | [Документация памяти тега](https://github.com/NousResearch/hermes-agent/blob/v2026.9.14/website/docs/user-guide/features/memory.md), [исходник MemoryStore](https://github.com/NousResearch/hermes-agent/blob/v2026.9.14/tools/memory_tool_store.py), [MemoryManager](https://github.com/NousResearch/hermes-agent/blob/v2026.9.14/agent/memory_manager.py) |
-| Конкретный бот на VPS | Какие файлы, флаги, инструменты и провайдер действительно работают | [Реестр сервисов](/srv/repos/agent-lab-mvp/docs/HERMES-SERVICES.md), Compose/systemd, image ID, runtime-профиль и пробный запрос |
+| Конкретный развёрнутый бот | Какие файлы, флаги, инструменты и провайдер действительно работают | Приватный реестр сервиса, Compose/systemd, image ID, runtime-профиль и пробный запрос |
 
 На текущей странице памяти упоминается действие `patch`; в [документации тега](https://github.com/NousResearch/hermes-agent/blob/v2026.9.14/website/docs/user-guide/features/memory.md#memory-tool-actions) перечислены `add`, `replace`, `remove`. Пока образ конкретного бота не проверен, проектировать для закреплённой базы следует с этими тремя действиями. Наличие раздела в официальных документах не подтверждает активацию функции в профиле. Каталог страниц и соответствий тегу: [`data/docs-catalog.json`](../data/docs-catalog.json).
 
@@ -97,9 +97,9 @@ auxiliary:
 
 Сравнение bundled и сторонних решений, зависимостей, рисков и исследований: [обзор провайдеров](./hermes-memory-providers-review-2026-10-15.md). В теге восемь bundled реализаций; наличие в каталоге или установленного пакета ещё не означает совместимости с производным образом бота. При подключении проверить идентификацию пользователя, область данных, хранение/удаление, сетевые вызовы, задержку, счёт и поведение при ошибке. `memory.write_approval` контролирует штатный `memory` tool, а не автоматически все ingest-hooks стороннего провайдера.
 
-## Рецепт для нового бота на этом VPS
+## Рецепт для нового развёрнутого бота
 
-1. Найти исходный репозиторий бота и сервис в [`CODEX_PROJECTS.md`](/home/ubuntu/Projects/CODEX_PROJECTS.md) и [реестре Hermes](/srv/repos/agent-lab-mvp/docs/HERMES-SERVICES.md). Зафиксировать тег/digest базового образа, локальные патчи, Compose/systemd, монтирования, `HERMES_HOME` и владельца runtime-профиля. Изменение этого справочника само по себе не меняет работающий контейнер.
+1. Найти исходный репозиторий бота и сервис в приватном реестре проектов и сервисов. Зафиксировать тег/digest базового образа, локальные патчи, Compose/systemd, монтирования, `HERMES_HOME` и владельца runtime-профиля. Изменение этого справочника само по себе не меняет работающий контейнер.
 2. Выделить отдельный профиль и storage. Составить короткие `SOUL.md` и проектный context-файл в соответствующем исходном репозитории. Не переносить память из другого бота через `--clone` без просмотра каждого факта. Токены, `.env`, `state.db`, реальные `MEMORY.md`/`USER.md` и личные документы держать вне Git.
 3. Решить, какие факты обязаны быть в каждом новом промпте. Поместить лишь их в `USER.md`/`MEMORY.md`; для остального определить первичный источник и поиск. Для многопользовательского gateway проверить, что профильная память не смешивает личные данные разных людей: штатные файлы относятся к **профилю**, а не автоматически к каждому собеседнику.
 4. Выбрать политику записей и ревью: свободная запись или `write_approval`, включённый/выключенный background review, отдельное одобрение skills. Если выбран внешний провайдер, зафиксировать его имя, версию, storage, credential scope, per-user mapping и способ проверки ingest/recall.

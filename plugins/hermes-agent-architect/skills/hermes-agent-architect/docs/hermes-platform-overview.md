@@ -140,7 +140,7 @@ Hermes — агентный runtime с циклом «модель → инст�
 - **Provider plugins** позволяют заменить одну подсистему без форка ядра.
   Документация разработчика отдельно описывает memory, model, context engine,
   browser, web, image, TTS и другие интерфейсы; сверяй точный контракт тега в
-  `upstream/hermes-agent/website/docs/developer-guide`.
+  `../../upstream/hermes-agent/website/docs/developer-guide`.
   [Developer Guide index](https://hermes-agent.nousresearch.com/docs/llms.txt).
 - **Dashboard, язык и внешний UX** расширяются отдельно от ядра: темы, вкладки,
   slots и backend routes dashboard, language packs, Desktop и Bot Mode. Эти
@@ -217,9 +217,8 @@ API server и relay. При подключении приложения снач
    после рестарта и rollback. Зафиксируй архитектурное решение в
    `references/decisions/` по [policy](../references/knowledge-policy.md).
 
-На этом VPS действующие контейнеры и владельцы исходников перечислены в
-`/srv/repos/agent-lab-mvp/docs/HERMES-SERVICES.md`; этот документ не
-подменяет проверку конкретного сервиса.
+Для работающего бота проверь приватный реестр сервиса, исходный репозиторий,
+развёрнутый образ и профиль; этот документ не подменяет такую проверку.
 
 ## 8. Как читать полный каталог
 

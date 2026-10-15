@@ -54,6 +54,10 @@ Claude or Codex agent only if delegation proves useful. A plugin's MCP servers c
 throughout an enabled session, so a role description is not a tool-permission
 boundary.
 
+## Hermes and VPS operating model
+
+`hermes-agent-architect` is the reusable component and research library. Its three focused sibling skills produce bot blueprints, choose extension contracts, and audit a deployed Hermes instance. Its pinned upstream source lives outside the installable skill folder, so upstream `SKILL.md` files do not flood Codex discovery. `vps-operator` is separate because service and Tailscale audits can be used without Hermes. Both packs are skills-only and load no MCP process. Live server inventories, profiles, credentials, tailnet identifiers and policy remain in private operations sources.
+
 ## Public library boundary
 
 This repository can remain public. Reusable procedures, catalog metadata, and

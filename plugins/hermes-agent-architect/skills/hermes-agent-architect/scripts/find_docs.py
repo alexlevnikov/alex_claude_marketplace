@@ -8,6 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "data" / "docs-catalog.json"
+UPSTREAM_DOCS = ROOT.parents[1] / "upstream" / "hermes-agent" / "website" / "docs"
 
 
 def main() -> None:
@@ -27,7 +28,7 @@ def main() -> None:
         print(f"{entry['title']} [{', '.join(entry['sections'])}]")
         print(f"  current: {entry['url']}")
         if entry["tag_doc_path"]:
-            print(f"  v2026.9.14: {ROOT / 'upstream/hermes-agent/website/docs' / entry['tag_doc_path']}")
+            print(f"  v2026.9.14: {UPSTREAM_DOCS / entry['tag_doc_path']}")
         else:
             print("  v2026.9.14: no matching documentation path; verify in source")
     indexed_paths = {entry["tag_doc_path"] for entry in entries}
@@ -35,7 +36,7 @@ def main() -> None:
         if path in indexed_paths or not all(word in path.casefold() for word in words):
             continue
         print(f"Tagged-only document: {path}")
-        print(f"  v2026.9.14: {ROOT / 'upstream/hermes-agent/website/docs' / path}")
+        print(f"  v2026.9.14: {UPSTREAM_DOCS / path}")
 
 
 if __name__ == "__main__":

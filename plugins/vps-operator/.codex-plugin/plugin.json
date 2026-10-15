@@ -1,0 +1,16 @@
+{
+  "name": "vps-operator",
+  "version": "0.1.0",
+  "description": "Read-only VPS service and Tailscale access review workflows.",
+  "author": { "name": "Alex Levnikov" },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "VPS Operator",
+    "shortDescription": "Review services and private network access.",
+    "longDescription": "Audit source-to-deployment drift and Tailscale access using private host context when available.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": "Проверь сервис или доступ Tailscale на VPS, сохранив фактическую карту сервера приватной."
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "hermes-agent-architect",
-  "version": "0.1.0",
-  "description": "Version-aware Hermes Agent architecture guidance and reusable bot design knowledge.",
+  "version": "0.2.0",
+  "description": "Hermes component library, evidence-based bot design, extensions, and runtime audits.",
   "author": {
     "name": "Alex Levnikov"
   },
@@ -9,10 +9,13 @@
   "interface": {
     "displayName": "Hermes Agent Architect",
     "shortDescription": "Design Hermes bots with version-checked evidence.",
-    "longDescription": "Research Hermes capabilities, choose supported extension points, and preserve reusable architecture decisions with the pinned official source.",
+    "longDescription": "Research Hermes components and memory, preserve architecture decisions, design bots, and audit deployed capabilities against pinned source.",
     "developerName": "Alex Levnikov",
     "category": "Productivity",
-    "capabilities": ["Read", "Write"],
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
     "defaultPrompt": "Помоги спроектировать Hermes-бота с проверкой версии, документации и архитектурных решений."
   }
 }

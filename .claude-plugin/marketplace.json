@@ -277,8 +277,8 @@
     {
       "name": "hermes-agent-architect",
       "source": "./plugins/hermes-agent-architect",
-      "description": "Version-aware Hermes Agent architecture guidance, official docs index, and reusable decisions for designing bots.",
-      "version": "0.1.0",
+      "description": "Hermes Agent component library, research, bot blueprints, extensions, and runtime audits.",
+      "version": "0.2.0",
       "author": {
         "name": "Alex Levnikov"
       },
@@ -288,6 +288,20 @@
         "architecture",
         "memory",
         "bots"
+      ]
+    },
+    {
+      "name": "vps-operator",
+      "source": "./plugins/vps-operator",
+      "description": "Portable VPS service and Tailscale access review skills without private host state.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "vps",
+        "tailscale",
+        "operations"
       ]
     }
   ]

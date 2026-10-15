@@ -1,7 +1,7 @@
 # Hermes Agent Architect project
 
-This directory is both the Codex skill and the main folder of the separate
-`VPS · Hermes Architect` Codex project. The owning Git repository is
+This directory is the Codex skill and the prepared main folder for the separate
+`VPS · Hermes Architect` Codex project. Register that project in the Codex UI. The owning Git repository is
 `/srv/repos/alex_claude_marketplace`; edit this checkout, not an installed
 plugin cache. The installed Codex skill on this VPS is a symlink to this folder.
 

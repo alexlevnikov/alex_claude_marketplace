@@ -13,7 +13,7 @@ description: >
   scraping/crawling sites, or extracting structured data at scale with no live
   browser needed — use the sibling `web-harvest` plugin instead.
 metadata:
-  version: "0.3.0"
+  version: "0.3.2"
 ---
 
 # Browser Lab

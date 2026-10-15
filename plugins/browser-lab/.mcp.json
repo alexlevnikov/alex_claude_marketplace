@@ -10,7 +10,7 @@
     },
     "mitmproxy": {
       "command": "uvx",
-      "args": ["mitmproxy-mcp"]
+      "args": ["--with", "mcp<2", "mitmproxy-mcp==0.6.1"]
     }
   },
   "recommendedCategories": [

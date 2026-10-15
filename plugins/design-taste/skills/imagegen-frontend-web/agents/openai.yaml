@@ -1,0 +1,5 @@
+interface:
+  display_name: "imagegen-frontend-web"
+  short_description: "Generates one horizontal reference image per section of a web surface before any code."
+policy:
+  allow_implicit_invocation: false

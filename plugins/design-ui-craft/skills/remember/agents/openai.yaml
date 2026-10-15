@@ -1,0 +1,5 @@
+interface:
+  display_name: "remember"
+  short_description: "Appends a learned design constraint to .ui-craft/brief.md §6 so future sessions obey it."
+policy:
+  allow_implicit_invocation: false

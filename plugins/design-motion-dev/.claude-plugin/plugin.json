@@ -1,0 +1,12 @@
+{
+  "name": "design-motion-dev",
+  "version": "0.1.1",
+  "description": "Паттерны Motion.dev/Framer Motion для входов, скролла, жестов, микровзаимодействий и layout-переходов.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "motion-dev"
+  ]
+}

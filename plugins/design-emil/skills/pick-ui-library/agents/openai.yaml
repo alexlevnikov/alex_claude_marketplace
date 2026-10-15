@@ -1,0 +1,5 @@
+interface:
+  display_name: "pick-ui-library"
+  short_description: "Recommends a UI component library for your stack."
+policy:
+  allow_implicit_invocation: false

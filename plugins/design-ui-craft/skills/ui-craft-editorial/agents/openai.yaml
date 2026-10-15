@@ -1,0 +1,5 @@
+interface:
+  display_name: "ui-craft-editorial"
+  short_description: "ui-craft base with an editorial, type-led aesthetic fixed in."
+policy:
+  allow_implicit_invocation: false

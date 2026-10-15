@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "tools": {
+    "design": {
+      "vendor": "design-skill-os",
+      "upstream": "https://github.com/frhscopex/design-skill-os",
+      "upstream_revision": "82e41c6f6d374f4fcdea06465536e5d5cefc7a3d",
+      "upstream_path": ".cursor/skills/SKILL.md",
+      "sha256": "6ebaa09fed1f35eb4c5051959136ccfa9303cdb281243e72caf5749d8fb83258"
+    }
+  }
+}

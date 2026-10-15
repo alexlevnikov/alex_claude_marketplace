@@ -1,0 +1,5 @@
+interface:
+  display_name: "delight"
+  short_description: "Adds purposeful micro-interactions — hover, press, success moments — within the motion tokens."
+policy:
+  allow_implicit_invocation: false

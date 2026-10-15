@@ -1,0 +1,5 @@
+interface:
+  display_name: "brandkit"
+  short_description: "Generates brand identity boards and logo systems; needs an image tool."
+policy:
+  allow_implicit_invocation: false

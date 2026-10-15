@@ -1,0 +1,5 @@
+interface:
+  display_name: "start"
+  short_description: "Explains the ui-craft ladder and names your next rung; changes nothing."
+policy:
+  allow_implicit_invocation: false

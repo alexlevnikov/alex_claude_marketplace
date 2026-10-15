@@ -1,0 +1,21 @@
+{
+  "name": "design-emil",
+  "version": "0.1.1",
+  "description": "Набор из девяти скиллов Эмиля Ковальски про ощущение компонентов, жесты, пружины и осмысленную анимацию.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Emil Kowalski",
+    "shortDescription": "Набор из девяти скиллов Эмиля Ковальски про ощущение компонентов, жесты, пружины и осмысленную анимацию.",
+    "longDescription": "Единого master-скилла нет. Выберите конкретный скилл для анализа, правки или прототипа; review-animations и prototype запускаются только по явному запросу.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Кратко расскажи, что умеет плагин design-emil, как вызвать его команды и навыки, и приведи примеры задач."
+  }
+}

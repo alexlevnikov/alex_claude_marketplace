@@ -1,0 +1,21 @@
+{
+  "name": "design-frontend-god-mode",
+  "version": "0.1.1",
+  "description": "Широкий frontend master для создания, переработки и полировки UI с единой дизайн-дисциплиной.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Shawnchee",
+    "shortDescription": "Широкий frontend master для создания, переработки и полировки UI с единой дизайн-дисциплиной.",
+    "longDescription": "Один скилл анализирует проект и DESIGN.md, выбирает визуальное направление, обращается к встроенным справочникам и проводит preflight.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Кратко расскажи, что умеет плагин design-frontend-god-mode, как вызвать его команды и навыки, и приведи примеры задач."
+  }
+}

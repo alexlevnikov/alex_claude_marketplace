@@ -1,0 +1,21 @@
+{
+  "name": "design-impeccable",
+  "version": "0.1.1",
+  "description": "Один дизайн-директор для создания, критики, полировки и визуальной итерации интерфейса.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "impeccable by pbakaus",
+    "shortDescription": "Один дизайн-директор для создания, критики, полировки и визуальной итерации интерфейса.",
+    "longDescription": "У одного основного скилла есть внутренние режимы shape, audit, polish, live и generate. Без цели он показывает контекстное меню, не выполняя режим автоматически.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Кратко расскажи, что умеет плагин design-impeccable, как вызвать его команды и навыки, и приведи примеры задач."
+  }
+}

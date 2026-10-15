@@ -1,0 +1,5 @@
+interface:
+  display_name: "motion-dev-animations"
+  short_description: "Motion.dev / Framer Motion patterns for React, Next.js, Svelte and Astro at 120fps."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,12 @@
+{
+  "name": "design-ibelick",
+  "version": "0.1.1",
+  "description": "Три коротких практических скилла для базовой чистоты UI, доступности и скорости анимации.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "ibelick"
+  ]
+}

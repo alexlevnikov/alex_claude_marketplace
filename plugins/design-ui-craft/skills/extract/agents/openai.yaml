@@ -1,0 +1,5 @@
+interface:
+  display_name: "extract"
+  short_description: "Pulls repeated markup into reusable components and tokens."
+policy:
+  allow_implicit_invocation: false

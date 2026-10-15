@@ -1,0 +1,5 @@
+interface:
+  display_name: "find-animation-opportunities"
+  short_description: "Read-only: finds where motion is missing but earned, and proposes it."
+policy:
+  allow_implicit_invocation: false

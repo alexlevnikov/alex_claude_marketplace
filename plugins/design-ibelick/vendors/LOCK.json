@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "tools": {
+    "baseline-ui": {
+      "vendor": "ibelick",
+      "upstream": "https://github.com/ibelick/ui-skills",
+      "upstream_revision": "c628a5917754ec2396d9cbb47988f280ba1d5cb0",
+      "upstream_path": "skills/baseline-ui/SKILL.md",
+      "sha256": "c71c3377a3b57ede439a32afcb6d4521556ea14a05bbf1e3cba2df00a2c62db5"
+    },
+    "fixing-accessibility": {
+      "vendor": "ibelick",
+      "upstream": "https://github.com/ibelick/ui-skills",
+      "upstream_revision": "c628a5917754ec2396d9cbb47988f280ba1d5cb0",
+      "upstream_path": "skills/fixing-accessibility/SKILL.md",
+      "sha256": "4065b8641b3c8a1b1f4dc29a8089520ae3f1475061ab608b46f6d559d4edf315"
+    },
+    "fixing-motion-performance": {
+      "vendor": "ibelick",
+      "upstream": "https://github.com/ibelick/ui-skills",
+      "upstream_revision": "c628a5917754ec2396d9cbb47988f280ba1d5cb0",
+      "upstream_path": "skills/fixing-motion-performance/SKILL.md",
+      "sha256": "e6b86a0d59cdc8429281cf03ead3e4c17b490fbc963323a5d318d1d7d0a50b03"
+    }
+  }
+}

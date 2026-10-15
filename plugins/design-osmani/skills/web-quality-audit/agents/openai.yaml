@@ -1,0 +1,5 @@
+interface:
+  display_name: "web-quality-audit"
+  short_description: "Evidence-led audit of performance, accessibility, SEO, best practices, and agentic browsing; localizes findings with liv"
+policy:
+  allow_implicit_invocation: false

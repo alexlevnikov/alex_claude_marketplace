@@ -1,0 +1,5 @@
+interface:
+  display_name: "unhappy"
+  short_description: "Designs the non-happy states first — empty, loading, error, partial — and turns boolean soup into a state machine."
+policy:
+  allow_implicit_invocation: false

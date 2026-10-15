@@ -1,0 +1,5 @@
+interface:
+  display_name: "prototype"
+  short_description: "Builds several genuinely different versions of one UI piece behind a live picker; promote the winner."
+policy:
+  allow_implicit_invocation: false

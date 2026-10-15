@@ -1,0 +1,5 @@
+interface:
+  display_name: "threejs-loaders"
+  short_description: "Three.js asset loading: GLTF / OBJ / textures, pipelines, progress."
+policy:
+  allow_implicit_invocation: false

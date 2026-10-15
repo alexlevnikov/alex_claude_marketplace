@@ -1,0 +1,21 @@
+{
+  "name": "design-iart",
+  "version": "0.1.1",
+  "description": "Девять технических рецептов веб-анимации: GSAP, SVG, Lottie playback, переходы, микровзаимодействия и 60fps.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "iart-ai web-animation",
+    "shortDescription": "Девять технических рецептов веб-анимации: GSAP, SVG, Lottie playback, переходы, микровзаимодействия и 60fps.",
+    "longDescription": "Выберите конкретную технику после решения о том, какое движение нужно. Каждый скилл ведёт реализацию своего типа эффекта.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Кратко расскажи, что умеет плагин design-iart, как вызвать его команды и навыки, и приведи примеры задач."
+  }
+}

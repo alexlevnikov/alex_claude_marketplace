@@ -1,0 +1,5 @@
+interface:
+  display_name: "brief"
+  short_description: "Interviews you and writes .ui-craft/brief.md — purpose, user, principles, success metric, out of scope."
+policy:
+  allow_implicit_invocation: false

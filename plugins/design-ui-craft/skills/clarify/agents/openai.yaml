@@ -1,0 +1,5 @@
+interface:
+  display_name: "clarify"
+  short_description: "Rewrites UX copy: error messages, empty states, CTAs, voice matrix, reading level."
+policy:
+  allow_implicit_invocation: false

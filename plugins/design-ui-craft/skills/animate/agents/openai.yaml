@@ -1,0 +1,5 @@
+interface:
+  display_name: "animate"
+  short_description: "Adds or adjusts animation inside the project's motion token system (durations, easings, intensity)."
+policy:
+  allow_implicit_invocation: false

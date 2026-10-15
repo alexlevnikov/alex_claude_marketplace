@@ -1,0 +1,5 @@
+interface:
+  display_name: "ui-craft"
+  short_description: "The ui-craft base: discovery, anti-slop rules, knobs and Craft Report; actions build | animate | review | polish | audit"
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,5 @@
+interface:
+  display_name: "threejs-interaction"
+  short_description: "Three.js raycasting, controls, pointer events."
+policy:
+  allow_implicit_invocation: false

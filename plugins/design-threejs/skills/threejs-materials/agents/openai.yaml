@@ -1,0 +1,5 @@
+interface:
+  display_name: "threejs-materials"
+  short_description: "Three.js materials and PBR."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,5 @@
+interface:
+  display_name: "redesign-existing-projects"
+  short_description: "taste-skill's redesign protocol for an existing project."
+policy:
+  allow_implicit_invocation: false

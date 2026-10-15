@@ -1,0 +1,21 @@
+{
+  "name": "design-motion-principles",
+  "version": "0.1.1",
+  "description": "Проектирование или аудит UI-motion через подходы Emil Kowalski, Jakub Krehel и Jhey Tompkins.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "kylezantos",
+    "shortDescription": "Проектирование или аудит UI-motion через подходы Emil Kowalski, Jakub Krehel и Jhey Tompkins.",
+    "longDescription": "Один скилл design-motion-principles выбирает режим Create или Audit. Audit обычно создаёт HTML-отчёт с зацикленными демонстрациями; флаги --terminal, --inline и --no-html меняют вывод.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Кратко расскажи, что умеет плагин design-motion-principles, как вызвать его команды и навыки, и приведи примеры задач."
+  }
+}

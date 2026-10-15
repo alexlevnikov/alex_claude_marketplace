@@ -1,0 +1,68 @@
+{
+  "schema_version": 2,
+  "tools": {
+    "60fps-animation": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/60fps-animation/SKILL.md",
+      "sha256": "e4ee3de7edac40a540a57333b60549522f566adbd9d349e0539bde1182d7ee7c"
+    },
+    "accessible-animation": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/accessible-animation/SKILL.md",
+      "sha256": "5c05d1770b2662c8627a6c86d4425e19b42a4c9d6f807670b49da7e6a6491ae1"
+    },
+    "ascii-animation": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/ascii-animation/SKILL.md",
+      "sha256": "9d61b302eda01342e433b1512cb63b7b80f988c800d15192226178426aa3decb"
+    },
+    "glassmorphism": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/glassmorphism/SKILL.md",
+      "sha256": "16d2646ab93ead206c80efa1aece4a572b21345813c770d0067610fa893be48a"
+    },
+    "gsap-web": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/gsap-web/SKILL.md",
+      "sha256": "a4d7dc483a942b02d9291018110e53bf023a03a68e301758958386d241ef1443"
+    },
+    "lottie-animation": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/lottie-animation/SKILL.md",
+      "sha256": "c8ab23efd43b779a4a938076f3673cd6bb21f2bb8a250465cd318d11e1803e62"
+    },
+    "micro-interaction": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/micro-interaction/SKILL.md",
+      "sha256": "864718e020b98e11474a4fd9ace3db7b6e7d65062e6dd2215e00234e3c783096"
+    },
+    "page-transition-animation": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/page-transition-animation/SKILL.md",
+      "sha256": "3b25807f6693e516bffd26e5f3c22cacd780d05fd07f27f4e11be66f1acb066c"
+    },
+    "svg-animation": {
+      "vendor": "iart",
+      "upstream": "https://github.com/iart-ai/web-animation-skills",
+      "upstream_revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "upstream_path": "skills/svg-animation/SKILL.md",
+      "sha256": "04d13ed4ccfa795e12421b25b61969fd42d9b609bd80ae2f351c0e0db847f16a"
+    }
+  }
+}

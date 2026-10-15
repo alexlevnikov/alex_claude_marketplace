@@ -1,7 +1,7 @@
 {
   "name": "design-tools",
-  "version": "0.6.0",
-  "description": "One-install design pack with two workflows and 87 updated vendor skills from 15 pinned upstream repositories. Claude Code has vendor and vendor:skill commands; Codex uses the design-tools router skill.",
+  "version": "0.6.1",
+  "description": "Design discovery and whole-surface workflows with 87 pinned vendor skills for compatibility. Claude Code retains vendor commands; Codex direct skills are available in standalone vendor plugins.",
   "author": {
     "name": "Alex Levnikov"
   },

@@ -1,0 +1,214 @@
+{
+  "schema_version": 2,
+  "tools": {
+    "ui-craft": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": "skills/ui-craft/SKILL.md",
+      "sha256": "1529a5fcd1a09de5a4487d23a4e267f0052886d345f2a73726faff94286b1093",
+      "local_adaptations": [
+        "Bundle and relink the upstream animation storyboard example"
+      ]
+    },
+    "ui-craft-minimal": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": "skills/ui-craft-minimal/SKILL.md",
+      "sha256": "56a524a9bdb99977eb44ceb9f996655c6e9e67ffd23a6e16deb4bd5616f8d1b1"
+    },
+    "ui-craft-editorial": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": "skills/ui-craft-editorial/SKILL.md",
+      "sha256": "ef242b20340796ac1040baea2fe68069e625366fce479adbe4f3afde5010f70e"
+    },
+    "ui-craft-dense-dashboard": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": "skills/ui-craft-dense-dashboard/SKILL.md",
+      "sha256": "b36b8a90f6758e565c7783e7c5f855fb90a1baf727534df4918aa0d44ea3ba34"
+    },
+    "start": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/start/SKILL.md",
+      "sha256": "aeb924393f3d36bfde4c17665b7f5053d0fcbff6ab96b5ccfe8cec916f770146"
+    },
+    "brief": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/brief/SKILL.md",
+      "sha256": "5bef831052a6708b84194fad5e3f15c82ca39b1de3c3684ee2dca418a0e0dc7b"
+    },
+    "tokens": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/tokens/SKILL.md",
+      "sha256": "fd3ef05980da7ec321a190fde5e47adf5c040165a7a19a037a2041daa5f920fc"
+    },
+    "shape": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/shape/SKILL.md",
+      "sha256": "708ad68f76689e3734a8cb069d3456c96df51a08f27b8364e12e2e156e7705c6",
+      "local_adaptations": [
+        "Point the state-design link at the bundled ui-craft skill"
+      ]
+    },
+    "craft": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/craft/SKILL.md",
+      "sha256": "af1bf85841815f7347ad15b62d9a12a00566c1fe0e7ee66be3c960ab5d28638a"
+    },
+    "sddesign": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/sddesign/SKILL.md",
+      "sha256": "ac0ed28216e94b9c8ed5a064e60980610a130a700646dfaa55b19cdd71165090"
+    },
+    "finalize": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/finalize/SKILL.md",
+      "sha256": "09e84f83a417078aad5d8d34e81bc8259601e98fe19123152f7a5985227d4f49"
+    },
+    "remember": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/remember/SKILL.md",
+      "sha256": "50825ff73e1fcbd427dd60057809fdc70c378762130b5d807a1d7002eacd91f8"
+    },
+    "polish": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/polish/SKILL.md",
+      "sha256": "e297dfa7d0ca04ef4b2d3907b45e3f8424e19607a5601cdb4c62582e90c6be3a"
+    },
+    "typeset": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/typeset/SKILL.md",
+      "sha256": "165319a6e87d7c13c574d8c18b19fa39cf2f67a9e72e1cf6891c747e6fe89c27"
+    },
+    "colorize": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/colorize/SKILL.md",
+      "sha256": "957576a309913636e66140880c4ce01cc4ad8c7f87dcdcc0766d4a102d186f19"
+    },
+    "adapt": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/adapt/SKILL.md",
+      "sha256": "7fc88dea10671164bd06421d43fbde889d3fab2c34646597245283941d860bc4"
+    },
+    "distill": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/distill/SKILL.md",
+      "sha256": "6f5eda9912081bbff2f315c62896a3c71ce3d3e7c654ecad31297819299163c4"
+    },
+    "bolder": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/bolder/SKILL.md",
+      "sha256": "fee45ee330c5a883a823f302c4e1401a3c398529f27aee78ac64197d0f635ff3"
+    },
+    "quieter": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/quieter/SKILL.md",
+      "sha256": "5d703e7018cb39be45d131aadc8e5f8537ed43441dc6b0e0692edf22168ea4f3"
+    },
+    "extract": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/extract/SKILL.md",
+      "sha256": "2f97f4664ba80a3d96cd99507815ce54c34cb2ae2f7ab3a6f0c51103067e60bb"
+    },
+    "redesign": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/redesign/SKILL.md",
+      "sha256": "d412ed2f1cdbf90ac4a32c1fe8bfde73f4921194a17d9374e6d6d86904728d5e"
+    },
+    "delight": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/delight/SKILL.md",
+      "sha256": "5ee37ed08c406f32853323376414eaee5adbe980555646e378f0952f58affbc9"
+    },
+    "animate": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/animate/SKILL.md",
+      "sha256": "08ff71d67ea8e616736642d75162f81893b9206637e0fdbb4bf9f812acef91f5"
+    },
+    "unhappy": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/unhappy/SKILL.md",
+      "sha256": "41d20f7c68c6e3b2cb5fe6006b946b9af8db70c58940ab9b58b7550f38ee308b"
+    },
+    "harden": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/harden/SKILL.md",
+      "sha256": "ba68a4b0721d7da7cc5533a4af6e030125d50d513bc2e618939421355ce7b249"
+    },
+    "clarify": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/clarify/SKILL.md",
+      "sha256": "60906eecc5e299d41ea170fac4dc515f9ddc18c85687861f853292fe79739238"
+    },
+    "audit": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/audit/SKILL.md",
+      "sha256": "f0b245a8a0d2ff6c26298fab2a5f4855fccba538e8780fde5ffaf80894edeefc"
+    },
+    "critique": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/critique/SKILL.md",
+      "sha256": "2bd9ca88fe1d3cff9a9610870a4badd5834e67a13fa0b2a87b70c88fa5678454"
+    },
+    "heuristic": {
+      "vendor": "ui-craft",
+      "upstream": "https://github.com/educlopez/ui-craft",
+      "upstream_revision": "eb88d0a9ad63d7fc8bb3d61720b7010c2cb212c8",
+      "upstream_path": ".agents/skills/heuristic/SKILL.md",
+      "sha256": "c52d4dce9734df77c58f40bd385bd18886c078046708fb70a79327479acaf6ad"
+    }
+  }
+}

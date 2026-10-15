@@ -1,0 +1,12 @@
+{
+  "name": "design-threejs",
+  "version": "0.1.1",
+  "description": "Десять технических справочников по vanilla Three.js: сцена, модели, материалы, свет, шейдеры, геометрия, текстуры, анимация, ввод и постобработка.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "threejs"
+  ]
+}

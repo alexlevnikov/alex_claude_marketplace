@@ -1,0 +1,12 @@
+{
+  "name": "design-calm-design",
+  "version": "0.1.1",
+  "description": "Полный процесс создания спокойного премиального интерфейса с DESIGN.md, самокритикой и финальными проверками.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "calm-design"
+  ]
+}

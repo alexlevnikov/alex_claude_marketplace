@@ -1,0 +1,5 @@
+interface:
+  display_name: "baseline-ui"
+  short_description: "Reviews a named UI file against its baseline, or applies the baseline during requested UI implementation."
+policy:
+  allow_implicit_invocation: false

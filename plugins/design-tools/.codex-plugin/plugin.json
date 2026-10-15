@@ -1,0 +1,30 @@
+{
+  "name": "design-tools",
+  "version": "0.6.1+codex.20261015045301",
+  "description": "Design discovery and whole-surface workflows with a bundled vendor compatibility inventory. Install standalone design vendor plugins for direct Codex skills.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "ui-craft",
+    "typography",
+    "motion",
+    "accessibility",
+    "performance"
+  ],
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Design Tools",
+    "shortDescription": "Design discovery and whole-surface workflows",
+    "longDescription": "Discover design passes for existing UI or run the whole-surface pipeline. Install a standalone vendor plugin for direct skills.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Improve an existing UI with Design Tools."
+  }
+}

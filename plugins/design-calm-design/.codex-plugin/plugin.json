@@ -1,0 +1,21 @@
+{
+  "name": "design-calm-design",
+  "version": "0.1.1",
+  "description": "Полный процесс создания спокойного премиального интерфейса с DESIGN.md, самокритикой и финальными проверками.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "calmtiger86",
+    "shortDescription": "Полный процесс создания спокойного премиального интерфейса с DESIGN.md, самокритикой и финальными проверками.",
+    "longDescription": "Один master выбирает режим interview, generate, upgrade, reference-match или multi-variant и подходящий выходной формат.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Кратко расскажи, что умеет плагин design-calm-design, как вызвать его команды и навыки, и приведи примеры задач."
+  }
+}

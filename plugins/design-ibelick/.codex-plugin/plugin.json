@@ -1,0 +1,21 @@
+{
+  "name": "design-ibelick",
+  "version": "0.1.1",
+  "description": "Три коротких практических скилла для базовой чистоты UI, доступности и скорости анимации.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ui-skills by ibelick",
+    "shortDescription": "Три коротких практических скилла для базовой чистоты UI, доступности и скорости анимации.",
+    "longDescription": "Выберите один точечный скилл по известной проблеме; это быстрые проверки и исправления конкретного компонента.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Кратко расскажи, что умеет плагин design-ibelick, как вызвать его команды и навыки, и приведи примеры задач."
+  }
+}

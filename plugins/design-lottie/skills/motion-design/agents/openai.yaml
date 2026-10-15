@@ -1,0 +1,5 @@
+interface:
+  display_name: "motion-design"
+  short_description: "Designs motion from scratch: timing, easing, choreography, Disney principles; any animation stack."
+policy:
+  allow_implicit_invocation: false

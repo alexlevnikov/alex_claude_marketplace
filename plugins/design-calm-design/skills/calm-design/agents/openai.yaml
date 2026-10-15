@@ -1,0 +1,5 @@
+interface:
+  display_name: "calm-design"
+  short_description: "Calm premium design agent: writes DESIGN.md, self-critiques, runs pre-flight checks; Korean-first."
+policy:
+  allow_implicit_invocation: false

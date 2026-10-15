@@ -1,0 +1,5 @@
+interface:
+  display_name: "industrial-brutalist-ui"
+  short_description: "Direction preset: industrial-brutalist UI."
+policy:
+  allow_implicit_invocation: false

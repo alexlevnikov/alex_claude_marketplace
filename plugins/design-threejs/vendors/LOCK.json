@@ -1,0 +1,75 @@
+{
+  "schema_version": 2,
+  "tools": {
+    "threejs-fundamentals": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-fundamentals/SKILL.md",
+      "sha256": "1018ff36926863bab270b4853cab8e512df03f16b817c5523b3c090e1156c81c"
+    },
+    "threejs-loaders": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-loaders/SKILL.md",
+      "sha256": "1b9bc8afe458f835344d2cb7491fc180e6687cdb5f54adcbf64fc45dd9df89dc"
+    },
+    "threejs-materials": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-materials/SKILL.md",
+      "sha256": "9f090dfad6b37ce5dd5adc11e88892e8fbb29c965d5b6b9121d91fefeb352b47"
+    },
+    "threejs-lighting": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-lighting/SKILL.md",
+      "sha256": "46c172cc64ac8b3938fcca8db3f0bbd7fe0231631c7515b0c24ea354053050a5"
+    },
+    "threejs-shaders": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-shaders/SKILL.md",
+      "sha256": "611b33752e97146e26aa440275c0dea12af4a1cbd41bcad3c0145aa68ddc6dd8"
+    },
+    "threejs-geometry": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-geometry/SKILL.md",
+      "sha256": "6078e3d145d8cad0e1d55c1b9749629f70fa509ab1e40bf08f1786476670b299"
+    },
+    "threejs-textures": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-textures/SKILL.md",
+      "sha256": "f15ab0eae44ffe88bb57a6332509a35846fbe69ca89dad8319ecf6bf16fb21a9"
+    },
+    "threejs-animation": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-animation/SKILL.md",
+      "sha256": "bbbb1f3c54176be501027e65f60ccdd6288dee9a70bfed2876591360cbe70c4f"
+    },
+    "threejs-interaction": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-interaction/SKILL.md",
+      "sha256": "9e5c7885b6aea93382daf6a67783f33bb8d67b2e063f4dc196ad3bd57d88d4b1"
+    },
+    "threejs-postprocessing": {
+      "vendor": "threejs",
+      "upstream": "https://github.com/cloudai-x/threejs-skills",
+      "upstream_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "upstream_path": "skills/threejs-postprocessing/SKILL.md",
+      "sha256": "c63b74aabcf95e447074ea5cb3a02c757031c8841a9202eccf48d31906abf75f"
+    }
+  }
+}

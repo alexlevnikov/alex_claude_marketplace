@@ -1,0 +1,12 @@
+{
+  "name": "design-motion-principles",
+  "version": "0.1.1",
+  "description": "Проектирование или аудит UI-motion через подходы Emil Kowalski, Jakub Krehel и Jhey Tompkins.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "design-motion-principles"
+  ]
+}

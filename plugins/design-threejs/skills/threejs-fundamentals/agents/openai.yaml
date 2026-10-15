@@ -1,0 +1,5 @@
+interface:
+  display_name: "threejs-fundamentals"
+  short_description: "Three.js scene setup: cameras, renderer, Object3D hierarchy, coordinates."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,21 @@
+{
+  "name": "design-osmani",
+  "version": "0.1.1",
+  "description": "Проверка качества веб-страниц по доступности, Core Web Vitals, скорости, SEO и практикам платформы.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Addy Osmani web-quality",
+    "shortDescription": "Проверка качества веб-страниц по доступности, Core Web Vitals, скорости, SEO и практикам платформы.",
+    "longDescription": "Если причина проблемы неизвестна, начните с web-quality-audit; при известной оси выберите один профильный скилл.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Кратко расскажи, что умеет плагин design-osmani, как вызвать его команды и навыки, и приведи примеры задач."
+  }
+}

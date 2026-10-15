@@ -1,0 +1,5 @@
+interface:
+  display_name: "awwwards"
+  short_description: "Applies Awwwards-winning design principles to a surface; orchestrator."
+policy:
+  allow_implicit_invocation: false

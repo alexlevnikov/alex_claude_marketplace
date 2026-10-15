@@ -1,0 +1,5 @@
+interface:
+  display_name: "gsap-web"
+  short_description: "GSAP recipes: ScrollTrigger, pinning, scrub, SplitText, Flip, Lenis."
+policy:
+  allow_implicit_invocation: false

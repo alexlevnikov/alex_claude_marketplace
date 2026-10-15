@@ -1,0 +1,5 @@
+interface:
+  display_name: "improve-animations"
+  short_description: "Read-only: audits all existing motion and writes a plan for other agents."
+policy:
+  allow_implicit_invocation: false

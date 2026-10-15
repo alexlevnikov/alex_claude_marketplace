@@ -1,0 +1,5 @@
+interface:
+  display_name: "threejs-shaders"
+  short_description: "Three.js GLSL and ShaderMaterial."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,5 @@
+interface:
+  display_name: "glassmorphism"
+  short_description: "Frosted-glass surfaces done right."
+policy:
+  allow_implicit_invocation: false

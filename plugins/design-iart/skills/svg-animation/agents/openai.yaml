@@ -1,0 +1,5 @@
+interface:
+  display_name: "svg-animation"
+  short_description: "SVG path, morph and line-drawing animation."
+policy:
+  allow_implicit_invocation: false

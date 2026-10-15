@@ -1,0 +1,5 @@
+interface:
+  display_name: "distill"
+  short_description: "Removes noise from an over-built surface: cuts sections, elements and decoration that earn nothing."
+policy:
+  allow_implicit_invocation: false

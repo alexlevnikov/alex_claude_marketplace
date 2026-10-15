@@ -1,0 +1,5 @@
+interface:
+  display_name: "critique"
+  short_description: "UX critique of a surface — what to change and why; no code changes."
+policy:
+  allow_implicit_invocation: false

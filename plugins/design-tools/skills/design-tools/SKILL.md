@@ -6,7 +6,7 @@ description: >
   describes a problem without naming a tool; resolve and run the selected bundled vendor skill
   when the user names one. Use design-pipeline for a whole new surface.
 metadata:
-  version: "0.6.0"
+  version: "0.6.1"
 ---
 
 # Design Tools — discovery
@@ -25,8 +25,15 @@ task, discover candidates and let the user pick before running them.
 - **Claude Code:** `/design-tools:<vendor>:<skill> <task>` runs one selected skill;
   `/design-tools:<vendor> <task>` runs that vendor's master skill, or lists its choices when it has
   no master. The native command files are under `commands/<vendor>/<skill>.md` and `commands/<vendor>.md`.
-- **Codex:** invoke `$design-tools:design-tools` with `<vendor>:<skill> <task>` or `<vendor> <task>`.
-  The same selector can be written as `design-tools:<vendor>:<skill>` in a normal request.
+- **Codex umbrella:** invoke `$design-tools:design-tools` with
+  `<vendor>:<skill> <task>` or `<vendor> <task>` to route through the compatibility
+  bundle. Typing `@` searches plugins and files; it does not directly invoke a skill.
+- **Standalone vendor plugins:** each of the 15 vendors can also be installed independently.
+  In Codex, `$design-ui-craft:typeset <task>` selects one tool and
+  `$design-ui-craft:overview` explains the package. In Claude Code the corresponding
+  forms are `/design-ui-craft:typeset <task>` and `/design-ui-craft:overview`.
+  Every standalone pack has `OVERVIEW.md` with all direct names and use cases;
+  an empty direct call gives the overview instead of editing files.
 - Locate the installed plugin root from this `SKILL.md`, then run
   `python3 <plugin-root>/scripts/invoke.py <vendor>[:<skill>]`. Check that the vendor and skill
   exist. A vendor with no master returns a list; ask the user to choose a skill. Otherwise read

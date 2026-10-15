@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "tools": {
+    "awwwards": {
+      "vendor": "awwwards",
+      "upstream": "https://github.com/tponscr-debug/claude-skill-awwwards",
+      "upstream_revision": "d18aa0c42b71fc60bc978b19de8e3181ab193ec5",
+      "upstream_path": "SKILL.md",
+      "sha256": "a64b44366a7e2ca5dd6376c47f030c8d7669167356dede29b4d277cda8986c34"
+    }
+  }
+}

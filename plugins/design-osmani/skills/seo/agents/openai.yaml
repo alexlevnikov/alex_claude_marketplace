@@ -1,0 +1,5 @@
+interface:
+  display_name: "seo"
+  short_description: "On-page SEO: meta, structured data, sitemap, robots, headings, internal links."
+policy:
+  allow_implicit_invocation: false

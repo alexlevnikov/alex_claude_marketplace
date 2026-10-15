@@ -1,0 +1,5 @@
+interface:
+  display_name: "craft"
+  short_description: "Builds a surface from the spec with ui-craft recipes (dashboard, landing, auth)."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,12 @@
+{
+  "name": "design-emil",
+  "version": "0.1.1",
+  "description": "Набор из девяти скиллов Эмиля Ковальски про ощущение компонентов, жесты, пружины и осмысленную анимацию.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "emil"
+  ]
+}

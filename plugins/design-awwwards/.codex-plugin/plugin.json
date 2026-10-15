@@ -1,0 +1,21 @@
+{
+  "name": "design-awwwards",
+  "version": "0.1.1",
+  "description": "Один арт-директор для выразительных веб-страниц по принципам проектов уровня Awwwards.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "tponscr-debug",
+    "shortDescription": "Один арт-директор для выразительных веб-страниц по принципам проектов уровня Awwwards.",
+    "longDescription": "Основной скилл awwwards сам ведёт исследование, типографику, палитру, композицию и motion для указанной поверхности.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Кратко расскажи, что умеет плагин design-awwwards, как вызвать его команды и навыки, и приведи примеры задач."
+  }
+}

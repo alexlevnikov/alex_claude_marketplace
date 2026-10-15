@@ -1,0 +1,5 @@
+interface:
+  display_name: "fixing-accessibility"
+  short_description: "Fast targeted accessibility fixes: focus ring, tab order, labels, ARIA."
+policy:
+  allow_implicit_invocation: false

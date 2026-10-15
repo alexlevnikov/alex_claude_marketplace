@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "tools": {
+    "accessibility": {
+      "vendor": "osmani",
+      "upstream": "https://github.com/addyosmani/web-quality-skills",
+      "upstream_revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "upstream_path": "skills/accessibility/SKILL.md",
+      "sha256": "21ad2404cfd978308591f748dda3490a7b06e7355caf9aa51483dee00819e69d"
+    },
+    "core-web-vitals": {
+      "vendor": "osmani",
+      "upstream": "https://github.com/addyosmani/web-quality-skills",
+      "upstream_revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "upstream_path": "skills/core-web-vitals/SKILL.md",
+      "sha256": "6f85d66a5644084c65a6991f724ae22f1fbc88a7f38d00b5316c72a5d9985bc6"
+    },
+    "performance": {
+      "vendor": "osmani",
+      "upstream": "https://github.com/addyosmani/web-quality-skills",
+      "upstream_revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "upstream_path": "skills/performance/SKILL.md",
+      "sha256": "afd416dbb84d0efdecedf24aab8fe6d070db3ce3c5a7551d536aa4e643f9cb7b"
+    },
+    "seo": {
+      "vendor": "osmani",
+      "upstream": "https://github.com/addyosmani/web-quality-skills",
+      "upstream_revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "upstream_path": "skills/seo/SKILL.md",
+      "sha256": "91c0e1ff2789b688247bbe485d3d08179ff0ae23a9af23d09848c3e5915b5ff8"
+    },
+    "best-practices": {
+      "vendor": "osmani",
+      "upstream": "https://github.com/addyosmani/web-quality-skills",
+      "upstream_revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "upstream_path": "skills/best-practices/SKILL.md",
+      "sha256": "88c5455bbab40fa74e8058662553cb380b10774a8354e0f2e1832e1fa4b9b1ac"
+    },
+    "web-quality-audit": {
+      "vendor": "osmani",
+      "upstream": "https://github.com/addyosmani/web-quality-skills",
+      "upstream_revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "upstream_path": "skills/web-quality-audit/SKILL.md",
+      "sha256": "f70580fe539e1eae85a7b7e3505b14f6f6842ece2fd32dfc71269213a7d17e79"
+    }
+  }
+}

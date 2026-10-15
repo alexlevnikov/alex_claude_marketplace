@@ -1,0 +1,5 @@
+interface:
+  display_name: "design"
+  short_description: "Design principles from ten canonical books, for when a decision needs a reason behind it; read-only."
+policy:
+  allow_implicit_invocation: false

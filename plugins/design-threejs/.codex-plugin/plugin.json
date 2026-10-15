@@ -1,0 +1,21 @@
+{
+  "name": "design-threejs",
+  "version": "0.1.1",
+  "description": "Десять технических справочников по vanilla Three.js: сцена, модели, материалы, свет, шейдеры, геометрия, текстуры, анимация, ввод и постобработка.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "cloudai-x threejs",
+    "shortDescription": "Десять технических справочников по vanilla Three.js: сцена, модели, материалы, свет, шейдеры, геометрия, текстуры, анимация, ввод и постобработка.",
+    "longDescription": "Единого master-дизайнера нет. Выберите одну техническую задачу и соответствующий скилл.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Кратко расскажи, что умеет плагин design-threejs, как вызвать его команды и навыки, и приведи примеры задач."
+  }
+}

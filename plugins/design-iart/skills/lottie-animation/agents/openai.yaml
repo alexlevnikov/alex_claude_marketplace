@@ -1,0 +1,5 @@
+interface:
+  display_name: "lottie-animation"
+  short_description: "Embeds and controls Lottie animations."
+policy:
+  allow_implicit_invocation: false

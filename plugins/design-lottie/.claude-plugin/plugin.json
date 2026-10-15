@@ -1,0 +1,12 @@
+{
+  "name": "design-lottie",
+  "version": "0.1.1",
+  "description": "Принципы проектирования UI-motion от LottieFiles: тайминг, easing, хореография и выбор способа реализации.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "lottie"
+  ]
+}

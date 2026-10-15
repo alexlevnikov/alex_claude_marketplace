@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Curated capability packs for Claude Code and Codex.",
-    "version": "0.6.0"
+    "version": "0.7.0"
   },
   "plugins": [
     {
@@ -55,7 +55,7 @@
       "name": "design-tools",
       "source": "./plugins/design-tools",
       "description": "One-install design pack with two workflows and 87 updated vendor skills from 15 pinned upstream repositories. Claude Code has vendor and vendor:skill commands; Codex uses the design-tools router skill.",
-      "version": "0.6.0",
+      "version": "0.6.1",
       "author": {
         "name": "YOURSAUNAS"
       },
@@ -77,6 +77,201 @@
         "emil-kowalski",
         "discovery",
         "prompt-composer"
+      ]
+    },
+    {
+      "name": "design-ui-craft",
+      "source": "./plugins/design-ui-craft",
+      "description": "Система проектирования веб-интерфейсов: базовые правила, бриф, токены, этапы, точечные улучшения и оценка результата.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "design",
+        "ui-craft"
+      ]
+    },
+    {
+      "name": "design-taste",
+      "source": "./plugins/design-taste",
+      "description": "Арт-дирекшн публичных сайтов: выбор выразительного визуального направления, сборка страницы и проверка рендера в браузере.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "design",
+        "taste"
+      ]
+    },
+    {
+      "name": "design-impeccable",
+      "source": "./plugins/design-impeccable",
+      "description": "Один дизайн-директор для создания, критики, полировки и визуальной итерации интерфейса.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "design",
+        "impeccable"
+      ]
+    },
+    {
+      "name": "design-emil",
+      "source": "./plugins/design-emil",
+      "description": "Набор из девяти скиллов Эмиля Ковальски про ощущение компонентов, жесты, пружины и осмысленную анимацию.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "design",
+        "emil"
+      ]
+    },
+    {
+      "name": "design-ibelick",
+      "source": "./plugins/design-ibelick",
+      "description": "Три коротких практических скилла для базовой чистоты UI, доступности и скорости анимации.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "design",
+        "ibelick"
+      ]
+    },
+    {
+      "name": "design-osmani",
+      "source": "./plugins/design-osmani",
+      "description": "Проверка качества веб-страниц по доступности, Core Web Vitals, скорости, SEO и практикам платформы.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "design",
+        "osmani"
+      ]
+    },
+    {
+      "name": "design-iart",
+      "source": "./plugins/design-iart",
+      "description": "Девять технических рецептов веб-анимации: GSAP, SVG, Lottie playback, переходы, микровзаимодействия и 60fps.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "design",
+        "iart"
+      ]
+    },
+    {
+      "name": "design-lottie",
+      "source": "./plugins/design-lottie",
+      "description": "Принципы проектирования UI-motion от LottieFiles: тайминг, easing, хореография и выбор способа реализации.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "design",
+        "lottie"
+      ]
+    },
+    {
+      "name": "design-motion-dev",
+      "source": "./plugins/design-motion-dev",
+      "description": "Паттерны Motion.dev/Framer Motion для входов, скролла, жестов, микровзаимодействий и layout-переходов.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "design",
+        "motion-dev"
+      ]
+    },
+    {
+      "name": "design-threejs",
+      "source": "./plugins/design-threejs",
+      "description": "Десять технических справочников по vanilla Three.js: сцена, модели, материалы, свет, шейдеры, геометрия, текстуры, анимация, ввод и постобработка.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "design",
+        "threejs"
+      ]
+    },
+    {
+      "name": "design-awwwards",
+      "source": "./plugins/design-awwwards",
+      "description": "Один арт-директор для выразительных веб-страниц по принципам проектов уровня Awwwards.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "design",
+        "awwwards"
+      ]
+    },
+    {
+      "name": "design-calm-design",
+      "source": "./plugins/design-calm-design",
+      "description": "Полный процесс создания спокойного премиального интерфейса с DESIGN.md, самокритикой и финальными проверками.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "design",
+        "calm-design"
+      ]
+    },
+    {
+      "name": "design-frontend-god-mode",
+      "source": "./plugins/design-frontend-god-mode",
+      "description": "Широкий frontend master для создания, переработки и полировки UI с единой дизайн-дисциплиной.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "design",
+        "frontend-god-mode"
+      ]
+    },
+    {
+      "name": "design-motion-principles",
+      "source": "./plugins/design-motion-principles",
+      "description": "Проектирование или аудит UI-motion через подходы Emil Kowalski, Jakub Krehel и Jhey Tompkins.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "design",
+        "design-motion-principles"
+      ]
+    },
+    {
+      "name": "design-skill-os",
+      "source": "./plugins/design-skill-os",
+      "description": "Справочник принципов дизайна из десяти книг: исследование, типографика, цвет, композиция, брендинг, сторителлинг и процесс.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Alex Levnikov"
+      },
+      "keywords": [
+        "design",
+        "design-skill-os"
       ]
     }
   ]

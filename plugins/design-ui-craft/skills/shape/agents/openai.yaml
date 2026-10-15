@@ -1,0 +1,5 @@
+interface:
+  display_name: "shape"
+  short_description: "Wireframes one new section into .ui-craft/spec.md — layout, state lattice, acceptance bar; writes a spec, not code."
+policy:
+  allow_implicit_invocation: false

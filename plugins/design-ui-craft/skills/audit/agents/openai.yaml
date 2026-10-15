@@ -1,0 +1,5 @@
+interface:
+  display_name: "audit"
+  short_description: "Technical accessibility audit inside a build session: contrast, focus, ARIA, keyboard; report only."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,12 @@
+{
+  "name": "design-skill-os",
+  "version": "0.1.1",
+  "description": "Справочник принципов дизайна из десяти книг: исследование, типографика, цвет, композиция, брендинг, сторителлинг и процесс.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "design-skill-os"
+  ]
+}

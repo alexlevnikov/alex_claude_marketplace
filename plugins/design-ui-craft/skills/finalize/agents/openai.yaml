@@ -1,0 +1,5 @@
+interface:
+  display_name: "finalize"
+  short_description: "Ship gate: READY / NOT READY / BLOCKED with findings; never edits."
+policy:
+  allow_implicit_invocation: false

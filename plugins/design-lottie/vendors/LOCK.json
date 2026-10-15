@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "tools": {
+    "motion-design": {
+      "vendor": "lottie",
+      "upstream": "https://github.com/lottiefiles/motion-design-skill",
+      "upstream_revision": "f9a8a041b85185ee4881b3471d3415e939aac772",
+      "upstream_path": "skills/motion-design/SKILL.md",
+      "sha256": "96d6590739bb8bb9290041638f1e21514a383658bc44d4d00ac2259914c6ef13"
+    }
+  }
+}

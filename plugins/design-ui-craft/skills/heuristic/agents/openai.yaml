@@ -1,0 +1,5 @@
+interface:
+  display_name: "heuristic"
+  short_description: "Scores a surface 0–100 against heuristics and personas; PM-ready audit, read-only."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,5 @@
+interface:
+  display_name: "design-motion-principles"
+  short_description: "Builds motion or audits it with Emil / Krehel / Tompkins lenses; audit emits an HTML report with looping demos."
+policy:
+  allow_implicit_invocation: false

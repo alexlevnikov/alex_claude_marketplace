@@ -1,0 +1,5 @@
+interface:
+  display_name: "design-taste-frontend-v1"
+  short_description: "Original taste-skill v1, kept for projects that need its earlier behavior."
+policy:
+  allow_implicit_invocation: false

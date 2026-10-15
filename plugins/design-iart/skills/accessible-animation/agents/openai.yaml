@@ -1,0 +1,5 @@
+interface:
+  display_name: "accessible-animation"
+  short_description: "Honours prefers-reduced-motion with accessible motion patterns."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,20 @@
+{
+  "name": "design-skill-os",
+  "version": "0.1.1",
+  "description": "Справочник принципов дизайна из десяти книг: исследование, типографика, цвет, композиция, брендинг, сторителлинг и процесс.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "frhscopex design-skill-os",
+    "shortDescription": "Справочник принципов дизайна из десяти книг: исследование, типографика, цвет, композиция, брендинг, сторителлинг и процесс.",
+    "longDescription": "Один read-only скилл design отвечает на вопрос и обосновывает дизайн-решение; файлы и интерфейс не меняет.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read"
+    ],
+    "defaultPrompt": "Кратко расскажи, что умеет плагин design-skill-os, как вызвать его команды и навыки, и приведи примеры задач."
+  }
+}

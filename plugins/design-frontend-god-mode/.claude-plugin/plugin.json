@@ -1,0 +1,12 @@
+{
+  "name": "design-frontend-god-mode",
+  "version": "0.1.1",
+  "description": "Широкий frontend master для создания, переработки и полировки UI с единой дизайн-дисциплиной.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "frontend-god-mode"
+  ]
+}

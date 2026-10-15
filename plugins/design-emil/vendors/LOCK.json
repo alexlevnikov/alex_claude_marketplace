@@ -1,0 +1,68 @@
+{
+  "schema_version": 2,
+  "tools": {
+    "emil-design-eng": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/emil-design-eng/SKILL.md",
+      "sha256": "e9b2fb66191a4fb6aaa63c5739b5dee1605d427e68ab2a9010243266bd462a4b"
+    },
+    "apple-design": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/apple-design/SKILL.md",
+      "sha256": "1cbf13cd6e20b25d0aa8f3dce1c636b93aa0d3c3ecb5a7d53328fbfaf53ff8c4"
+    },
+    "find-animation-opportunities": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/find-animation-opportunities/SKILL.md",
+      "sha256": "7be77665d65d76c3846aa414796d07fbe1f8913d94dcf9f8ffcbee2896cdf752"
+    },
+    "improve-animations": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/improve-animations/SKILL.md",
+      "sha256": "9b94a0a0c7f73e8624fe1d2746d689fc4113fa1f4145965f8fc6fc4a2ac78660"
+    },
+    "review-animations": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/review-animations/SKILL.md",
+      "sha256": "2c5e6c2172c569d0732ec4c36f8a667f9608fb4f1360f64bf1238e111b7e9b78"
+    },
+    "animation-vocabulary": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/animation-vocabulary/SKILL.md",
+      "sha256": "e419635a45f57f00ce01199ba70b2cfa297ae0a038f122af00a92e570bd98dab"
+    },
+    "pick-ui-library": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/pick-ui-library/SKILL.md",
+      "sha256": "b4abbfb29d5cc111b40eb9479d3a3c15ff524856696e08ff29a688d6bc5cd84e"
+    },
+    "ask-sonner": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/ask-sonner/SKILL.md",
+      "sha256": "094bd8a24dae5fcdd35cdd4fe6f007b426db7167e5f1ffbe705dbbce9ae5fdec"
+    },
+    "prototype": {
+      "vendor": "emil",
+      "upstream": "https://github.com/emilkowalski/skills",
+      "upstream_revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "upstream_path": "skills/prototype/SKILL.md",
+      "sha256": "020163cbf37f3407c751d4bb42dc928b32e3a8b77bed3f11f9f474eb0b991b28"
+    }
+  }
+}

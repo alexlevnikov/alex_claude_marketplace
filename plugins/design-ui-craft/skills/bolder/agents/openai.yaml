@@ -1,0 +1,5 @@
+interface:
+  display_name: "bolder"
+  short_description: "Amplifies personality inside the current direction: stronger type, contrast, signature details."
+policy:
+  allow_implicit_invocation: false

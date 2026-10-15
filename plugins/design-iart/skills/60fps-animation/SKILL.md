@@ -1,0 +1,16 @@
+---
+name: 60fps-animation
+description: "Use iart-ai web-animation skill 60fps-animation for make a janky CSS animation hit 60fps"
+---
+
+# 60fps-animation
+
+Если пользователь вызвал навык без цели, файла и инструкций, прочитай `../../OVERVIEW.md` и дай короткий обзор возможностей, прямых вызовов и примеров применения. Ничего не запускай и не меняй.
+
+При конкретной задаче этот вендорский скилл уже выбран:
+
+Контракт вендора: How-to, not taste. Reach for these once the motion decision is made and a specific technique is named.
+
+1. Прочитай `../../vendors/60fps-animation/SKILL.md` и следуй процедуре для указанной пользователем цели.
+
+Относительные ссылки исходного скилла разрешай из его папки в `../../vendors/`. Slash-команды в исходном тексте относятся к Claude Code, не к Codex. Полный каталог пакета: `../../OVERVIEW.md`.

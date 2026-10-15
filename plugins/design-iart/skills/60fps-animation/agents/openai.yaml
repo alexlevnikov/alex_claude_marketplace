@@ -1,0 +1,5 @@
+interface:
+  display_name: "60fps-animation"
+  short_description: "Makes janky CSS animation hit 60fps."
+policy:
+  allow_implicit_invocation: false

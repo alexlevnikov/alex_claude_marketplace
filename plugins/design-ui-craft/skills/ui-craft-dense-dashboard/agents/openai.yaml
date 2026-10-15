@@ -1,0 +1,5 @@
+interface:
+  display_name: "ui-craft-dense-dashboard"
+  short_description: "ui-craft base tuned for dense data dashboards and tables."
+policy:
+  allow_implicit_invocation: false

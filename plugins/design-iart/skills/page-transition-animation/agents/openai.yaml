@@ -1,0 +1,5 @@
+interface:
+  display_name: "page-transition-animation"
+  short_description: "Page and view transitions."
+policy:
+  allow_implicit_invocation: false

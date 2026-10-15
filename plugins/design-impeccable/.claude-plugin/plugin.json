@@ -1,0 +1,12 @@
+{
+  "name": "design-impeccable",
+  "version": "0.1.1",
+  "description": "Один дизайн-директор для создания, критики, полировки и визуальной итерации интерфейса.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "impeccable"
+  ]
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "design-taste-frontend"
+  short_description: "Deals researched website art directions from its bundled library, builds the chosen direction, and inspects rendered out"
+policy:
+  allow_implicit_invocation: false

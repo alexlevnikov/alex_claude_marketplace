@@ -1,0 +1,5 @@
+interface:
+  display_name: "redesign"
+  short_description: "ui-craft's redesign lens: re-composes an existing surface against the brief and tokens."
+policy:
+  allow_implicit_invocation: false

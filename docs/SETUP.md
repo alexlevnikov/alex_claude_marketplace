@@ -1,6 +1,6 @@
 # Install and update
 
-This repository is the marketplace. Its three packs live in `plugins/`; install
+This repository is the marketplace. Its 18 packs live in `plugins/`; install
 each pack once, then use its skill names in any project. A clone outside a sync
 folder such as iCloud is the recommended working copy. GitHub is the sync
 channel. The GitHub repository can be public or private; private installs
@@ -13,6 +13,7 @@ claude plugin marketplace add alexlevnikov/alex_claude_marketplace
 claude plugin install design-tools@alex-claude-marketplace
 claude plugin install web-harvest@alex-claude-marketplace
 claude plugin install browser-lab@alex-claude-marketplace
+claude plugin install design-ui-craft@alex-claude-marketplace  # example standalone vendor
 ```
 
 Install only the packs you use. For a quick local check before publishing, run
@@ -25,6 +26,7 @@ After a published update:
 ```bash
 claude plugin marketplace update alex-claude-marketplace
 claude plugin update design-tools@alex-claude-marketplace
+claude plugin update design-ui-craft@alex-claude-marketplace
 ```
 
 Restart the Claude Code session so it loads the updated pack. An older separate
@@ -38,13 +40,15 @@ codex plugin marketplace add alexlevnikov/alex_claude_marketplace
 codex plugin add design-tools@alex-claude-marketplace
 codex plugin add web-harvest@alex-claude-marketplace
 codex plugin add browser-lab@alex-claude-marketplace
+codex plugin add design-ui-craft@alex-claude-marketplace  # example standalone vendor
 ```
 
-Use `$design-tools:design-tools ui-craft:typeset <task>` to select a vendor
-skill. `$design-tools:design-pipeline <task>` starts a whole-surface workflow.
-Codex 0.155 loads the pack skills and bundled files but does not expose the
-generated Claude command files as individual skills. Newer versions may differ;
-run `python3 scripts/codex-smoke.py` after an update.
+Use `$design-ui-craft:typeset <task>` to invoke a standalone vendor skill, or
+`$design-ui-craft:overview` for its short catalog. The umbrella fallback is
+`$design-tools:design-tools ui-craft:typeset <task>`;
+`$design-tools:design-pipeline <task>` starts a whole-surface workflow. See the
+[vendor pack list](../README.md#use-design-tools) and run
+`python3 scripts/codex-smoke.py` after an update.
 
 For a changed plugin version, refresh the marketplace with `codex plugin
 marketplace upgrade alex-claude-marketplace`, then remove and add that plugin
@@ -53,8 +57,9 @@ session after installing.
 
 ## Local dependencies and credentials
 
-- `design-tools` needs no separate vendor installation. Some vendor procedures
-  still need browser, image, or network capabilities. Impeccable's launcher can
+- Each vendor pack includes its pinned skill resources and license evidence;
+  `design-tools` retains a compatibility copy. Some procedures still need
+  browser, image, or network capabilities. Impeccable's launcher can
   download its upstream binary on first use.
 - `browser-lab` starts local MCP processes and requires its browser and runtime
   dependencies. Run `bash doctor.sh` on the machine using it.

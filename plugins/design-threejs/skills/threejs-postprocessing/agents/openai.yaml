@@ -1,0 +1,5 @@
+interface:
+  display_name: "threejs-postprocessing"
+  short_description: "Three.js EffectComposer passes: bloom, depth of field and more."
+policy:
+  allow_implicit_invocation: false

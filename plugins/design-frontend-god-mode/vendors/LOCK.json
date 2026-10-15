@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "tools": {
+    "frontend-god-mode": {
+      "vendor": "frontend-god-mode",
+      "upstream": "https://github.com/Shawnchee/frontend-god-mode",
+      "upstream_revision": "e19f282b1f798813df81e2d217ac8ce69369924e",
+      "upstream_path": "frontend-god-mode/SKILL.md",
+      "sha256": "1be0a3e2e036cedb8dfae4e73bae11cf7aeec8fa15cd92caee28ea34ddb3973b"
+    }
+  }
+}

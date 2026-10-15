@@ -1,0 +1,5 @@
+interface:
+  display_name: "high-end-visual-design"
+  short_description: "Makes an existing surface read as expensive: shadows, cards, spacing, 'absolute zero' anti-patterns."
+policy:
+  allow_implicit_invocation: false

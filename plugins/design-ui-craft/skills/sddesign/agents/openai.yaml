@@ -1,0 +1,5 @@
+interface:
+  display_name: "sddesign"
+  short_description: "ui-craft's six-gate conveyor for one surface: brief → tokens → shape → craft → converge → ship."
+policy:
+  allow_implicit_invocation: false

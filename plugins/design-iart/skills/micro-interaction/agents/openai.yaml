@@ -1,0 +1,5 @@
+interface:
+  display_name: "micro-interaction"
+  short_description: "Micro-interaction recipes: hover, press, toggle, feedback."
+policy:
+  allow_implicit_invocation: false

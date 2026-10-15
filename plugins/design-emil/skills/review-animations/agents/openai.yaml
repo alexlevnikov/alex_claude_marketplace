@@ -1,0 +1,5 @@
+interface:
+  display_name: "review-animations"
+  short_description: "Read-only review of animation code against Emil's craft bar; defaults to flagging."
+policy:
+  allow_implicit_invocation: false

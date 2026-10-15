@@ -1,0 +1,5 @@
+interface:
+  display_name: "ui-craft-minimal"
+  short_description: "ui-craft base with a minimal, whitespace-led aesthetic fixed in."
+policy:
+  allow_implicit_invocation: false

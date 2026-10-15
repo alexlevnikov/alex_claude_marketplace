@@ -1,0 +1,5 @@
+interface:
+  display_name: "ask-sonner"
+  short_description: "Answers questions about the Sonner toast library."
+policy:
+  allow_implicit_invocation: false

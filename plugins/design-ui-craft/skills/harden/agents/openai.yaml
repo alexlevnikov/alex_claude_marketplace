@@ -1,0 +1,5 @@
+interface:
+  display_name: "harden"
+  short_description: "Production-hardens a surface: skeletons, empty/error/partial states, i18n, offline, permissions, first run."
+policy:
+  allow_implicit_invocation: false

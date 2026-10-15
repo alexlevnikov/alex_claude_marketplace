@@ -1,0 +1,5 @@
+interface:
+  display_name: "frontend-god-mode"
+  short_description: "Consolidated do-everything frontend master skill; orchestrator."
+policy:
+  allow_implicit_invocation: false

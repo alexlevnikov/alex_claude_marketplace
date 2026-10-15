@@ -1,0 +1,5 @@
+interface:
+  display_name: "stitch-design-taste"
+  short_description: "taste-skill tuned for Google Stitch handoff."
+policy:
+  allow_implicit_invocation: false

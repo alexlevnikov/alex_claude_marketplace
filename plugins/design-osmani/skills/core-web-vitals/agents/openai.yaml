@@ -1,0 +1,5 @@
+interface:
+  display_name: "core-web-vitals"
+  short_description: "Diagnoses and improves LCP, INP, and CLS using field signals and browser traces when available."
+policy:
+  allow_implicit_invocation: false

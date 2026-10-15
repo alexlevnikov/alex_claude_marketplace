@@ -37,18 +37,33 @@ def main() -> int:
         prompt = call(env, "codex", "debug", "prompt-input", "Harness smoke test")
         json.loads(prompt)  # The prompt must be valid JSON, not only printable text.
         skill_count = 0
+        implicit_count = 0
+        explicit_count = 0
         for entry in CATALOG["plugins"]:
             plugin = entry["name"]
+            installed_root = Path(installs[plugin]["installedPath"])
             for skill in (ROOT / "plugins" / plugin / "skills").glob("*/SKILL.md"):
                 qualified = f"{plugin}:{skill.parent.name}"
-                if qualified not in prompt:
-                    raise RuntimeError(f"{qualified} is absent from Codex prompt input")
+                installed_skill = installed_root / "skills" / skill.parent.name / "SKILL.md"
+                if not installed_skill.is_file():
+                    raise RuntimeError(f"{qualified} is absent from installed plugin cache")
+                policy = skill.parent / "agents" / "openai.yaml"
+                explicit_only = policy.is_file() and "allow_implicit_invocation: false" in policy.read_text()
+                if explicit_only:
+                    # Explicit-only skills are available through `$` but omitted from
+                    # model-visible prompt input until the user invokes them.
+                    explicit_count += 1
+                else:
+                    if qualified not in prompt:
+                        raise RuntimeError(f"implicit skill {qualified} is absent from Codex prompt input")
+                    implicit_count += 1
                 skill_count += 1
         installed = Path(installs["design-tools"]["installedPath"])
         selector = call(env, sys.executable, str(installed / "scripts" / "invoke.py"), "ui-craft:typeset")
         if "status: OK" not in selector or str(installed / "vendors" / "typeset" / "SKILL.md") not in selector:
             raise RuntimeError("installed design-tools selector cannot load the bundled skill")
-        print(f"Codex smoke OK: {len(installs)} packs, {skill_count} entry skills, bundled vendor selector")
+        print(f"Codex smoke OK: {len(installs)} packs, {skill_count} entry skills "
+              f"({implicit_count} implicit, {explicit_count} explicit), bundled vendor selector")
     return 0
 
 

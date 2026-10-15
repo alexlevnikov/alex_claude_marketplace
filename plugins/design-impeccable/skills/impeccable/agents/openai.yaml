@@ -1,0 +1,5 @@
+interface:
+  display_name: "impeccable"
+  short_description: "pbakaus's design director with internal modes — shape, audit, critique, typeset, colorize, polish, harden, live and more"
+policy:
+  allow_implicit_invocation: false

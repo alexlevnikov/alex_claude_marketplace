@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "tools": {
+    "design-motion-principles": {
+      "vendor": "design-motion-principles",
+      "upstream": "https://github.com/kylezantos/design-motion-principles",
+      "upstream_revision": "4a9ca879f24a361f4dca4174fe2da0f67b5ddee3",
+      "upstream_path": "skills/design-motion-principles/SKILL.md",
+      "sha256": "5a951f307fd07297c8d9559afc01cb1fa4c8268e2c3d62b82dc67c536a0cdbe4"
+    }
+  }
+}

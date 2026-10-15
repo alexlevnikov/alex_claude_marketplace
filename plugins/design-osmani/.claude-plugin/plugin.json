@@ -1,0 +1,12 @@
+{
+  "name": "design-osmani",
+  "version": "0.1.1",
+  "description": "Проверка качества веб-страниц по доступности, Core Web Vitals, скорости, SEO и практикам платформы.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "osmani"
+  ]
+}

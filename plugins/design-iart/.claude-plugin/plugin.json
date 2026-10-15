@@ -1,0 +1,12 @@
+{
+  "name": "design-iart",
+  "version": "0.1.1",
+  "description": "Девять технических рецептов веб-анимации: GSAP, SVG, Lottie playback, переходы, микровзаимодействия и 60fps.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "iart"
+  ]
+}

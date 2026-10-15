@@ -1,0 +1,5 @@
+interface:
+  display_name: "fixing-motion-performance"
+  short_description: "Fixes janky animation: compositor-only properties, layout thrash, reduced-motion, perf budget."
+policy:
+  allow_implicit_invocation: false

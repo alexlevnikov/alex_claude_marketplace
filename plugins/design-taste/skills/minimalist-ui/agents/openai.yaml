@@ -1,0 +1,5 @@
+interface:
+  display_name: "minimalist-ui"
+  short_description: "Direction preset: minimalist UI."
+policy:
+  allow_implicit_invocation: false

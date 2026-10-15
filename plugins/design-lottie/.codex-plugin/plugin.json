@@ -1,0 +1,21 @@
+{
+  "name": "design-lottie",
+  "version": "0.1.1",
+  "description": "Принципы проектирования UI-motion от LottieFiles: тайминг, easing, хореография и выбор способа реализации.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "LottieFiles",
+    "shortDescription": "Принципы проектирования UI-motion от LottieFiles: тайминг, easing, хореография и выбор способа реализации.",
+    "longDescription": "Один основной скилл motion-design проектирует движение с нуля и применим к CSS, Motion, GSAP, Lottie и пружинам.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Кратко расскажи, что умеет плагин design-lottie, как вызвать его команды и навыки, и приведи примеры задач."
+  }
+}

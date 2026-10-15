@@ -1,0 +1,5 @@
+interface:
+  display_name: "colorize"
+  short_description: "Applies and tunes colour on existing UI: palette use, theming, dark mode, accent budget."
+policy:
+  allow_implicit_invocation: false

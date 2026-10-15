@@ -33,17 +33,26 @@ def check_catalog() -> dict[str, Path]:
         name, source = entry.get("name"), entry.get("source")
         if not isinstance(name, str) or name in installed:
             fail(f"duplicate or invalid plugin name: {name!r}")
-        if source != f"./plugins/{name}":
-            fail(f"{name}: source must be ./plugins/{name}")
-        root = ROOT / source
+        expected_source = f"./plugins/{name}"
+        if isinstance(source, dict):
+            if source != {"source": "local", "path": expected_source}:
+                fail(f"{name}: local source must point to {expected_source}")
+            source_path = source["path"]
+        elif source == expected_source:
+            source_path = source
+        else:
+            fail(f"{name}: source must be {expected_source}")
+        root = ROOT / source_path
         if root.is_symlink():
             fail(f"{name}: pack directory must not be a symlink")
         manifest_path = root / ".claude-plugin" / "plugin.json"
         manifest = read_json(manifest_path)
         if manifest.get("name") != name:
             fail(f"{name}: manifest name differs from marketplace")
-        if manifest.get("version") != entry.get("version"):
+        if entry.get("version") is not None and manifest.get("version") != entry["version"]:
             fail(f"{name}: manifest and marketplace versions differ")
+        if not manifest.get("version"):
+            fail(f"{name}: manifest version is missing")
         skills = list((root / "skills").glob("*/SKILL.md"))
         if not skills:
             fail(f"{name}: no top-level skills")
@@ -103,8 +112,12 @@ def main() -> int:
         design = packs["design-tools"] / "scripts"
         run(sys.executable, str(design / "check_bundle.py"))
         run(sys.executable, str(design / "build.py"), "--check")
-        run("git", "diff", "--check")
-        run("git", "diff", "--cached", "--check")
+        run(sys.executable, str(design / "export_vendor_plugins.py"), "--check")
+        # Vendored snapshots are pinned by hash. Preserve upstream whitespace;
+        # check authored files here and let check_bundle/export verify copies.
+        authored = ("--", ".", ":(exclude,glob)plugins/design-*/vendors/**")
+        run("git", "diff", "--check", *authored)
+        run("git", "diff", "--cached", "--check", *authored)
         print("Library OK")
     except (ValueError, subprocess.CalledProcessError) as exc:
         print(f"Library check failed: {exc}", file=sys.stderr)

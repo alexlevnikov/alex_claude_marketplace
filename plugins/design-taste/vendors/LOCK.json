@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "tools": {
+    "design-taste-frontend": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/taste-skill/SKILL.md",
+      "sha256": "21aa7dd60840bd68a65a226e6d784bbada3f01e5cfe2ea82086be1e83b6e59d9"
+    },
+    "design-taste-frontend-v1": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/taste-skill-v1/SKILL.md",
+      "sha256": "1ac5b62809cff95a6633c4018fbfa6053361f80493acbc590310a1859b6c9760"
+    },
+    "gpt-taste": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/gpt-tasteskill/SKILL.md",
+      "sha256": "99022f365838ae1fe67fe8574d018920f635eb22a5e1a5cda1595308c298e3b9"
+    },
+    "high-end-visual-design": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/soft-skill/SKILL.md",
+      "sha256": "38e3c73a48abcdf1b33e3a58158038f47765ab902e67f92bfa163e49f0763518"
+    },
+    "brandkit": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/brandkit/SKILL.md",
+      "sha256": "54993c3c3da80f4ac2d80a7e99b87b7092ccfda2292e2832fc8d07e404228e8c"
+    },
+    "imagegen-frontend-web": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/imagegen-frontend-web/SKILL.md",
+      "sha256": "9fc826d99cc47121d4071b2a69611a834025b2e5e095f6afe385a412210b430b"
+    },
+    "imagegen-frontend-mobile": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/imagegen-frontend-mobile/SKILL.md",
+      "sha256": "284263951ff525673ffe451e5d685e8d89c9580099b93f6272910fb3fc110e56"
+    },
+    "image-to-code": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/image-to-code-skill/SKILL.md",
+      "sha256": "bb47707147a7547e6f9dc2b07df9b5d51e159162f64acb05bccc5afaf635eab8"
+    },
+    "full-output-enforcement": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/output-skill/SKILL.md",
+      "sha256": "254f14dc185b5b8ab5b9581662d248cd7e861cec77f1ade464a7a4a3f2a81722"
+    },
+    "minimalist-ui": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/minimalist-skill/SKILL.md",
+      "sha256": "6c77b040acc234dea91948fdf585964ee344679dcbc76b080b30a83cc51fd7ad"
+    },
+    "industrial-brutalist-ui": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/brutalist-skill/SKILL.md",
+      "sha256": "31c38a2ab7be29e8f9613385c0c243e0eba204ebb7e5e727b3012e281b600874"
+    },
+    "redesign-existing-projects": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/redesign-skill/SKILL.md",
+      "sha256": "80255a23350e3bccb87f70770d6d8d49ee260583f9db70c48a86fb6f0e97831e"
+    },
+    "stitch-design-taste": {
+      "vendor": "taste",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "upstream_revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "upstream_path": "skills/stitch-skill/SKILL.md",
+      "sha256": "d3b3e1c598d7bcc43191a0ae39ee5d78becb6a8814ce79856bb90e4e20b970af"
+    }
+  }
+}

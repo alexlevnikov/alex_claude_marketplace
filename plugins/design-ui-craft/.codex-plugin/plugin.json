@@ -1,0 +1,21 @@
+{
+  "name": "design-ui-craft",
+  "version": "0.1.1",
+  "description": "Система проектирования веб-интерфейсов: базовые правила, бриф, токены, этапы, точечные улучшения и оценка результата.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ui-craft by educlopez",
+    "shortDescription": "Система проектирования веб-интерфейсов: базовые правила, бриф, токены, этапы, точечные улучшения и оценка результата.",
+    "longDescription": "Базовый ui-craft задаёт правила и формат результата; узкие скиллы сначала читают базу. Этапы brief/tokens/shape/craft могут вести диалог и записывать .ui-craft/brief.md и .ui-craft/spec.md.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Кратко расскажи, что умеет плагин design-ui-craft, как вызвать его команды и навыки, и приведи примеры задач."
+  }
+}

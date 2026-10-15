@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "tools": {
+    "calm-design": {
+      "vendor": "calm-design",
+      "upstream": "https://github.com/calmtiger86/calm-design",
+      "upstream_revision": "c85ed30665a90a324cd08e68f80377b5cc2c0c86",
+      "upstream_path": "SKILL.md",
+      "sha256": "4b152a7220cd78de7cab1c569243fdd1d9b3a4bd17cba84688350cfba339cdd9"
+    }
+  }
+}

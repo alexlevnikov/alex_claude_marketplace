@@ -1,0 +1,5 @@
+interface:
+  display_name: "full-output-enforcement"
+  short_description: "Modifier: bans placeholders, ellipses and truncated output in whatever the next tool writes."
+policy:
+  allow_implicit_invocation: false

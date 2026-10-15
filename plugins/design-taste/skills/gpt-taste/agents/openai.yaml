@@ -1,0 +1,5 @@
+interface:
+  display_name: "gpt-taste"
+  short_description: "taste-skill variant tuned for GPT-style output."
+policy:
+  allow_implicit_invocation: false

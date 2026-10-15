@@ -1,0 +1,12 @@
+{
+  "name": "design-awwwards",
+  "version": "0.1.1",
+  "description": "Один арт-директор для выразительных веб-страниц по принципам проектов уровня Awwwards.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "awwwards"
+  ]
+}

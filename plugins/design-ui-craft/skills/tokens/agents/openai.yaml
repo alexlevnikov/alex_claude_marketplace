@@ -1,0 +1,5 @@
+interface:
+  display_name: "tokens"
+  short_description: "Establishes or audits the three-layer design-token spine (primitive → semantic → component)."
+policy:
+  allow_implicit_invocation: false

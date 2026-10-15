@@ -1,0 +1,5 @@
+interface:
+  display_name: "imagegen-frontend-mobile"
+  short_description: "Generates reference imagery for mobile screens before any code."
+policy:
+  allow_implicit_invocation: false

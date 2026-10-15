@@ -1,0 +1,12 @@
+{
+  "name": "design-ui-craft",
+  "version": "0.1.1",
+  "description": "Система проектирования веб-интерфейсов: базовые правила, бриф, токены, этапы, точечные улучшения и оценка результата.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "keywords": [
+    "design",
+    "ui-craft"
+  ]
+}

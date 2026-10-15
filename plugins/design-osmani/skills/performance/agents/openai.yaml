@@ -1,0 +1,5 @@
+interface:
+  display_name: "performance"
+  short_description: "Cuts page weight and load time: payload, critical path, fonts, images, caching."
+policy:
+  allow_implicit_invocation: false

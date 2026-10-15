@@ -1,0 +1,5 @@
+interface:
+  display_name: "accessibility"
+  short_description: "Full WCAG 2.2 accessibility pass — POUR, conformance level, fixes."
+policy:
+  allow_implicit_invocation: false

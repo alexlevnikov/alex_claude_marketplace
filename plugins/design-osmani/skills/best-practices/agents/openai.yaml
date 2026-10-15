@@ -1,0 +1,5 @@
+interface:
+  display_name: "best-practices"
+  short_description: "Reviews runtime and source evidence for security, compatibility, and modern platform practices."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,5 @@
+interface:
+  display_name: "animation-vocabulary"
+  short_description: "Reverse dictionary: describe an effect, get its name and a reference."
+policy:
+  allow_implicit_invocation: false

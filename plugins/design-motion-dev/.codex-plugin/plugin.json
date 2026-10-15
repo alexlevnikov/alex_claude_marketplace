@@ -1,0 +1,21 @@
+{
+  "name": "design-motion-dev",
+  "version": "0.1.1",
+  "description": "Паттерны Motion.dev/Framer Motion для входов, скролла, жестов, микровзаимодействий и layout-переходов.",
+  "author": {
+    "name": "Alex Levnikov"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Motion.dev skill",
+    "shortDescription": "Паттерны Motion.dev/Framer Motion для входов, скролла, жестов, микровзаимодействий и layout-переходов.",
+    "longDescription": "Один master motion-dev-animations уточняет задачу, планирует эффект, реализует и проверяет его по встроенным примерам и справочникам.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Кратко расскажи, что умеет плагин design-motion-dev, как вызвать его команды и навыки, и приведи примеры задач."
+  }
+}

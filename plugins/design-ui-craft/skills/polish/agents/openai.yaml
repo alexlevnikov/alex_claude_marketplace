@@ -1,0 +1,5 @@
+interface:
+  display_name: "polish"
+  short_description: "Final finish pass on a surface that is already right: alignment, spacing, micro-details, using project tokens."
+policy:
+  allow_implicit_invocation: false

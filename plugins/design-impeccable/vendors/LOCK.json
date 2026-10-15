@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "tools": {
+    "impeccable": {
+      "vendor": "impeccable",
+      "upstream": "https://github.com/pbakaus/impeccable",
+      "upstream_revision": "2f98774f86bc05563876643db37e6c37c322850f",
+      "upstream_path": ".claude/skills/impeccable/SKILL.md",
+      "sha256": "3826f1cb31ba28317c35bb1eb0a550604ade863fa4bbc6ccd63a41f15e24f458"
+    }
+  }
+}

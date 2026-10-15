@@ -1,0 +1,5 @@
+interface:
+  display_name: "image-to-code"
+  short_description: "Generates a visual reference, analyses it, then codes the UI from it; tuned for Codex."
+policy:
+  allow_implicit_invocation: false

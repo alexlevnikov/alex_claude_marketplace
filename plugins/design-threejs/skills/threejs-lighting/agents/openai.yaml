@@ -1,0 +1,5 @@
+interface:
+  display_name: "threejs-lighting"
+  short_description: "Three.js lights, shadows, environment maps."
+policy:
+  allow_implicit_invocation: false

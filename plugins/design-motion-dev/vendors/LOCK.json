@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "tools": {
+    "motion-dev-animations": {
+      "vendor": "motion-dev",
+      "upstream": "https://github.com/199-biotechnologies/motion-dev-animations-skill",
+      "upstream_revision": "3feedfb4dba8adae40fc9a5f9a23e3dda2121205",
+      "upstream_path": "SKILL.md",
+      "sha256": "ff99f404d3c5722c00ed504ae0a115348ed8170b52b38c106c147129351048d5"
+    }
+  }
+}

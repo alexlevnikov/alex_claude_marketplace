@@ -1,0 +1,5 @@
+interface:
+  display_name: "quieter"
+  short_description: "Tones a loud surface down: fewer accents, calmer type and motion, more whitespace."
+policy:
+  allow_implicit_invocation: false

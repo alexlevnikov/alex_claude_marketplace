@@ -1,0 +1,5 @@
+interface:
+  display_name: "adapt"
+  short_description: "Makes an existing layout responsive: breakpoints, touch targets, safe areas, fluid type, container queries."
+policy:
+  allow_implicit_invocation: false

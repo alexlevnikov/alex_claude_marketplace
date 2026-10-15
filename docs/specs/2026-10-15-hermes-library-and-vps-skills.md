@@ -1,23 +1,88 @@
-# Hermes library and portable VPS skills: implementation plan
+# Hermes Architect: библиотека компонентов и публичные VPS-скиллы
 
-Status: implemented in the marketplace working tree on 2026-10-15; publication remains a separate Git operation.
+Статус: реализовано и опубликовано в `alex_claude_marketplace` 15 октября 2026 года. Этот документ фиксирует план, границы и проверку результата; новые исследования продолжают пополнять сам `hermes-agent-architect`.
 
-## Goals and boundaries
+## Цель
 
-Keep `hermes-agent-architect` as the main living library of Hermes mechanics, component cards, deep research, architecture decisions and reusable bot patterns. Support specific design and audit tasks with short sibling skills. Keep the marketplace public: no server map, real tailnet policy, credentials, runtime profiles, session data or personal memory. The existing private host-architecture skill remains the owner of machine topology.
+Сохранить `hermes-agent-architect` как основной скилл и библиотеку для построения Hermes-ботов. В библиотеке находятся механики платформы, полный обзор функций, глубокие исследования, архитектурные решения и повторяемые паттерны. Узкие соседние скиллы применяют эту библиотеку к конкретной задаче и не копируют её содержание. Репозиторий публичный; состояние конкретных серверов и ботов в него не переносится.
 
-## Work sequence
+Успешное применение выглядит так: Codex находит нужный компонент и прежние решения, сверяет текущую официальную документацию с закреплённым исходным кодом, отдельно проверяет целевого бота, проектирует или меняет его в собственном репозитории, затем сохраняет переносимый вывод с доказательством и границей применимости.
 
-1. Move the pinned Hermes submodule from the architect skill directory to the Hermes plugin root; update paths and verify that Codex no longer discovers its nested skills.
-2. Preserve overview and research; add component cards, a searchable knowledge corpus, an accepted library-boundary decision and a new-bot pattern. Require versioned evidence and a public-content check for future additions.
-3. Add `hermes-bot-blueprint`, `hermes-extension-author` and `hermes-runtime-audit` as focused workflows that read the architect library rather than duplicate it.
-4. Add a separate, skills-only `vps-operator` plugin for portable service and Tailscale access reviews. Keep the machine-specific inventory in private sources.
-5. Validate skill frontmatter, links, catalog paths, manifest registration, public hygiene and the local Codex installation. Do not alter running services.
+## Архитектура
 
-## Acceptance criteria
+```text
+plugins/hermes-agent-architect/
+  skills/
+    hermes-agent-architect/       # основная библиотека и отдельная папка проекта Codex
+      SKILL.md
+      references/components/      # карточки механик
+      references/decisions/       # решения владельца
+      references/patterns/        # повторяемые схемы
+      docs/                       # полный обзор и исследования
+      data/docs-catalog.json      # официальный индекс и привязка к тегу
+      scripts/                    # поиск и проверка знаний
+    hermes-bot-blueprint/         # проектирование нового бота
+    hermes-extension-author/      # выбор и разработка расширения
+    hermes-runtime-audit/         # сравнение Git, образа, профиля и документации
+  upstream/hermes-agent/          # чистый submodule вне installable skills
+plugins/vps-operator/
+  skills/vps-service-audit/       # переносимая проверка Compose/systemd
+  skills/tailscale-access-review/ # переносимая проверка доступа
+```
 
-- The architect skill still links to its overview, memory studies, official catalog, decisions and patterns.
-- The pinned source remains at commit `345cd2b057a452236de401d3534b8502a7465e8d`, with no nested upstream skill in the installed architect directory.
-- New skills appear as top-level plugin skills and can resolve shared library references.
-- Public authored files contain no concrete VPS or tailnet inventory.
-- Read-only checks pass, and any unrelated working-tree changes remain untouched.
+Hermes и VPS-процедуры разделены по жизненному циклу установки. Оба плагина состоят только из скиллов и не запускают MCP-процессы. Настоящие карты хостов, адреса, tailnet policy, секреты, профили, пользовательская память и сессии остаются в приватных источниках. Публичный скилл может запросить приватный контекст у установленного на машине локального скилла, но не содержит его копию.
+
+## Этапы и результат
+
+### 1. Исправить обнаружение скиллов
+
+- Перенести закреплённый `v2026.9.14` submodule из папки architect-скилла на уровень Hermes-плагина, не меняя commit `345cd2b057a452236de401d3534b8502a7465e8d`.
+- Обновить `.gitmodules`, README, поиск документации и ссылки в исследованиях.
+- Проверить, что внутри установленного architect-скилла остаётся один `SKILL.md`, а файлы тега доступны по новому пути.
+
+Результат: Codex больше не регистрирует сотни upstream-скиллов как часть личной библиотеки.
+
+### 2. Сформировать живую библиотеку
+
+- Оставить обзор платформы, исследование памяти и обзор провайдеров в `docs/`.
+- Завести короткие карточки профилей и сессий, расширений, памяти и автоматизации. Каждая карточка отвечает на вопрос «когда применять», указывает границы и первичные источники.
+- Записать принятое владельцем решение о публичной библиотеке и приватной карте инфраструктуры; добавить черновой паттерн нового Hermes-бота.
+- Добавить поиск по авторским материалам (`find_knowledge.py`) отдельно от поиска по официальному каталогу (`find_docs.py`).
+- Добавить `validate_knowledge.py`: проверка формата записей, ссылок, закреплённой версии и типовых утечек машинных путей, адресов и ключей.
+
+Новая запись считается проверенной только после чтения первичного источника и указания области применимости. Решение получает статус `accepted` лишь после выбора владельца. Черновик не выдаётся за испытанный паттерн.
+
+### 3. Добавить прикладные Hermes-скиллы
+
+- `hermes-bot-blueprint` составляет архитектуру бота из требований, компонентов, границ данных, проверки и отката.
+- `hermes-extension-author` выбирает поддерживаемый контракт: skill, plugin, MCP, provider, adapter или обоснованный патч ядра.
+- `hermes-runtime-audit` сопоставляет три разных свидетельства: текущий официальный сайт, закреплённый исходный код и реально работающий экземпляр.
+
+Каждый скилл читает основную библиотеку через относительные ссылки. Код и конфигурация конкретного бота принадлежат его исходному репозиторию.
+
+### 4. Выделить публичные процедуры VPS/Tailscale
+
+- В отдельном `vps-operator` держать только универсальную проверку источника и развёртывания Compose/systemd, а также доступов Tailscale SSH, grants, Serve и Funnel.
+- Реальные имена узлов, маршруты, IP, политики, SSH-идентичности и карта сервисов остаются в приватном операционном скилле или проекте.
+- Сначала читать состояние и готовить план изменения с проверкой и откатом. Публичный плагин сам по себе не меняет работающие сервисы.
+
+### 5. Установка и приёмка
+
+- Зарегистрировать оба плагина в marketplace и синхронизировать версии manifest/catalog.
+- Подключить новые скиллы локально символическими ссылками на Git checkout, чтобы следующая VPS-сессия читала обновлённые файлы. На другой машине нужен Git pull или обновление установленного плагина.
+- Прогнать валидатор всех шести скиллов, проверку каталога marketplace, поиск по знаниям, проверку pinned commit, изолированную установку обоих плагинов и проверку Codex prompt discovery.
+- Проверить публичную границу и оставить чужие изменения рабочего дерева вне коммита.
+
+Все эти проверки выполнены. Изолированная установка увидела четыре Hermes-скилла и два VPS-скилла; в установленном architect-каталоге только один `SKILL.md`. Работающие боты и контейнеры не менялись.
+
+## Постоянный цикл обновления
+
+1. Во время проектирования найти карточку компонента, прежнее решение и точный документ в каталоге.
+2. Сверить текущий официальный источник с pinned тегом. Для действующего бота дополнительно проверить приватную карту, исходный репозиторий, образ и профиль.
+3. После задачи сохранить только переносимый вывод: обновить карточку, паттерн, исследование или решение с датой, версией и ссылкой на доказательство.
+4. Запустить `python3 scripts/validate_knowledge.py`, прочитать diff, зафиксировать и опубликовать Git-коммит. Уже открытая сессия может потребовать перечитать изменённый файл.
+5. Обновлять закреплённый upstream и каталог как отдельное изменение с анализом отличий; наличие нового документа само по себе не означает доступность функции у бота.
+
+## Откат и ограничения
+
+Поскольку плагины не развёртывают сервисы, их откат — возврат Git-коммита и обновление локальной установки. Если откатывается перенос submodule, следует также синхронизировать `.gitmodules` и инициализированный checkout. Проверка структуры и типовых утечек не заменяет ревью источников и публичного diff. Приватная карта VPS остаётся самостоятельным источником фактов о развёртывании.

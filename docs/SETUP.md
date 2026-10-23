@@ -1,6 +1,6 @@
 # Install and update
 
-This repository is the marketplace. Its 18 packs live in `plugins/`; install
+This repository is the marketplace. Its 21 packs live in `plugins/`; install
 each pack once, then use its skill names in any project. A clone outside a sync
 folder such as iCloud is the recommended working copy. GitHub is the sync
 channel. The GitHub repository can be public or private; private installs
@@ -40,6 +40,7 @@ codex plugin marketplace add alexlevnikov/alex_claude_marketplace
 codex plugin add design-tools@alex-claude-marketplace
 codex plugin add web-harvest@alex-claude-marketplace
 codex plugin add browser-lab@alex-claude-marketplace
+codex plugin add openviking@alex-claude-marketplace
 codex plugin add design-ui-craft@alex-claude-marketplace  # example standalone vendor
 ```
 
@@ -56,6 +57,8 @@ again if the installed cache still points at the earlier version. Reopen the
 session after installing.
 
 For `hermes-agent-architect`, Codex may omit the pinned upstream submodule from its cache. Use the separate public marketplace checkout and automatic resolver described in the [Hermes setup](../plugins/hermes-agent-architect/README.md#pinned-source-for-codex-installations). Keep only the normal plugin installed; do not add duplicate user-skill symlinks.
+
+For OpenViking OAuth and ChatGPT Pro setup, see the [OpenViking plugin guide](../plugins/openviking/README.md).
 
 ## Local dependencies and credentials
 

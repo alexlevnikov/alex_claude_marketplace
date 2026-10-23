@@ -1,6 +1,6 @@
 {
   "name": "hermes-agent-architect",
-  "version": "0.2.1",
+  "version": "0.2.5+codex.20261022224000",
   "description": "Hermes component library, evidence-based bot design, extensions, and runtime audits.",
   "author": {
     "name": "Alex Levnikov"

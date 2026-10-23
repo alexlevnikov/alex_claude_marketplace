@@ -11,6 +11,7 @@ their contents.
 | [web-harvest](plugins/web-harvest/) | Search, scrape, crawl, and extraction | Routing skill and hosted MCP connections; credentials stay local |
 | [hermes-agent-architect](plugins/hermes-agent-architect/) | Research Hermes and design bots | Living component library, deep research, decisions, bot workflows, pinned upstream |
 | [vps-operator](plugins/vps-operator/) | Audit VPS services and Tailscale access | Portable skills; private host maps stay outside this repository |
+| [openviking](plugins/openviking/) | Search and read owner-authorized OpenViking memory | OAuth HTTP MCP connection and retrieval skill |
 | [design-tools](plugins/design-tools/) | Discover design tools or build a new web surface | Discovery and pipeline skills, commands, wiki, and a compatibility copy of 87 vendor skills |
 | [design vendor plugins](plugins/design-tools/registry/vendor-plugin-overviews.json) | Install and invoke one vendor independently | 15 standalone packs with direct skills, commands, resources, and license evidence |
 

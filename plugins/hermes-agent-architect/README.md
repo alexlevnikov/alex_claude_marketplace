@@ -1,6 +1,6 @@
 # Hermes Agent Architect
 
-The [architect skill](skills/hermes-agent-architect/SKILL.md) remains the primary component and research library: [component cards](skills/hermes-agent-architect/references/components/index.md), [architecture decisions](skills/hermes-agent-architect/references/decisions/), [bot patterns](skills/hermes-agent-architect/references/patterns/), [full platform overview](skills/hermes-agent-architect/docs/hermes-platform-overview.md), memory research and an official documentation catalog. Focused sibling skills turn that library into bot blueprints, extension designs and runtime audits.
+The [architect skill](skills/hermes-agent-architect/SKILL.md) remains the primary component and research library: [component cards](skills/hermes-agent-architect/references/components/index.md), [architecture decisions](skills/hermes-agent-architect/references/decisions/), [bot patterns](skills/hermes-agent-architect/references/patterns/), [full platform overview](skills/hermes-agent-architect/docs/hermes-platform-overview.md), memory research and an official documentation catalog. Focused sibling skills turn that library into bot blueprints, extension designs and runtime audits. The [OpenViking memory skill](skills/openviking-memory/SKILL.md) provides a pinned, searchable copy of the official OpenViking documentation plus architecture, configuration, integration and operations guides.
 
 The clean Hermes `v2026.9.14` submodule is pinned at `upstream/hermes-agent`, outside `skills/`, to avoid discovering upstream skills as this plugin's skills. Initialize it after cloning with `git submodule update --init -- plugins/hermes-agent-architect/upstream/hermes-agent` from the marketplace root.
 
@@ -21,7 +21,7 @@ Before using an existing destination, review its origin, branch and Git status.
 Preserve local changes; do not clone over it or reset it. This checkout remains
 outside iCloud and outside managed caches. It is source storage, not another
 skill installation: do not link its skills into `~/.agents/skills` or add it as a
-second marketplace. Codex should discover exactly the four plugin skills.
+second marketplace. Codex should discover exactly the five plugin skills.
 
 From the installed architect skill, `scripts/resolve_upstream.py` automatically
 tries the adjacent submodule, then the standard checkout above. Both must match
@@ -39,6 +39,14 @@ When an intentionally reviewed plugin update changes the pin, first review the
 external checkout for local changes, fast-forward its main branch, then run the
 submodule update command again. An old or edited source is rejected until it
 matches; the resolver does not automatically advance or erase it.
+
+### OpenViking documentation
+
+The OpenViking skill includes all 304 Markdown pages under upstream `docs/` at commit `824e9c7ff5e7cebbc36f55257c39f8bbe75d5a24`. Its [manifest](skills/openviking-memory/references/upstream/manifest.json) records source blob hashes, and the copied documentation retains its [AGPL-3.0 license](skills/openviking-memory/references/upstream/LICENSE). It is a documentation snapshot, not a deployed OpenViking server. Verify it with `python3 plugins/hermes-agent-architect/skills/openviking-memory/scripts/verify_docs.py`.
+
+### Project context
+
+The [project context instructions](skills/hermes-agent-architect/docs/project-context-routing.md) tell each skill where to look for Reflection, Life Manager, Hermes Corpus and shared VPS memory: Linear Resources, current plans, checkout documents and relevant code. Research is supporting evidence for unresolved questions. Physical host paths and runtime inventories remain in private operations sources.
 
 ### Verification
 

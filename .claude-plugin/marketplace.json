@@ -278,7 +278,7 @@
       "name": "hermes-agent-architect",
       "source": "./plugins/hermes-agent-architect",
       "description": "Hermes Agent component library, research, bot blueprints, extensions, and runtime audits.",
-      "version": "0.2.1",
+      "version": "0.2.5",
       "author": {
         "name": "Alex Levnikov"
       },
@@ -303,6 +303,14 @@
         "tailscale",
         "operations"
       ]
+    },
+    {
+      "name": "openviking",
+      "source": "./plugins/openviking",
+      "description": "Read-only OAuth MCP access to the owner's OpenViking memory for Codex and Claude Code.",
+      "version": "0.1.0",
+      "author": { "name": "Alex Levnikov" },
+      "keywords": ["openviking", "memory", "mcp", "search"]
     }
   ]
 }

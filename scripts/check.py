@@ -112,13 +112,17 @@ def main() -> int:
         hermes = packs["hermes-agent-architect"]
         run(sys.executable, "-B", "-m", "unittest", "discover", "-s", str(hermes / "tests"), "-v")
         run(sys.executable, "-B", str(hermes / "skills/hermes-agent-architect/scripts/validate_knowledge.py"))
+        run(sys.executable, "-B", str(hermes / "skills/openviking-memory/scripts/verify_docs.py"))
         design = packs["design-tools"] / "scripts"
         run(sys.executable, str(design / "check_bundle.py"))
         run(sys.executable, str(design / "build.py"), "--check")
         run(sys.executable, str(design / "export_vendor_plugins.py"), "--check")
         # Vendored snapshots are pinned by hash. Preserve upstream whitespace;
         # check authored files here and let check_bundle/export verify copies.
-        authored = ("--", ".", ":(exclude,glob)plugins/design-*/vendors/**")
+        authored = (
+            "--", ".", ":(exclude,glob)plugins/design-*/vendors/**",
+            ":(exclude,glob)plugins/hermes-agent-architect/skills/openviking-memory/references/upstream/**",
+        )
         run("git", "diff", "--check", *authored)
         run("git", "diff", "--cached", "--check", *authored)
         print("Library OK")

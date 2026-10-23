@@ -1,0 +1,7 @@
+{
+  "name": "openviking",
+  "version": "0.1.0",
+  "description": "Read-only OAuth MCP access to the owner's OpenViking memory.",
+  "author": { "name": "Alex Levnikov" },
+  "keywords": ["openviking", "memory", "mcp", "search"]
+}

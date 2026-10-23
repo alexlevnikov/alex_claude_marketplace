@@ -1,0 +1,1527 @@
+{
+  "repository": "https://github.com/volcengine/OpenViking",
+  "commit": "824e9c7ff5e7cebbc36f55257c39f8bbe75d5a24",
+  "scope": "docs/**/*.md",
+  "files": [
+    {
+      "path": "docs/.vitepress/brand-e.md",
+      "blob_sha": "298e7281172351df5c9b0b444b35ed734e60a844",
+      "size": 2183
+    },
+    {
+      "path": "docs/.vitepress/deployment-context.md",
+      "blob_sha": "5841dfa55938e25968b415ac632df71175cab3cf",
+      "size": 7042
+    },
+    {
+      "path": "docs/.vitepress/LANGUAGE.md",
+      "blob_sha": "ceb21389a9a2cacaec3a0a9babe327d5dec1cea5",
+      "size": 6708
+    },
+    {
+      "path": "docs/.vitepress/social-preview.md",
+      "blob_sha": "a1b2cd0c254ecd50e21236b53adf95f5c5d0d641",
+      "size": 3058
+    },
+    {
+      "path": "docs/.vitepress/theme/fonts/reading/README.md",
+      "blob_sha": "8eebd252058f84eeb7c26e2de6ea8fc2091436f2",
+      "size": 383
+    },
+    {
+      "path": "docs/.vitepress/theme/fonts/reading/source-serif-LICENSE.md",
+      "blob_sha": "5871e1f3d1b3362453b3a1f6c493fbefdbd3dcf3",
+      "size": 4491
+    },
+    {
+      "path": "docs/.vitepress/theme/fonts/tosaki/README.md",
+      "blob_sha": "21508c1e5c923e325f2761ad135d345e20de7a98",
+      "size": 1212
+    },
+    {
+      "path": "docs/en/about/01-about-us.md",
+      "blob_sha": "a92c490ced5ed359feb14ea6a9d8a5c5fa819073",
+      "size": 9540
+    },
+    {
+      "path": "docs/en/about/02-changelog.md",
+      "blob_sha": "eee9c12ff1c38bcff2411af3098adcabf2290d65",
+      "size": 61339
+    },
+    {
+      "path": "docs/en/about/03-roadmap.md",
+      "blob_sha": "0bd0c6d85e8f8a20e046d5d05f47c81762aaea9f",
+      "size": 1821
+    },
+    {
+      "path": "docs/en/agent-integrations/01-overview.md",
+      "blob_sha": "52d5c3e6aca46d1daaf5359d28c83cc01b96a393",
+      "size": 3978
+    },
+    {
+      "path": "docs/en/agent-integrations/02-claude-code.md",
+      "blob_sha": "17b399bdea7118f40374dc298d4f79f489f70e3f",
+      "size": 12523
+    },
+    {
+      "path": "docs/en/agent-integrations/03-openclaw.md",
+      "blob_sha": "98bb798676e78e9fa4d37896b6010c49512eaa76",
+      "size": 11847
+    },
+    {
+      "path": "docs/en/agent-integrations/04-codex.md",
+      "blob_sha": "14c08a8ef467ca96fb3ef01493f7cb2c3a13fad3",
+      "size": 15610
+    },
+    {
+      "path": "docs/en/agent-integrations/05-hermes.md",
+      "blob_sha": "742b17a58fb9de217d6e4d24e98e8f7e5bf318d8",
+      "size": 2927
+    },
+    {
+      "path": "docs/en/agent-integrations/06-mcp-clients.md",
+      "blob_sha": "450378d61370e022dd6c9440bc2c8f1d713f70d7",
+      "size": 3548
+    },
+    {
+      "path": "docs/en/agent-integrations/07-langchain-langgraph.md",
+      "blob_sha": "1c47da27a2dd14c5998c6d6a39179d179cc7edaa",
+      "size": 14311
+    },
+    {
+      "path": "docs/en/agent-integrations/08-community-plugins.md",
+      "blob_sha": "57f2eb7bea9837be53d8be3aec5fb437e1ed54d5",
+      "size": 6327
+    },
+    {
+      "path": "docs/en/agent-integrations/09-log-ingestion.md",
+      "blob_sha": "4589485d65e65d77d0a25c307763fe00faf189b5",
+      "size": 8694
+    },
+    {
+      "path": "docs/en/agent-integrations/10-opencode.md",
+      "blob_sha": "7e138461ac9ea10245390cd745691888d12c3540",
+      "size": 10621
+    },
+    {
+      "path": "docs/en/agent-integrations/11-pi.md",
+      "blob_sha": "002eedb926272e1bb04e2550e8c6c9db7c6379c3",
+      "size": 12831
+    },
+    {
+      "path": "docs/en/agent-integrations/12-cursor.md",
+      "blob_sha": "98384aca3fd8fbf4bf42e9c977a18c91b53c12e0",
+      "size": 6886
+    },
+    {
+      "path": "docs/en/agent-integrations/13-trae.md",
+      "blob_sha": "04ee6454bd940ed8de3813311d7f827b92cc9dde",
+      "size": 6598
+    },
+    {
+      "path": "docs/en/agent-integrations/14-openviking-helper.md",
+      "blob_sha": "06b4f08d99ce14fda76fbb1d1c69126f402fafac",
+      "size": 4543
+    },
+    {
+      "path": "docs/en/agent-integrations/15-agent-plugins.md",
+      "blob_sha": "1c24c44272d2ce639cfa6edc8839dc0b9b69c009",
+      "size": 9369
+    },
+    {
+      "path": "docs/en/agent-integrations/16-capability-reference.md",
+      "blob_sha": "a9cdea4f47b3e3d14f1978f18fe5bec30101dae7",
+      "size": 80663
+    },
+    {
+      "path": "docs/en/agent-integrations/17-dsh.md",
+      "blob_sha": "e6217cc32e2806b33dd6c7d36b4b56d15909e8f7",
+      "size": 10909
+    },
+    {
+      "path": "docs/en/agent-integrations/18-plugin-development.md",
+      "blob_sha": "668ec705d2fa362af411267cfa4ff63f83597489",
+      "size": 61089
+    },
+    {
+      "path": "docs/en/agent-integrations/19-recall-tuning.md",
+      "blob_sha": "8da2aab209facf006b790350233c055682480d28",
+      "size": 3023
+    },
+    {
+      "path": "docs/en/api/01-overview.md",
+      "blob_sha": "e4d170eb2aabc3aece6b026dabaae7a249663e02",
+      "size": 30245
+    },
+    {
+      "path": "docs/en/api/02-resources.md",
+      "blob_sha": "10d0d5138f6ce5ae27e8e1ff1b0eefcccdcc822f",
+      "size": 47450
+    },
+    {
+      "path": "docs/en/api/03-filesystem.md",
+      "blob_sha": "3d0955e32d68149b5d97ec4bea06ade54dcd270a",
+      "size": 28221
+    },
+    {
+      "path": "docs/en/api/04-skills.md",
+      "blob_sha": "55da4f491fb08cb8581886b6ca01fe72884b415b",
+      "size": 38509
+    },
+    {
+      "path": "docs/en/api/05-sessions.md",
+      "blob_sha": "1fe91fd97a9ff7fcdc3704c6e7139d49f177648d",
+      "size": 52216
+    },
+    {
+      "path": "docs/en/api/06-retrieval.md",
+      "blob_sha": "759033e26fd115dd21e892ecc28ce56180af1c8f",
+      "size": 55132
+    },
+    {
+      "path": "docs/en/api/07-system.md",
+      "blob_sha": "b656b4eaf3cd82a5a4704141d0581d731cb228f3",
+      "size": 11099
+    },
+    {
+      "path": "docs/en/api/08-admin.md",
+      "blob_sha": "4ceb5d0131bb1bcbd7ba44db869013d835f5f794",
+      "size": 92341
+    },
+    {
+      "path": "docs/en/api/09-metrics.md",
+      "blob_sha": "12abace4af68b49a29ceecb0380bb2658879e2f9",
+      "size": 3148
+    },
+    {
+      "path": "docs/en/api/10-privacy.md",
+      "blob_sha": "02a6215f38652a2456f1951e2925424610625b93",
+      "size": 18238
+    },
+    {
+      "path": "docs/en/api/11-snapshot.md",
+      "blob_sha": "31c731946fad2b839431a002b6dca26f5fd8475b",
+      "size": 28150
+    },
+    {
+      "path": "docs/en/api/12-acl.md",
+      "blob_sha": "6add9751296268ce99028e5b2a37174e2810c1cc",
+      "size": 6176
+    },
+    {
+      "path": "docs/en/api/12-content.md",
+      "blob_sha": "a50eb32208b163806294833eb8c1830289d0d6e9",
+      "size": 29698
+    },
+    {
+      "path": "docs/en/api/14-ovpack.md",
+      "blob_sha": "50cc876c7ac842bf7dd2a779727aa11b0cbe5642",
+      "size": 14054
+    },
+    {
+      "path": "docs/en/api/15-watches.md",
+      "blob_sha": "56ca5d493b4933f54e7347168ae1e5677ac9721e",
+      "size": 8829
+    },
+    {
+      "path": "docs/en/api/16-memory.md",
+      "blob_sha": "dc592edf24e3ec7a6043948828ce0a9977d6d85a",
+      "size": 2539
+    },
+    {
+      "path": "docs/en/api/17-tasks.md",
+      "blob_sha": "3146f6dde683a0da21f6ce307756f9fc24aa6b2b",
+      "size": 13626
+    },
+    {
+      "path": "docs/en/api/18-observer.md",
+      "blob_sha": "997b9a1c95d3f412c260a63897358062903265a9",
+      "size": 10543
+    },
+    {
+      "path": "docs/en/api/19-agent-evolution.md",
+      "blob_sha": "dd4947c15ecdbf794ec4ed71fb28fa0b73aa0c2a",
+      "size": 4995
+    },
+    {
+      "path": "docs/en/api/20-webdav.md",
+      "blob_sha": "9526ff464c044f2797b673eba1a5e7985f1f4819",
+      "size": 5540
+    },
+    {
+      "path": "docs/en/api/22-openviking-assets.md",
+      "blob_sha": "cc0766d44934cf465203936d09c777ddcdb49af6",
+      "size": 6490
+    },
+    {
+      "path": "docs/en/api/23-agent-runtime.md",
+      "blob_sha": "ee4f2bdd994b5c6b4d3ea7647dfccb70c92a3f2c",
+      "size": 13388
+    },
+    {
+      "path": "docs/en/api/24-vikingbot.md",
+      "blob_sha": "9aeb9da7f05c2d3e15eafa6f47d2e0480064bc61",
+      "size": 7376
+    },
+    {
+      "path": "docs/en/api/25-gateway.md",
+      "blob_sha": "da8df10e8aa11ebe5f3bb596d81419b5b8ba7ff3",
+      "size": 23296
+    },
+    {
+      "path": "docs/en/api/99-api-doc-writing-guide.md",
+      "blob_sha": "18215e064031b37b128f278b8b217a7ec642a87c",
+      "size": 10498
+    },
+    {
+      "path": "docs/en/concepts/00-overview.md",
+      "blob_sha": "2f3c1921702ab9d6e6be92daf57eb345b260371e",
+      "size": 2813
+    },
+    {
+      "path": "docs/en/concepts/01-architecture.md",
+      "blob_sha": "29082b3965d1da00a9e6c3535bb837c89ba05e2d",
+      "size": 6571
+    },
+    {
+      "path": "docs/en/concepts/02-context-types.md",
+      "blob_sha": "c799d1e13427e298f938171bfd57a369e3c3da75",
+      "size": 8672
+    },
+    {
+      "path": "docs/en/concepts/03-context-layers.md",
+      "blob_sha": "2048e723ca8ffad16bf65c1f0680851e623b102e",
+      "size": 9578
+    },
+    {
+      "path": "docs/en/concepts/04-viking-uri.md",
+      "blob_sha": "eae0fa9c767e7bc1f888f7b9475fc465fd25b95d",
+      "size": 16757
+    },
+    {
+      "path": "docs/en/concepts/05-storage.md",
+      "blob_sha": "b117329df0acbec04c4bd423ba0249b8446aa5a9",
+      "size": 6136
+    },
+    {
+      "path": "docs/en/concepts/06-extraction.md",
+      "blob_sha": "f09714677b16df51185518129a25d6683b0777e6",
+      "size": 8545
+    },
+    {
+      "path": "docs/en/concepts/07-retrieval.md",
+      "blob_sha": "38e9535cab40984afe1a1e5e0614b0382bf4c27c",
+      "size": 5621
+    },
+    {
+      "path": "docs/en/concepts/08-session.md",
+      "blob_sha": "84b3f78a2ddf8eb881959af3b29ece830749d94c",
+      "size": 9460
+    },
+    {
+      "path": "docs/en/concepts/09-transaction.md",
+      "blob_sha": "f0470a5ca145b999dcd18489ad2c1b9ddce49cfc",
+      "size": 22823
+    },
+    {
+      "path": "docs/en/concepts/10-encryption.md",
+      "blob_sha": "0aceae26af0945fa3cba5a666fbb5679d8804764",
+      "size": 6223
+    },
+    {
+      "path": "docs/en/concepts/11-multi-tenant.md",
+      "blob_sha": "4bc2acc0505f89af49547253ded465fd6a319e31",
+      "size": 13615
+    },
+    {
+      "path": "docs/en/concepts/12-metrics.md",
+      "blob_sha": "8f0451a401fef1bfb260c2e362cac0767e3fdd78",
+      "size": 32550
+    },
+    {
+      "path": "docs/en/concepts/13-privacy.md",
+      "blob_sha": "7c0cec6f9ad5221d559e023b5ce17829d648550d",
+      "size": 7345
+    },
+    {
+      "path": "docs/en/concepts/14-multi-write-storage.md",
+      "blob_sha": "356cab111c5e1997923102bdc7e22c50c211734a",
+      "size": 2067
+    },
+    {
+      "path": "docs/en/concepts/15-acl.md",
+      "blob_sha": "7dbb1dfae59df4e271fed45f3f1e36050cf88de1",
+      "size": 10342
+    },
+    {
+      "path": "docs/en/concepts/15-vikingbot.md",
+      "blob_sha": "8d51f67b2cb61a6ff37d1e56b06b858dafa1b73a",
+      "size": 9037
+    },
+    {
+      "path": "docs/en/concepts/16-queue-lifecycle.md",
+      "blob_sha": "3693027c896a25974fd631ba9056bb0a00ff22a7",
+      "size": 3970
+    },
+    {
+      "path": "docs/en/configuration/01-server.md",
+      "blob_sha": "a8f2a903791098f21f6776b7e601336b49247c35",
+      "size": 22996
+    },
+    {
+      "path": "docs/en/configuration/02-client.md",
+      "blob_sha": "05b6013b936f41ecbd94786b4c1495bbfd575d91",
+      "size": 22714
+    },
+    {
+      "path": "docs/en/context-compilation/01-overview.md",
+      "blob_sha": "9782a11b6bced6eb41e4d4bc985100b13f1faf68",
+      "size": 5871
+    },
+    {
+      "path": "docs/en/context-compilation/02-llm-wiki.md",
+      "blob_sha": "6d49e093e981d8e879602f3f55b94e1a0acf2d60",
+      "size": 5249
+    },
+    {
+      "path": "docs/en/context-compilation/03-knowledge-graph.md",
+      "blob_sha": "7aaa8a9efdc029d108c0a3cd34f85191710833c1",
+      "size": 4371
+    },
+    {
+      "path": "docs/en/context-compilation/04-daily-report.md",
+      "blob_sha": "4f5bfa3f35effbe314218bcc6e080113ac32a499",
+      "size": 2356
+    },
+    {
+      "path": "docs/en/context-compilation/05-knowledge-distillation.md",
+      "blob_sha": "ac51c3733ed359397d02fa8132c8eb055f57f68e",
+      "size": 3319
+    },
+    {
+      "path": "docs/en/context-compilation/06-memory-consolidation.md",
+      "blob_sha": "820f3e10c69d36e9768826a6e6d6c44b99e3a67b",
+      "size": 7111
+    },
+    {
+      "path": "docs/en/faq/faq.md",
+      "blob_sha": "8f328a0b63b30b279473570898976c7354be1679",
+      "size": 19308
+    },
+    {
+      "path": "docs/en/gateway/01-how-it-works.md",
+      "blob_sha": "886c85e60197eb410a87728aadabd21edecfe3d3",
+      "size": 14837
+    },
+    {
+      "path": "docs/en/gateway/02-quickstart.md",
+      "blob_sha": "f121e6c12c1d626561a73ac4b4060e40a9df9806",
+      "size": 10452
+    },
+    {
+      "path": "docs/en/gateway/03-connect-clients.md",
+      "blob_sha": "8b20640305a75fac33141522bbcd250004f2b61a",
+      "size": 21239
+    },
+    {
+      "path": "docs/en/gateway/04-openviking-tools.md",
+      "blob_sha": "59f7e8d49b191b47c7d5ff5612a33ec0b3ccc808",
+      "size": 22973
+    },
+    {
+      "path": "docs/en/gateway/05-long-conversations.md",
+      "blob_sha": "caf3216b43bbfd898f0f49623bbfb13188306a32",
+      "size": 15771
+    },
+    {
+      "path": "docs/en/gateway/06-manage-in-studio.md",
+      "blob_sha": "4a35f796fb40c77f44e9c4f9839abd672d5d4f76",
+      "size": 9765
+    },
+    {
+      "path": "docs/en/gateway/07-upstreams.md",
+      "blob_sha": "99e1302e39175f64f352632c5f6c8d0d96d46796",
+      "size": 20852
+    },
+    {
+      "path": "docs/en/gateway/08-context-profiles.md",
+      "blob_sha": "d8a49ae3b571c2a6af838347f0fab8a4a490fd86",
+      "size": 11432
+    },
+    {
+      "path": "docs/en/gateway/09-gateway-keys.md",
+      "blob_sha": "efde9cffe1fd34922f8ce00066ef96b516afeb3f",
+      "size": 8225
+    },
+    {
+      "path": "docs/en/gateway/10-overview-and-requests.md",
+      "blob_sha": "417a6eb5f32fc91afa9b653618f9c6d759a2ed55",
+      "size": 13407
+    },
+    {
+      "path": "docs/en/gateway/11-security-and-data.md",
+      "blob_sha": "66bdbd01d0657d9cf9fe4da597a49f794bd1bed3",
+      "size": 8317
+    },
+    {
+      "path": "docs/en/gateway/12-troubleshooting.md",
+      "blob_sha": "f369043af78869044e29e3c9fb921abd8dc8141a",
+      "size": 32846
+    },
+    {
+      "path": "docs/en/gateway/13-configuration.md",
+      "blob_sha": "ca2630e2ccb228b0281448b9f856d7267aaface3",
+      "size": 18950
+    },
+    {
+      "path": "docs/en/getting-started/01-introduction.md",
+      "blob_sha": "96922f77b366497e2f198c158d84194bb32dfa87",
+      "size": 3864
+    },
+    {
+      "path": "docs/en/getting-started/02-quickstart.md",
+      "blob_sha": "b0e9b9f59c17ed004c58830b61fb6b02b501db55",
+      "size": 5304
+    },
+    {
+      "path": "docs/en/getting-started/03-quickstart-server.md",
+      "blob_sha": "f52787fc41a83cbf7ee98353b34ab2d1a44c1e57",
+      "size": 1117
+    },
+    {
+      "path": "docs/en/getting-started/04-setup-for-agent.md",
+      "blob_sha": "badaba4e7afb004db1c577bc3019279345b87114",
+      "size": 13679
+    },
+    {
+      "path": "docs/en/getting-started/05-cli-setup.md",
+      "blob_sha": "7d0ae5edb90d0cf197b69c9cb04c0d4ff8efc643",
+      "size": 14228
+    },
+    {
+      "path": "docs/en/getting-started/06-evaluate.md",
+      "blob_sha": "637b2f7533b9eb1ebac6285d0f9749a1bbbaa744",
+      "size": 4965
+    },
+    {
+      "path": "docs/en/guides/00-overview.md",
+      "blob_sha": "cebb4fe68d8b49bccacbc6c8de926ffacdacff2f",
+      "size": 2432
+    },
+    {
+      "path": "docs/en/guides/01-configuration.md",
+      "blob_sha": "eceac1ec278ea303c589598c538ed9a44626edb5",
+      "size": 119362
+    },
+    {
+      "path": "docs/en/guides/02-volcengine-purchase-guide.md",
+      "blob_sha": "8c2700d9011d6f8f9dedc2bcbd86f1314d4f8836",
+      "size": 9730
+    },
+    {
+      "path": "docs/en/guides/03-deployment.md",
+      "blob_sha": "f629b4b558941b2967b4c7f875f0684103cccf6a",
+      "size": 18564
+    },
+    {
+      "path": "docs/en/guides/04-authentication.md",
+      "blob_sha": "f416bd86c30369353a135b8b4543dfaef5945976",
+      "size": 26319
+    },
+    {
+      "path": "docs/en/guides/05-observability.md",
+      "blob_sha": "d8fdcc375932c9c35fe60b7c120b0e9492d250d3",
+      "size": 22197
+    },
+    {
+      "path": "docs/en/guides/06-mcp-integration.md",
+      "blob_sha": "81fefc928d351e7787179351fc5f99fd5e32ebdd",
+      "size": 22460
+    },
+    {
+      "path": "docs/en/guides/07-operation-telemetry.md",
+      "blob_sha": "2eb75bf0fc23777ea005ab2fe9bd4bc15814f3d2",
+      "size": 17687
+    },
+    {
+      "path": "docs/en/guides/08-encryption.md",
+      "blob_sha": "ea971ce81e427fec7f35d1c4e0cf6092850a0f42",
+      "size": 15047
+    },
+    {
+      "path": "docs/en/guides/09-ovpack.md",
+      "blob_sha": "7be1daf89fb37531a8df2a3597c994f8886fcea8",
+      "size": 22988
+    },
+    {
+      "path": "docs/en/guides/10-prompt-guide.md",
+      "blob_sha": "19a6b5410a97d4e289ca444877d1056a5a307ed3",
+      "size": 34438
+    },
+    {
+      "path": "docs/en/guides/11-grafana-prometheus.md",
+      "blob_sha": "67bd83e8e48a838f53b4dd852f7d67b6bdb2887b",
+      "size": 15403
+    },
+    {
+      "path": "docs/en/guides/11-oauth.md",
+      "blob_sha": "dd65dfec59471bbc828b39f3251ddba08768ae73",
+      "size": 17165
+    },
+    {
+      "path": "docs/en/guides/12-public-access.md",
+      "blob_sha": "5f1a059e7cff9163d803888b49092611499a30e6",
+      "size": 8689
+    },
+    {
+      "path": "docs/en/guides/12-vikingbot-metrics-validation.md",
+      "blob_sha": "4403e00389ca4ebc5f141a825c9d0238b1f60aff",
+      "size": 9396
+    },
+    {
+      "path": "docs/en/guides/13-multi-write-storage.md",
+      "blob_sha": "4a30c18abfa88de56a8c2db784b4f4eeac2786c7",
+      "size": 3061
+    },
+    {
+      "path": "docs/en/guides/14-ragfs-cache.md",
+      "blob_sha": "f71a3db4775de19647adddeb814d4347815da098",
+      "size": 13885
+    },
+    {
+      "path": "docs/en/guides/15-gateway.md",
+      "blob_sha": "c27ada462dbf35fb3e498f20a582baaf75aee495",
+      "size": 20633
+    },
+    {
+      "path": "docs/en/guides/15-snapshot.md",
+      "blob_sha": "2348f9a06272d09aedab633f506a130a887bd933",
+      "size": 18441
+    },
+    {
+      "path": "docs/en/guides/16-cuvs.md",
+      "blob_sha": "870e094aceffd8b6bac335bdb62da160896821cf",
+      "size": 16897
+    },
+    {
+      "path": "docs/en/guides/17-vikingbot.md",
+      "blob_sha": "e8ca7dcfd8b79148c169cbd796ec89e910418698",
+      "size": 11746
+    },
+    {
+      "path": "docs/en/guides/18-openviking-assets.md",
+      "blob_sha": "49bc8b6729303c012cdf132885d3bc02d4fcceaf",
+      "size": 18081
+    },
+    {
+      "path": "docs/en/guides/19-deployment-checklist.md",
+      "blob_sha": "f95f74b4e75db58b81592d3542d4cb5da12cd028",
+      "size": 8721
+    },
+    {
+      "path": "docs/en/guides/20-private-deployment.md",
+      "blob_sha": "93dc30e990c82a58385f262191e6e92ccd204eb0",
+      "size": 16278
+    },
+    {
+      "path": "docs/en/guides/21-private-operations.md",
+      "blob_sha": "ca9c81d72486c7f68c1b47a5836d4d0902ca49b8",
+      "size": 7728
+    },
+    {
+      "path": "docs/en/guides/22-gateway-operations.md",
+      "blob_sha": "64d84feffe95399b21bed7437e2aa6d2227e407a",
+      "size": 31182
+    },
+    {
+      "path": "docs/en/guides/23-data-organize.md",
+      "blob_sha": "1646c9cc9a832829be82c673ff34e68357eaefda",
+      "size": 7298
+    },
+    {
+      "path": "docs/en/guides/working-memory-default-off.md",
+      "blob_sha": "0769a152b85d0433593f8254dbab8deae18cd5ea",
+      "size": 7464
+    },
+    {
+      "path": "docs/en/index.md",
+      "blob_sha": "29b4b9e8cfb76e2fd3127b88939b06bec1ea2c01",
+      "size": 212
+    },
+    {
+      "path": "docs/en/reference/01-overview.md",
+      "blob_sha": "ec023b2af8fc419d68f823d6993229b599376f6a",
+      "size": 2092
+    },
+    {
+      "path": "docs/en/workflows/01-overview.md",
+      "blob_sha": "3e1f57a9b16e0f48d298e666a02afa41b0b6bd3f",
+      "size": 3140
+    },
+    {
+      "path": "docs/images/agents/en/agent-cli.md",
+      "blob_sha": "3b1bf63ab7faa8e67af844314ff124e393ede708",
+      "size": 979
+    },
+    {
+      "path": "docs/images/agents/en/api.md",
+      "blob_sha": "206ba1cdaf07712493374d47a6670dad3d8d00a3",
+      "size": 2748
+    },
+    {
+      "path": "docs/images/agents/en/claude-code.md",
+      "blob_sha": "4a9b01bca0f2a3d2c6f9e68abd2a08bcb7416707",
+      "size": 2392
+    },
+    {
+      "path": "docs/images/agents/en/cli.md",
+      "blob_sha": "4f5958cb2e35c65866b0fe53b179169a4f124ff9",
+      "size": 647
+    },
+    {
+      "path": "docs/images/agents/en/codex.md",
+      "blob_sha": "ac6a24589a39c11c11d2f665319ef9b99d64fb8d",
+      "size": 2600
+    },
+    {
+      "path": "docs/images/agents/en/cursor.md",
+      "blob_sha": "c8ef31d6ebc1fed6e359672e6961ac59041aa11e",
+      "size": 1255
+    },
+    {
+      "path": "docs/images/agents/en/deepseek-harness.md",
+      "blob_sha": "8ebf1e6733fd7fc5219634e30906b0e8559902fa",
+      "size": 2599
+    },
+    {
+      "path": "docs/images/agents/en/deerflow-mcp.md",
+      "blob_sha": "0cb17bdb38182c424b27fef887de56e84b28773c",
+      "size": 2486
+    },
+    {
+      "path": "docs/images/agents/en/deerflow-memory-manager.md",
+      "blob_sha": "3e5e2ca8e769b86d6815b8a2ba637c73c97646b2",
+      "size": 4465
+    },
+    {
+      "path": "docs/images/agents/en/doubao-work.md",
+      "blob_sha": "f43e8b47e4a22c213b19ee6ffd24534a3229c3ed",
+      "size": 1632
+    },
+    {
+      "path": "docs/images/agents/en/hermes.md",
+      "blob_sha": "fab7ae0c4acbdbfdb83610406aab7f6b9eba79f4",
+      "size": 2644
+    },
+    {
+      "path": "docs/images/agents/en/kimi-code.md",
+      "blob_sha": "7a65cb5014a98bb34931c77b6ae0b1f5a6441e36",
+      "size": 1486
+    },
+    {
+      "path": "docs/images/agents/en/mcp.md",
+      "blob_sha": "1f6ccdd9325c5406d46f2fc80e5388d76fc9a03c",
+      "size": 1812
+    },
+    {
+      "path": "docs/images/agents/en/openclaw.md",
+      "blob_sha": "ed08d72e8ce529fd55b6e72da6f3621307541117",
+      "size": 1887
+    },
+    {
+      "path": "docs/images/agents/en/opencode.md",
+      "blob_sha": "ea9c732c2a8f326ba7c3f8852f7000e6f93a680d",
+      "size": 1403
+    },
+    {
+      "path": "docs/images/agents/en/pi.md",
+      "blob_sha": "f741a722cd1dae4a11736ec0d172ba2a77ac7354",
+      "size": 1585
+    },
+    {
+      "path": "docs/images/agents/en/sdk.md",
+      "blob_sha": "fa6f430119ade502b52d8b801c63ad36cd7f9153",
+      "size": 1748
+    },
+    {
+      "path": "docs/images/agents/en/trae.md",
+      "blob_sha": "71337d1bbfc447bd92c7326f8b917868f12b92ae",
+      "size": 2450
+    },
+    {
+      "path": "docs/images/agents/en/workbuddy.md",
+      "blob_sha": "224404c36209cb3d4ce66900ddfa1789b9078056",
+      "size": 1841
+    },
+    {
+      "path": "docs/images/agents/en/zcode.md",
+      "blob_sha": "138ba01e476390bb2ca0af716c1dbc87c2eacc4b",
+      "size": 1516
+    },
+    {
+      "path": "docs/images/agents/skills/sales-opportunity-order-builder.md",
+      "blob_sha": "c261f5d6a06b6012b68edfe7456b4c306c3db09a",
+      "size": 12982
+    },
+    {
+      "path": "docs/images/agents/zh/agent-cli.md",
+      "blob_sha": "48ee1e15e01a97802fcf4d635dde772e824da738",
+      "size": 917
+    },
+    {
+      "path": "docs/images/agents/zh/api.md",
+      "blob_sha": "36332c53292ea858028bb490169be45feefb5799",
+      "size": 2741
+    },
+    {
+      "path": "docs/images/agents/zh/claude-code.md",
+      "blob_sha": "42e9f897b8994bb54aaf41240e6d7f0f2a8f336d",
+      "size": 2413
+    },
+    {
+      "path": "docs/images/agents/zh/cli.md",
+      "blob_sha": "81811d862afe982e9954319fd7b98412253ddfeb",
+      "size": 570
+    },
+    {
+      "path": "docs/images/agents/zh/codex.md",
+      "blob_sha": "1d9039df2f4a0b25b55e7945f787242842da81bb",
+      "size": 2527
+    },
+    {
+      "path": "docs/images/agents/zh/cursor.md",
+      "blob_sha": "3971a70ecda9c440f280fc00b7ce6100d4e911ab",
+      "size": 1267
+    },
+    {
+      "path": "docs/images/agents/zh/deepseek-harness.md",
+      "blob_sha": "f628e3e2ed8a8955e4cd4663c46f7d304fa85f5c",
+      "size": 2604
+    },
+    {
+      "path": "docs/images/agents/zh/deerflow-mcp.md",
+      "blob_sha": "2f31deeaa78ddfb6428c51fa52ab3bb33e07e3f9",
+      "size": 2353
+    },
+    {
+      "path": "docs/images/agents/zh/deerflow-memory-manager.md",
+      "blob_sha": "51f0aabbab050d6c91ec928833ced15e7c48437b",
+      "size": 4165
+    },
+    {
+      "path": "docs/images/agents/zh/doubao-work.md",
+      "blob_sha": "410a98d674882efd6945d90a62fb3d8a85b583be",
+      "size": 1560
+    },
+    {
+      "path": "docs/images/agents/zh/hermes.md",
+      "blob_sha": "94016dbca2d660cc91ba6faca303b70e6426fc5e",
+      "size": 2498
+    },
+    {
+      "path": "docs/images/agents/zh/kimi-code.md",
+      "blob_sha": "3a5cf68979f01762e940dcea903abb2ac40551bb",
+      "size": 1510
+    },
+    {
+      "path": "docs/images/agents/zh/mcp.md",
+      "blob_sha": "2223ccafd5a73502fb9803ec3a2634bf9cf21f93",
+      "size": 1468
+    },
+    {
+      "path": "docs/images/agents/zh/openclaw.md",
+      "blob_sha": "01943214144be1c2755de17143369c6d72be313d",
+      "size": 1850
+    },
+    {
+      "path": "docs/images/agents/zh/opencode.md",
+      "blob_sha": "c6499b8621b8f7c45aa33e6e21bae32c8798e56c",
+      "size": 1405
+    },
+    {
+      "path": "docs/images/agents/zh/pi.md",
+      "blob_sha": "351912fc4c80e21c0a573324e15c0658c3f9257e",
+      "size": 1593
+    },
+    {
+      "path": "docs/images/agents/zh/sdk.md",
+      "blob_sha": "80ac126b460f8c45fe0f1d305ec5c992fadad3f8",
+      "size": 1722
+    },
+    {
+      "path": "docs/images/agents/zh/trae.md",
+      "blob_sha": "7db9e23a702d2fba6bbe74ceae551e95d7e9ea30",
+      "size": 2480
+    },
+    {
+      "path": "docs/images/agents/zh/workbuddy.md",
+      "blob_sha": "b5d6e2db780eacc965be799fae9535d37ebe650d",
+      "size": 1795
+    },
+    {
+      "path": "docs/images/agents/zh/zcode.md",
+      "blob_sha": "94575c18ec142dda1819d1c4cff2a6a1a80dc786",
+      "size": 1541
+    },
+    {
+      "path": "docs/images/integrations/README.md",
+      "blob_sha": "a329f8abe5929d169ffe288156b6b088a2e09a78",
+      "size": 2983
+    },
+    {
+      "path": "docs/index.md",
+      "blob_sha": "29b4b9e8cfb76e2fd3127b88939b06bec1ea2c01",
+      "size": 212
+    },
+    {
+      "path": "docs/repository/CONTRIBUTING_CN.md",
+      "blob_sha": "987f9586e34adf7b9ab881affaf2dcea1821103c",
+      "size": 13836
+    },
+    {
+      "path": "docs/repository/CONTRIBUTING_JA.md",
+      "blob_sha": "abd79edd0d1e2aad357e7294edbb38f34a7335b7",
+      "size": 20361
+    },
+    {
+      "path": "docs/repository/README_CN.md",
+      "blob_sha": "38c113eeeb40b5f99fef8053ccc23ee6b641b672",
+      "size": 25616
+    },
+    {
+      "path": "docs/repository/README_JA.md",
+      "blob_sha": "94917f82562bb76945625e14f1665891b00f7c18",
+      "size": 31093
+    },
+    {
+      "path": "docs/repository/RELEASE_CN.md",
+      "blob_sha": "237177a951f188e67b31505cdff56ed1f9a3249b",
+      "size": 12343
+    },
+    {
+      "path": "docs/repository/RELEASE.md",
+      "blob_sha": "db4dae8b9b51c0e9db651df3b294e1563aba173a",
+      "size": 14783
+    },
+    {
+      "path": "docs/zh/about/01-about-us.md",
+      "blob_sha": "7940dd54f73d3ccb9ce36001f6c405908d5e034a",
+      "size": 8557
+    },
+    {
+      "path": "docs/zh/about/02-changelog.md",
+      "blob_sha": "4b3c44461c6bccee763147019cdfe8091f705034",
+      "size": 57300
+    },
+    {
+      "path": "docs/zh/about/03-roadmap.md",
+      "blob_sha": "fca07963a64a9dddb8f8585a5b079797a1750a0d",
+      "size": 1689
+    },
+    {
+      "path": "docs/zh/agent-integrations/01-overview.md",
+      "blob_sha": "75d4e78bc67adba23d7c8008da9be1ba046dd0bb",
+      "size": 3715
+    },
+    {
+      "path": "docs/zh/agent-integrations/02-claude-code.md",
+      "blob_sha": "5743c423679a9d4c675ffe65990c9809dec00f7b",
+      "size": 12461
+    },
+    {
+      "path": "docs/zh/agent-integrations/03-openclaw.md",
+      "blob_sha": "f07bd5823c618ebbf464e09e4211ca1bfb065ff8",
+      "size": 10960
+    },
+    {
+      "path": "docs/zh/agent-integrations/04-codex.md",
+      "blob_sha": "b9d568536588739cb3711a840c8d4f80b7e5cbe2",
+      "size": 15131
+    },
+    {
+      "path": "docs/zh/agent-integrations/05-hermes.md",
+      "blob_sha": "e2d4afabfda403f2374d1abe226b11c83608ab44",
+      "size": 2692
+    },
+    {
+      "path": "docs/zh/agent-integrations/06-mcp-clients.md",
+      "blob_sha": "4cbb4dc894d788b5a397069cb5b1ec0a2583a997",
+      "size": 3282
+    },
+    {
+      "path": "docs/zh/agent-integrations/07-langchain-langgraph.md",
+      "blob_sha": "1cb7b089f67e1f72ed2b897b9fe27b3f9c42c025",
+      "size": 14016
+    },
+    {
+      "path": "docs/zh/agent-integrations/08-community-plugins.md",
+      "blob_sha": "94a774c055f64d0e7bbdbcb9f150ef298440098d",
+      "size": 6026
+    },
+    {
+      "path": "docs/zh/agent-integrations/09-log-ingestion.md",
+      "blob_sha": "e81d7e7db666aad8da6f2da6654af9c46664c78d",
+      "size": 8125
+    },
+    {
+      "path": "docs/zh/agent-integrations/10-opencode.md",
+      "blob_sha": "fef6ef758e0535718501158addf3239edcb734c0",
+      "size": 10168
+    },
+    {
+      "path": "docs/zh/agent-integrations/11-pi.md",
+      "blob_sha": "e5ca07f2857261a73d8f6d469550313554c2c80f",
+      "size": 12258
+    },
+    {
+      "path": "docs/zh/agent-integrations/12-cursor.md",
+      "blob_sha": "996fd7520a42cd651dc365a8498ecd4a57ae87c5",
+      "size": 6397
+    },
+    {
+      "path": "docs/zh/agent-integrations/13-trae.md",
+      "blob_sha": "d922c70febafcfd4caa0bf4a706e09a03d677ccd",
+      "size": 6251
+    },
+    {
+      "path": "docs/zh/agent-integrations/14-openviking-helper.md",
+      "blob_sha": "c583734d159c3ebd0d9f59925afd78392be7d172",
+      "size": 4225
+    },
+    {
+      "path": "docs/zh/agent-integrations/15-agent-plugins.md",
+      "blob_sha": "1f11ac5c7139f423241ebe1e72d74fbbbb438c3f",
+      "size": 9187
+    },
+    {
+      "path": "docs/zh/agent-integrations/16-capability-reference.md",
+      "blob_sha": "ead9a0c363232b409e2e3fc31f419c65cfa35e36",
+      "size": 76015
+    },
+    {
+      "path": "docs/zh/agent-integrations/17-dsh.md",
+      "blob_sha": "04e0e093caf7cce12ee784507e69315fc194cff5",
+      "size": 10375
+    },
+    {
+      "path": "docs/zh/agent-integrations/18-plugin-development.md",
+      "blob_sha": "cdde19c5ddcfd79ad56376247016fbbfbebd0c0d",
+      "size": 55611
+    },
+    {
+      "path": "docs/zh/agent-integrations/19-recall-tuning.md",
+      "blob_sha": "339c16540e69480b0b7e305fdd195ca3869fc6e8",
+      "size": 2701
+    },
+    {
+      "path": "docs/zh/api/01-overview.md",
+      "blob_sha": "dc86d6942bb25f1acdb312a3ffe07d70c7204665",
+      "size": 28461
+    },
+    {
+      "path": "docs/zh/api/02-resources.md",
+      "blob_sha": "4a56b6e2e2244d5de11ef46d49e6989ed613cc52",
+      "size": 44880
+    },
+    {
+      "path": "docs/zh/api/03-filesystem.md",
+      "blob_sha": "cbbc56601df88e04dd109e45c0a0be91aaa24d04",
+      "size": 28703
+    },
+    {
+      "path": "docs/zh/api/04-skills.md",
+      "blob_sha": "ded61a3e79754ab39f3f61495e6aad83aa0b0abf",
+      "size": 36942
+    },
+    {
+      "path": "docs/zh/api/05-sessions.md",
+      "blob_sha": "74a1cef2af051fe8a837e733e72838e15b308d37",
+      "size": 50406
+    },
+    {
+      "path": "docs/zh/api/06-retrieval.md",
+      "blob_sha": "41aaa8386a9eaecc10b9fb8902ca6481c71880e3",
+      "size": 51648
+    },
+    {
+      "path": "docs/zh/api/07-system.md",
+      "blob_sha": "62ecc611f50412ad21299f676d1b06f04384f812",
+      "size": 10511
+    },
+    {
+      "path": "docs/zh/api/08-admin.md",
+      "blob_sha": "a3d98d18aefabf8800f4768474d0595edcac2a98",
+      "size": 89085
+    },
+    {
+      "path": "docs/zh/api/09-metrics.md",
+      "blob_sha": "251f0ddbd6828f9b145ca09617a2dc3792fb9ac8",
+      "size": 2973
+    },
+    {
+      "path": "docs/zh/api/10-privacy.md",
+      "blob_sha": "47b55c07ec9763cbbd6d13edd940a817ce405de4",
+      "size": 17583
+    },
+    {
+      "path": "docs/zh/api/11-snapshot.md",
+      "blob_sha": "27ae992998fd4bc5ec5d43aed56049b59867409a",
+      "size": 26948
+    },
+    {
+      "path": "docs/zh/api/12-acl.md",
+      "blob_sha": "49b3ed688a030ad218188d8d00b2b5dc3915ef52",
+      "size": 6023
+    },
+    {
+      "path": "docs/zh/api/12-content.md",
+      "blob_sha": "829fc487973ee753035748cd75262eae7d5a5505",
+      "size": 28243
+    },
+    {
+      "path": "docs/zh/api/14-ovpack.md",
+      "blob_sha": "8d4ffdb2359576d001b9d42ba0ff3ae0dfb4d3fe",
+      "size": 13349
+    },
+    {
+      "path": "docs/zh/api/15-watches.md",
+      "blob_sha": "32e57dabea710e91446db7e7706b739cc3de47e5",
+      "size": 8636
+    },
+    {
+      "path": "docs/zh/api/16-memory.md",
+      "blob_sha": "fce2ff8c4487ff0de5275c1e9d36d69eebd34f7a",
+      "size": 2322
+    },
+    {
+      "path": "docs/zh/api/17-tasks.md",
+      "blob_sha": "265db49f5557b1360de06283d6c83396a7d86cd6",
+      "size": 12955
+    },
+    {
+      "path": "docs/zh/api/18-observer.md",
+      "blob_sha": "db7cb5bd2d7a37f1e3fba4ee1d268016cf01b3a2",
+      "size": 10156
+    },
+    {
+      "path": "docs/zh/api/19-agent-evolution.md",
+      "blob_sha": "d74472bbd578488f9c580ab55f14d7fccc5a1702",
+      "size": 4662
+    },
+    {
+      "path": "docs/zh/api/20-webdav.md",
+      "blob_sha": "d6cf424bac0de00a4e77f153158ac82602969278",
+      "size": 5214
+    },
+    {
+      "path": "docs/zh/api/22-openviking-assets.md",
+      "blob_sha": "8434764fed147f985670d884085cd004d393c22b",
+      "size": 6158
+    },
+    {
+      "path": "docs/zh/api/23-agent-runtime.md",
+      "blob_sha": "1fa9b1cbb5988f0fd2bcd4c95565b2bc3b09801e",
+      "size": 12406
+    },
+    {
+      "path": "docs/zh/api/24-vikingbot.md",
+      "blob_sha": "b03377e44b91fdb30391c34b10d5010d6af68982",
+      "size": 7012
+    },
+    {
+      "path": "docs/zh/api/25-gateway.md",
+      "blob_sha": "4716b6927e9d5ead4e0658d304e4f7ed3d474556",
+      "size": 22274
+    },
+    {
+      "path": "docs/zh/api/99-api-doc-writing-guide.md",
+      "blob_sha": "88513bdd1c3f708a90ff23e18dc981fe5288cfa5",
+      "size": 9263
+    },
+    {
+      "path": "docs/zh/concepts/00-overview.md",
+      "blob_sha": "533b53ac39c782a5444ac4f8b74f92f904d345fc",
+      "size": 2474
+    },
+    {
+      "path": "docs/zh/concepts/01-architecture.md",
+      "blob_sha": "cc684c795723677246944610aa5326d335b5b9d5",
+      "size": 5964
+    },
+    {
+      "path": "docs/zh/concepts/02-context-types.md",
+      "blob_sha": "33831dc5e569bcba8ab3a1b1f04673a446198f41",
+      "size": 7890
+    },
+    {
+      "path": "docs/zh/concepts/03-context-layers.md",
+      "blob_sha": "678ba4d565cdd1ce2774e9efdccf186cc74ea961",
+      "size": 8790
+    },
+    {
+      "path": "docs/zh/concepts/04-viking-uri.md",
+      "blob_sha": "2c8cc63031e367935e891745eade73022d9c9419",
+      "size": 15910
+    },
+    {
+      "path": "docs/zh/concepts/05-storage.md",
+      "blob_sha": "1ab4eeae48f4311da5c3a3be8699aa2fa7e6f1f6",
+      "size": 5498
+    },
+    {
+      "path": "docs/zh/concepts/06-extraction.md",
+      "blob_sha": "32614cfb86d8ee27097a01d32d4cdcfe6b46e65f",
+      "size": 7863
+    },
+    {
+      "path": "docs/zh/concepts/07-retrieval.md",
+      "blob_sha": "a09c77f4bfef845818b7933b35fc3abc2efe8210",
+      "size": 5187
+    },
+    {
+      "path": "docs/zh/concepts/08-session.md",
+      "blob_sha": "5949e9674b69dd778a00627ec98a654147dc62eb",
+      "size": 8944
+    },
+    {
+      "path": "docs/zh/concepts/09-transaction.md",
+      "blob_sha": "560df5d5d02546d5f13c4eb01e891457225dbb2b",
+      "size": 21443
+    },
+    {
+      "path": "docs/zh/concepts/10-encryption.md",
+      "blob_sha": "276e3faaf8afd154fd365ba06a3462538570c932",
+      "size": 5652
+    },
+    {
+      "path": "docs/zh/concepts/11-multi-tenant.md",
+      "blob_sha": "cc8b91c5a5581c16668c00570c0158f77d0efc89",
+      "size": 12805
+    },
+    {
+      "path": "docs/zh/concepts/12-metrics.md",
+      "blob_sha": "283fba3844bd52913c2f28a63c32de0681634a83",
+      "size": 31458
+    },
+    {
+      "path": "docs/zh/concepts/13-privacy.md",
+      "blob_sha": "0b680ba288fb8363ea2080d3053a20773943494a",
+      "size": 7034
+    },
+    {
+      "path": "docs/zh/concepts/14-multi-write-storage.md",
+      "blob_sha": "d7d0dbdc3a1b7cf3cf950107f48a83f7ffd36163",
+      "size": 1835
+    },
+    {
+      "path": "docs/zh/concepts/15-acl.md",
+      "blob_sha": "327a39f8cf2f83a33ed6fed1acc103402cc9af60",
+      "size": 9485
+    },
+    {
+      "path": "docs/zh/concepts/15-vikingbot.md",
+      "blob_sha": "b9a0d00ffdc16e280b7c88e7e0b878d7a96b54a9",
+      "size": 7884
+    },
+    {
+      "path": "docs/zh/concepts/16-queue-lifecycle.md",
+      "blob_sha": "638dfbb3f1e33e625266db5795cd36be63fa2721",
+      "size": 3835
+    },
+    {
+      "path": "docs/zh/configuration/01-server.md",
+      "blob_sha": "34ca259328684c0ef3f6a74250b748a07893010f",
+      "size": 21994
+    },
+    {
+      "path": "docs/zh/configuration/02-client.md",
+      "blob_sha": "bfe06c2f0f7b13980f5529133c930934f4a89edb",
+      "size": 21326
+    },
+    {
+      "path": "docs/zh/context-compilation/01-overview.md",
+      "blob_sha": "8161ff2b1830234a96f89a1edc0d78eb6f15eae0",
+      "size": 5365
+    },
+    {
+      "path": "docs/zh/context-compilation/02-llm-wiki.md",
+      "blob_sha": "ec30579fa29311e420870e72e616a5a09f1d04ca",
+      "size": 4961
+    },
+    {
+      "path": "docs/zh/context-compilation/03-knowledge-graph.md",
+      "blob_sha": "84c87b79a122c7d3b788945e6705f6f235541bc2",
+      "size": 4245
+    },
+    {
+      "path": "docs/zh/context-compilation/04-daily-report.md",
+      "blob_sha": "f99af87b1e0c5183e0b047b3ccebbd0e880ccf16",
+      "size": 2273
+    },
+    {
+      "path": "docs/zh/context-compilation/05-knowledge-distillation.md",
+      "blob_sha": "4dbf9c87e142cf46f2d5a71e17cc9d351cbb2dcf",
+      "size": 2933
+    },
+    {
+      "path": "docs/zh/context-compilation/06-memory-consolidation.md",
+      "blob_sha": "424cf2e8713794a00e619b8c32c8902f74047583",
+      "size": 6576
+    },
+    {
+      "path": "docs/zh/faq/faq.md",
+      "blob_sha": "1afc3efd357fe63c1ea5abad43aa878cbfa3144d",
+      "size": 17482
+    },
+    {
+      "path": "docs/zh/gateway/01-how-it-works.md",
+      "blob_sha": "b037ee2e90b9132999aa393230edcf6ba095f079",
+      "size": 13801
+    },
+    {
+      "path": "docs/zh/gateway/02-quickstart.md",
+      "blob_sha": "7a8c035e885ce3e7e49b1fc179b9f4d9075bc593",
+      "size": 9947
+    },
+    {
+      "path": "docs/zh/gateway/03-connect-clients.md",
+      "blob_sha": "6424d284fa6a5fb63fc2afb5e713116fc0378026",
+      "size": 20596
+    },
+    {
+      "path": "docs/zh/gateway/04-openviking-tools.md",
+      "blob_sha": "f62ac5255c4bee6b074fc8df29990250ce7ce15b",
+      "size": 22127
+    },
+    {
+      "path": "docs/zh/gateway/05-long-conversations.md",
+      "blob_sha": "f5b13674ebb8793c54c4ed3817318b26f6bbe78a",
+      "size": 14684
+    },
+    {
+      "path": "docs/zh/gateway/06-manage-in-studio.md",
+      "blob_sha": "219fe4467ffed7f02711e7fb4b3eb8981239def0",
+      "size": 9293
+    },
+    {
+      "path": "docs/zh/gateway/07-upstreams.md",
+      "blob_sha": "0521f95d62323090c5820623adfac716748f1694",
+      "size": 19462
+    },
+    {
+      "path": "docs/zh/gateway/08-context-profiles.md",
+      "blob_sha": "3fa76fd2a345e5235fcdbed7a0814eb5655a012d",
+      "size": 10761
+    },
+    {
+      "path": "docs/zh/gateway/09-gateway-keys.md",
+      "blob_sha": "911dcdea4da9ee47d6ce4cfb4f2b8695e3ea3b54",
+      "size": 8158
+    },
+    {
+      "path": "docs/zh/gateway/10-overview-and-requests.md",
+      "blob_sha": "a24476a9c9abeadddee663d22c5862ac2534e88d",
+      "size": 13062
+    },
+    {
+      "path": "docs/zh/gateway/11-security-and-data.md",
+      "blob_sha": "f6819d9a1998324f0f37789ad4ff57749488a47c",
+      "size": 8097
+    },
+    {
+      "path": "docs/zh/gateway/12-troubleshooting.md",
+      "blob_sha": "5e6aff880330bb69fea45f62c243884686c56021",
+      "size": 31770
+    },
+    {
+      "path": "docs/zh/gateway/13-configuration.md",
+      "blob_sha": "c18df95fc6aaa82c2100cc97d56d54bb0a34772c",
+      "size": 18542
+    },
+    {
+      "path": "docs/zh/getting-started/01-introduction.md",
+      "blob_sha": "c7c2fd8a21b3e77265221df225841af0f9a9a88c",
+      "size": 3454
+    },
+    {
+      "path": "docs/zh/getting-started/02-quickstart.md",
+      "blob_sha": "83b8e07e5f296edce63b034d6e9edb810819a6a0",
+      "size": 4973
+    },
+    {
+      "path": "docs/zh/getting-started/03-quickstart-server.md",
+      "blob_sha": "d7d6177320256741ad194d60ddaeab69176ba809",
+      "size": 1027
+    },
+    {
+      "path": "docs/zh/getting-started/04-setup-for-agent.md",
+      "blob_sha": "849b8d8df84b14c15b2d3b08dccadb408e57ac01",
+      "size": 12107
+    },
+    {
+      "path": "docs/zh/getting-started/05-cli-setup.md",
+      "blob_sha": "60ec281a3ab2ba4ce3ba28be17d7f01593d84ff1",
+      "size": 13641
+    },
+    {
+      "path": "docs/zh/getting-started/06-evaluate.md",
+      "blob_sha": "24fa46c38c072433f6e735e79b5d628f5193df6a",
+      "size": 4293
+    },
+    {
+      "path": "docs/zh/guides/00-overview.md",
+      "blob_sha": "f69ceb89ff41dc44618aa86ecb4c24645ee43f32",
+      "size": 2127
+    },
+    {
+      "path": "docs/zh/guides/01-configuration.md",
+      "blob_sha": "4aac9c79c351b9fada4227f2fb56a9012fd29d66",
+      "size": 113759
+    },
+    {
+      "path": "docs/zh/guides/02-volcengine-purchase-guide.md",
+      "blob_sha": "a2e881cc8ad4a2b02345da4de941522d28838550",
+      "size": 8518
+    },
+    {
+      "path": "docs/zh/guides/03-deployment.md",
+      "blob_sha": "e8445f9d542a4790ae01f2f475719479ed287795",
+      "size": 17630
+    },
+    {
+      "path": "docs/zh/guides/04-authentication.md",
+      "blob_sha": "db6135039c0b6687051f22beb42a6d50ab4d6b5e",
+      "size": 22591
+    },
+    {
+      "path": "docs/zh/guides/05-observability.md",
+      "blob_sha": "3e5ff4a5c9ff52e204a1091a6131fdc2104119a9",
+      "size": 21012
+    },
+    {
+      "path": "docs/zh/guides/06-mcp-integration.md",
+      "blob_sha": "da7a437497fa71e0ccd33f132f1db96a2279518e",
+      "size": 21251
+    },
+    {
+      "path": "docs/zh/guides/07-operation-telemetry.md",
+      "blob_sha": "347eae7d6b62df0d2b28a2c717b8fd7b184978d5",
+      "size": 16717
+    },
+    {
+      "path": "docs/zh/guides/08-encryption.md",
+      "blob_sha": "4c1efffc27d96668912e8774a799c79e02dd9d07",
+      "size": 13882
+    },
+    {
+      "path": "docs/zh/guides/09-ovpack.md",
+      "blob_sha": "f2569ad0ab72687f9e32d0344519d4f2995b9e8c",
+      "size": 21566
+    },
+    {
+      "path": "docs/zh/guides/10-prompt-guide.md",
+      "blob_sha": "3619e429eb0ea7b747e04efe8845137bbc4d7a88",
+      "size": 29994
+    },
+    {
+      "path": "docs/zh/guides/11-grafana-prometheus.md",
+      "blob_sha": "5d84f7fd82b3852f3c5b813e492000a45839f75b",
+      "size": 14063
+    },
+    {
+      "path": "docs/zh/guides/11-oauth.md",
+      "blob_sha": "b5bb48b6c7948903e5742bf40a439cbf4f6615dc",
+      "size": 16246
+    },
+    {
+      "path": "docs/zh/guides/12-public-access.md",
+      "blob_sha": "675d5f2c6f2ce37fc6ca86863a29e84189556bc9",
+      "size": 8215
+    },
+    {
+      "path": "docs/zh/guides/12-vikingbot-metrics-validation.md",
+      "blob_sha": "456f01b5c6f0b4d6ad0426994e12b1290a1d3fee",
+      "size": 8784
+    },
+    {
+      "path": "docs/zh/guides/13-multi-write-storage.md",
+      "blob_sha": "3211082dbc8f5e07a2506bfc6ac119d8c0c45a24",
+      "size": 2756
+    },
+    {
+      "path": "docs/zh/guides/14-ragfs-cache.md",
+      "blob_sha": "da3fc48515a579f6dcab053d0629d405c8e86113",
+      "size": 12476
+    },
+    {
+      "path": "docs/zh/guides/15-gateway.md",
+      "blob_sha": "397e878111465b8d8c1bdab49ee0c7685cb5e6b2",
+      "size": 19967
+    },
+    {
+      "path": "docs/zh/guides/15-snapshot.md",
+      "blob_sha": "7ba6b915a36738f0ebe67299b624c50ebaf0a2c6",
+      "size": 17553
+    },
+    {
+      "path": "docs/zh/guides/16-cuvs.md",
+      "blob_sha": "1d42a2ac71a746ce5181ab98fb8db14eb7d61105",
+      "size": 16197
+    },
+    {
+      "path": "docs/zh/guides/17-vikingbot.md",
+      "blob_sha": "cd1a66dfae5a37755b77ec0c4b9fcd0370040d14",
+      "size": 10616
+    },
+    {
+      "path": "docs/zh/guides/18-openviking-assets.md",
+      "blob_sha": "c98c9b55b8f10617f3b19fb481efdf098fe817c6",
+      "size": 16819
+    },
+    {
+      "path": "docs/zh/guides/19-deployment-checklist.md",
+      "blob_sha": "f1821e2279a80f28b8cf93ed0f500e24d943ae8d",
+      "size": 7951
+    },
+    {
+      "path": "docs/zh/guides/20-private-deployment.md",
+      "blob_sha": "af239d48b528bd326c4d469f2b10200ab862e8bb",
+      "size": 15195
+    },
+    {
+      "path": "docs/zh/guides/21-private-operations.md",
+      "blob_sha": "65a6db7962337ea5e28febc64d25a96a104e084c",
+      "size": 7069
+    },
+    {
+      "path": "docs/zh/guides/22-gateway-operations.md",
+      "blob_sha": "13921b7c6d238d63f262def5dd12f9b40a84c957",
+      "size": 29714
+    },
+    {
+      "path": "docs/zh/guides/23-data-organize.md",
+      "blob_sha": "7754073f5316258071345400f9351c9c2d79d2ac",
+      "size": 6426
+    },
+    {
+      "path": "docs/zh/guides/working-memory-default-off.md",
+      "blob_sha": "8e25a1e66e2cbc6f5917ecb65b784e7f1f776da7",
+      "size": 6989
+    },
+    {
+      "path": "docs/zh/index.md",
+      "blob_sha": "5f884ca61f614fc1c0ffad1d9c021686cf56665d",
+      "size": 198
+    },
+    {
+      "path": "docs/zh/reference/01-overview.md",
+      "blob_sha": "682601d3b29a24c8e62a239e2c502ca305e89c34",
+      "size": 1843
+    },
+    {
+      "path": "docs/zh/workflows/01-overview.md",
+      "blob_sha": "f2557f4a62848c7b1f9e4b2bc73882313ce58057",
+      "size": 2808
+    }
+  ]
+}

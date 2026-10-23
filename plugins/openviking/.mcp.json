@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "openviking": {
+      "type": "http",
+      "url": "https://vps-919b6444.tail77fcdc.ts.net:10000/mcp"
+    }
+  }
+}

@@ -24,7 +24,7 @@
 SETTINGS="$HOME/.claude/settings.json"
 VARS="FIRECRAWL_API_KEY EXA_API_KEY TAVILY_API_KEY BRIGHTDATA_API_TOKEN APIFY_TOKEN"
 
-pass=0; fail=0
+pass=0; fail=0; configured=0
 ok()   { printf '  [ OK ]  %s\n' "$*"; pass=$((pass+1)); }
 bad()  { printf '  [FAIL]  %s\n' "$*"; fail=$((fail+1)); }
 note() { printf '  [INFO]  %s\n' "$*"; }
@@ -61,15 +61,17 @@ for var in $VARS; do
   sval="${!sval_name}"
   shellval="${!var:-}"
   if [ -n "$sval" ]; then
+    configured=$((configured+1))
     ok "$var — in settings.json env"
   elif [ -n "$shellval" ]; then
+    configured=$((configured+1))
     bad "$var — only exported in this shell; Claude Code will NOT see it. Copy it into $SETTINGS → env."
   else
     skip "$var — not set anywhere"
   fi
   # The live call below prefers the settings.json value; fall back to the shell
   # one so a mis-stored-but-valid key is still reported honestly.
-  eval "USE_$var=\${sval:-\$shellval}"
+  printf -v "USE_$var" '%s' "${sval:-$shellval}"
 done
 
 echo ""
@@ -132,9 +134,9 @@ echo ""
 echo "3) Repo hygiene — no key may ever be committed"
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 if git -C "$REPO" rev-parse --git-dir >/dev/null 2>&1; then
-  hits=$(git -C "$REPO" grep -InE '(fc-|tvly-|apify_api_)[A-Za-z0-9_-]{16,}' -- . 2>/dev/null | head -5)
+  hits=$(git -C "$REPO" grep -IlE '(fc-|tvly-|apify_api_)[A-Za-z0-9_-]{16,}' -- . 2>/dev/null | head -5)
   if [ -n "$hits" ]; then
-    bad "possible key material tracked in git:"
+    bad "possible key material tracked in git (file names only):"
     printf '%s\n' "$hits" | sed 's/^/          /'
   else
     ok "no key-shaped strings tracked in git"
@@ -145,11 +147,20 @@ fi
 
 echo ""
 echo "===================================================="
-echo " RESULT: ${pass} passed, ${fail} failed"
-if [ "$fail" = "0" ]; then
-  echo " Every configured key is stored correctly and works."
+if [ "$configured" = "0" ]; then
+  echo " RESULT: INCOMPLETE — no provider keys available to test"
+  echo " No provider keys configured; authenticated backend checks could not run."
+  echo " Keyless Firecrawl availability must be verified with a separate request."
 else
-  echo " Fix the [FAIL] lines above, restart Claude Code, then re-run."
+  echo " RESULT: ${pass} passed, ${fail} failed"
+  if [ "$fail" = "0" ]; then
+    echo " Every configured key is stored correctly and works."
+  else
+    echo " Fix the [FAIL] lines above, restart Claude Code, then re-run."
+  fi
 fi
 echo "===================================================="
+if [ "$configured" = "0" ]; then
+  exit 2
+fi
 exit "$fail"

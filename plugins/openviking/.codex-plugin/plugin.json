@@ -1,0 +1,17 @@
+{
+  "name": "openviking",
+  "version": "0.1.0",
+  "description": "Read-only access to the owner's OpenViking memory through OAuth MCP.",
+  "author": { "name": "Alex Levnikov" },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "OpenViking",
+    "shortDescription": "Search and read the owner's shared memory.",
+    "longDescription": "Connect to the owner's OpenViking MCP server with OAuth, then find and read source-backed context. The server currently exposes read-only tools.",
+    "developerName": "Alex Levnikov",
+    "category": "Productivity",
+    "capabilities": ["Read"],
+    "defaultPrompt": "Find relevant context in OpenViking and cite the source paths."
+  }
+}

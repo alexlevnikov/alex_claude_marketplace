@@ -1,0 +1,16 @@
+{
+  "name": "telegram-bot-development",
+  "version": "0.1.0",
+  "description": "Develop Telegram bots against current official Bot API documentation.",
+  "author": { "name": "Alex Levnikov" },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Telegram Bot Development",
+    "shortDescription": "Build bots with current Telegram features.",
+    "longDescription": "Choose Telegram bot capabilities, implement update handling and interactions, and verify release behavior against official documentation.",
+    "developerName": "Alex Levnikov",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": "Помоги разработать Telegram-бота с проверкой актуального Bot API и нужных функций."
+  }
+}

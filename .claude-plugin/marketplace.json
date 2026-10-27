@@ -291,6 +291,14 @@
       ]
     },
     {
+      "name": "telegram-bot-development",
+      "source": "./plugins/telegram-bot-development",
+      "description": "Official-source guide for Telegram Bot API development, features, integrations, payments, and operations.",
+      "version": "0.1.0",
+      "author": { "name": "Alex Levnikov" },
+      "keywords": ["telegram", "bot", "bot-api", "mini-app", "payments"]
+    },
+    {
       "name": "vps-operator",
       "source": "./plugins/vps-operator",
       "description": "Portable VPS service and Tailscale access review skills without private host state.",

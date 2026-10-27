@@ -1,0 +1,7 @@
+{
+  "name": "telegram-bot-development",
+  "version": "0.1.0",
+  "description": "Source-backed workflow and feature guide for developing Telegram bots.",
+  "author": { "name": "Alex Levnikov" },
+  "keywords": ["telegram", "bot", "bot-api", "mini-app", "payments"]
+}
